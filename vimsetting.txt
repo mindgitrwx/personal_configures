@@ -7,7 +7,7 @@ mapkey('<Ctrl-y>', 'Show me the money', function() {
 //map
 addSearchAliasX('mN', 'navermap', 'https://map.naver.com/?query=');
 addSearchAliasX('mG', '구글맵', 'https://www.google.com/maps?q=');
-addSearchAliasX('r', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
+addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
 //shorten - what is.. who is.. where is..  
 addSearchAliasX('wm', '뜻', 'https://www.googlecom/search?q=what+is+the+meaning+of+');
@@ -47,14 +47,14 @@ addSearchAliasX('spA', 'spotify', 'https://open.spotify.com/search/albums/');
 addSearchAliasX('ml', 'melon', 'https://www.melon.com/search/total/index.htm?q=');
 
 //coding
-addSearchAliasX('l', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
-addSearchAliasX('c', 'search coding', 'https://searchcode.com/?q=' );
+addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
+addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=' );
 addSearchAliasX('cw', 'chrome webstore', 'https://chrome.google.com/webstore/search/' );
 addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=' );
-addSearchAliasX('w', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
+addSearchAliasX('W', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
 
 //Video
-addSearchAliasX('y', 'youtube', 'https://www.youtube.com/results?search_query=');
+addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
 
 //Wiki
 addSearchAliasX('nW', '나무위키', 'https://namu.wiki/w/');
@@ -110,6 +110,7 @@ mapkey('"yy', "surround url with double quotation mark", function() {
     Clipboard.write( '"' + window.location.href + '"');
 });
 
+// Todo : why it is not work
 vmapkey('"Y', "surround selection with doube quotation mark", function() {
     Clipcoard.write( '"' + window.getSelection().toString() + '"');
 });
