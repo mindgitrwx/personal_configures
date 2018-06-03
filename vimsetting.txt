@@ -2,5 +2,42 @@ mapkey('<Ctrl-y>', 'Show me the money', function() {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
 
+# Custom Search Engines
+#g: https://www.google.com/search?q=%s Google
+#wm: https://www.google.com/search?q=what+is+the+meaning+of+%s&btnI 뜻
+#m: https://www.google.com/search?q=method+of+%s&btnI 방법
+#u: https://www.google.com/search?q=usage+of+%s&btnI 사용예
+#e: https://www.google.com/search?q=example+of+%s&btnI 예제
+#d: https://www.google.com/search?q=difference+between+%s&btnI 차이점
+#t: https://translate.google.co.kr/?hl=ko#ko/en/%s 한글영어번역
+#T: https://translate.google.co.kr/?hl=ko#en/ko/%s 영어한글번역
+#n: http://map.naver.com/?query=%s 네이버지도 
+#r: http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=%s  도로명
+#az: https://www.amazon.com/s/?field-keywords=%s Amazon
+#l: https://www.google.com/search?q=%s&btnI I'm feeling lucky...
+#w: https://www.wolframalpha.com/input/?i=
+# More examples.
+#
+# (Vimium supports search completion Wikipedia, as
+# above, and for these.)
+#
+# y: https://www.youtube.com/results?search_query=%s Youtube
+# gm: https://www.google.com/maps?q=%s Google maps
+# b: https://www.bing.com/search?q=%s Bing
+# d: https://duckduckgo.com/?q=%s DuckDuckGo
+# qw: https://www.qwant.com/?q=%s Qwant
+
 addSearchAliasX('n', 'navermap', 'https://map.naver.com/?query=');
-addSearchAliasX('r', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
+addSearchAliasX('g', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
+addSearchAliasX('wm', '뜻', 'https://www.google.com/search?q=what+is+the+meaning+of+');
+addSearchAliasX('m', '방법', 'https://www.google.com/search?q=method+of+');
+addSearchAliasX('u', '사용예', 'https://www.google.com/search?q=usage+of+');
+addSearchAliasX('e', '예제', 'https://www.google.com/search?q=example+of+');
+addSearchAliasX('d', '차이점', 'https://www.google.com/search?q=difference+between+');
+addSearchAliasX('t', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
+addSearchAliasX('T', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
+addSearchAliasX('az', '아마존', 'https://www.amazon.com/s/?field-keywords=');
+addSearchAliasX('l', 'I'm feeling lucky', 'https://www.google.com/search?q=');
+addSearchAliasX('w', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
+addSearchAliasX('y', 'youtube', 'https://www.youtube.com/results?search_query=%s');
+addSearchAliasX('gm', '구글맵', 'https://www.google.com/maps?q=');
