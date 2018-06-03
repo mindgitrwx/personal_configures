@@ -17,8 +17,8 @@ addSearchAliasX('na', '네이버사전all', 'http://dic.naver.com/search.nhn?dic
 addSearchAliasX('ne', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 
 addSearchAliasX('az', '아마존', 'https://www.amazon.com/s/?field-keywords=');
-addSearchAliasX('l', 'Im feeling lucky', 'https://www.google.com/search?q=');
+addSearchAliasX('l', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
 addSearchAliasX('w', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
-addSearchAliasX('y', 'youtube', 'https://www.youtube.com/results?search_query=%s');
+addSearchAliasX('y', 'youtube', 'https://www.youtube.com/results?search_query=');
 addSearchAliasX('gm', '구글맵', 'https://www.google.com/maps?q=');
 
