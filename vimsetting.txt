@@ -13,8 +13,8 @@ addSearchAliasX('d', '차이점', 'https://www.google.com/search?q=difference+be
 //dictionary
 addSearchAliasX('t', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
 addSearchAliasX('T', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
-addSearchAliasX('na', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=ji&query=');
-addSearchAliasX('ne', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=%s&preQuery=&searchOption=example&examType=&forceRedirect=N');
+addSearchAliasX('na', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+addSearchAliasX('ne', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 
 addSearchAliasX('az', '아마존', 'https://www.amazon.com/s/?field-keywords=');
 addSearchAliasX('l', 'Im feeling lucky', 'https://www.google.com/search?q=');
