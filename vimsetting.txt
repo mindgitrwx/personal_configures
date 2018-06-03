@@ -9,11 +9,16 @@ addSearchAliasX('m', '방법', 'https://www.google.com/search?q=method+of+');
 addSearchAliasX('u', '사용예', 'https://www.google.com/search?q=usage+of+');
 addSearchAliasX('e', '예제', 'https://www.google.com/search?q=example+of+');
 addSearchAliasX('d', '차이점', 'https://www.google.com/search?q=difference+between+');
+
+//dictionary
 addSearchAliasX('t', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
 addSearchAliasX('T', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
+addSearchAliasX('na', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=ji&query=');
+addSearchAliasX('ne', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=%s&preQuery=&searchOption=example&examType=&forceRedirect=N');
+
 addSearchAliasX('az', '아마존', 'https://www.amazon.com/s/?field-keywords=');
 addSearchAliasX('l', 'Im feeling lucky', 'https://www.google.com/search?q=');
-addSearchAliasX('wr', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
+addSearchAliasX('w', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
 addSearchAliasX('y', 'youtube', 'https://www.youtube.com/results?search_query=%s');
 addSearchAliasX('gm', '구글맵', 'https://www.google.com/maps?q=');
 
