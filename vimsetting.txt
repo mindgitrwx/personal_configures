@@ -12,6 +12,12 @@ addSearchAliasX('u', '사용예', 'https://www.google.com/search?q=usage+of+');
 addSearchAliasX('e', '예제', 'https://www.google.com/search?q=example+of+');
 addSearchAliasX('d', '차이점', 'https://www.google.com/search?q=difference+between+');
 
+//file 확장자
+addSearchAliasX('pdF', 'pdf', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Apdf+');
+addSearchAliasX('cpP', 'cpp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Acpp+');
+addSearchAliasX('hwP', 'hwp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Ahwp+');
+addSearchAliasX('ppT', 'ppt', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Appt+');
+
 //dictionary
 addSearchAliasX('t', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
 addSearchAliasX('T', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
@@ -31,10 +37,13 @@ addSearchAliasX('sc', 'soundcloud', 'https://soundcloud.com/search?q=');
 addSearchAliasX('scI', 'soundcloudid', 'https://soundcloud.com/');
 addSearchAliasX('sp', 'spotify', 'https://open.spotify.com/search/results/');
 addSearchAliasX('spA', 'spotify', 'https://open.spotify.com/search/albums/');
+addSearchAliasX('ml', 'melon', 'https://www.melon.com/search/total/index.htm?q=');
 
 //coding
 addSearchAliasX('l', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
+addSearchAliasX('c', 'search coding', 'https://searchcode.com/?q=' );
 addSearchAliasX('w', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
 addSearchAliasX('y', 'youtube', 'https://www.youtube.com/results?search_query=');
 addSearchAliasX('gm', '구글맵', 'https://www.google.com/maps?q=');
+
 
