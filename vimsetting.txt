@@ -4,6 +4,8 @@ mapkey('<Ctrl-y>', 'Show me the money', function() {
 
 addSearchAliasX('n', 'navermap', 'https://map.naver.com/?query=');
 addSearchAliasX('r', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
+
+//shorten  
 addSearchAliasX('wm', '뜻', 'https://www.google.com/search?q=what+is+the+meaning+of+');
 addSearchAliasX('m', '방법', 'https://www.google.com/search?q=method+of+');
 addSearchAliasX('u', '사용예', 'https://www.google.com/search?q=usage+of+');
@@ -16,7 +18,15 @@ addSearchAliasX('T', '영어한글번역', 'https://translate.google.co.kr/?hl=k
 addSearchAliasX('na', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
 addSearchAliasX('ne', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 
+//shop
 addSearchAliasX('az', '아마존', 'https://www.amazon.com/s/?field-keywords=');
+addSearchAliasX('쿠!', '쿠팡', 'http://www.coupang.com/np/search?component=&q=');
+addSearchAliasX('다!', '다나와', 'http://search.danawa.com/dsearch.php?k1=');
+addSearchAliasX('인!', '인터파크', 'http://search.danawa.com/dsearch.php?k1=');
+addSearchAliasX('티!', '티몬', 'http://search.ticketmonster.co.kr/search/?keyword=');
+addSearchAliasX('예!', 'yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
+
+//coding
 addSearchAliasX('l', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
 addSearchAliasX('w', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
 addSearchAliasX('y', 'youtube', 'https://www.youtube.com/results?search_query=');
