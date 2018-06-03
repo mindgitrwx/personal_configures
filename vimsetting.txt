@@ -110,7 +110,7 @@ mapkey('"yy', "surround url with double quotation mark", function() {
     Clipboard.write( '"' + window.location.href + '"');
 });
 
-vmapkey('"y', "surround selection with doube quotation mark", function() {
+vmapkey('"Y', "surround selection with doube quotation mark", function() {
     Clipcoard.write( '"' + window.getSelection().toString() + '"');
 });
 /*
