@@ -104,3 +104,7 @@ mapkey('q', '#1Click on an Image or a button', function() {
         searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
     });
 });
+
+mapkey('"yy', "#7Copy current page's URL", function() {
+    Clipboard.write('"' + window.location.href + '"');
+});
