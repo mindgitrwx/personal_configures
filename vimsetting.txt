@@ -1,16 +1,23 @@
+//Surfing key config
 mapkey('<Ctrl-y>', 'Show me the money', function() {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
 
-addSearchAliasX('n', 'navermap', 'https://map.naver.com/?query=');
+
+//map
+addSearchAliasX('mN', 'navermap', 'https://map.naver.com/?query=');
+addSearchAliasX('mG', '구글맵', 'https://www.google.com/maps?q=');
 addSearchAliasX('r', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
-//shorten  
-addSearchAliasX('wm', '뜻', 'https://www.google.com/search?q=what+is+the+meaning+of+');
-addSearchAliasX('m', '방법', 'https://www.google.com/search?q=method+of+');
-addSearchAliasX('u', '사용예', 'https://www.google.com/search?q=usage+of+');
-addSearchAliasX('e', '예제', 'https://www.google.com/search?q=example+of+');
-addSearchAliasX('d', '차이점', 'https://www.google.com/search?q=difference+between+');
+//shorten - what is.. who is.. where is..  
+addSearchAliasX('wm', '뜻', 'https://www.googlecom/search?q=what+is+the+meaning+of+');
+addSearchAliasX('wM', '방법', 'https://www.google.com/search?q=method+of+');
+addSearchAliasX('wU', '사용예', 'https://www.google.com/search?q=usage+of+');
+addSearchAliasX('wE', '예제', 'https://www.google.com/search?q=example+of+');
+addSearchAliasX('wD', '차이점', 'https://www.google.com/search?q=difference+between+');
+addSearchAliasX('wL', '리스트', 'https://www.google.com/search?q=list+of+');
+addSearchAliasX('wR', '랭킹', 'https://www.google.com/search?q=rank+of+');
+addSearchAliasX('wS', '공통점', 'https://www.google.com/search?q=common+point+of+');
 
 //file 확장자
 addSearchAliasX('pdF', 'pdf', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Apdf+');
@@ -42,8 +49,14 @@ addSearchAliasX('ml', 'melon', 'https://www.melon.com/search/total/index.htm?q='
 //coding
 addSearchAliasX('l', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
 addSearchAliasX('c', 'search coding', 'https://searchcode.com/?q=' );
+addSearchAliasX('cw', 'chrome webstore', 'https://chrome.google.com/webstore/search/' );
+addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=' );
 addSearchAliasX('w', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
+
+//Video
 addSearchAliasX('y', 'youtube', 'https://www.youtube.com/results?search_query=');
-addSearchAliasX('gm', '구글맵', 'https://www.google.com/maps?q=');
 
-
+//Wiki
+addSearchAliasX('nW', '나무위키', 'https://namu.wiki/w/');
+addSearchAliasX('eW', '영문위키', 'https://www.wikiwand.com/en/');
+addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
