@@ -100,7 +100,7 @@ mapkey('ya', '#7Copy a link URL to the clipboard', function() {
 
 mapkey('q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", function(element) { 
-        Clipboard.write(element.href);
+        Clipboard.write(element.src);
         searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
     });
 });
