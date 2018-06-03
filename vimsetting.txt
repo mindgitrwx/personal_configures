@@ -109,6 +109,7 @@ mapkey('q', '#1Click on an Image or a button', function() {
 mapkey('"yy', "surround url with double quotation mark", function() {
     Clipboard.write( '"' + window.location.href + '"');
 });
-vmapkey('"y', 'surround selection with doube quotation mark", function() {
+
+vmapkey('"y', "surround selection with doube quotation mark", function() {
     Clipboard.write( '"' + window.getSelection().toString() + '"');
 });
