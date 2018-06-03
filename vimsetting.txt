@@ -20,11 +20,18 @@ addSearchAliasX('ne', '네어버사전example', 'http://endic.naver.com/search_e
 
 //shop
 addSearchAliasX('az', '아마존', 'https://www.amazon.com/s/?field-keywords=');
-addSearchAliasX('쿠', '쿠팡', 'http://www.coupang.com/np/search?component=&q=');
-addSearchAliasX('다', '다나와', 'http://search.danawa.com/dsearch.php?k1=');
-addSearchAliasX('인', '인터파크', 'http://search.danawa.com/dsearch.php?k1=');
-addSearchAliasX('티', '티몬', 'http://search.ticketmonster.co.kr/search/?keyword=');
-addSearchAliasX('예', 'yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
+addSearchAliasX('sC', '쿠팡', 'http://www.coupang.com/np/search?component=&q=');
+addSearchAliasX('sD', '다나와', 'http://search.danawa.com/dsearch.php?k1=');
+addSearchAliasX('sI', '인터파크', 'http://search.danawa.com/dsearch.php?k1=');
+addSearchAliasX('sT', '티몬', 'http://search.ticketmonster.co.kr/search/?keyword=');
+addSearchAliasX('sY', 'yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
+
+//music
+addSearchAliasX('sc', 'soundcloud', 'https://soundcloud.com/search?q=');
+addSearchAliasX('scid', 'soundcloudid', 'https://soundcloud.com/');
+addSearchAliasX('spt', 'spotify', 'https://open.spotify.com/search/results/');
+addSearchAliasX('spta', 'spotify', 'https://open.spotify.com/search/albums/');
+addSearchAliasX('az', '아마존', 'https://www.amazon.com/s/?field-keywords=');
 
 //coding
 addSearchAliasX('l', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
