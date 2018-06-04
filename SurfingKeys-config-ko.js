@@ -1,10 +1,20 @@
-//Surfing key config
+/*
+Surfing key config
+Korean specific surfing key config
+jonghyeon.rw@gmail.com
+*/
 mapkey('<Ctrl-y>', 'Show me the money', function() {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
 
+//unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
+unmap('<Ctrl-6>');
+unmap('ob'); // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
+unmap('og');
+unmap('ow');
+
 //map
-addSearchAliasX('mN', 'navermap', 'https://map.naver.com/?query=');
+addSearchAliasX('mN', 'navermap', 'https://map.naver.com/?query=') c;
 addSearchAliasX('mG', '구글맵', 'https://www.google.com/maps?q=');
 addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
@@ -61,8 +71,6 @@ addSearchAliasX('nW', '나무위키', 'https://namu.wiki/w/');
 addSearchAliasX('eW', '영문위키', 'https://www.wikiwand.com/en/');
 addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 
-
-
 mapkey('Q', '#8Open omnibar for word translation', function() {
     Front.openOmniquery({
         url: "https://m.endic.naver.com/search.nhn?searchOption=all&query=",
@@ -98,10 +106,19 @@ mapkey('ya', '#7Copy a link URL to the clipboard', function() {
 });
 */
 
+// 구글 이미지 검색  
 mapkey('q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", function(element) { 
         Clipboard.write(element.src);
         searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
+        // Todo: copy 하는 방법은 없는지 알아보기
+    });
+});
+
+mapkey('Q', '#1Click on an Image or a button', function() {
+    Hints.create("img, button", function(element) { 
+        Clipboard.write(element.src);
+        // Todo: copy 하는 방법은 없는지 알아보기
     });
 });
 
