@@ -18,15 +18,32 @@ addSearchAliasX('mN', 'navermap', 'https://map.naver.com/?query=');
 addSearchAliasX('mG', '구글맵', 'https://www.google.com/maps?q=');
 addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
+//coding
+addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
+addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
+addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/');
+addSearchAliasX('cE', 'chrome extension', 'https://chrome.google.com/webstore/search/');
+addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=');
+addSearchAliasX('W', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
+
+//sns
+addSearchAliasX('fB', 'facebook(페이스북)', 'https://www.facebook.com/search/top/?q=');
+addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
+addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
+addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
+addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
+addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
+
 //shorten - what is.. who is.. where is..  
-addSearchAliasX('wm', '뜻', 'https://www.googlecom/search?q=what+is+the+meaning+of+');
-addSearchAliasX('wM', '방법', 'https://www.google.com/search?q=method+of+');
-addSearchAliasX('wU', '사용예', 'https://www.google.com/search?q=usage+of+');
-addSearchAliasX('wE', '예제', 'https://www.google.com/search?q=example+of+');
+addSearchAliasX('wC', '분류', 'https://www.google.com/search?q=classfication+of');
 addSearchAliasX('wD', '차이점', 'https://www.google.com/search?q=difference+between+');
-addSearchAliasX('wL', '리스트', 'https://www.google.com/search?q=list+of+');
+addSearchAliasX('wE', '예제', 'https://www.google.com/search?q=example+of+');
+addSearchAliasX('wM', '방법', 'https://www.google.com/search?q=method+of+');
+addSearchAliasX('wm', '뜻', 'https://www.googlecom/search?q=what+is+the+meaning+of+');
 addSearchAliasX('wR', '랭킹', 'https://www.google.com/search?q=rank+of+');
 addSearchAliasX('wS', '공통점', 'https://www.google.com/search?q=common+point+of+');
+addSearchAliasX('wU', '사용예', 'https://www.google.com/search?q=usage+of+');
+addSearchAliasX('wL', '리스트', 'https://www.google.com/search?q=list+of+');
 
 //file 확장자
 addSearchAliasX('pdF', 'pdf', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Apdf+');
@@ -42,6 +59,7 @@ addSearchAliasX('nE', '네어버사전example', 'http://endic.naver.com/search_e
 
 //shop
 addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
+addSearchAliasX('sA', '아마존', 'https://www.amazon.com/s/?field-keywords=');
 addSearchAliasX('sC', '쿠팡', 'http://www.coupang.com/np/search?component=&q=');
 addSearchAliasX('sD', '다나와', 'http://search.danawa.com/dsearch.php?k1=');
 addSearchAliasX('sI', '인터파크', 'http://isearch.interpark.com/isearch?q=');
@@ -49,19 +67,12 @@ addSearchAliasX('sT', '티몬', 'http://search.ticketmonster.co.kr/search/?keywo
 addSearchAliasX('sY', 'yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
 
 //music
-addSearchAliasX('sC', 'soundcloud', 'https://soundcloud.com/search?q=');
+addSearchAliasX('sc', 'soundcloud', 'https://soundcloud.com/search?q=');
 addSearchAliasX('scI', 'soundcloudid', 'https://soundcloud.com/');
-addSearchAliasX('sP', 'spotify', 'https://open.spotify.com/search/results/');
+addSearchAliasX('sp', 'spotify', 'https://open.spotify.com/search/results/');
+
 addSearchAliasX('spA', 'spotify', 'https://open.spotify.com/search/albums/');
 addSearchAliasX('mL', 'melon', 'https://www.melon.com/search/total/index.htm?q=');
-
-//coding
-addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
-addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
-addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/');
-addSearchAliasX('cE', 'chrome extension', 'https://chrome.google.com/webstore/search/');
-addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=');
-addSearchAliasX('W', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
 
 //Video
 addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
@@ -71,6 +82,9 @@ addSearchAliasX('nW', '나무위키', 'https://namu.wiki/w/');
 addSearchAliasX('eW', '영문위키', 'https://www.wikiwand.com/en/');
 addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 
+//news 
+//knowledge
+//blog
 
 // mapkey('Q', '#8Open omnibar for word translation', function() {
 //     Front.openOmniquery({
@@ -134,7 +148,7 @@ function SelectText() {
 }
 mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
-        Clipboard.write(SelectText(element.src));
+        Clipboard.write(SelectText(element));
     });
 });
 
