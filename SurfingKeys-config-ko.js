@@ -118,6 +118,7 @@ mapkey('q', '#1Click on an Image or a button', function() {
 mapkey('Q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", function(element) { 
         Clipboard.write(element.src);
+        searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
         // Todo: copy 하는 방법은 없는지 알아보기
     });
 });
@@ -128,7 +129,7 @@ mapkey('"yy', "surround url with double quotation mark", function() {
 });
 
 // Todo : why it is not work
-vmapkey('Y', "surround selection with doube quotation mark", function() {
+vmapkey('""', "surround selection with doube quotation mark", function() {
     Clipcoard.write( '"' + window.getSelection().toString() + '"');
 });
 /*
