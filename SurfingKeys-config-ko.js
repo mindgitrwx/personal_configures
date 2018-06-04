@@ -132,7 +132,7 @@ mapkey('q', '#1Click on an Image or a button', function () {
 });
 
 //How to work as 
-function SelectText() {
+function SelectText(element) {
     var doc = document;
     if (doc.body.createTextRange) {
         var range = document.body.createTextRange();
