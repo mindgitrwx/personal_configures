@@ -14,7 +14,7 @@ unmap('og');
 unmap('ow');
 
 //map
-addSearchAliasX('mN', 'navermap', 'https://map.naver.com/?query=') c;
+addSearchAliasX('mN', 'navermap', 'https://map.naver.com/?query=');
 addSearchAliasX('mG', '구글맵', 'https://www.google.com/maps?q=');
 addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
@@ -129,7 +129,7 @@ mapkey('"yy', "surround url with double quotation mark", function() {
 });
 
 // Todo : why it is not work
-vmapkey('7', "surround selection with doube quotation mark", function() {
+vmapkey('"', "surround selection with doube quotation mark", function() {
     Clipcoard.write( '"' + window.getSelection().toString() + '"');
 });
 /*
