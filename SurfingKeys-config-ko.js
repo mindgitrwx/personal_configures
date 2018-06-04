@@ -117,7 +117,8 @@ mapkey('q', '#1Click on an Image or a button', function () {
     });
 });
 
-function SelectText(element) {
+//How to work as 
+function SelectText() {
     var doc = document;
     if (doc.body.createTextRange) {
         var range = document.body.createTextRange();
@@ -131,10 +132,9 @@ function SelectText(element) {
         selection.addRange(range);
     }
 }
-// 이미지 복사
 mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
-        Clipboard.write(SelectText(element.res));
+        Clipboard.write(SelectText(element.src));
     });
 });
 
