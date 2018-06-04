@@ -106,7 +106,7 @@ mapkey('ya', '#7Copy a link URL to the clipboard', function() {
 });
 */
 
-// 구글 이미지 검색  
+// 구글 이미지 검색  (주소가 정확할 경우 잘 진행됨)
 mapkey('q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", function(element) { 
         Clipboard.write(element.src);
@@ -118,6 +118,7 @@ mapkey('q', '#1Click on an Image or a button', function() {
 mapkey('Q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", function(element) { 
         Clipboard.write(element.src);
+        document.execCommand("copy");
         searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
         // Todo: copy 하는 방법은 없는지 알아보기
     });
