@@ -116,10 +116,10 @@ mapkey('q', '#1Click on an Image or a button', function() {
         // Todo: copy 하는 방법은 없는지 알아보기
     });
 });
-
+// 구글 이미지 복사 
 mapkey('Q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", function(element) { 
-        document.execCommand("copy");
+        element.execCommand("copy");
     });
 });
 
