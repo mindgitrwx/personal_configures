@@ -158,12 +158,13 @@ mapkey('"yy', "surround url with double quotation mark", function () {
 });
 
 // Todo : why it is not work
-vmapkey('"', "surround selection with doube quotation mark", function () {
+vmapkey('gy', "surround selection with doube quotation mark", function () {
     var quotated;
     quotated = '"' + window.getSelection().toString() + '"';
     Clipcoard.write(quoatated);
 });
 /*
+    quotated = '"' + window.getSelection().toString() + '"';
 vmapkey('<y', "surround selection with TODO", function() {
     Clipcoard.write( '<' + window.getSelection().toString() + '>');
 });
