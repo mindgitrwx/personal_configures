@@ -3,7 +3,7 @@ Surfing key config
 Korean specific surfing key config
 jonghyeon.rw@gmail.com
 */
-mapkey('<Ctrl-y>', 'Show me the money', function() {
+mapkey('<Ctrl-y>', 'Show me the money', function () {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
 
@@ -57,10 +57,10 @@ addSearchAliasX('mL', 'melon', 'https://www.melon.com/search/total/index.htm?q='
 
 //coding
 addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
-addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=' );
-addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/' );
-addSearchAliasX('cE', 'chrome extension', 'https://chrome.google.com/webstore/search/' );
-addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=' );
+addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
+addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/');
+addSearchAliasX('cE', 'chrome extension', 'https://chrome.google.com/webstore/search/');
+addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=');
 addSearchAliasX('W', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
 
 //Video
@@ -90,7 +90,7 @@ addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 //     });
 // });
 
-Visual.setTranslationService("https://m.endic.naver.com/search.nhn?searchOption=all&query=", function(res) {
+Visual.setTranslationService("https://m.endic.naver.com/search.nhn?searchOption=all&query=", function (res) {
     var res = JSON.parse(res.text);
     return renderShanbay(res);
 });
@@ -109,28 +109,45 @@ mapkey('ya', '#7Copy a link URL to the clipboard', function() {
 */
 
 // 구글 이미지 검색  (주소가 정확할 경우 잘 진행됨)
-mapkey('q', '#1Click on an Image or a button', function() {
-    Hints.create("img, button", function(element) { 
+mapkey('q', '#1Click on an Image or a button', function () {
+    Hints.create("img, button", function (element) {
         Clipboard.write(element.src);
         searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
         // Todo: copy 하는 방법은 없는지 알아보기
     });
 });
+
+function SelectText(element) {
+    var doc = document;
+    if (doc.body.createTextRange) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(element);
+        range.select();
+    } else if (window.getSelection) {
+        var selection = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents(element);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
+}
 // 이미지 복사
-mapkey('Q', '#1Click on an Image or a button', function() {
-    Hints.create("img, button", function(element) { 
-        Clipboard.write(element);
+mapkey('Q', '#1Click on an Image or a button', function () {
+    Hints.create("img, button", function (element) {
+        var doc = document;
+
+        Clipboard.write(SelectText(element));
     });
 });
 
 // surround  - Todo: nam of <
-mapkey('"yy', "surround url with double quotation mark", function() {
-    Clipboard.write( '"' + window.location.href + '"');
+mapkey('"yy', "surround url with double quotation mark", function () {
+    Clipboard.write('"' + window.location.href + '"');
 });
 
 // Todo : why it is not work
-vmapkey('"', "surround selection with doube quotation mark", function() {
-    Clipcoard.write( '"' + window.getSelection().toString() + '"');
+vmapkey('"', "surround selection with doube quotation mark", function () {
+    Clipcoard.write('"' + window.getSelection().toString() + '"');
 });
 /*
 vmapkey('<y', "surround selection with TODO", function() {
