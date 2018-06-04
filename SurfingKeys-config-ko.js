@@ -159,9 +159,9 @@ mapkey('"yy', "surround url with double quotation mark", function () {
 
 // Todo : why it is not work
 vmapkey('"', "surround selection with doube quotation mark", function () {
-    var quoted;
-    quoated = '"' + window.getSelection().toString() + '"';
-    Clipcoard.write(quoated);
+    var quotated;
+    quotated = '"' + window.getSelection().toString() + '"';
+    Clipcoard.write(quoatated);
 });
 /*
 vmapkey('<y', "surround selection with TODO", function() {
