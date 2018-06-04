@@ -119,7 +119,7 @@ mapkey('q', '#1Click on an Image or a button', function() {
 // 이미지 복사
 mapkey('Q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", function(element) { 
-        document.execCommand()
+        document.execCommand('copy');
     });
 });
 
