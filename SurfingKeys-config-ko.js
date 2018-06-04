@@ -134,9 +134,7 @@ function SelectText(element) {
 // 이미지 복사
 mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
-        var doc = document;
-
-        Clipboard.write(SelectText(element));
+        Clipboard.write(SelectText(element.res));
     });
 });
 
