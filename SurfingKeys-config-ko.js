@@ -147,7 +147,7 @@ function SelectText() {
     }
 }
 mapkey('Q', '#1Click on an Image or a button', function () {
-    Hints.create("img, button", function (element) {
+    Hints.create("img", function (element) {
         Clipboard.write(SelectText(element));
     });
 });
