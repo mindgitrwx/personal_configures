@@ -119,7 +119,6 @@ mapkey('q', '#1Click on an Image or a button', function() {
 
 mapkey('Q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", function(element) { 
-        Clipboard.write(element.src);
         document.execCommand("copy");
     });
 });
