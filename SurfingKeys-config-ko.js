@@ -3,7 +3,6 @@ mapkey('<Ctrl-y>', 'Show me the money', function() {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
 
-
 //map
 addSearchAliasX('mN', 'navermap', 'https://map.naver.com/?query=');
 addSearchAliasX('mG', '구글맵', 'https://www.google.com/maps?q=');
@@ -28,11 +27,11 @@ addSearchAliasX('ppT', 'ppt', 'https://www.google.com/search?hl=en&biw=1600&bih=
 //dictionary
 addSearchAliasX('t', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
 addSearchAliasX('T', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
-addSearchAliasX('na', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
-addSearchAliasX('ne', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
+addSearchAliasX('nA', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+addSearchAliasX('nE', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 
 //shop
-addSearchAliasX('az', '아마존', 'https://www.amazon.com/s/?field-keywords=');
+addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
 addSearchAliasX('sC', '쿠팡', 'http://www.coupang.com/np/search?component=&q=');
 addSearchAliasX('sD', '다나와', 'http://search.danawa.com/dsearch.php?k1=');
 addSearchAliasX('sI', '인터파크', 'http://isearch.interpark.com/isearch?q=');
@@ -40,16 +39,17 @@ addSearchAliasX('sT', '티몬', 'http://search.ticketmonster.co.kr/search/?keywo
 addSearchAliasX('sY', 'yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
 
 //music
-addSearchAliasX('sc', 'soundcloud', 'https://soundcloud.com/search?q=');
+addSearchAliasX('sC', 'soundcloud', 'https://soundcloud.com/search?q=');
 addSearchAliasX('scI', 'soundcloudid', 'https://soundcloud.com/');
-addSearchAliasX('sp', 'spotify', 'https://open.spotify.com/search/results/');
+addSearchAliasX('sP', 'spotify', 'https://open.spotify.com/search/results/');
 addSearchAliasX('spA', 'spotify', 'https://open.spotify.com/search/albums/');
-addSearchAliasX('ml', 'melon', 'https://www.melon.com/search/total/index.htm?q=');
+addSearchAliasX('mL', 'melon', 'https://www.melon.com/search/total/index.htm?q=');
 
 //coding
 addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
 addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=' );
-addSearchAliasX('cw', 'chrome webstore', 'https://chrome.google.com/webstore/search/' );
+addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/' );
+addSearchAliasX('cE', 'chrome extension', 'https://chrome.google.com/webstore/search/' );
 addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=' );
 addSearchAliasX('W', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
 
