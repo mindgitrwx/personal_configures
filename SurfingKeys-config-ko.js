@@ -129,7 +129,7 @@ mapkey('"yy', "surround url with double quotation mark", function() {
 });
 
 // Todo : why it is not work
-vmapkey('""', "surround selection with doube quotation mark", function() {
+vmapkey('7', "surround selection with doube quotation mark", function() {
     Clipcoard.write( '"' + window.getSelection().toString() + '"');
 });
 /*
