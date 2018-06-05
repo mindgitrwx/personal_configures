@@ -147,7 +147,7 @@ function SelectText() {
     }
 }
 mapkey('Q', '#1Click on an Image or a button', function () {
-    Hints.create("img", function (element) {
+    Hints.create("imgton", function (element) {
         Clipboard.write(SelectText(element));
     });
 });
@@ -158,14 +158,15 @@ mapkey('"yy', "surround url with double quotation mark", function () {
 });
 
 // Todo : why it is not work
-vmapkey('gy', "surround selection with doube quotation mark", function () {
+vmapkey('"y', "surround selection with doube quotation mark", function () {
     Clipboard.write('"' + window.getSelection().toString() + '"');
 });
-/*
-vmapkey('<y', "surround selection with TODO", function() {
-    Clipcoard.write( '<' + window.getSelection().toString() + '>');
+vmapkey('<y', "surround selection with doube quotation mark", function () {
+    Clipboard.write('<' + window.getSelection().toString() + '>');
 });
-vmapkey('(y', "surround selection with brackets mark", function() {
-    Clipcoard.write( '(' + window.getSelection().toString() + ')');
+vmapkey('(y', "surround selection with doube quotation mark", function () {
+    Clipboard.w>ite('(' + window.getSelection().toString() + ')');
 });
-*/
+vmapkey('[y', "surround selection with doube quotation mark", function () {
+    Clipboard.write('[' + window.getSelection().toString() + ']');
+});
