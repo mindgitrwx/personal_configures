@@ -199,10 +199,10 @@ mapkey('<Ctrl-Alt-s>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
 // vscode bind
-mapkey('<Ctrl-X>', '#12Open Chrome extensions', function () {
+mapkey('<Ctrl-Shift-x>', '#12Open Chrome extensions', function () {
     tabOpenLink("chrome://extensions/");
 });
 // intellij bind
-map('<Ctrl-E>', 'T');
+map('<Ctrl-Shift-t>', 'T');
 // intellij bind -
 map('<Alt-F12>', '<Ctrl-J>');
