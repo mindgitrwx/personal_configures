@@ -31,7 +31,7 @@ addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/sea
 addSearchAliasX('cE', 'chrome extension', 'https://chrome.google.com/webstore/search/');
 addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=');
 addSearchAliasX('W', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
-hddSearchAliasX('gH', 'github', 'https://github.com/search?q=', 'o');
+addSearchAliasX('gH', 'github', 'https://github.com/search?q=', 'o');
 
 //sns
 addSearchAliasX('fB', 'facebook(페이스북)', 'https://www.facebook.com/search/top/?q=');
@@ -181,7 +181,7 @@ vmapkey('<--!y', "surround selection ", function () {
 });
 
 // 보다 간단한 방법이 필요함 (vmapkey의 내부의 코드를 보지 못했음 )
-/*
+
 vmapkey('1y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
@@ -209,4 +209,3 @@ vmapkey('8y', "delete first n character", function () {
 vmapkey('9y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(9));
 });
-*/
