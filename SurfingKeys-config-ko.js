@@ -179,9 +179,11 @@ vmapkey('/*y', "surround selection ", function () {
 vmapkey('<--!y', "surround selection ", function () {
     Clipboard.write('<--!' + window.getSelection().toString() + '-->');
 });
+vmapkey(',y', "added comma", function () {
+    Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
+});
 
 // 보다 간단한 방법이 필요함 (vmapkey의 내부의 코드를 보지 못했음 )
-
 vmapkey('1y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
