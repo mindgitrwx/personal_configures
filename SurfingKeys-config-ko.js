@@ -7,6 +7,11 @@ https://raw.githubusercontent.com/mindgitrwx/gitconventions/master/SurfingKeys-c
 Surfing key 에서 se를 누르면 setting surfing key 의 setting으로 들어가집니다. 이때 보여지는 화면에서
 Advanced mode를 선택한 후, Load settings from에 위 주소를 입력하고 Save 해주시면 몇초 지나서 이 설정이 저장될 겁니다.
 
+키 맵핑할 때 주의할 점
+map('<Ctrl-Shif-e>', 'T');
+이런식으로 맵핑하면 동작하지 않고
+map('<Ctrl-E>', 'T');
+이런 식으로 맵핑해야 함 
 jonghyeon.rw@gmail.com
 */
 mapkey('<Ctrl-y>', 'Show me the money', function () {
@@ -207,4 +212,7 @@ mapkey('<Ctrl-X>', '#12Open Chrome extensions', function () {
 // intellij bind
 map('<Ctrl-E>', 'T');
 // intellij bind -
-map('<Alt-F12>', '<Ctrl-J>');
+mapkey('<Alt-F12>', '#12Open Chrome Settings', function () {
+    tabOpenLink("chrome://settings/");
+});
+
