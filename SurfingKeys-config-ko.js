@@ -156,7 +156,7 @@ function copyElement(element) {
     })
 }
 mapkey('Q', '#1Click on an Image or a button', function () {
-    Hints.create("imgton", function (element) {
+    Hints.create("img", function (element) {
         copyElement(element);
     });
 });
