@@ -1,6 +1,12 @@
 /*
 Surfing keys config (SurfingKeys)
 Korean specific surfing key config
+Please copy this url to text box [load settings from:], and 'Save'
+https://raw.githubusercontent.com/mindgitrwx/gitconventions/master/SurfingKeys-config-ko.js
+
+Surfing key 에서 se를 누르면 setting surfing key 의 setting으로 들어가집니다. 이때 보여지는 화면에서
+Advanced mode를 선택한 후, Load settings from에 위 주소를 입력하고 Save 해주시면 몇초 지나서 이 설정이 저장될 겁니다.
+
 jonghyeon.rw@gmail.com
 */
 mapkey('<Ctrl-y>', 'Show me the money', function () {
