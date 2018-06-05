@@ -214,13 +214,13 @@ mapkey('<Ctrl-X>', '#12Open Chrome extensions', function () {
 // intellij bind
 map('<Ctrl-E>', 'T');
 map('<Ctrl-N>', 'T');
-// intellij bind -
+// intellij bind - 동작하지 않음
 mapkey('<Alt-F12>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome.send('inspect',[String(data.processId), String(data.routeId)])");
 });
 
-// vscode bind
-mapkey('<Ctrl-\>', '#12Open Chrome extensions', function () {
+// vscode bind 동작하지 않음  
+mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
     RUNTIME("duplicateTab");
     RUNTIME("newWindow");
 });
