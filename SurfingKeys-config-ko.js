@@ -31,15 +31,10 @@ addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/sea
 addSearchAliasX('cE', 'chrome extension', 'https://chrome.google.com/webstore/search/');
 addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=');
 addSearchAliasX('W', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
-addSearchAliasX('gh', 'github', 'https://github.com/search?q=', 'o');
+hddSearchAliasX('gH', 'github', 'https://github.com/search?q=', 'o');
 
 //sns
 addSearchAliasX('fB', 'facebook(페이스북)', 'https://www.facebook.com/search/top/?q=');
-addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
-addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
-addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
-addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
-addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
 
 //shorten - what is.. who is.. where is..  
 addSearchAliasX('wC', '분류', 'https://www.google.com/search?q=classfication+of');
@@ -184,4 +179,33 @@ vmapkey('/*y', "surround selection ", function () {
 });
 vmapkey('<--!y', "surround selection ", function () {
     Clipboard.write('<--!' + window.getSelection().toString() + '-->');
+});
+
+// 보다 간단한 방법이 필요함 (vmapkey의 내부의 코드를 보지 못했음 )
+vmapkey('1y', "delete first n character", function () {
+    Clipboard.write(window.getSelection().toString().substr(1));
+});
+vmapkey('2y', "delete first n character", function () {
+    Clipboard.write(window.getSelection().toString().substr(2));
+});
+vmapkey('3y', "delete first n character", function () {
+    Clipboard.write(window.getSelection().toString().substr(3));
+});
+vmapkey('4y', "delete first n character", function () {
+    Clipboard.write(window.getSelection().toString().substr(1));
+});
+vmapkey('5y', "delete first n character", function () {
+    Clipboard.write(window.getSelection().toString().substr(2));
+});
+vmapkey('6y', "delete first n character", function () {
+    Clipboard.write(window.getSelection().toString().substr(3));
+});
+vmapkey('7y', "delete first n character", function () {
+    Clipboard.write(window.getSelection().toString().substr(1));
+});
+vmapkey('8y', "delete first n character", function () {
+    Clipboard.write(window.getSelection().toString().substr(2));
+});
+vmapkey('9y', "delete first n character", function () {
+    Clipboard.write(window.getSelection().toString().substr(3));
 });
