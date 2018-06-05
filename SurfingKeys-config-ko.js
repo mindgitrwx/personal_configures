@@ -238,3 +238,10 @@ map('j', 'ArrowDown',  {domain: 'map\.naver\.com/i'});
 map('k', 'ArrowUp', {domain: 'map\.naver\.com/i'});
 map('l', 'Arrowright', {domain: 'map\.naver\.com/i'});
 */
+// 지도 이동 
+
+map('h', 'ArrowLeft');
+map('j', 'ArrowDown');
+map('k', 'ArrowUp');
+map('l', 'Arrowright');
+
