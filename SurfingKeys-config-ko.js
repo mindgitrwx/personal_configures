@@ -198,11 +198,13 @@ mapkey('gs', '#12Open Chrome Settings', function () {
 mapkey('<Ctrl-Alt-s>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
+
+// 정상적으로 동작하지 않음 
 // vscode bind
 mapkey('<Ctrl-Shift-x>', '#12Open Chrome extensions', function () {
     tabOpenLink("chrome://extensions/");
 });
 // intellij bind
-map('<Ctrl-Shift-t>', 'T');
+map('<Ctrl-Shift-e>', 'T');
 // intellij bind -
 map('<Alt-F12>', '<Ctrl-J>');
