@@ -218,3 +218,10 @@ map('<Ctrl-E>', 'T');
 mapkey('<Alt-F12>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome.send('inspect',[String(data.processId), String(data.routeId)])");
 });
+
+mapkey('zz', 'Choose a tab', function() {
+    Front.chooseTab();
+}, {domain: /github\.com/i});
+mapkey('zz', 'Show usage', function() {
+    Front.showUsage();
+}, {domain: /google\.com/i});
