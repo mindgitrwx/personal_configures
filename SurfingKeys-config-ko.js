@@ -132,23 +132,32 @@ mapkey('q', '#1Click on an Image or a button', function () {
 });
 
 //How to work as 
-function SelectText() {
-    var doc = document;
-    if (doc.body.createTextRange) {
-        var range = document.body.createTextRange();
-        range.moveToElementText(element);
-        range.select();
-    } else if (window.getSelection) {
-        var selection = window.getSelection();
-        var range = document.createRange();
-        range.selectNodeContents(element);
-        selection.removeAllRanges();
-        selection.addRange(range);
-    }
+function copyElement(element) {
+  var text = document.createElement("textarea");
+
+  document.oncopy = function(e) {
+    e.clipboardData.setData("text/plain", text.value);
+    console.log(e.clipboardData.getData("text/plain"));
+  }
+
+  fetch(element.src.replace(/^(http:|https:)/, location.protocol))
+    .then(function(response) {
+      return response.blob()
+    })
+    .then(function(blob) {
+      var reader = new FileReader();
+      reader.onload = function() {
+        document.body.appendChild(text);
+        text.value = reader.result;
+        text.select();
+        alert("Press CTRL+C to copy image to clipboard");
+      }
+      reader.readAsDataURL(blob)
+    })
 }
 mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("imgton", function (element) {
-        Clipboard.write(SelectText(element));
+        copyElement(element);
     });
 });
 
