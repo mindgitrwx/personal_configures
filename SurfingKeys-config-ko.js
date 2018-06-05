@@ -179,35 +179,14 @@ vmapkey('/*y', "surround selection ", function () {
 vmapkey('<--!y', "surround selection ", function () {
     Clipboard.write('<--!' + window.getSelection().toString() + '-->');
 });
-vmapkey('gy', "added comma", function () {
+vmapkey('gcy', "added comma", function () {
     Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
 });
 
 // 보다 간단한 방법이 필요함 (vmapkey의 내부의 코드를 보지 못했음 )
-vmapkey('g1y', "delete first n character", function () {
+vmapkey('gdy', "delete first 1 character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
-vmapkey('g2y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(2));
-});
-vmapkey('g3y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(3));
-});
-vmapkey('g4y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(4));
-});
-vmapkey('g5y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(5));
-});
-vmapkey('g6y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(6));
-});
-vmapkey('g7y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(7));
-});
-vmapkey('g8y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(8));
-});
-vmapkey('g9y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(9));
+vmapkey('gry', "delete surronded", function () {
+    Clipboard.write(window.getSelection().toString().substr(1, -1));
 });
