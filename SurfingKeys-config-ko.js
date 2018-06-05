@@ -201,7 +201,7 @@ mapkey('<Ctrl-Alt-s>', '#12Open Chrome Settings', function () {
 
 // 정상적으로 동작하지 않음 
 // vscode bind
-mapkey('<Ctrl-Shift-x>', '#12Open Chrome extensions', function () {
+mapkey('<Ctrl-Shift-X>', '#12Open Chrome extensions', function () {
     tabOpenLink("chrome://extensions/");
 });
 // intellij bind
