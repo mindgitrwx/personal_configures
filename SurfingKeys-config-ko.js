@@ -194,6 +194,6 @@ vmapkey('gDy', "delete surronded", function () {
 mapkey('gs', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
-mapkey('<Ctrl-Alt-S>', '#12Open Chrome Settings', function () {
+mapkey('<Ctrl-Alt-s>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
