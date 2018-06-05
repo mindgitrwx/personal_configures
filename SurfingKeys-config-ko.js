@@ -240,8 +240,8 @@ map('l', 'Arrowright', {domain: 'map\.naver\.com/i'});
 */
 // 지도 이동 
 
-map('h', '<ArrowLeft>');
-map('j', '<ArrowDown>');
-map('k', '<ArrowUp>');
-map('l', '<Arrowright>');
+map( '<ArrowLeft>','h');
+map( '<ArrowDown>','j');
+map( '<ArrowUp>','k');
+map( '<Arrowright>','l');
 
