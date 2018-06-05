@@ -188,5 +188,5 @@ vmapkey('gdy', "delete first 1 character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
 vmapkey('gDy', "delete surronded", function () {
-    Clipboard.write(window.getSelection().toString().substr(1, -1));
+    Clipboard.write(window.getSelection().toString().slice(1, -1));
 });
