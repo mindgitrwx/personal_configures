@@ -220,10 +220,15 @@ mapkey('<Alt-F12>', '#12Open Chrome Settings', function () {
 });
 
 // vscode bind 동작하지 않음  
+mapkey('<Ctrl-\>', '#12Open Chrome extensions', function () {
+    RUNTIME("duplicateTab");
+    RUNTIME("newWindow");
+});
 mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
     RUNTIME("duplicateTab");
     RUNTIME("newWindow");
 });
+
 map('<Ctrl-V>', 'sm'); // markdown preview
 
 mapkey('zz', 'Choose a tab', function () {
