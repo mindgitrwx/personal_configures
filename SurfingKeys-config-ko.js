@@ -161,12 +161,21 @@ mapkey('"yy', "surround url with double quotation mark", function () {
 vmapkey('"y', "surround selection with doube quotation mark", function () {
     Clipboard.write('"' + window.getSelection().toString() + '"');
 });
-vmapkey('<y', "surround selection with doube quotation mark", function () {
+vmapkey('<y', "surround selection ", function () {
     Clipboard.write('<' + window.getSelection().toString() + '>');
 });
-vmapkey('(y', "surround selection with doube quotation mark", function () {
+vmapkey('(y', "surround selection ", function () {
     Clipboard.w > ite('(' + window.getSelection().toString() + ')');
 });
-vmapkey('[y', "surround selection with doube quotation mark", function () {
+vmapkey('[y', "surround selection ", function () {
     Clipboard.write('[' + window.getSelection().toString() + ']');
+});
+vmapkey('{y', "surround selection ", function () {
+    Clipboard.write('{' + window.getSelection().toString() + '}');
+});
+vmapkey('/*y', "surround selection ", function () {
+    Clipboard.write('/*' + window.getSelection().toString() + '*/');
+});
+vmapkey('<--!y', "surround selection ", function () {
+    Clipboard.write('<--!' + window.getSelection().toString() + '-->');
 });
