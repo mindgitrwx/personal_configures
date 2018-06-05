@@ -204,3 +204,5 @@ mapkey('<Ctrl-Shift-x>', '#12Open Chrome extensions', function () {
 });
 // intellij bind
 map('<Ctrl-E>', 'T');
+// intellij bind -
+map('<Alt-F12>', '<Ctrl-J>');
