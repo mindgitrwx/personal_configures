@@ -184,30 +184,30 @@ vmapkey('gy', "added comma", function () {
 });
 
 // 보다 간단한 방법이 필요함 (vmapkey의 내부의 코드를 보지 못했음 )
-vmapkey('1y', "delete first n character", function () {
+vmapkey('g1y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
-vmapkey('2y', "delete first n character", function () {
+vmapkey('g2y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(2));
 });
-vmapkey('3y', "delete first n character", function () {
+vmapkey('g3y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(3));
 });
-vmapkey('4y', "delete first n character", function () {
+vmapkey('g4y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(4));
 });
-vmapkey('5y', "delete first n character", function () {
+vmapkey('g5y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(5));
 });
-vmapkey('6y', "delete first n character", function () {
+vmapkey('g6y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(6));
 });
-vmapkey('7y', "delete first n character", function () {
+vmapkey('g7y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(7));
 });
-vmapkey('8y', "delete first n character", function () {
+vmapkey('g8y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(8));
 });
-vmapkey('9y', "delete first n character", function () {
+vmapkey('g9y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(9));
 });
