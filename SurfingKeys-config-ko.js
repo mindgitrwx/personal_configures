@@ -90,25 +90,12 @@ addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 mapkey('Q', '#8Open omnibar for word translation', function () {
     Front.openOmniquery({
         url: 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&dt=bd&q=',
-        /*
-         * or
-        url: function(q) {
-            return "https://api.shanbay.com/bdc/search/?word=" + q
-        },
-        */
         query: Visual.getWordUnderCursor(),
-        style: "opacity: 0.8;",
-        parseResult: function (res) {
-            var res = JSON.parse(res.text);
-            return [renderShanbay(res)];
-        }
+        style: 'opacity: 0.8;',
+        parseResult: res => [render(JSON.parse(res.text))]
     });
 });
-
-Visual.setTranslationService("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&dt=bd&q=", function (res) {
-    var res = JSON.parse(res.text);
-    return renderShanbay(res);
-});
+Visual.setTranslationService('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ja&dt=t&dt=bd&q=', res => render(JSON.parse(res.text)));
 
 /*
 mapkey('q', '#1Click on an Image or a button', function() {
