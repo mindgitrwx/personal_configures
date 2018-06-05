@@ -187,6 +187,6 @@ vmapkey('gcy', "added comma", function () {
 vmapkey('gdy', "delete first 1 character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
-vmapkey('gry', "delete surronded", function () {
+vmapkey('gDy', "delete surronded", function () {
     Clipboard.write(window.getSelection().toString().substr(1, -1));
 });
