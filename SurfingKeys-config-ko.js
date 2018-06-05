@@ -18,6 +18,7 @@ mapkey('<Ctrl-y>', 'Show me the money', function () {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
 
+settings.caseSensitive = true;
 //unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
 unmap('<Ctrl-6>');
 unmap('ob'); // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
@@ -213,6 +214,5 @@ mapkey('<Ctrl-X>', '#12Open Chrome extensions', function () {
 map('<Ctrl-E>', 'T');
 // intellij bind -
 mapkey('<Alt-F12>', '#12Open Chrome Settings', function () {
-    tabOpenLink("chrome://settings/");
+    tabOpenLink("chrome.send('inspect',[String(data.processId), String(data.routeId)])");
 });
-
