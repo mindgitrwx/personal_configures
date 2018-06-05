@@ -87,9 +87,9 @@ addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 //knowledge
 //blog
 
-mapkey('Q', '#8Open omnibar for word translation', function() {
+mapkey('Q', '#8Open omnibar for word translation', function () {
     Front.openOmniquery({
-        url: "https://m.endic.naver.com/search.nhn?searchOption=all&query=",
+        url: 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&dt=bd&q=',
         /*
          * or
         url: function(q) {
@@ -98,14 +98,14 @@ mapkey('Q', '#8Open omnibar for word translation', function() {
         */
         query: Visual.getWordUnderCursor(),
         style: "opacity: 0.8;",
-        parseResult: function(res) {
+        parseResult: function (res) {
             var res = JSON.parse(res.text);
-            return [ renderShanbay(res) ];
+            return [renderShanbay(res)];
         }
     });
 });
 
-Visual.setTranslationService("https://m.endic.naver.com/search.nhn?searchOption=all&query=", function (res) {
+Visual.setTranslationService("https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&dt=bd&q=", function (res) {
     var res = JSON.parse(res.text);
     return renderShanbay(res);
 });
