@@ -111,7 +111,6 @@ mapkey('q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", Hints.dispatchMouseClick);
     searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
 });
-
 mapkey('ya', '#7Copy a link URL to the clipboard', function() {
     Hints.create('*[href]', function(element) {
         Clipboard.write(element.href);
@@ -214,14 +213,27 @@ mapkey('<Ctrl-X>', '#12Open Chrome extensions', function () {
 });
 // intellij bind
 map('<Ctrl-E>', 'T');
+map('<Ctrl-N>', 'T');
 // intellij bind -
 mapkey('<Alt-F12>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome.send('inspect',[String(data.processId), String(data.routeId)])");
 });
 
-mapkey('zz', 'Choose a tab', function() {
+// vscode bind
+mapkey('<Ctrl-\>', '#12Open Chrome extensions', function () {
+    RUNTIME("duplicateTab");
+    RUNTIME("newWindow");
+});
+map('<Ctrl-V>', 'sm'); // markdown preview
+
+mapkey('zz', 'Choose a tab', function () {
     Front.chooseTab();
-}, {domain: /github\.com/i});
-mapkey('zz', 'Show usage', function() {
+}, {
+    domain: /github\.com/i
+});
+mapkey('zz', 'Show usage', function () {
     Front.showUsage();
-}, {domain: /google\.com/i});
+}, {
+    domain: /google\.com/i
+});
+
