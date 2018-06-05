@@ -158,7 +158,6 @@ mapkey('Q', '#1Click on an Image or a button', function () {
 mapkey('"yy', "surround url with double quotation mark", function () {
     Clipboard.write('"' + window.location.href + '"');
 });
-
 vmapkey('"y', "surround selection with doube quotation mark", function () {
     Clipboard.write('"' + window.getSelection().toString() + '"');
 });
@@ -182,6 +181,7 @@ vmapkey('<--!y', "surround selection ", function () {
 });
 
 // 보다 간단한 방법이 필요함 (vmapkey의 내부의 코드를 보지 못했음 )
+/*
 vmapkey('1y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
@@ -192,20 +192,21 @@ vmapkey('3y', "delete first n character", function () {
     Clipboard.write(window.getSelection().toString().substr(3));
 });
 vmapkey('4y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(1));
+    Clipboard.write(window.getSelection().toString().substr(4));
 });
 vmapkey('5y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(2));
+    Clipboard.write(window.getSelection().toString().substr(5));
 });
 vmapkey('6y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(3));
+    Clipboard.write(window.getSelection().toString().substr(6));
 });
 vmapkey('7y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(1));
+    Clipboard.write(window.getSelection().toString().substr(7));
 });
 vmapkey('8y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(2));
+    Clipboard.write(window.getSelection().toString().substr(8));
 });
 vmapkey('9y', "delete first n character", function () {
-    Clipboard.write(window.getSelection().toString().substr(3));
+    Clipboard.write(window.getSelection().toString().substr(9));
 });
+*/
