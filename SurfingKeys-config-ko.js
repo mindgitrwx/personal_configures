@@ -156,10 +156,11 @@ function copyElement(element) {
     })
 }
 mapkey('Q', '#1Click on an Image or a button', function () {
-    Hints.create("img", function (element) {
+    Hints.create("img, button", function (element) {
         copyElement(element);
     });
 });
+
 
 // surround  - Todo: nam of <
 mapkey('"yy', "surround url with double quotation mark", function () {
