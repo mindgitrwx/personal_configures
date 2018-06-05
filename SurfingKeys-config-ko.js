@@ -1,5 +1,5 @@
 /*
-Surfing key config
+Surfing keys config (SurfingKeys)
 Korean specific surfing key config
 jonghyeon.rw@gmail.com
 */
@@ -132,6 +132,7 @@ mapkey('q', '#1Click on an Image or a button', function () {
     });
 });
 
+/*
 function SelectText(element) {
     var doc = document;
     if (doc.body.createTextRange) {
@@ -163,14 +164,13 @@ mapkey('Q', '#1Click on an Image or a button', function () {
         alert("image copied!");
     });
 });
+*/
 
-
-// surround  - Todo: nam of <
+// surround   
 mapkey('"yy', "surround url with double quotation mark", function () {
     Clipboard.write('"' + window.location.href + '"');
 });
 
-// Todo : why it is not work
 vmapkey('"y', "surround selection with doube quotation mark", function () {
     Clipboard.write('"' + window.getSelection().toString() + '"');
 });
