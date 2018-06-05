@@ -182,11 +182,18 @@ vmapkey('<--!y', "surround selection ", function () {
 vmapkey('gcy', "added comma", function () {
     Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
 });
-
 // 보다 간단한 방법이 필요함 (vmapkey의 내부의 코드를 보지 못했음 )
 vmapkey('gdy', "delete first 1 character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
 vmapkey('gDy', "delete surronded", function () {
     Clipboard.write(window.getSelection().toString().slice(1, -1));
+});
+
+//setting 
+mapkey('gs', '#12Open Chrome Settings', function () {
+    tabOpenLink("chrome://settings/");
+});
+mapkey('<Ctrl-Alt-S>', '#12Open Chrome Settings', function () {
+    tabOpenLink("chrome://settings/");
 });
