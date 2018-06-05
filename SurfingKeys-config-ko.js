@@ -25,6 +25,7 @@ addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/sea
 addSearchAliasX('cE', 'chrome extension', 'https://chrome.google.com/webstore/search/');
 addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=');
 addSearchAliasX('W', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
+addSearchAliasX('gh', 'github', 'https://github.com/search?q=', 'o');
 
 //sns
 addSearchAliasX('fB', 'facebook(페이스북)', 'https://www.facebook.com/search/top/?q=');
