@@ -35,11 +35,6 @@ addSearchAliasX('gh', 'github', 'https://github.com/search?q=', 'o');
 
 //sns
 addSearchAliasX('fB', 'facebook(페이스북)', 'https://www.facebook.com/search/top/?q=');
-addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
-addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
-addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
-addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
-addSearchAliasX('fB', '계산기(울프럼알파)', 'https://www.facebook.com/search/top/?q=');
 
 //shorten - what is.. who is.. where is..  
 addSearchAliasX('wC', '분류', 'https://www.google.com/search?q=classfication+of');
