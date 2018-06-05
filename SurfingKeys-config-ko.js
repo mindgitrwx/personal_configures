@@ -179,7 +179,7 @@ vmapkey('/*y', "surround selection ", function () {
 vmapkey('<--!y', "surround selection ", function () {
     Clipboard.write('<--!' + window.getSelection().toString() + '-->');
 });
-vmapkey(',y', "added comma", function () {
+vmapkey('gy', "added comma", function () {
     Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
 });
 
