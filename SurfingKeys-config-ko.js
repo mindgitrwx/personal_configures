@@ -202,3 +202,5 @@ mapkey('<Ctrl-Alt-s>', '#12Open Chrome Settings', function () {
 mapkey('<Ctrl-Shift-x>', '#12Open Chrome extensions', function () {
     tabOpenLink("chrome://extensions/");
 });
+// intellij, vscode bind
+map('<Ctrl-Shift-e>', 'T');
