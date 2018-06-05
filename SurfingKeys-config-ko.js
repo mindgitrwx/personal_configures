@@ -203,4 +203,4 @@ mapkey('<Ctrl-Shift-x>', '#12Open Chrome extensions', function () {
     tabOpenLink("chrome://extensions/");
 });
 // intellij bind
-map('T', '<Ctrl-Shift-e>');
+map('<Ctrl-E>', 'T');
