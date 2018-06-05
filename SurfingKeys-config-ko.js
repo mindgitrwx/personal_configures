@@ -232,7 +232,9 @@ mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
 map('<Ctrl-V>', 'sm'); // markdown preview
 
 // 지도 이동 
+/*
 map('h', 'ArrowLeft', {domain: 'map\.naver\.com/i'});
 map('j', 'ArrowDown',  {domain: 'map\.naver\.com/i'});
 map('k', 'ArrowUp', {domain: 'map\.naver\.com/i'});
 map('l', 'Arrowright', {domain: 'map\.naver\.com/i'});
+*/
