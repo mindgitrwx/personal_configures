@@ -131,33 +131,35 @@ mapkey('q', '#1Click on an Image or a button', function () {
     });
 });
 
-//How to work as 
-function copyElement(element) {
-  var text = document.createElement("textarea");
-
-  document.oncopy = function(e) {
-    e.clipboardData.setData("text/plain", text.value);
-    console.log(e.clipboardData.getData("text/plain"));
-  }
-
-  fetch(element.src.replace(/^(http:|https:)/, location.protocol))
-    .then(function(response) {
-      return response.blob()
-    })
-    .then(function(blob) {
-      var reader = new FileReader();
-      reader.onload = function() {
-        document.body.appendChild(text);
-        text.value = reader.result;
-        text.select();
-        alert("Press CTRL+C to copy image to clipboard");
-      }
-      reader.readAsDataURL(blob)
-    })
+function SelectText(element) {
+    var doc = document;
+    if (doc.body.createTextRange) {
+        var range = document.body.createTextRange();
+        range.moveToElementText(element);
+        range.select();
+    } else if (window.getSelection) {
+        var selection = window.getSelection();
+        var range = document.createRange();
+        range.selectNodeContents(element);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
 }
+
 mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
-        copyElement(element);
+        $(this).attr("contenteditable", true);
+        //Select the image
+        SelectText($(this).get(0));
+        //Execute copy Command
+        //Note: This will ONLY work directly inside a click listenner
+        document.execCommand('copy');
+        //Unselect the content
+        window.getSelection().removeAllRanges();
+        //Make the container Div uneditable again
+        $(this).removeAttr("contenteditable");
+        //Success!!
+        alert("image copied!");
     });
 });
 
@@ -175,7 +177,7 @@ vmapkey('<y', "surround selection with doube quotation mark", function () {
     Clipboard.write('<' + window.getSelection().toString() + '>');
 });
 vmapkey('(y', "surround selection with doube quotation mark", function () {
-    Clipboard.w>ite('(' + window.getSelection().toString() + ')');
+    Clipboard.w > ite('(' + window.getSelection().toString() + ')');
 });
 vmapkey('[y', "surround selection with doube quotation mark", function () {
     Clipboard.write('[' + window.getSelection().toString() + ']');
