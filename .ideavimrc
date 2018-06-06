@@ -1,0 +1,108 @@
+set hlsearch
+set scrolloff=3
+set ignorecase smartcase
+set showmode
+set history=1000
+
+" easy system clipboard copy/paste
+noremap <space>y "*y
+noremap <space>Y "*Y
+noremap <space>p "*p
+noremap <space>P "*P
+
+" easy window navigation
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
+nnoremap <c-k> <c-w>k
+nnoremap <a-h> gT
+nnoremap <a-l> gt
+nnoremap <c-s-tab> gT
+nnoremap <c-tab> gt
+
+" clear the search buffer when hitting return
+nnoremap <space><cr> :nohlsearch<cr>
+
+" options
+nnoremap cow :action EditorToggleUseSoftWraps<cr>
+nnoremap col :action EditorToggleShowWhitespaces<cr>
+
+" actions
+nnoremap ,a :action GotoAction<cr>
+nnoremap ,e :action SearchEverywhere<cr>
+
+nnoremap ,q :action CloseContent<cr>
+nnoremap ,Q :action ReopenClosedTab<cr>
+
+nnoremap ,\ :action VimFilePrevious<cr>
+nnoremap ,b :action ToggleLineBreakpoint<cr>
+
+nnoremap ,S :action Switcher<cr>
+nnoremap ,F :action FileStructurePopup<cr>
+>
+nnoremap ,u :action FindUsages<cr>
+
+" code insertion
+nnoremap ,g :action Generate<cr>
+
+" code navigation
+nnoremap ,] :action GotoImplementation<cr>
+nnoremap ,[ :action GotoSuperMethod<cr>
+nnoremap ,k :action HighlightUsagesInFile<cr>
+nnoremap ,c :action GotoClass<cr>
+nnoremap ,f :action GotoFile<cr>
+nnoremap ,s :action GotoSymbol<cr>
+
+nnoremap ,gt :action GotoTest<cr
+
+" Togle 
+nnoremap ,, :action NextTab<cr>
+
+" Quick
+nnoremap ,qA action QuickActionPopup<cr> 
+nnoremap ,qa action QuickActions<cr>    
+nnoremap ,qc action QuickChangeScheme<cr>
+nnoremap ,qd action QuickDocCopy<cr>    
+nnoremap ,qe action QuickEvaluateExpression<cr>  
+nnoremap ,qf action QuickFixes<cr>              
+nnoremap ,qi action QuickImplementations<cr>   
+nnoremap ,qj action QuickJavaDoc<cr>          
+
+" newfile 
+nnoremap ,nf :action NewFile<cr>
+nnoremap ,nc :action NewClass<cr>
+nnoremap ,ng :action NewGroup<cr>
+nnoremap ,nm :action NewModule<cr>
+nnoremap ,np :action NewProject<cr>
+
+" Debug
+nnoremap \r :action RunClass<cr>
+nnoremap \R :action Run<cr>
+nnoremap \d :action DebugClass<cr>
+nnoremap \D :action Debug<cr>
+nnoremap \c :action CheckStyleCurrentFileAction<cr>
+
+" code refactoring
+nnoremap <space>rr :action RenameElement<cr>
+
+" unimpaired mappings
+nnoremap [, O<esc>j
+nnoremap ], o<esc>k
+nnoremap [q :action PreviousOccurence<cr>
+nnoremap ]q :action NextOccurence<cr>
+nnoremap [m :action MethodUp<cr>
+nnoremap ]m :action MethodDown<cr>
+nnoremap [c :action VcsShowPrevChangeMarker<crF
+nnoremap ]c :action VcsShowNextChangeMarker<cr>
+
+" built-in navigation to navigated items works better
+nnoremap <c-o> :action Back<cr>
+nnoremap <c-i> :action Forward<cr>
+" but preserve ideavim defaults
+nnoremap g<c-o> <c-o>
+nnoremap g<c-i> <c-i>
+
+" built in search looks better
+nnoremap / :action Find<cr>
+" but preserve ideavim search
+nnoremap g/ /
