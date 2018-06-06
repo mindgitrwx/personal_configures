@@ -36,6 +36,7 @@ removeSearchAliasX('s')
 
 //General
 addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
+addSearchAliasX('G', 'Google', 'https://www.google.com/search?q=');
 
 //map
 addSearchAliasX('nM', 'navermap', 'https://map.naver.com/?query=');
