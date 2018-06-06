@@ -17,9 +17,7 @@ jonghyeon.rw@gmail.com
 mapkey('<Ctrl-y>', 'Show me the money', function () {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
-
-settings.caseSensitive = true;
-settings.omnibarSuggestion = true;
+settings.caseSensitive = true; settings.omnibarSuggestion = true;
 
 //unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
 unmap('<Ctrl-6>');
@@ -27,15 +25,18 @@ unmap('ob'); // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap
 unmap('og');
 unmap('ow');
 
+//General
+addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
+
 //map
-addSearchAliasX('mN', 'navermap', 'https://map.naver.com/?query=');
-addSearchAliasX('mG', '구글맵', 'https://www.google.com/maps?q=');
+addSearchAliasX('nM', 'navermap', 'https://map.naver.com/?query=');
+addSearchAliasX('gM', '구글맵', 'https://www.google.com/maps?q=');
 addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
 //coding
-addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
 addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
-addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/');
+addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
+addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
 addSearchAliasX('cE', 'chrome extension', 'https://chrome.google.com/webstore/search/');
 addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=');
 addSearchAliasX('W', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
@@ -64,8 +65,11 @@ addSearchAliasX('ppT', 'ppt', 'https://www.google.com/search?hl=en&biw=1600&bih=
 //dictionary
 addSearchAliasX('t', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
 addSearchAliasX('T', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
-addSearchAliasX('nA', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
-addSearchAliasX('nE', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
+addSearchAliasX('tA', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+addSearchAliasX('tE', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
+addSearchAliasX('tL', '가사해석', 'https://www.google.com/search?q=가사+해석+');
+addSearchAliasX('tL', '가사해석', 'https://www.google.com/search?q=가사+해석+');
+addSearchAliasX('ll', '가사', 'https://www.google.com/search?q=lyrics+of+');
 
 //shop
 addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
@@ -77,12 +81,13 @@ addSearchAliasX('sT', '티몬', 'http://search.ticketmonster.co.kr/search/?keywo
 addSearchAliasX('sY', 'yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
 
 //music
-addSearchAliasX('sc', 'soundcloud', 'https://soundcloud.com/search?q=');
-addSearchAliasX('scI', 'soundcloudid', 'https://soundcloud.com/');
-addSearchAliasX('sp', 'spotify', 'https://open.spotify.com/search/results/');
-
-addSearchAliasX('spA', 'spotify', 'https://open.spotify.com/search/albums/');
+addSearchAliasX('msC', 'soundcloud', 'https://soundcloud.com/search?q=');
+addSearchAliasX('msI', 'soundcloudid', 'https://soundcloud.com/');
+addSearchAliasX('mS', 'spotify', 'https://open.spotify.com/search/results/');
+addSearchAliasX('msA', 'spotify', 'https://open.spotify.com/search/albums/');
 addSearchAliasX('mL', 'melon', 'https://www.melon.com/search/total/index.htm?q=');
+addSearchAliasX('mH', 'hiphople', 'http://hiphople.com/index.php?_filter=search&mid=lyrics&search_keyword=');
+addSearchAliasX('mG', 'Genius', 'https://genius.com/search?q=');
 
 //Video
 addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
