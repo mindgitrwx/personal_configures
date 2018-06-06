@@ -24,7 +24,6 @@ settings.defaultSearchEngine = 'L';
 
 //unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
 unmap('<Ctrl-6>');
-unmap('<Ctrl-6>');
 
 mapkey('on', '#3Open Firefox newtab', function() {
     tabOpenLink("www.google.com");
