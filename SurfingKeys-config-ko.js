@@ -14,6 +14,7 @@ map('<Ctrl-E>', 'T');
 이런 식으로 맵핑해야 함 
 jonghyeon.rw@gmail.com
 */
+
 mapkey('<Ctrl-y>', 'Show me the money', function () {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
@@ -23,12 +24,12 @@ settings.defaultSearchEngine = 'L';
 
 //unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
 unmap('<Ctrl-6>');
-unmap('ob'); // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
-unmap('og');
-unmap('ow');
-unmap('sb'); // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
-unmap('sg');
-unmap('sw');
+
+// 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
+removeSearchAliasX('b')
+removeSearchAliasX('g')
+removeSearchAliasX('w')
+removeSearchAliasX('s')
 
 //General
 addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
@@ -93,6 +94,8 @@ addSearchAliasX('msA', 'spotify', 'https://open.spotify.com/search/albums/');
 addSearchAliasX('mL', 'melon', 'https://www.melon.com/search/total/index.htm?q=');
 addSearchAliasX('mH', 'hiphople', 'http://hiphople.com/index.php?_filter=search&mid=lyrics&search_keyword=');
 addSearchAliasX('mG', 'Genius', 'https://genius.com/search?q=');
+addSearchAliasX('mP', 'pitchfork', 'https://pitchfork.com/search/?query=');
+addSearchAliasX('mC', 'metacritic', 'http://www.metacritic.com/search/all/');
 
 //Video
 addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
