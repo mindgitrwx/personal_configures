@@ -24,7 +24,11 @@ settings.defaultSearchEngine = 'L';
 
 //unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
 unmap('<Ctrl-6>');
+unmap('<Ctrl-6>');
 
+mapkey('on', '#3Open Firefox newtab', function() {
+    tabOpenLink("www.google.com");
+});
 // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
 removeSearchAliasX('b')
 removeSearchAliasX('g')
@@ -118,9 +122,7 @@ mapkey('Q', '#8Open omnibar for word translation', function () {
     });
 });
 Visual.setTranslationService('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ja&dt=t&dt=bd&q=', res => render(JSON.parse(res.text)));
-
-/*
-mapkey('q', '#1Click on an Image or a button', function() {
+/* mapkey('q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", Hints.dispatchMouseClick);
     searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
 });
@@ -261,9 +263,6 @@ map( '<Arrowright>','l');
 */
 
 map( 'h','<ArrowLeft>');
-
 map( 'j' ,'<ArrowDown>' );
-
 map( 'k' ,'<ArrowUp>' );
-
 map( 'l' ,'<Arrowright>' );
