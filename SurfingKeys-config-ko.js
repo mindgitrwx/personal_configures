@@ -19,6 +19,8 @@ mapkey('<Ctrl-y>', 'Show me the money', function () {
 });
 settings.caseSensitive = true; settings.omnibarSuggestion = true;
 
+settings.defaultSearchEngine = 'L';
+
 //unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
 unmap('<Ctrl-6>');
 unmap('ob'); // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
