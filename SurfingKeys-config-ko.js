@@ -24,6 +24,9 @@ unmap('<Ctrl-6>');
 unmap('ob'); // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
 unmap('og');
 unmap('ow');
+unmap('sb'); // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
+unmap('sg');
+unmap('sw');
 
 //General
 addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
