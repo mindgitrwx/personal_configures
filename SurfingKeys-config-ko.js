@@ -15,6 +15,8 @@ map('<Ctrl-E>', 'T');
 jonghyeon.rw@gmail.com
 */
 
+var namuPage = 0;
+
 mapkey('<Ctrl-y>', 'Show me the money', function () {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
@@ -362,7 +364,14 @@ mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
 map('<Ctrl-V>', 'sm'); // markdown preview
 
 mapkey('D', '나무위키 목차 스크롤 테스트', function () {
-    document.getElementById('s-1').scrollIntoView();
+    namuPage++;
+    pageId = 's-' + namuPage.toString();
+    document.getElementById(pageId).scrollIntoView();
+});
+mapkey('U', '나무위키 목차 스크롤 테스트', function () {
+    if(nPage != 0){nPage--;} 
+    pageId = 's-' + nPage.toString();
+    document.getElementById(pageId).scrollIntoView();
 });
 // 지도 이동 
 /*
