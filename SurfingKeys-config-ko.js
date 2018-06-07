@@ -174,6 +174,31 @@ mapkey('Q', '#1Click on an Image or a button', function () {
 });
 */
 
+function renderGoogleTranslate(res) {
+    var exp = res.msg;
+    if (res.data.definition) {
+        var tmp = [];
+        tmp.push('<div>{0}</div>'.format(res.data.definition));
+        exp = '<div>{0}</div>'.format(tmp.join('\n'));
+    }
+    return exp;
+}
+mapkey('Q', '#8Open omnibar for word translation', function() {
+    Front.openOmniquery({
+        url: "https://translate.google.cn/#auto/en/",
+        query: Visual.getWordUnderCursor(),
+        style: "opacity: 0.3;",
+        parseResult: function(res) {
+            var res = JSON.parse(res.text);
+            return [ renderGoogleTranslate(res) ];
+        }
+    });
+});
+Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(res) {
+    var res = JSON.parse(res.text);
+    return renderShanbay(res);
+});
+
 // surround   
 mapkey('"yy', "surround url with double quotation mark", function () {
     Clipboard.write('"' + window.location.href + '"');
@@ -202,7 +227,6 @@ vmapkey('<--!y', "surround selection ", function () {
 vmapkey('gcy', "added comma", function () {
     Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
 });
-
 mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function() {
     var linksToYank = [];
     Hints.create('*[href]', function(element) {
@@ -210,6 +234,7 @@ mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function() {
         Clipboard.write(linksToYank.join('\n'));
     }, {multipleHits: true});
 });
+
 // 보다 간단한 방법이 필요함 (vmapkey의 내부의 코드를 보지 못했음 )
 vmapkey('gdy', "delete first 1 character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));

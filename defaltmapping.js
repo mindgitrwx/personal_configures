@@ -318,7 +318,7 @@ mapkey('Q', '#8Open omnibar for word translation', function() {
         },
         */
         query: Visual.getWordUnderCursor(),
-        style: "opacity: 0.8;",
+        style: "opacity: 0.3;",
         parseResult: function(res) {
             var res = JSON.parse(res.text);
             return [ renderShanbay(res) ];
@@ -329,6 +329,7 @@ Visual.setTranslationService("https://api.shanbay.com/bdc/search/?word=", functi
     var res = JSON.parse(res.text);
     return renderShanbay(res);
 });
+
 mapkey('b', '#8Open a bookmark', function() {
     Front.openOmnibar(({type: "Bookmarks"}));
 });
