@@ -70,12 +70,11 @@ addSearchAliasX('cpP', 'cpp', 'https://www.google.com/search?hl=en&biw=1600&bih=
 addSearchAliasX('hwP', 'hwp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Ahwp+');
 addSearchAliasX('ppT', 'ppt', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Appt+');
 
-//dictionary
+//translation
 addSearchAliasX('t', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
 addSearchAliasX('T', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
 addSearchAliasX('tA', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
 addSearchAliasX('tE', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
-addSearchAliasX('tL', '가사해석', 'https://www.google.com/search?q=가사+해석+');
 addSearchAliasX('tL', '가사해석', 'https://www.google.com/search?q=가사+해석+');
 addSearchAliasX('ll', '가사', 'https://www.google.com/search?q=lyrics+of+');
 
@@ -85,19 +84,25 @@ addSearchAliasX('nM', 'navermap', 'https://map.naver.com/?query=');
 addSearchAliasX('nA', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
 addSearchAliasX('nE', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 
+//Damm 
+addSearchAliasX('D', '다음', 'https://search.daum.net/search?w=');
+addSearchAliasX('dA', '다음 사전all', 'http://dic.daum.net/search.do?q=');
+addSearchAliasX('dE', '다음 사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
+addSearchAliasX('dM', '다음 map', 'http://local.daum.net/map/index.jsp?q=');
+
 //shop
 addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
-addSearchAliasX('sA', '아마존', 'https://www.amazon.com/s/?field-keywords=');
+addSearchAliasX('sA', '아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민 
 addSearchAliasX('sC', '쿠팡', 'http://www.coupang.com/np/search?component=&q=');
 addSearchAliasX('sD', '다나와', 'http://search.danawa.com/dsearch.php?k1=');
 addSearchAliasX('sI', '인터파크', 'http://isearch.interpark.com/isearch?q=');
 addSearchAliasX('sT', '티몬', 'http://search.ticketmonster.co.kr/search/?keyword=');
 addSearchAliasX('sY', 'yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
 addSearchAliasX('sW', '위메프', 'http://search.wemakeprice.com/search?search_cate=top&search_keyword=');
-addSearchAliasX('sO', '옥션', 'http://search.ticketmonster.co.kr/search/?keyword=');
-
+addSearchAliasX('saU', '옥션', 'http://search.auction.co.kr/search/search.aspx?keyword=');
 addSearchAliasX('sG', '지마켓', 'http://search.ticketmonster.co.kr/search/?keyword=');
-addSearchAliasX('s11', '11번가', 'http://search.ticketmonster.co.kr/search/?keyword=');
+addSearchAliasX('s11', '11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
+
 //music
 addSearchAliasX('msC', 'soundcloud', 'https://soundcloud.com/search?q=');
 addSearchAliasX('msI', 'soundcloudid', 'https://soundcloud.com/');
@@ -108,6 +113,7 @@ addSearchAliasX('mH', 'hiphople', 'http://hiphople.com/index.php?_filter=search&
 addSearchAliasX('mG', 'Genius', 'https://genius.com/search?q=');
 addSearchAliasX('mP', 'pitchfork', 'https://pitchfork.com/search/?query=');
 addSearchAliasX('mC', 'metacritic', 'http://www.metacritic.com/search/all/');
+
 //Video
 addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
 
