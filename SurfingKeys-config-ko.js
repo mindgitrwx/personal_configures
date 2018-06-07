@@ -238,24 +238,43 @@ vmapkey('~y', "surround selection ", function () {
     var UpperSelected = window.getSelection().toString()
     Clipboard.write(UpperSelected.toUpperCase());
 });
-vmapkey('gcy', "added comma", function () {
+vmapkey('~jy', "remove enter", function () {
+    Clipboard.write(window.getSelection().toString().replace(/\n/g, " "));
+});
+vmapkey('~cy', "added comma", function () {
     Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
 });
-
+vmapkey('~dy', "delete first 1 character", function () {
+    Clipboard.write(window.getSelection().toString().substr(1));
+});
+vmapkey('~Dy', "delete surronded", function () {
+    Clipboard.write(window.getSelection().toString().slice(1, -1));
+});
+vmapkey('~sy', "remove special character", function () {
+    Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9]/ig, "_"));
+});
+// markdown
+vmapkey('miy', "markdown italic", function () {
+    Clipboard.write('*' + window.getSelection().toString() + '*');
+});
+vmapkey('mby', "markdown bold", function () {
+    Clipboard.write('**' + window.getSelection().toString() + '**');
+});
+vmapkey('mly', "markdown link", function () {
+    Clipboard.write('[replaceit](' + window.getSelection().toString() + ')');
+});
+vmapkey('msy', "markdown Strikethrough", function () {
+    Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
+});
+vmapkey('~sy', "remove special character", function () {
+    Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9]/ig, "_"));
+});
 mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function() {
     var linksToYank = [];
     Hints.create('*[href]', function(element) {
         linksToYank.push('"' + element.href + '"');
         Clipboard.write(linksToYank.join('\n'));
     }, {multipleHits: true});
-});
-
-// 보다 간단한 방법이 필요함 (vmapkey의 내부의 코드를 보지 못했음 )
-vmapkey('gdy', "delete first 1 character", function () {
-    Clipboard.write(window.getSelection().toString().substr(1));
-});
-vmapkey('gDy', "delete surronded", function () {
-    Clipboard.write(window.getSelection().toString().slice(1, -1));
 });
 
 //setting 
@@ -289,7 +308,6 @@ mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
     RUNTIME("duplicateTab");
     RUNTIME("newWindow");
 });
-
 map('<Ctrl-V>', 'sm'); // markdown preview
 
 // 지도 이동 
