@@ -260,12 +260,15 @@ map( '<ArrowDown>','j');
 map( '<ArrowUp>','k');
 map( '<Arrowright>','l');
 */
+
+//naver map
+/*
 unmap( 'h' );
 unmap( 'j' );
 unmap( 'k' );
 unmap( 'l' );
-
 map( 'h','<ArrowLeft>');
 map( 'j' ,'<ArrowDown>' );
 map( 'k' ,'<ArrowUp>' );
 map( 'l' ,'<Arrowright>' );
+*/
