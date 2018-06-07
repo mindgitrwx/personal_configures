@@ -253,6 +253,15 @@ vmapkey('~Dy', "delete surronded", function () {
 vmapkey('~sy', "remove special character", function () {
     Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9]/ig, "_"));
 });
+vmapkey('~dy', "markdown Strikethrough", function () {
+    Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
+});
+
+//Todo
+vmapkey('~diy', "remove inner dobule quoates strings", function () {
+    Clipboard.write('~~ ' + window.getSelection().toString().replace(/".*"/, '""') + ' ~~');
+});
+alphabet = alphabet.replace(/H.*S/, 'HS')
 // markdown
 vmapkey('miy', "markdown italic", function () {
     Clipboard.write('*' + window.getSelection().toString() + '*');
@@ -266,9 +275,7 @@ vmapkey('mly', "markdown link", function () {
 vmapkey('msy', "markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
-vmapkey('~sy', "remove special character", function () {
-    Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9]/ig, "_"));
-});
+// etc
 mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function() {
     var linksToYank = [];
     Hints.create('*[href]', function(element) {
@@ -304,6 +311,7 @@ mapkey('<Ctrl-\>', '#12Open Chrome extensions', function () {
     RUNTIME("duplicateTab");
     RUNTIME("newWindow");
 });
+//todo
 mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
     RUNTIME("duplicateTab");
     RUNTIME("newWindow");
