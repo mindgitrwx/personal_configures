@@ -19,7 +19,6 @@ mapkey('<Ctrl-y>', 'Show me the money', function () {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
 });
 settings.caseSensitive = true; settings.omnibarSuggestion = true;
-
 settings.defaultSearchEngine = 'L';
 
 //unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
@@ -261,6 +260,10 @@ map( '<ArrowDown>','j');
 map( '<ArrowUp>','k');
 map( '<Arrowright>','l');
 */
+unmap( 'h' );
+unmap( 'j' );
+unmap( 'k' );
+unmap( 'l' );
 
 map( 'h','<ArrowLeft>');
 map( 'j' ,'<ArrowDown>' );
