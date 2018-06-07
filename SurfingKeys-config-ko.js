@@ -375,7 +375,7 @@ mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
     pageId = 's-' + namuPage.toString();
     document.getElementById(pageId).scrollIntoView();
 },{domain: 'namu\.wiki\.com/i'});
-
+/*
 // 아직 구현되지 않음
 mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     wikiPage++;
@@ -399,6 +399,8 @@ mapkey('U', '스택오버플로우 답변 up스크롤', function () {
     pageId =  + 'tocsection-1'+ wikiPage.toString();
     document.getElementById(pageId).scrollIntoView();
 },{domain: 'en\.wikipedia\.org/i'});
+*/
+
 //네이버 맵 지도 이동
 /*
 map('h', 'ArrowLeft', );
