@@ -38,7 +38,6 @@ addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q
 addSearchAliasX('G', 'Google', 'https://www.google.com/search?q=');
 
 //map
-addSearchAliasX('nM', 'navermap', 'https://map.naver.com/?query=');
 addSearchAliasX('gM', '구글맵', 'https://www.google.com/maps?q=');
 addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
@@ -80,6 +79,12 @@ addSearchAliasX('tL', '가사해석', 'https://www.google.com/search?q=가사+�
 addSearchAliasX('tL', '가사해석', 'https://www.google.com/search?q=가사+해석+');
 addSearchAliasX('ll', '가사', 'https://www.google.com/search?q=lyrics+of+');
 
+//navers
+addSearchAliasX('N', 'naver', 'https://www.naver.com/?query=');
+addSearchAliasX('nM', 'navermap', 'https://map.naver.com/?query=');
+addSearchAliasX('nA', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+addSearchAliasX('nE', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
+
 //shop
 addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
 addSearchAliasX('sA', '아마존', 'https://www.amazon.com/s/?field-keywords=');
@@ -88,7 +93,11 @@ addSearchAliasX('sD', '다나와', 'http://search.danawa.com/dsearch.php?k1=');
 addSearchAliasX('sI', '인터파크', 'http://isearch.interpark.com/isearch?q=');
 addSearchAliasX('sT', '티몬', 'http://search.ticketmonster.co.kr/search/?keyword=');
 addSearchAliasX('sY', 'yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
+addSearchAliasX('sW', '위메프', 'http://search.wemakeprice.com/search?search_cate=top&search_keyword=');
+addSearchAliasX('sO', '옥션', 'http://search.ticketmonster.co.kr/search/?keyword=');
 
+addSearchAliasX('sG', '지마켓', 'http://search.ticketmonster.co.kr/search/?keyword=');
+addSearchAliasX('s11', '11번가', 'http://search.ticketmonster.co.kr/search/?keyword=');
 //music
 addSearchAliasX('msC', 'soundcloud', 'https://soundcloud.com/search?q=');
 addSearchAliasX('msI', 'soundcloudid', 'https://soundcloud.com/');
@@ -207,6 +216,9 @@ mapkey('Q', '#8Open omnibar for word translation', function() {
 Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(res) {
     var res = JSON.parse(res.text);
     return renderShanbay(res);
+});
+mapkey('yk', "copy url before keyword insertion", function () {
+    Clipboard.write(window.location.href.split('=')[0]);
 });
 // surround   
 mapkey('"yy', "surround url with double quotation mark", function () {
