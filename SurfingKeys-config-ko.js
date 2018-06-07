@@ -208,7 +208,6 @@ Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(r
     var res = JSON.parse(res.text);
     return renderShanbay(res);
 });
-
 // surround   
 mapkey('"yy', "surround url with double quotation mark", function () {
     Clipboard.write('"' + window.location.href + '"');
@@ -251,7 +250,7 @@ vmapkey('~Dy', "delete surronded", function () {
     Clipboard.write(window.getSelection().toString().slice(1, -1));
 });
 vmapkey('~sy', "remove special character", function () {
-    Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9]/ig, "_"));
+    Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9]/ig, ""));
 });
 vmapkey('~dy', "markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
