@@ -189,7 +189,7 @@ mapkey('Q', '#8Open omnibar for word translation', function() {
         query: Visual.getWordUnderCursor(),
         style: "opacity: 0.3;",
         parseResult: function(res) {
-            var res = JSON.parse(res.text);
+            var res = JSON.parse(res.prev);
             return [ renderGoogleTranslate(res) ];
         }
     });
