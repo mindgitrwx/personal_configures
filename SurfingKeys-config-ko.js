@@ -214,7 +214,7 @@ mapkey('"yy', "surround url with double quotation mark", function () {
     Clipboard.write('"' + window.location.href + '"');
 });
 vmapkey('"y', "surround selection with doube quotation mark", function () {
-    Clipboard.write('"' + window.getSelection().toString() + '"');
+    Clipboard.write('"' + window.getSelection().toString().replace(/\n/g, " ") + '"');
 });
 vmapkey('<y', "surround selection ", function () {
     Clipboard.write('<' + window.getSelection().toString() + '>');
@@ -257,12 +257,14 @@ vmapkey('~dy', "markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
 //Todo
+/*
 vmapkey('~diy', "remove inner dobule quoates strings", function () {
     Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
 });
 vmapkey('~siy', "remove inner single quoates strings", function () {
     Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
 });
+*/
 // markdown
 vmapkey('miy', "markdown italic", function () {
     Clipboard.write('*' + window.getSelection().toString() + '*');
