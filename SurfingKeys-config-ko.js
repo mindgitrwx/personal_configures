@@ -41,17 +41,35 @@ addSearchAliasX('G', 'Google', 'https://www.google.com/search?q=');
 addSearchAliasX('gM', '구글맵', 'https://www.google.com/maps?q=');
 addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
-//coding
+//coding -- 미완성
 addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
-addSearchAliasX('cE', 'chrome extension', 'https://chrome.google.com/webstore/search/');
-addSearchAliasX('M', 'math (수학수식계산)', 'https://www.searchonmath.com/result?equation=');
-addSearchAliasX('W', '계산기(울프럼알파)', 'https://www.wolframalpha.com/input/?i=');
 addSearchAliasX('gH', 'github', 'https://github.com/search?q=', 'o');
+
+//language -- 
+//
+addSearchAliasX('lJ', 'Javascript', 'https://www.google.com/search?q=Javascript+');
+addSearchAliasX('lj', 'java', 'https://www.google.com/search?q=Java+');
+//addSearchAliasX('lC', 'C++', 'https://www.google.com/search?q=C++');
+addSearchAliasX('lc', 'c', 'https://www.google.com/search?q=c+language+');
+addSearchAliasX('l#', 'C#', 'https://www.google.com/search?q=c%23+');
+addSearchAliasX('lR', 'R', 'https://www.google.com/search?q=languag+');
+addSearchAliasX('lr', 'Ruby', 'https://www.google.com/search?q=Ruby+');
+addSearchAliasX('lP', 'Python', 'https://www.google.com/search?q=Python+');
+addSearchAliasX('lp', 'php', 'https://www.google.com/search?q=php+');
+addSearchAliasX('lK', 'Kotlin', 'https://www.google.com/search?q=Kotlin+');
+addSearchAliasX('lS', 'Swi=t', 'https://www.google.com/search?q=Swift+');
+addSearchAliasX('lQ', 'SQL Query', 'https://www.google.com/search?q=SQL+');
+addSearchAliasX('ls', 'Shell script', 'https://www.google.com/search?q=Shell+Schript+');
+addSearchAliasX('lT', 'Typescript', 'https://www.google.com/search?q=TypeScript+');
+addSearchAliasX('lH', 'HTML', 'https://www.google.com/search?q=HTML+');
 
 //sns
 addSearchAliasX('fB', 'facebook(페이스북)', 'https://www.facebook.com/search/top/?q=');
+addSearchAliasX('tW', 'twitter', 'https://twitter.com/search?q=');
+addSearchAliasX('ig', 'instagram HashTag', 'https://www.instagram.com/explore/tags/');
+addSearchAliasX('rD', 'reddit', 'https://www.reddit.com/search?q=');
 
 //shorten - what is.. who is.. where is..  
 addSearchAliasX('wC', '분류', 'https://www.google.com/search?q=classfication+of');
@@ -82,11 +100,13 @@ addSearchAliasX('ll', '가사', 'https://www.google.com/search?q=lyrics+of+');
 addSearchAliasX('N', 'naver', 'https://www.naver.com/?query=');
 addSearchAliasX('nM', 'navermap', 'https://map.naver.com/?query=');
 addSearchAliasX('nA', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+addSearchAliasX('nD', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
 addSearchAliasX('nE', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 
 //Damm 
 addSearchAliasX('D', '다음', 'https://search.daum.net/search?w=');
 addSearchAliasX('dA', '다음 사전all', 'http://dic.daum.net/search.do?q=');
+addSearchAliasX('dD', '다음 사전all', 'http://dic.daum.net/search.do?q=');
 addSearchAliasX('dE', '다음 사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 addSearchAliasX('dM', '다음 map', 'http://local.daum.net/map/index.jsp?q=');
 
@@ -100,8 +120,11 @@ addSearchAliasX('sT', '티몬', 'http://search.ticketmonster.co.kr/search/?keywo
 addSearchAliasX('sY', 'yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
 addSearchAliasX('sW', '위메프', 'http://search.wemakeprice.com/search?search_cate=top&search_keyword=');
 addSearchAliasX('saU', '옥션', 'http://search.auction.co.kr/search/search.aspx?keyword=');
-addSearchAliasX('sG', '지마켓', 'http://search.ticketmonster.co.kr/search/?keyword=');
+//addSearchAliasX('sG', '지마켓', ''); 쿼리를 알 수 없음
 addSearchAliasX('s11', '11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
+addSearchAliasX('siH', '아이허브', ' https://kr.iherb.com/search?kw=');
+addSearchAliasX('s11', '11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
+addSearchAliasX('sdC', '다이닝코드 (음식점)', 'https://www.diningcode.com/isearch.php?query=');
 
 //music
 addSearchAliasX('msC', 'soundcloud', 'https://soundcloud.com/search?q=');
