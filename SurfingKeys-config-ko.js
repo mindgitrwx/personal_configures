@@ -369,12 +369,13 @@ mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
     namuPage++;
     pageId = 's-' + namuPage.toString();
     document.getElementById(pageId).scrollIntoView();
-},{domain: 'namu\.wiki\.com/i'});
+});
 mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
     namuPage--;
     pageId = 's-' + namuPage.toString();
     document.getElementById(pageId).scrollIntoView();
-},{domain: 'namu\.wiki\.com/i'});
+});
+//,{domain: 'namu\.wiki\.com/i'} Todo why it makes error?
 /*
 // 아직 구현되지 않음
 mapkey('D', '위키 목차 대단위 다운스크롤', function () {
