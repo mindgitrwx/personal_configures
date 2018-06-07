@@ -3,15 +3,21 @@ package org.nd4j.examples;
 import org.nd4j.linalg.api.ndarray.indarray;
 import org.nd4j.linalg.factory.nd4j;
 
+import './defaltmapping.js'
+import './defaltmapping.js'
+import './dejjfaltmapping.js'
+import './defaltmapping.js'
 /**
  * ---
  *
  * in this example, wi''ll see some basic opreation for indarrays
  * @author jonghyeon yeo
- */
-
+ * wwwwiwwj
+ *
 /**
  * --- nd4j example 1: indarray concat, hstack, vstack, and pad ---
+ * 
+ * 
  *
  * in this example, we'll see some basic operations for indarrays
  *
@@ -91,7 +97,6 @@ public class concatvstackhstackpad {
 
         system.out.println("### combined dimension 0####");
         system.out.println(combined);
-
 
         indarray combined2 = nd4j.concat(1,zeros,ones);
 

@@ -99,7 +99,6 @@ addSearchAliasX('mH', 'hiphople', 'http://hiphople.com/index.php?_filter=search&
 addSearchAliasX('mG', 'Genius', 'https://genius.com/search?q=');
 addSearchAliasX('mP', 'pitchfork', 'https://pitchfork.com/search/?query=');
 addSearchAliasX('mC', 'metacritic', 'http://www.metacritic.com/search/all/');
-
 //Video
 addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
 
@@ -202,6 +201,14 @@ vmapkey('<--!y', "surround selection ", function () {
 });
 vmapkey('gcy', "added comma", function () {
     Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
+});
+
+mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function() {
+    var linksToYank = [];
+    Hints.create('*[href]', function(element) {
+        linksToYank.push('"' + element.href + '"');
+        Clipboard.write(linksToYank.join('\n'));
+    }, {multipleHits: true});
 });
 // 보다 간단한 방법이 필요함 (vmapkey의 내부의 코드를 보지 못했음 )
 vmapkey('gdy', "delete first 1 character", function () {
