@@ -178,6 +178,10 @@ function renderGoogleTranslate(res) {
     var exp = res.msg;
     if (res.data.definition) {
         var tmp = [];
+        for (var reg in res.data.pronunciations) {
+            tmp.push('<div>[{0}] {1}</div>'.format(reg, res.data.pronunciations[reg]));
+            tmp.push('<div><audio src="{0}" controls></audio></div>'.format(res.data[reg+'_audio']));
+        }
         tmp.push('<div>{0}</div>'.format(res.data.definition));
         exp = '<div>{0}</div>'.format(tmp.join('\n'));
     }
@@ -186,10 +190,16 @@ function renderGoogleTranslate(res) {
 mapkey('Q', '#8Open omnibar for word translation', function() {
     Front.openOmniquery({
         url: "https://translate.google.cn/#auto/en/",
+        /*
+         * or
+        url: function(q) {
+            return "https://api.shanbay.com/bdc/search/?word=" + q
+        },
+        */
         query: Visual.getWordUnderCursor(),
         style: "opacity: 0.3;",
         parseResult: function(res) {
-            var res = JSON.parse(res.prev);
+            var res = JSON.parse(res.text);
             return [ renderGoogleTranslate(res) ];
         }
     });
@@ -224,9 +234,14 @@ vmapkey('/*y', "surround selection ", function () {
 vmapkey('<--!y', "surround selection ", function () {
     Clipboard.write('<--!' + window.getSelection().toString() + '-->');
 });
+vmapkey('~y', "surround selection ", function () {
+    var UpperSelected = window.getSelection().toString()
+    Clipboard.write(UpperSelected.toUpperCase());
+});
 vmapkey('gcy', "added comma", function () {
     Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
 });
+
 mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function() {
     var linksToYank = [];
     Hints.create('*[href]', function(element) {
