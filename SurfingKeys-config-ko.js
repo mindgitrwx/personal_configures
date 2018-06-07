@@ -256,12 +256,13 @@ vmapkey('~sy', "remove special character", function () {
 vmapkey('~dy', "markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
-
 //Todo
 vmapkey('~diy', "remove inner dobule quoates strings", function () {
-    Clipboard.write('~~ ' + window.getSelection().toString().replace(/".*"/, '""') + ' ~~');
+    Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
 });
-
+vmapkey('~siy', "remove inner single quoates strings", function () {
+    Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
+});
 // markdown
 vmapkey('miy', "markdown italic", function () {
     Clipboard.write('*' + window.getSelection().toString() + '*');
