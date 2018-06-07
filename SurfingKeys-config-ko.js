@@ -169,7 +169,7 @@ mapkey('ya', '#7Copy a link URL to the clipboard', function() {
 });
 */
 
-// 구글 이미지 검색  (주소가 정확할 경우 잘 진행됨)
+// q의 기능을 구글 이미지 검색으로 바꿈 (주소가 정확할 경우 잘 진행됨)
 mapkey('q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
         Clipboard.write(element.src);
@@ -361,6 +361,9 @@ mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
 });
 map('<Ctrl-V>', 'sm'); // markdown preview
 
+mapkey('D', '나무위키 목차 스크롤 테스트', function () {
+    document.getElementById('s-1').scrollIntoView();
+});
 // 지도 이동 
 /*
 map('h', 'ArrowLeft', {domain: 'map\.naver\.com/i'});
