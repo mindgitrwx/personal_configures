@@ -217,8 +217,8 @@ Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(r
     var res = JSON.parse(res.text);
     return renderShanbay(res);
 });
-mapkey('yk', "copy url before keyword insertion", function () {
-    Clipboard.write(window.location.href.split('=')[0]);
+mapkey('yk', "Copy url before keyword insertion", function () {
+    Clipboard.write(window.location.href.split('=')[0] + '=');
 });
 // surround   
 mapkey('"yy', "surround url with double quotation mark", function () {
@@ -249,22 +249,22 @@ vmapkey('~y', "surround selection ", function () {
     var UpperSelected = window.getSelection().toString()
     Clipboard.write(UpperSelected.toUpperCase());
 });
-vmapkey('~jy', "remove enter", function () {
+vmapkey('~jy', "Remove enter", function () {
     Clipboard.write(window.getSelection().toString().replace(/\n/g, " "));
 });
-vmapkey('~cy', "added comma", function () {
+vmapkey('~cy', "Added comma", function () {
     Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
 });
-vmapkey('~dy', "delete first 1 character", function () {
+vmapkey('~dy', "Delete first 1 character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
-vmapkey('~Dy', "delete surronded", function () {
+vmapkey('~Dy', "Delete surronded", function () {
     Clipboard.write(window.getSelection().toString().slice(1, -1));
 });
-vmapkey('~sy', "remove special character", function () {
+vmapkey('~sy', "Remove special character", function () {
     Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9]/ig, ""));
 });
-vmapkey('~dy', "markdown Strikethrough", function () {
+vmapkey('~dy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
 //Todo
@@ -277,16 +277,16 @@ vmapkey('~siy', "remove inner single quoates strings", function () {
 });
 */
 // markdown
-vmapkey('miy', "markdown italic", function () {
+vmapkey('miy', "Markdown italic", function () {
     Clipboard.write('*' + window.getSelection().toString() + '*');
 });
-vmapkey('mby', "markdown bold", function () {
+vmapkey('mby', "Markdown bold", function () {
     Clipboard.write('**' + window.getSelection().toString() + '**');
 });
-vmapkey('mly', "markdown link", function () {
+vmapkey('mly', "Markdown link", function () {
     Clipboard.write('[replaceit](' + window.getSelection().toString() + ')');
 });
-vmapkey('msy', "markdown Strikethrough", function () {
+vmapkey('msy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
 // etc
