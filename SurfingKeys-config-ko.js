@@ -261,7 +261,7 @@ vmapkey('~dy', "markdown Strikethrough", function () {
 vmapkey('~diy', "remove inner dobule quoates strings", function () {
     Clipboard.write('~~ ' + window.getSelection().toString().replace(/".*"/, '""') + ' ~~');
 });
-alphabet = alphabet.replace(/H.*S/, 'HS')
+
 // markdown
 vmapkey('miy', "markdown italic", function () {
     Clipboard.write('*' + window.getSelection().toString() + '*');
