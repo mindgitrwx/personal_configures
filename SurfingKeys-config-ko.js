@@ -15,7 +15,9 @@ map('<Ctrl-E>', 'T');
 jonghyeon.rw@gmail.com
 */
 
+// for page moving
 var namuPage = 0;
+var wikiPage = 0;
 
 mapkey('<Ctrl-y>', 'Show me the money', function () {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
@@ -363,19 +365,43 @@ mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
 });
 map('<Ctrl-V>', 'sm'); // markdown preview
 
-mapkey('D', '나무위키 목차 스크롤 테스트', function () {
+mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
     namuPage++;
     pageId = 's-' + namuPage.toString();
     document.getElementById(pageId).scrollIntoView();
-});
-mapkey('U', '나무위키 목차 스크롤 테스트', function () {
-    if(nPage != 0){nPage--;} 
-    pageId = 's-' + nPage.toString();
+},{domain: 'namu\.wiki\.com/i'});
+mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
+    namuPage--;
+    pageId = 's-' + namuPage.toString();
     document.getElementById(pageId).scrollIntoView();
-});
-// 지도 이동 
+},{domain: 'namu\.wiki\.com/i'});
+
+// 아직 구현되지 않음
+mapkey('D', '위키 목차 대단위 다운스크롤', function () {
+    wikiPage++;
+    pageId =  + 'tocsection-1'+ wikiPage.toString();
+    document.getElementById(pageId).scrollIntoView();
+},{domain: 'en\.wikipedia\.org/i'});
+mapkey('U', '위키 목차 대단위 up스크롤', function () {
+    wikiPage--;
+    pageId =  + 'tocsection-1'+ wikiPage.toString();
+    document.getElementById(pageId).scrollIntoView();
+},{domain: 'en\.wikipedia\.org/i'});
+
+// 아직 구현되지 않음
+mapkey('D', '스택오버플로우 답변 다운스크롤', function () {
+    wikiPage++;
+    pageId =  + 'tocsection-1'+ wikiPage.toString();
+    document.getElementById(pageId).scrollIntoView();
+},{domain: 'en\.wikipedia\.org/i'});
+mapkey('U', '스택오버플로우 답변 up스크롤', function () {
+    wikiPage--;
+    pageId =  + 'tocsection-1'+ wikiPage.toString();
+    document.getElementById(pageId).scrollIntoView();
+},{domain: 'en\.wikipedia\.org/i'});
+//네이버 맵 지도 이동
 /*
-map('h', 'ArrowLeft', {domain: 'map\.naver\.com/i'});
+map('h', 'ArrowLeft', );
 map('j', 'ArrowDown',  {domain: 'map\.naver\.com/i'});
 map('k', 'ArrowUp', {domain: 'map\.naver\.com/i'});
 map('l', 'Arrowright', {domain: 'map\.naver\.com/i'});
