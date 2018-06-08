@@ -18,6 +18,7 @@ jonghyeon.rw@gmail.com
 // for page moving
 var namuPage = 0;
 var wikiPage = 0;
+var stackAnswer = 0;
 
 mapkey('<Ctrl-y>', 'Show me the money', function () {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
@@ -410,19 +411,17 @@ mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
     pageHeadLine[wikiPage].scrollIntoView();
 },{domain: /www\.wikiwand\.org/i});
 
-// Todo: 아직 구현되지 않음 
-/*
 mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
-    wikiPage++;
-    pageId =  ;
-    document.getElementById(pageId).scrollIntoView();
+    stackAnswer++;
+    pageHeadLine = document.querySelectorAll(".answer");
+    pageHeadLine[stackAnswer].scrollIntoView();
 },{domain: /www\.wikiwand\.org/i});
 mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
-    wikiPage--;
-    pageId =  ;
-    document.getElementById(pageId).scrollIntoView();
-},{domain: /www\.wikiwand\.org/i});
-*/
+    stackAnswer--;
+    pageHeadLine = document.querySelectorAll(".answer");
+    pageHeadLine[stackAnswer].scrollIntoView();
+},{domain: /stackoverflow\.com/i});
+
 //네이버 맵 지도 이동
 /*
 map('h', 'ArrowLeft', );
