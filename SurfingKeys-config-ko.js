@@ -78,16 +78,34 @@ addSearchAliasX('ig', 'instagram HashTag', 'https://www.instagram.com/explore/ta
 addSearchAliasX('rD', 'reddit', 'https://www.reddit.com/search?q=');
 
 //shorten - what is.. who is.. where is..  
+addSearchAliasX('wA', 'advanced', 'https://www.google.com/search?q=advanced+');
+addSearchAliasX('wB', 'basic', 'https://www.google.com/search?q=basic+');
 addSearchAliasX('wC', '분류', 'https://www.google.com/search?q=classfication+of');
 addSearchAliasX('wD', '차이점', 'https://www.google.com/search?q=difference+between+');
 addSearchAliasX('wE', '예제', 'https://www.google.com/search?q=example+of+');
+addSearchAliasX('wF', '어디서부터', 'https://www.google.com/search?q=where+from');
+addSearchAliasX('wG', '목적', 'https://www.googlecom/search?q=what+is+goal+of+');
+addSearchAliasX('wH', '역사', 'https://www.google.com/search?q=history+of+');
+addSearchAliasX('wI', '소개', 'https://www.google.com/search?q=Introduction+of');
+addSearchAliasX('wJ', '직업', 'https://www.google.com/search?q=jo+of');
+addSearchAliasX('wK', '한국', 'https://www.google.com/search?q=Korea+');
+addSearchAliasX('wL', '리스트', 'https://www.google.com/search?q=list+of+');
+addSearchAliasX('wL', '위치', 'https://www.google.com/search?q=Location+of');
 addSearchAliasX('wM', '방법', 'https://www.google.com/search?q=method+of+');
 addSearchAliasX('wm', '뜻', 'https://www.googlecom/search?q=what+is+the+meaning+of+');
+addSearchAliasX('wN', '이름', 'https://www.googlecom/search?q=name+of');
+addSearchAliasX('wO', '순서', 'https://www.googlecom/search?q=order+of');
+addSearchAliasX('wP', '문제', 'https://www.googlecom/search?q=problem+of');
+addSearchAliasX('wQ', '질문', 'https://www.google.com/search?q=questions+of');
 addSearchAliasX('wR', '랭킹', 'https://www.google.com/search?q=rank+of+');
 addSearchAliasX('wS', '공통점', 'https://www.google.com/search?q=common+point+of+');
+addSearchAliasX('wT', '표', 'https://www.google.com/search?q=q=table+of');
 addSearchAliasX('wU', '사용예', 'https://www.google.com/search?q=usage+of+');
-addSearchAliasX('wL', '리스트', 'https://www.google.com/search?q=list+of+');
-
+// addSearchAliasX('wW', '사용예', 'https://www.google.com/search?q=usage+of+'); //  w에만 지나치게 만이 추가 가능 
+// addSearchAliasX('wX', '사용예', 'https://www.google.com/search?q=usage+of+');
+// addSearchAliasX('wY', '사용예', 'https://www.google.com/search?q=usage+of+');
+// addSearchAliasX('wZ', '사용예', 'https://www.google.com/search?q=usage+of+');
+// 
 //file 확장자
 addSearchAliasX('pdF', 'pdf', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Apdf+');
 addSearchAliasX('cpP', 'cpp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Acpp+');
@@ -296,8 +314,8 @@ vmapkey('~dy', "Delete first 1 character", function () {
 vmapkey('~Dy', "Delete surronded", function () {
     Clipboard.write(window.getSelection().toString().slice(1, -1));
 });
-vmapkey('~sy', "Remove special character", function () {
-    Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9]/ig, ""));
+vmapkey('~sy', "Remove special character (blank is not considered as special character", function () {
+    Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9:blank:]/ig, ""));
 });
 vmapkey('~dy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
