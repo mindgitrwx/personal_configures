@@ -15,7 +15,7 @@ map('<Ctrl-E>', 'T');
 jonghyeon.rw@gmail.com
 */
 
-// for page moving
+// ------------ for page moving -------------- (everytime reseted when)
 var namuPage = 0;
 var wikiPage = 0;
 var stackAnswer = 0;
@@ -385,6 +385,19 @@ mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
 });
 map('<Ctrl-V>', 'sm'); // markdown preview
 
+//-------------- D key and U key ----------------------
+//TODO: add rage of scroll
+//sysntax, code
+mapkey('D', '', function () {
+    codeWrapper++;
+    pageHeadLine = document.querySelectorAll("pre");
+    pageHeadLine[codeWrapper].scrollIntoView();
+});
+mapkey('U', '', function () {
+    codeWrapper--;
+    pageHeadLine = document.querySelectorAll("pre");
+    pageHeadLine[codeWrapper].scrollIntoView();
+});
 mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
     namuPage++;
     pageHeadLine = document.querySelectorAll(".wiki-heading");
@@ -433,21 +446,8 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
     window.scrollBy(0, -47); // Adjust scrolling with a negative value here : stackoverflow upper bar
 },{domain: /stackoverflow\.com/i});
 
-// md 파일의 목차는 <h1> <h2> <h3> 이런 방식으로 결정되고, 숫자가 클수록 대단위의 목차다
+//--------------End of D key and U key ----------------------
 
-//sysntax, code
-/*
-mapkey('D', '', function () {
-    codeWrapper++;
-    pageHeadLine = document.querySelectorAll("pre");
-    pageHeadLine[codeWrapper].scrollIntoView();
-});
-mapkey('U', '', function () {
-    codeWrapper--;
-    pageHeadLine = document.querySelectorAll("pre");
-    pageHeadLine[codeWrapper].scrollIntoView();
-});
-*/
 
 //pdf viewer mapping 
 
