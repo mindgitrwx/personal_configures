@@ -406,18 +406,16 @@ mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
 },{domain: /www\.wikiwand\.com/i});
 
 // query select all 내부에서 regular expression 이 먹히지 않음 
-/*
 mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
     stackAnswer++;
-    pageHeadLine = document.querySelectorAll(".answer-*");
+    pageHeadLine = document.querySelectorAll("answer ice-ice-baby");
     pageHeadLine[stackAnswer].scrollIntoView();
 },{domain: /www\.wikiwand\.org/i});
 mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {egu
     stackAnswer--;
-    pageHeadLine = document.querySelectorAll(".answer-*");
+    pageHeadLine = document.querySelectorAll("answer ice-ice-baby");
     pageHeadLine[stackAnswer].scrollIntoView();
 },{domain: /stackoverflow\.com/i});
-*/
 
 // md 파일의 목차는 <h1> <h2> <h3> 이런 방식으로 결정되고, 숫자가 클수록 대단위의 목차다
 
