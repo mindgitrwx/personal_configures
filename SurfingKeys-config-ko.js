@@ -387,7 +387,7 @@ map('<Ctrl-V>', 'sm'); // markdown preview
 
 mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
     namuPage++;
-    pageHeadLine = document.querySelectorAll(".mw-heading");
+    pageHeadLine = document.querySelectorAll(".wiki-heading");
     pageHeadLine[namuPage].scrollIntoView();
 },{domain: /namu\.wiki\.com/i});
 mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
@@ -422,12 +422,12 @@ mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
 // query select all 내부에서 regular expression 이 먹히지 않음 
 mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
     stackAnswer++;
-    pageHeadLine = document.querySelectorAll("answer");
+    pageHeadLine = document.querySelectorAll(".answer");
     pageHeadLine[stackAnswer].scrollIntoView();
 },{domain: /stackoverflow\.com/i});
 mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
     stackAnswer--;
-    pageHeadLine = document.querySelectorAll("answer");
+    pageHeadLine = document.querySelectorAll(".answer");
     pageHeadLine[stackAnswer].scrollIntoView();
 },{domain: /stackoverflow\.com/i});
 
