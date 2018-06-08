@@ -404,12 +404,12 @@ mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
 // query select all 내부에서 regular expression 이 먹히지 않음 
 mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
     stackAnswer++;
-    pageHeadLine = document.querySelectorAll("answer ice-ice-baby");
+    pageHeadLine = document.querySelectorAll("answer");
     pageHeadLine[stackAnswer].scrollIntoView();
 },{domain: /stackoverflow\.org/i});
 mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {egu
     stackAnswer--;
-    pageHeadLine = document.querySelectorAll("answer ice-ice-baby");
+    pageHeadLine = document.querySelectorAll("answer");
     pageHeadLine[stackAnswer].scrollIntoView();
 },{domain: /stackoverflow\.com/i});
 
