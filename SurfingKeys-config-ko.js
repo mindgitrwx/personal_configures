@@ -378,17 +378,6 @@ mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
     document.getElementById(pageId).scrollIntoView();
 },{domain: /namu\.wiki\.com/i});
 
-mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
-    namuPage++;
-    pageId = 's-'+ namuPage.toString();
-    document.getElementById(pageId).scrollIntoView();
-},{domain: /\iki\.com/i});
-mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
-    namuPage--;
-    pageId = 's-' + namuPage.toString();
-    document.getElementById(pageId).scrollIntoView();
-},{domain: /namu\.wiki\.com/i});
-
 mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     wikiPage++;
     pageHeadLine = document.querySelectorAll(".mw-headline");
@@ -429,6 +418,7 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {egu
 // md 파일의 목차는 <h1> <h2> <h3> 이런 방식으로 결정되고, 숫자가 클수록 대단위의 목차다
 
 //sysntax, code
+/*
 mapkey('D', '', function () {
     codeWrapper++;
     pageHeadLine = document.querySelectorAll("pre");
@@ -439,6 +429,7 @@ mapkey('U', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
     pageHeadLine[codeWrapper].scrollIntoView();
 });
+*/
 
 //pdf viewer mapping 
 
