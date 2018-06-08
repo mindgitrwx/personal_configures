@@ -392,12 +392,12 @@ mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     wikiPage++;
     pageHeadLine = document.querySelectorAll(".mw-headline");
     pageHeadLine[wikiPage].scrollIntoView();
-},{domain: /en\.wikipedia\.org/i});
+},{domain: /\.wikipedia\.org/i});
 mapkey('U', '위키 목차 대단위 up스크롤', function () {
     wikiPage--;
     pageHeadLine = document.querySelectorAll(".mw-headline");
     pageHeadLine[wikiPage].scrollIntoView();
-},{domain: /en\.wikipedia\.org/i});
+},{domain: /\.wikipedia\.org/i});
 
 // Todo: 아직 구현되지 않음
 mapkey('D', 'wikiwand 목차 대단위 스크롤 ', function () {
@@ -432,6 +432,7 @@ mapkey('U', 'github readme up 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".answers");
     pageHeadLine[stackAnswer].scrollIntoView();
 },{domain: /stackoverflow\.com/i});
+
 //네이버 맵 지도 이동
 /*
 map('h', 'ArrowLeft', );
