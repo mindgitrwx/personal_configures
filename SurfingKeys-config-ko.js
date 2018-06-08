@@ -418,10 +418,20 @@ mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
 },{domain: /www\.wikiwand\.org/i});
 mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
     stackAnswer--;
-    pageHeadLine = document.querySelectorAll(".answer");
+    pageHeadLine = document.querySelectorAll(".answers");
     pageHeadLine[stackAnswer].scrollIntoView();
 },{domain: /stackoverflow\.com/i});
 
+mapkey('D', 'github readme 스크롤', function () {
+    stackAnswer++;
+    pageHeadLine = document.querySelectorAll(".answers");
+    pageHeadLine[stackAnswer].scrollIntoView();
+},{domain: /www\.wikiwand\.org/i});
+mapkey('U', 'github readme up 스크롤 ', function () {
+    stackAnswer--;
+    pageHeadLine = document.querySelectorAll(".answers");
+    pageHeadLine[stackAnswer].scrollIntoView();
+},{domain: /stackoverflow\.com/i});
 //네이버 맵 지도 이동
 /*
 map('h', 'ArrowLeft', );
