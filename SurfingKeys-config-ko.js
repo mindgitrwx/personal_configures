@@ -406,7 +406,7 @@ mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
     stackAnswer++;
     pageHeadLine = document.querySelectorAll("answer");
     pageHeadLine[stackAnswer].scrollIntoView();
-},{domain: /stackoverflow\.org/i});
+},{domain: /stackoverflow\.com/i});
 mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {egu
     stackAnswer--;
     pageHeadLine = document.querySelectorAll("answer");
