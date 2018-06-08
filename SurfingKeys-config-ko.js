@@ -386,11 +386,6 @@ mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
     pageId = 's-' + namuPage.toString();
     document.getElementById(pageId).scrollIntoView();
 },{domain: /namu\.wiki\.com/i});
-,{domain: /www\.wikiwand\.com/i});
-,{domain: /www\.wikipedia\.com/i});
-,{domain: /github\.com/i});
-https://www.wikiwand.com/en/C%20langauge
-https://github.com/brookhong/Surfingkeys
 
 // Todo: 아직 구현되지 않음
 mapkey('D', '위키 목차 대단위 다운스크롤', function () {
