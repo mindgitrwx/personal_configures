@@ -19,6 +19,7 @@ jonghyeon.rw@gmail.com
 var namuPage = 0;
 var wikiPage = 0;
 var stackAnswer = 0;
+var codeWrapper = 0;
 
 mapkey('<Ctrl-y>', 'Show me the money', function () {
     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
@@ -404,37 +405,69 @@ mapkey('D', 'wikiwand 목차 대단위 스크롤 ', function () {
     wikiPage++;
     pageHeadLine = document.querySelectorAll(".mw-headline");
     pageHeadLine[wikiPage].scrollIntoView();
-},{domain: /www\.wikiwand\.org/i});
+},{domain: /www\.wikiwand\.com/i});
 mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
     wikiPage--;
     pageHeadLine = document.querySelectorAll(".mw-headline");
     pageHeadLine[wikiPage].scrollIntoView();
-},{domain: /www\.wikiwand\.org/i});
+},{domain: /www\.wikiwand\.com/i});
 
+// query select all 내부에서 regular expression 이 먹히지 않음 
+/*
 mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
     stackAnswer++;
-    pageHeadLine = document.querySelectorAll(".answer");
+    pageHeadLine = document.querySelectorAll(".answer-*");
     pageHeadLine[stackAnswer].scrollIntoView();
 },{domain: /www\.wikiwand\.org/i});
-mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
+mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {egu
     stackAnswer--;
-    pageHeadLine = document.querySelectorAll(".answers");
+    pageHeadLine = document.querySelectorAll(".answer-*");
     pageHeadLine[stackAnswer].scrollIntoView();
 },{domain: /stackoverflow\.com/i});
+*/
 
-mapkey('D', 'github readme 스크롤', function () {
-    stackAnswer++;
-    pageHeadLine = document.querySelectorAll(".answers");
-    pageHeadLine[stackAnswer].scrollIntoView();
-},{domain: /www\.wikiwand\.org/i});
-mapkey('U', 'github readme up 스크롤 ', function () {
-    stackAnswer--;
-    pageHeadLine = document.querySelectorAll(".answers");
-    pageHeadLine[stackAnswer].scrollIntoView();
-},{domain: /stackoverflow\.com/i});
+// md 파일의 목차는 <h1> <h2> <h3> 이런 방식으로 결정되고, 숫자가 클수록 대단위의 목차다
+
+//sysntax, code
+mapkey('D', '', function () {
+    codeWrapper++;
+    pageHeadLine = document.querySelectorAll("pre");
+    pageHeadLine[codeWrapper].scrollIntoView();
+});
+mapkey('U', '', function () {
+    codeWrapper--;
+    pageHeadLine = document.querySelectorAll("pre");
+    pageHeadLine[codeWrapper].scrollIntoView();
+});
+
+//pdf viewer mapping 
+
+// mapkey('D', 'github readme 스크롤', function () {
+//     stackAnswer++;
+//     pageHeadLine = document.querySelectorAll(".answers");
+//     pageHeadLine[stackAnswer].scrollIntoView();
+// },{domain: /\\pdf_viewer.html*/i});
+// mapkey('U', 'github readme up 스크롤 ', function () {
+//     stackAnswer--;
+//     pageHeadLine = document.querySelectorAll(".answers");
+//     pageHeadLine[stackAnswer].scrollIntoView();
+// },{domain: /\\pdf_viewer.html*/i});
+
+// mapkey('D', 'github readme 스크롤', function () {
+//     stackAnswer++;
+//     pageHeadLine = document.querySelectorAll(".wp_syntax", ".wp_");
+//     pageHeadLine[stackAnswer].scrollIntoView();
+// },{domain: /\\pdf_viewer.html*/i});
+// mapkey('U', 'github readme up 스크롤 ', function () {
+//     stackAnswer--;
+//     pageHeadLine = document.querySelectorAll(".answers");
+//     pageHeadLine[stackAnswer].scrollIntoView();
+// },{domain: /\\pdf_viewer.html*/i});
+// */
 
 //네이버 맵 지도 이동
 /*
+
 map('h', 'ArrowLeft', );
 map('j', 'ArrowDown',  {domain: 'map\.naver\.com/i'});
 map('k', 'ArrowUp', {domain: 'map\.naver\.com/i'});
