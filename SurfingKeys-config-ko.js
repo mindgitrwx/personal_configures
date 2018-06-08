@@ -376,32 +376,59 @@ mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
     document.getElementById(pageId).scrollIntoView();
 },{domain: /namu\.wiki\.com/i});
 
-/*
-// 아직 구현되지 않음
+mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
+    namuPage++;
+    pageId = 's-'+ namuPage.toString();
+    document.getElementById(pageId).scrollIntoView();
+},{domain: /\iki\.com/i});
+mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
+    namuPage--;
+    pageId = 's-' + namuPage.toString();
+    document.getElementById(pageId).scrollIntoView();
+},{domain: /namu\.wiki\.com/i});
+,{domain: /www\.wikiwand\.com/i});
+,{domain: /www\.wikipedia\.com/i});
+,{domain: /github\.com/i});
+https://www.wikiwand.com/en/C%20langauge
+https://github.com/brookhong/Surfingkeys
+
+// Todo: 아직 구현되지 않음
 mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     wikiPage++;
-    pageId =  + 'tocsection-1'+ wikiPage.toString();
-    document.getElementById(pageId).scrollIntoView();
-},{domain: 'en\.wikipedia\.org/i'});
+    pageHeadLine = document.querySelectorAll(".mv-headline");
+    pageHeadLine[wikiPage].scrollIntoView();
+},{domain: /en\.wikipedia\.org/i});
 mapkey('U', '위키 목차 대단위 up스크롤', function () {
     wikiPage--;
-    pageId =  + 'tocsection-1'+ wikiPage.toString();
-    document.getElementById(pageId).scrollIntoView();
-},{domain: 'en\.wikipedia\.org/i'});
+    pageHeadLine = document.querySelectorAll(".mv-headline");
+    pageHeadLine[wikiPage].scrollIntoView();
+},{domain: /en\.wikipedia\.org/i});
 
-// 아직 구현되지 않음
-mapkey('D', '스택오버플로우 답변 다운스크롤', function () {
+// Todo: 아직 구현되지 않음
+mapkey('D', 'wikiwand 목차 대단위 스크롤 ', function () {
     wikiPage++;
-    pageId =  + 'tocsection-1'+ wikiPage.toString();
-    document.getElementById(pageId).scrollIntoView();
-},{domain: 'en\.wikipedia\.org/i'});
-mapkey('U', '스택오버플로우 답변 up스크롤', function () {
+    pageHeadLine = document.querySelectorAll(".mv-headline");
+    pageHeadLine[wikiPage].scrollIntoView();
+},{domain: /www\.wikiwand\.org/i});
+mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
     wikiPage--;
-    pageId =  + 'tocsection-1'+ wikiPage.toString();
-    document.getElementById(pageId).scrollIntoView();
-},{domain: 'en\.wikipedia\.org/i'});
-*/
+    pageHeadLine = document.querySelectorAll(".mv-headline");
+    pageHeadLine[wikiPage].scrollIntoView();
+},{domain: /www\.wikiwand\.org/i});
 
+// Todo: 아직 구현되지 않음 
+/*
+mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
+    wikiPage++;
+    pageId =  ;
+    document.getElementById(pageId).scrollIntoView();
+},{domain: /www\.wikiwand\.org/i});
+mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
+    wikiPage--;
+    pageId =  ;
+    document.getElementById(pageId).scrollIntoView();
+},{domain: /www\.wikiwand\.org/i});
+*/
 //네이버 맵 지도 이동
 /*
 map('h', 'ArrowLeft', );
