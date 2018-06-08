@@ -371,15 +371,11 @@ mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
     namuPage++;
     pageHeadLine = document.querySelectorAll(".mw-heading");
     pageHeadLine[namuPage].scrollIntoView();
-    pageId = 's-'+ namuPage.toString();
-    document.getElementById(pageId).scrollIntoView();
 },{domain: /namu\.wiki\.com/i});
 mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
     namuPage--;
     pageHeadLine = document.querySelectorAll(".wiki-heading");
     pageHeadLine[namuPage].scrollIntoView();
-    pageId = 's-' + namuPage.toString();
-    document.getElementById(pageId).scrollIntoView();
 },{domain: /namu\.wiki\.com/i});
 
 mapkey('D', '위키 목차 대단위 다운스크롤', function () {
