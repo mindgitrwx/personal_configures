@@ -431,12 +431,12 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {egu
 //sysntax, code
 mapkey('D', '', function () {
     codeWrapper++;
-    pageHeadLine = document.querySelectorAll(".pre");
+    pageHeadLine = document.querySelectorAll("pre");
     pageHeadLine[codeWrapper].scrollIntoView();
 });
 mapkey('U', '', function () {
     codeWrapper--;
-    pageHeadLine = document.querySelectorAll(".pre");
+    pageHeadLine = document.querySelectorAll("pre");
     pageHeadLine[codeWrapper].scrollIntoView();
 });
 
