@@ -410,7 +410,7 @@ mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
     stackAnswer++;
     pageHeadLine = document.querySelectorAll("answer ice-ice-baby");
     pageHeadLine[stackAnswer].scrollIntoView();
-},{domain: /www\.wikiwand\.org/i});
+},{domain: /stackoverflow\.org/i});
 mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {egu
     stackAnswer--;
     pageHeadLine = document.querySelectorAll("answer ice-ice-baby");
