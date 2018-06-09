@@ -417,7 +417,7 @@ function UpController(lineQuery = 'pre' , offset = 0) {
         window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
     }
 }
-
+/*
 mapkey('D', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
     if(pageHeadLine.length > codeWrapper){ codeWrapper++;}
@@ -428,6 +428,7 @@ mapkey('U', '', function () {
     if(0 < codeWrapper){ codeWrapper--;}
     pageHeadLine[codeWrapper].scrollIntoView();
 });
+*/
 
 mapkey('D', '대단위 다운스크롤', DownController('wiki-heading',0));
 mapkey('U', '대단위 up스크롤', UpController('wiki-heading',0));
