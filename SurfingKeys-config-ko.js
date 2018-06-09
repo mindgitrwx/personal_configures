@@ -358,6 +358,9 @@ mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function() {
 mapkey('gs', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
+mapkey('gE', '#12Open Chrome extensions Shortcut setting', function () {
+    tabOpenLink("chrome://extensions/shortcuts");
+});
 // intellij bind
 mapkey('<Ctrl-Alt-s>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
@@ -470,6 +473,7 @@ mapkey('l', 'slideshare next page', function () {
 // sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive
 //Soundcloud shortcuts
 // . 이 들어가야 하는지 아닌지 테스트 
+// TODO: 잘 동작하지 않음
 mapkey('J', 'soundcloud previous song', function () {
     document.getElementsByClassName('sc-ir playControls__control playControls__prev skipControl__previous').click();
 },{domain: /soundcloud\.com/i});
