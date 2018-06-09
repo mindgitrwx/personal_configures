@@ -417,7 +417,7 @@ function UpController(lineQuery = 'pre' , offset = 0) {
         window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
     }
 }
-/*
+/* 동작하는 코드 
 mapkey('D', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
     if(pageHeadLine.length > codeWrapper){ codeWrapper++;}
@@ -430,11 +430,11 @@ mapkey('U', '', function () {
 });
 */
 
-mapkey('D', '대단위 다운스크롤', DownController('pre',0));
-mapkey('U', '대단위 up스크롤', UpController('pre',0));
-mapkey('D', '나무위키 목차 대단위 다운스크롤', DownController('wiki-heading',0) , {domain: /namu\.wiki/i});
-mapkey('U', '나무위키 목차 대단위 up스크롤', UpController('wiki-heading',0) , {domain: /namu\.wiki/i});
-/*
+mapkey('D', '', DownController('pre',0));
+mapkey('U', '', UpController('pre',0));
+mapkey('D', '나무위키 목차 대단위 다운스크롤', DownController('.wiki-heading',0) , {domain: /namu\.wiki/i});
+mapkey('U', '나무위키 목차 대단위 up스크롤', UpController('.wiki-heading',0) , {domain: /namu\.wiki/i});
+/* 동작하는 코드
 mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".wiki-heading");
     if(pageHeadLine.length > namuPage){ namuPage++;}
