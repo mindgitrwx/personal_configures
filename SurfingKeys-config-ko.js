@@ -193,7 +193,7 @@ mapkey('ya', '#7Copy a link URL to the clipboard', function() {
 */
 
 // q의 기능을 구글 이미지 검색으로 바꿈 (주소가 정확할 경우 잘 진행됨)
-mapkey('q', '#1Click on an Image or a button', function () {
+mapkey('q', '#1get image link and google image search', function () {
     Hints.create("img, button", function (element) {
         Clipboard.write(element.src);
         searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
