@@ -429,8 +429,10 @@ mapkey('U', '', function () {
     pageHeadLine[codeWrapper].scrollIntoView();
 });
 
-mapkey('D', '나무위키 목차 대단위 다운스크롤', DownController('wiki-heading') , {domain: /namu\.wiki/i});
-mapkey('U', '나무위키 목차 대단위 up스크롤', UpController('wiki-heading') , {domain: /namu\.wiki/i});
+mapkey('D', '대단위 다운스크롤', DownController('wiki-heading',0));
+mapkey('U', '대단위 up스크롤', UpController('wiki-heading',0));
+mapkey('D', '나무위키 목차 대단위 다운스크롤', DownController('wiki-heading',0) , {domain: /namu\.wiki/i});
+mapkey('U', '나무위키 목차 대단위 up스크롤', UpController('wiki-heading',0) , {domain: /namu\.wiki/i});
 /*
 mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".wiki-heading");
