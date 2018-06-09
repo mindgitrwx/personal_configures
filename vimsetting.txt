@@ -1,14 +1,30 @@
 //Surfing key config
+   
+     
+     
+                                                                                                                     
+                                                                                                                     
+                                                                                                                     
+  mapkey('<Ctrl-y>','Show me the money', function() {                                                                
+     Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).'); 
+  });                                                                                                                
+  10QflvxnGiX5Pkii3dQB                                                                                               
+                                                                                                                     
 
-mapkey('<Ctrl-y>', 'Show me the money', function() {
-    Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
-});
-
+e@
+e@
+addSearchAliasX
+addSearchAliasX
+addSearchAliasXj
+jonghyeon.rw@gmail.com
 //map
 addSearchAliasX('mN', 'navermap', 'https://map.naver.com/?query=');
 addSearchAliasX('mG', '구글맵', 'https://www.google.com/maps?q=');
 addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
-
+addSearchAliasX
+addSearchAliasX
+addSearchAliasX
+s
 //shorten - what is.. who is.. where is..  
 addSearchAliasX('wm', '뜻', 'https://www.googlecom/search?q=what+is+the+meaning+of+');
 addSearchAliasX('wM', '방법', 'https://www.google.com/search?q=method+of+');

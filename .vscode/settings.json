@@ -1,10 +1,12 @@
 {
-    "editor.tabSize": 2,
+    "editor.tabSize"        : 2,
     "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.handleKeys": {
-        "<C-a>": false,
+    "vim.useCtrlKeys"       : true,
+    "vim.hlsearch"          : true,
+    "vim.handleKeys"        : {
         "<C-f>": false
-    }
+    },
+    "cSpell.words": [
+        "domain"
+    ]
 }

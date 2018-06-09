@@ -13,12 +13,13 @@ map('<Ctrl-Shif-e>', 'T');
 map('<Ctrl-E>', 'T');
 이런 식으로 맵핑해야 함 
 jonghyeon.rw@gmail.com
-*/
+    */
 
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
 var namuPage    = 0;
 var wikiPage    = 0;
-var stackAnswer = 0;
+var stackAnswer = 0;  // 변수 통합 생각중
+var naverAnswer = 0;
 var codeWrapper = 0;
 
 settings.caseSensitive       = true; settings.omnibarSuggestion = true;
@@ -373,12 +374,12 @@ mapkey('<Ctrl-X>', '#12Open Chrome extensions', function () {
 // intellij bind
 map('<Ctrl-E>', 'T');
 map('<Ctrl-N>', 'T');
-// intellij bind - 동작하지 않음
+// intellij bind - 동작 하지 않음
 mapkey('<Alt-F12>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome.send('inspect',[String(data.processId), String(data.routeId)])");
 });
 
-// vscode bind 동작하지 않음  
+// vscode bind 동작 하지 않음  
 mapkey('<Ctrl-\>', '#12Open Chrome extensions', function () {
     RUNTIME("duplicateTab");
     RUNTIME("newWindow");
@@ -386,7 +387,7 @@ mapkey('<Ctrl-\>', '#12Open Chrome extensions', function () {
 //todo
 mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
     RUNTIME("duplicateTab");
-    RUNTIME("newWindow");
+    RUNTIME("");
 });
 map('<Ctrl-V>', 'sm'); // markdown preview
 
@@ -449,7 +450,17 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
     pageHeadLine[stackAnswer].scrollIntoView();
     window.scrollBy(0, -47); // Adjust scrolling with a negative value here : stackoverflow upper bar
 },{domain: /stackoverflow\.com/i});
-
+domain: /kin\.naver\.com/i
+mapkey('D', 'naver 답변 다운 스크롤', function () {
+    naverAnswer++;
+    pageHeadLine = document.querySelectorAll(".qna_detail_answerList");
+    pageHeadLine[naverAnswer].scrollIntoView();
+},{domain: /kin\.naver\.com/i});
+mapkey('U', 'naver 답변 up 스크롤 ', function () {
+    naverAnswer--;
+    pageHeadLine = document.querySelectorAll(".qna_detail_answerList");
+    pageHeadLine[naverAnswer].scrollIntoView();
+},{domain: /kin\.naver\.com/i});
 //https://www.slideshare.net/mandrewmartin/regression-presentation
 //div.j-prev-btn.arrow-left  btnPrevious
 //div.j-prev-btn.arrow-right btnNext
@@ -505,7 +516,7 @@ mapkey('L', 'soundcloud like', function () {
 //     stackAnswer--;
 //     pageHeadLine = document.querySelectorAll(".answers");
 //     pageHeadLine[stackAnswer].scrollIntoView();
-// },{domain: /\\pdf_viewer.html*/i});
+// },{domain: /\*pdf_viewer.html*/i});
 // */
 
 //네이버 맵 지도 이동
