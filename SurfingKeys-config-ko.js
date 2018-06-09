@@ -271,7 +271,7 @@ Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(r
     return renderShanbay(res);
 });
 mapkey('yr', "Copy url as regex", function () {
-    Clipboard.write('\/' + window.location.href.slice(8,).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
+    Clipboard.write('domain: ' + '\/' + window.location.href.slice(8,).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
 mapkey('yk', "Copy url before keyowrd insertion", function () {
     Clipboard.write(window.location.href.split('=')[0] + '=');
@@ -459,10 +459,10 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
 window.onload = function(){
 }
 */
-mapkey('H', 'slideshare previous page', function () {
+mapkey('h', 'slideshare previous page', function () {
     document.getElementById('btnPrevious').click();
 },{domain: /www\.slideshare\.net/i});
-mapkey('L', 'slideshare next page', function () {
+mapkey('l', 'slideshare next page', function () {
     document.getElementById('btnNext').click();
 },{domain: /www\.slideshare\.net/i});
 //pdf viewer mapping 
@@ -491,13 +491,11 @@ mapkey('L', 'slideshare next page', function () {
 // */
 
 //네이버 맵 지도 이동
-/*
-
-map('h', 'ArrowLeft', );
+map('h', 'ArrowLeft', {});
 map('j', 'ArrowDown',  {domain: 'map\.naver\.com/i'});
 map('k', 'ArrowUp', {domain: 'map\.naver\.com/i'});
 map('l', 'Arrowright', {domain: 'map\.naver\.com/i'});
-*/
+
 // 지도 이동 
 
 /* 이것도 잘 되지 않는다 
