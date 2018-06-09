@@ -450,11 +450,16 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
 },{domain: /stackoverflow\.com/i});
 
 //https://www.slideshare.net/mandrewmartin/regression-presentation
-//div.j-prev-btn.arrow-left
-//div.j-prev-btn.arrow-right
+//div.j-prev-btn.arrow-left  btnPrevious
+//div.j-prev-btn.arrow-right btnNext
 //
 //--------------End of D key and U key ----------------------
 
+/*
+window.onload = function(){
+  document.getElementById('clickButton').click();
+}
+*/
 
 //pdf viewer mapping 
 
