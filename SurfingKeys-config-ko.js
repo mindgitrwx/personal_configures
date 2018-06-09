@@ -401,13 +401,13 @@ map('<Ctrl-V>', 'sm'); // markdown preview
 //-------------- D key and U key ---------------------- 함수화 필요
 //TODO: add rage of scroll
 //sysntax, code
-function DownController(lineQuery, offset = 0) {
+function DownController(lineQuery = 'pre' , offset = 0) {
     pageHeadLine = document.querySelectorAll('.' + lineQuery);
     if(pageHeadLine.length > lineNum){ lineNum++;}
     pageHeadLine[lineNum].scrollIntoView();
     window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
 }
-function UpController(lineQuery, offset = 0) {
+function UpController(lineQuery = 'pre' , offset = 0) {
     pageHeadLine = document.querySelectorAll('.' + lineQuery);
     if(0 < lineNum){ lineNum--;}
     pageHeadLine[lineNum].scrollIntoView();
