@@ -457,18 +457,16 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
 
 /*
 window.onload = function(){
-  document.getElementById('clickButton').click();
 }
 */
-mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
-    stackAnswer--;
-    pageHeadLine = document.querySelectorAll(".answer");
-    pageHeadLine[stackAnswer].scrollIntoView();
-    window.scrollBy(0, -47); // Adjust scrolling with a negative value here : stackoverflow upper bar
-},{domain: /stackoverflow\.com/i});
-
+mapkey('H', 'slideshare previous page', function () {
+    document.getElementById('btnPrevious').click();
+},{domain: /www\.slideshare\.net/i});
+mapkey('L', 'slideshare next page', function () {
+    document.getElementById('btnNext').click();
+},{domain: /www\.slideshare\.net/i});
 //pdf viewer mapping 
-/www\.slideshare\.net/i
+
 // mapkey('D', 'github readme 스크롤', function () {
 //     stackAnswer++;
 //     pageHeadLine = document.querySelectorAll(".answers");
