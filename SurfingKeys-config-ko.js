@@ -317,7 +317,7 @@ vmapkey('~dy', "Delete first 1 character", function () {
 vmapkey('~Dy', "Delete surronded", function () {
     Clipboard.write(window.getSelection().toString().slice(1, -1));
 });
-vmapkey('~sy', "Remove special character (blank is not considered as special character", function () {
+vmapkey('~sy', "Remove special character (blank is not considered as special character", function () { //TODO: Black is not work
     Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9:blank:]/ig, ""));
 });
 vmapkey('~dy', "Markdown Strikethrough", function () {
@@ -423,7 +423,6 @@ mapkey('U', '위키 목차 대단위 up스크롤', function () {
     pageHeadLine[wikiPage].scrollIntoView();
 },{domain: /\.wikipedia\.org/i});
 
-// Todo: 아직 구현되지 않음
 mapkey('D', 'wikiwand 목차 대단위 스크롤 ', function () {
     wikiPage++;
     pageHeadLine = document.querySelectorAll(".mw-headline");
@@ -465,6 +464,21 @@ mapkey('h', 'slideshare previous page', function () {
 mapkey('l', 'slideshare next page', function () {
     document.getElementById('btnNext').click();
 },{domain: /www\.slideshare\.net/i});
+
+// skipControl sc-ir playControls__control playControls__prev skipControl__previous
+// skipControl sc-ir playControls__control playControls__next skipControl__next
+// sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive
+//Soundcloud shortcuts
+// . 이 들어가야 하는지 아닌지 테스트 
+mapkey('J', 'soundcloud previous song', function () {
+    document.getElementsByClassName('sc-ir playControls__control playControls__prev skipControl__previous').click();
+},{domain: /soundcloud\.com/i});
+mapkey('K', 'soundcloud next song', function () {
+    document.getElementsByClassName('skipControl sc-ir playControls__control playControls__next skipControl__next').click();
+},{domain: /soundcloud\.com/i});
+mapkey('L', 'soundcloud like', function () {
+    document.getElementsByClassName('sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive').click();
+},{domain: /soundcloud\.com/i});
 //pdf viewer mapping 
 
 // mapkey('D', 'github readme 스크롤', function () {
