@@ -168,7 +168,13 @@ addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=')
 addSearchAliasX('nW', '나무위키', 'https://namu.wiki/w/');
 addSearchAliasX('eW', '영문위키', 'https://www.wikiwand.com/en/');
 addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
-
+http:   //www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=
+//papaers
+addSearchAliasX('pG', '구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
+addSearchAliasX('pN', 'nCBI', 'https://www.ncbi.nlm.nih.gov/search/?term=');
+addSearchAliasX('pR', 'RISS', 'http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=');
+addSearchAliasX('pE', 'ELSEVIER', 'https://www.elsevier.com/search-results?query=');
+addSearchAliasX('pC', 'CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
 //news 
 //knowledge
 //blog
@@ -395,70 +401,70 @@ map('<Ctrl-V>', 'sm'); // markdown preview
 //TODO: add rage of scroll
 //sysntax, code
 mapkey('D', '', function () {
-    codeWrapper++;
     pageHeadLine = document.querySelectorAll("pre");
+    if(pageHeadLine.length > codeWrapper){ codeWrapper++;}
     pageHeadLine[codeWrapper].scrollIntoView();
 });
 mapkey('U', '', function () {
-    codeWrapper--;
     pageHeadLine = document.querySelectorAll("pre");
+    if(0 < codeWrapper){ codeWrapper0--;}
     pageHeadLine[codeWrapper].scrollIntoView();
 });
 mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
-    namuPage++;
     pageHeadLine = document.querySelectorAll(".wiki-heading");
+    if(pageHeadLine.length > namuPage){ namuPage++;}
     pageHeadLine[namuPage].scrollIntoView();
 },{domain: /namu\.wiki/i});
 mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
-    namuPage--;
     pageHeadLine = document.querySelectorAll(".wiki-heading");
+    if(0 < namuPage){ namuPage--;}
     pageHeadLine[namuPage].scrollIntoView();
 },{domain: /namu\.wiki/i});
 
 mapkey('D', '위키 목차 대단위 다운스크롤', function () {
-    wikiPage++;
     pageHeadLine = document.querySelectorAll(".mw-headline");
+    wikiPage++;
     pageHeadLine[wikiPage].scrollIntoView();
 },{domain: /\.wikipedia\.org/i});
 mapkey('U', '위키 목차 대단위 up스크롤', function () {
-    wikiPage--;
     pageHeadLine = document.querySelectorAll(".mw-headline");
+    wikiPage--;
     pageHeadLine[wikiPage].scrollIntoView();
 },{domain: /\.wikipedia\.org/i});
 
 mapkey('D', 'wikiwand 목차 대단위 스크롤 ', function () {
-    wikiPage++;
     pageHeadLine = document.querySelectorAll(".mw-headline");
+    wikiPage++;
     pageHeadLine[wikiPage].scrollIntoView();
 },{domain: /www\.wikiwand\.com/i});
 mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
-    wikiPage--;
     pageHeadLine = document.querySelectorAll(".mw-headline");
+    wikiPage--;
     pageHeadLine[wikiPage].scrollIntoView();
 },{domain: /www\.wikiwand\.com/i});
 
 // query select all 내부에서 regular expression 이 먹히지 않음 
 mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
-    stackAnswer++;
     pageHeadLine = document.querySelectorAll(".answer");
+    stackAnswer++;
     pageHeadLine[stackAnswer].scrollIntoView();
     window.scrollBy(0, -47); // Adjust scrolling with a negative value : stackoverflow upper bar
 },{domain: /stackoverflow\.com/i});
 mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
-    stackAnswer--;
     pageHeadLine = document.querySelectorAll(".answer");
+    stackAnswer--;
     pageHeadLine[stackAnswer].scrollIntoView();
     window.scrollBy(0, -47); // Adjust scrolling with a negative value here : stackoverflow upper bar
 },{domain: /stackoverflow\.com/i});
 domain: /kin\.naver\.com/i
 mapkey('D', 'naver 답변 다운 스크롤', function () {
-    naverAnswer++;
     pageHeadLine = document.querySelectorAll(".qna_detail_answerList");
+    naverAnswer++;
     pageHeadLine[naverAnswer].scrollIntoView();
 },{domain: /kin\.naver\.com/i});
 mapkey('U', 'naver 답변 up 스크롤 ', function () {
-    naverAnswer--;
     pageHeadLine = document.querySelectorAll(".qna_detail_answerList");
+    naverAnswer--;
     pageHeadLine[naverAnswer].scrollIntoView();
 },{domain: /kin\.naver\.com/i});
 //https://www.slideshare.net/mandrewmartin/regression-presentation
