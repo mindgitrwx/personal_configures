@@ -397,7 +397,7 @@ mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
 });
 map('<Ctrl-V>', 'sm'); // markdown preview
 
-//-------------- D key and U key ----------------------
+//-------------- D key and U key ---------------------- 함수화 필요
 //TODO: add rage of scroll
 //sysntax, code
 mapkey('D', '', function () {
@@ -458,12 +458,12 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
 },{domain: /stackoverflow\.com/i});
 domain: /kin\.naver\.com/i
 mapkey('D', 'naver 답변 다운 스크롤', function () {
-    pageHeadLine = document.querySelectorAll(".qna_detail_answerList");
+    pageHeadLine = document.querySelectorAll(".line_horizontal");
     naverAnswer++;
     pageHeadLine[naverAnswer].scrollIntoView();
 },{domain: /kin\.naver\.com/i});
 mapkey('U', 'naver 답변 up 스크롤 ', function () {
-    pageHeadLine = document.querySelectorAll(".qna_detail_answerList");
+    pageHeadLine = document.querySelectorAll(".line_horizontal");
     naverAnswer--;
     pageHeadLine[naverAnswer].scrollIntoView();
 },{domain: /kin\.naver\.com/i});
