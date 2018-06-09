@@ -271,7 +271,7 @@ Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(r
     return renderShanbay(res);
 });
 mapkey('yr', "Copy url as regex", function () {
-    Clipboard.write('\/' + window.location.href.slice(8,).split('/')[0].replace(/\./g, "\\\.") + '\/');
+    Clipboard.write('\/' + window.location.href.slice(8,).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
 mapkey('yk', "Copy url before keyowrd insertion", function () {
     Clipboard.write(window.location.href.split('=')[0] + '=');
@@ -460,9 +460,15 @@ window.onload = function(){
   document.getElementById('clickButton').click();
 }
 */
+mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
+    stackAnswer--;
+    pageHeadLine = document.querySelectorAll(".answer");
+    pageHeadLine[stackAnswer].scrollIntoView();
+    window.scrollBy(0, -47); // Adjust scrolling with a negative value here : stackoverflow upper bar
+},{domain: /stackoverflow\.com/i});
 
 //pdf viewer mapping 
-
+/www\.slideshare\.net/i
 // mapkey('D', 'github readme 스크롤', function () {
 //     stackAnswer++;
 //     pageHeadLine = document.querySelectorAll(".answers");
