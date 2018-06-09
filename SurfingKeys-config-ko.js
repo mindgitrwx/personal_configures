@@ -401,6 +401,7 @@ map('<Ctrl-V>', 'sm'); // markdown preview
 //-------------- D key and U key ---------------------- 함수화 필요
 //TODO: add rage of scroll
 //sysntax, code
+/* 잘 동작하지 않음 
 function DownController(lineQuery = 'pre' , offset = 0) {
     pageHeadLine = document.querySelectorAll(lineQuery);
     if(pageHeadLine.length){
@@ -417,7 +418,12 @@ function UpController(lineQuery = 'pre' , offset = 0) {
         window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
     }
 }
-/* 동작하는 코드 
+mapkey('D', '', DownController('pre',0));
+mapkey('U', '', UpController('pre',0));
+mapkey('D', '나무위키 목차 대단위 다운스크롤', DownController('.wiki-heading', 0) , {domain: /namu\.wiki/i});
+mapkey('U', '나무위키 목차 대단위 up스크롤', UpController('.wiki-heading',0) , {domain: /namu\.wiki/i});
+*/
+
 mapkey('D', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
     if(pageHeadLine.length > codeWrapper){ codeWrapper++;}
@@ -428,13 +434,7 @@ mapkey('U', '', function () {
     if(0 < codeWrapper){ codeWrapper--;}
     pageHeadLine[codeWrapper].scrollIntoView();
 });
-*/
 
-mapkey('D', '', DownController('pre',0));
-mapkey('U', '', UpController('pre',0));
-mapkey('D', '나무위키 목차 대단위 다운스크롤', DownController('.wiki-heading',0) , {domain: /namu\.wiki/i});
-mapkey('U', '나무위키 목차 대단위 up스크롤', UpController('.wiki-heading',0) , {domain: /namu\.wiki/i});
-/* 동작하는 코드
 mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".wiki-heading");
     if(pageHeadLine.length > namuPage){ namuPage++;}
@@ -445,52 +445,52 @@ mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
     if(0 < namuPage){ namuPage--;}
     pageHeadLine[namuPage].scrollIntoView();
 },{domain: /namu\.wiki/i});
-*/
 
 mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
+    if(pageHeadLine.length > wikiPage){ wikiPage++;}
     wikiPage++;
     pageHeadLine[wikiPage].scrollIntoView();
 },{domain: /\.wikipedia\.org/i});
 mapkey('U', '위키 목차 대단위 up스크롤', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
-    wikiPage--;
+    if(0 < wikiPage){ wikiPage--;}
     pageHeadLine[wikiPage].scrollIntoView();
 },{domain: /\.wikipedia\.org/i});
 
 mapkey('D', 'wikiwand 목차 대단위 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
-    wikiPage++;
+    if(pageHeadLine.length > wikiPage){ wikiPage++;}
     pageHeadLine[wikiPage].scrollIntoView();
 },{domain: /www\.wikiwand\.com/i});
 mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
-    wikiPage--;
+    if(0 < wikiPage){ wikiPage--;}
     pageHeadLine[wikiPage].scrollIntoView();
 },{domain: /www\.wikiwand\.com/i});
 
 // query select all 내부에서 regular expression 이 먹히지 않음 
 mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
     pageHeadLine = document.querySelectorAll(".answer");
-    stackAnswer++;
+    if(pageHeadLine.length > stackAnswer){ stackAnswer++;}
     pageHeadLine[stackAnswer].scrollIntoView();
     window.scrollBy(0, -47); // Adjust scrolling with a negative value : stackoverflow upper bar
 },{domain: /stackoverflow\.com/i});
 mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".answer");
-    stackAnswer--;
+    if(0 < stackAnswer){ stackAnswer--;}
     pageHeadLine[stackAnswer].scrollIntoView();
     window.scrollBy(0, -47); // Adjust scrolling with a negative value here : stackoverflow upper bar
 },{domain: /stackoverflow\.com/i});
 domain: /kin\.naver\.com/i
 mapkey('D', 'naver 답변 다운 스크롤', function () {
     pageHeadLine = document.querySelectorAll(".line_horizontal");
-    naverAnswer++;
+    if(pageHeadLine.length > naverAnswer){ naverAnswer++;}
     pageHeadLine[naverAnswer].scrollIntoView();
 },{domain: /kin\.naver\.com/i});
 mapkey('U', 'naver 답변 up 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".line_horizontal");
-    naverAnswer--;
+    if(0 < naverAnswer){ naverAnswer--;}
     pageHeadLine[naverAnswer].scrollIntoView();
 },{domain: /kin\.naver\.com/i});
 //https://www.slideshare.net/mandrewmartin/regression-presentation
