@@ -491,12 +491,10 @@ mapkey('l', 'slideshare next page', function () {
 // */
 
 //네이버 맵 지도 이동
-/*
 map('h', '<ArrowLeft>', {domain: /www\.google\.com/i});
 map('j', '<ArrowDown>',  {domain: /www\.google\.com/i});
 map('k', '<ArrowUp>', {domain: /www\.google\.com/i});
-map('l', '<Arrowright>', {domain: /www\.google\.com/i});
-*/
+map('l', '<ArrowRight>', {domain: /www\.google\.com/i});
 
 // 지도 이동 
 
