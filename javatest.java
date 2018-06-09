@@ -7,12 +7,7 @@ import './defaltmapping.js'
 import './defaltmapping.js'
 import './dejjfaltmapping.js'
 import './defaltmapping.js'
-/**
- * ---
- *
- * in this example, wi''ll see some basic opreation for indarrays
- * @author jonghyeon yeo
- * wwwwiwwj
+/** * --- * * in this example, wi''ll see some basic opreation for indarrays * @author jonghyeon yeo * wwwwiwwj
  *
 /**
  * --- nd4j example 1: indarray concat, hstack, vstack, and pad ---
@@ -93,6 +88,12 @@ public class concatvstackhstackpad {
         system.out.println("### ones ####");
         system.out.println(ones);
 
+
+        //the name of code is not as implemented as you 
+//the name of code is not as implemented as you inte
+//the name of code is not as implemented as you
+//the name of code is not as implemented as you
+//the name of code is not as implemented as you
         indarray combined = nd4j.concat(0,zeros,ones);
 
         system.out.println("### combined dimension 0####");

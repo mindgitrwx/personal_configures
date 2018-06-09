@@ -21,9 +21,6 @@ var wikiPage = 0;
 var stackAnswer = 0;
 var codeWrapper = 0;
 
-mapkey('<Ctrl-y>', 'Show me the money', function () {
-    Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');
-});
 settings.caseSensitive = true; settings.omnibarSuggestion = true;
 settings.defaultSearchEngine = 'L';
 
