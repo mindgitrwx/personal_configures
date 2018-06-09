@@ -270,7 +270,10 @@ Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(r
     var res = JSON.parse(res.text);
     return renderShanbay(res);
 });
-mapkey('yk', "Copy url before keyword insertion", function () {
+mapkey('yk', "Copy url as regex", function () {
+    Clipboard.write(window.location.href.slice(8,).split('/')[0].replace(/./g, "\.") + '=');
+});
+mapkey('yr', "Copy url before keyowrd insertion", function () {
     Clipboard.write(window.location.href.split('=')[0] + '=');
 });
 // surround   
@@ -446,6 +449,10 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
     window.scrollBy(0, -47); // Adjust scrolling with a negative value here : stackoverflow upper bar
 },{domain: /stackoverflow\.com/i});
 
+//https://www.slideshare.net/mandrewmartin/regression-presentation
+//div.j-prev-btn.arrow-left
+//div.j-prev-btn.arrow-right
+//
 //--------------End of D key and U key ----------------------
 
 
