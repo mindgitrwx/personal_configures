@@ -2,7 +2,7 @@
 Surfing keys config (SurfingKeys)
 Korean specific surfing key config
 Please copy this url to text box [load settings from:], and 'Save'
-https://raw.githubusercontent.com/mindgitrwx/gitconventions/master/SurfingKeys-config-ko.js
+https:   //raw.githubusercontent.com/mindgitrwx/gitconventions/master/SurfingKeys-config-ko.js
 
 Surfing key 에서 se를 누르면 setting surfing key 의 setting으로 들어가집니다. 이때 보여지는 화면에서
 Advanced mode를 선택한 후, Load settings from에 위 주소를 입력하고 Save 해주시면 몇초 지나서 이 설정이 저장될 겁니다.
@@ -15,13 +15,13 @@ map('<Ctrl-E>', 'T');
 jonghyeon.rw@gmail.com
 */
 
-// ------------ for page moving -------------- (everytime reseted when)
-var namuPage = 0;
-var wikiPage = 0;
+// ------------ for page moving -------------- (every time it would be returned zero when refreshed)
+var namuPage    = 0;
+var wikiPage    = 0;
 var stackAnswer = 0;
 var codeWrapper = 0;
 
-settings.caseSensitive = true; settings.omnibarSuggestion = true;
+settings.caseSensitive       = true; settings.omnibarSuggestion = true;
 settings.defaultSearchEngine = 'L';
 
 //unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
@@ -174,9 +174,9 @@ addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 
 mapkey('Q', '#8Open omnibar for word translation', function () {
     Front.openOmniquery({
-        url: 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&dt=bd&q=',
-        query: Visual.getWordUnderCursor(),
-        style: 'opacity: 0.8;',
+        url        : 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&dt=bd&q=',
+        query      : Visual.getWordUnderCursor(),
+        style      : 'opacity: 0.8;',
         parseResult: res => [render(JSON.parse(res.text))]
     });
 });
@@ -210,7 +210,7 @@ function SelectText(element) {
         range.select();
     } else if (window.getSelection) {
         var selection = window.getSelection();
-        var range = document.createRange();
+        var range     = document.createRange();
         range.selectNodeContents(element);
         selection.removeAllRanges();
         selection.addRange(range);
@@ -257,8 +257,8 @@ mapkey('Q', '#8Open omnibar for word translation', function() {
             return "https://api.shanbay.com/bdc/search/?word=" + q
         },
         */
-        query: Visual.getWordUnderCursor(),
-        style: "opacity: 0.3;",
+        query      : Visual.getWordUnderCursor(),
+        style      : "opacity: 0.3;",
         parseResult: function(res) {
             var res = JSON.parse(res.text);
             return [ renderGoogleTranslate(res) ];

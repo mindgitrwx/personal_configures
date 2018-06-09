@@ -1,3 +1,26 @@
+//    Copyright 2018 jonghyun
+// 
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+// 
+//        http://www.apache.org/licenses/LICENSE-2.0
+// 
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+
+/*
+ * Filename: d:\study\vimplugin\javatest.java
+ * Path: d:\study\vimplugin
+ * Created Date: Thursday, June 7th 2018, 4:28:52 am
+ * Author: jonghyun
+ * 
+ * Copyright (c) 2018 Your Company
+ */
+
 package org.nd4j.examples;
 
 import org.nd4j.linalg.api.ndarray.indarray;
@@ -18,6 +41,11 @@ import './defaltmapping.js'
  *
  * @author tom hanlon
  */
+
+ /**
+  * 
+  */
+  */
 public class concatvstackhstackpad {
 
    /***
@@ -26,10 +54,12 @@ public class concatvstackhstackpad {
     * @deprecated
     * @
     * 
+    * @ii woeij oijew jo jojaojeoaijwe
+    * 
+    a ("The big enchilada, as this extraordinarily comprehensive study clearly demonstrates, is how people live their lives: whether they smoke, what and how much they eat, and whether they abuse alcohol or drugs. These, along with high levels of blood sugar and blood pressure, both of which are influenced by diet, are the main factors dictating poor health.)=4.5^2
     * 
     * 
-    * 
-    * 
+    ----wef-ewf---
     * 
     * 
     * 
@@ -89,6 +119,7 @@ public class concatvstackhstackpad {
         system.out.println(ones);
 
 
+        12 + 12 + 10
         //the name of code is not as implemented as you 
 //the name of code is not as implemented as you inte
 //the name of code is not as implemented as you
