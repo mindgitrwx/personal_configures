@@ -270,10 +270,10 @@ Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(r
     var res = JSON.parse(res.text);
     return renderShanbay(res);
 });
-mapkey('yk', "Copy url as regex", function () {
+mapkey('yr', "Copy url as regex", function () {
     Clipboard.write('\/' + window.location.href.slice(8,).split('/')[0].replace(/\./g, "\\\.") + '\/');
 });
-mapkey('yr', "Copy url before keyowrd insertion", function () {
+mapkey('yk', "Copy url before keyowrd insertion", function () {
     Clipboard.write(window.location.href.split('=')[0] + '=');
 });
 // surround   
