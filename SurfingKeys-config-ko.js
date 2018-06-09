@@ -21,6 +21,7 @@ var wikiPage    = 0;
 var stackAnswer = 0;  // 변수 통합 생각중
 var naverAnswer = 0;
 var codeWrapper = 0;
+var lineNum     = 0;
 
 settings.caseSensitive       = true; settings.omnibarSuggestion = true;
 settings.defaultSearchEngine = 'L';
@@ -400,6 +401,19 @@ map('<Ctrl-V>', 'sm'); // markdown preview
 //-------------- D key and U key ---------------------- 함수화 필요
 //TODO: add rage of scroll
 //sysntax, code
+function DownController(lineQuery, offset = 0) {
+    pageHeadLine = document.querySelectorAll('.' + lineQuery);
+    if(pageHeadLine.length > lineNum){ lineNum++;}
+    pageHeadLine[lineNum].scrollIntoView();
+    window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
+}
+function UpController(lineQuery, offset = 0) {
+    pageHeadLine = document.querySelectorAll('.' + lineQuery);
+    if(0 < lineNum){ lineNum--;}
+    pageHeadLine[lineNum].scrollIntoView();
+    window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
+}
+
 mapkey('D', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
     if(pageHeadLine.length > codeWrapper){ codeWrapper++;}
@@ -407,9 +421,13 @@ mapkey('D', '', function () {
 });
 mapkey('U', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
-    if(0 < codeWrapper){ codeWrapper0--;}
+    if(0 < codeWrapper){ codeWrapper--;}
     pageHeadLine[codeWrapper].scrollIntoView();
 });
+
+mapkey('D', '나무위키 목차 대단위 다운스크롤', DownController('.wiki-heading') , {domain: /namu\.wiki/i});
+mapkey('U', '나무위키 목차 대단위 up스크롤', UpController('.wiki-heading') , {domain: /namu\.wiki/i});
+/*
 mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".wiki-heading");
     if(pageHeadLine.length > namuPage){ namuPage++;}
@@ -420,6 +438,7 @@ mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
     if(0 < namuPage){ namuPage--;}
     pageHeadLine[namuPage].scrollIntoView();
 },{domain: /namu\.wiki/i});
+*/
 
 mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
