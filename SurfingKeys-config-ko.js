@@ -403,15 +403,19 @@ map('<Ctrl-V>', 'sm'); // markdown preview
 //sysntax, code
 function DownController(lineQuery = 'pre' , offset = 0) {
     pageHeadLine = document.querySelectorAll('.' + lineQuery);
-    if(pageHeadLine.length > lineNum){ lineNum++;}
-    pageHeadLine[lineNum].scrollIntoView();
-    window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
+    if(pageHeadLine.length){
+        if(pageHeadLine.length > lineNum){ lineNum++;}
+        pageHeadLine[lineNum].scrollIntoView();
+        window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
+    }
 }
 function UpController(lineQuery = 'pre' , offset = 0) {
     pageHeadLine = document.querySelectorAll('.' + lineQuery);
-    if(0 < lineNum){ lineNum--;}
-    pageHeadLine[lineNum].scrollIntoView();
-    window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
+    if(pageHeadLine.length){
+        if(0 < lineNum){ lineNum--;}
+        pageHeadLine[lineNum].scrollIntoView();
+        window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
+    }
 }
 
 mapkey('D', '', function () {
