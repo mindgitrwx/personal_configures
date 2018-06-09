@@ -402,7 +402,7 @@ map('<Ctrl-V>', 'sm'); // markdown preview
 //TODO: add rage of scroll
 //sysntax, code
 function DownController(lineQuery = 'pre' , offset = 0) {
-    pageHeadLine = document.querySelectorAll('.' + lineQuery);
+    pageHeadLine = document.querySelectorAll(lineQuery);
     if(pageHeadLine.length){
         if(pageHeadLine.length > lineNum){ lineNum++;}
         pageHeadLine[lineNum].scrollIntoView();
@@ -410,7 +410,7 @@ function DownController(lineQuery = 'pre' , offset = 0) {
     }
 }
 function UpController(lineQuery = 'pre' , offset = 0) {
-    pageHeadLine = document.querySelectorAll('.' + lineQuery);
+    pageHeadLine = document.querySelectorAll(lineQuery);
     if(pageHeadLine.length){
         if(0 < lineNum){ lineNum--;}
         pageHeadLine[lineNum].scrollIntoView();
