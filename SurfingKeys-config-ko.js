@@ -95,7 +95,6 @@ addSearchAliasX('wI', '소개', 'https://www.google.com/search?q=Introduction+of
 addSearchAliasX('wJ', '직업', 'https://www.google.com/search?q=jo+of+');
 addSearchAliasX('wK', '한국', 'https://www.google.com/search?q=Korea+');
 addSearchAliasX('wL', '리스트', 'https://www.google.com/search?q=list+of+');
-addSearchAliasX('wL', '위치', 'https://www.google.com/search?q=Location+of+');
 addSearchAliasX('wM', '방법', 'https://www.google.com/search?q=method+of+');
 addSearchAliasX('wm', '뜻', 'https://www.google.com/search?q=what+is+the+meaning+of+');
 addSearchAliasX('wN', '이름', 'https://www.google.com/search?q=name+of+');
