@@ -537,10 +537,15 @@ mapkey('ZT', 'remove element', function () {
     elem.parentNode.removeChild(elem);
     elem = document.getElementById('foot-cnt');
     elem.parentNode.removeChild(elem);
-    elem = document.getElementsByClassName('iUha30');
-    elem.parentNode.removeChild(elem);
-    elee = document.getElementsByClassName('fl');
-    elem.parentNode.removeChild(elem);
+
+    ele = document.getElementsByClassName('iUha30s');
+    for (var i = 0; i < ele.length; i++ ) {
+        ele[i].parentNode.removeChild = ele[i];
+    }
+    ele = document.getElementsByClassName('fi');
+    for (var i = 0; i < ele.length; i++ ) {
+        ele[i].parentNode.removeChild = ele[i];
+    }
 });
 //p, ''df viewer mapping 
 
