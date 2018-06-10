@@ -574,8 +574,8 @@ mapkey('ZT', 'remove element', function () {
     elem.parentNode.removeChild(elem);
 */
 
-    ELEMENT.classList.remove("iUha30s");
-    ELEMENT.classList.remove("fi");
+    document.classList.remove("iUha30s");
+    document.classList.remove("fi");
 });
 //p, ''df viewer mapping 
 
