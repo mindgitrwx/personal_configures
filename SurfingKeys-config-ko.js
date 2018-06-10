@@ -529,13 +529,13 @@ mapkey('l', 'google book next page', function () {
 // . 이 들어가야 하는지 아닌지 테스트 
 // TODO: 잘 동작하지 않음
 mapkey('J', 'soundcloud previous song', function () {
-    document.getElementsByClassName('sc-ir playControls__control playControls__prev skipControl__previous').click();
+    document.getElementsByClassName('sc-ir.playControls__control.playControls__prev.skipControl__previous').click();
 },{domain: /soundcloud\.com/i});
 mapkey('K', 'soundcloud next song', function () {
-    document.getElementsByClassName('skipControl sc-ir playControls__control playControls__next skipControl__next').click();
+    document.getElementsByClassName('skipControl.sc-ir.playControls__control.playControls__next skipControl__next').click();
 },{domain: /soundcloud\.com\/books/i});
 mapkey('L', 'soundcloud like', function () {
-    document.getElementsByClassName('sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive').click();
+    document.getElementsByClassName('sc-button-like.playbackSoundBadge__like.sc-button.sc-button-small.sc-button-icon.sc-button-responsive').click();
 },{domain: /soundcloud\.com\/books/i});
 
 
