@@ -526,6 +526,8 @@ mapkey('L', 'soundcloud like', function () {
     document.getElementsByClassName('sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive').click();
 },{domain: /soundcloud\.com/i});
 
+
+//동작하지 않음
 mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
     window.location.href = window.location.href.split('=')[0] + '=' + parseInt(window.location.href.split('=')[1])++;
 });
@@ -535,6 +537,7 @@ mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
 
 mapkey('ZT', 'remove element', function () {
 
+    /*
     elem = document.getElementsByClassName('ctr-p');
     elem.parentNode.removeChild(elem);
     elem = document.getElementById('slim_appbar');
@@ -548,6 +551,7 @@ mapkey('ZT', 'remove element', function () {
     elem = document.getElementById('foot-cnt');
     elem.parentNode.removeChild(elem);
     ele = document.getElementsByClassName('iUha30s');
+    */
 
     for (var i = 0; i < ele.length; i++ ) {
         ele[i].parentNode.removeChild = ele[i];
