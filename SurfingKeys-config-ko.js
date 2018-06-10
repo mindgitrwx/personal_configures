@@ -503,6 +503,9 @@ mapkey('U', 'naver 답변 up 스크롤 ', function () {
 window.onload = function(){
 }
 */
+
+
+// page 양 옆으로 넘길 수 있도록 하기
 mapkey('h', 'slideshare previous page', function () {
     document.getElementById('btnPrevious').click();
 },{domain: /www\.slideshare\.net/i});
@@ -529,10 +532,10 @@ mapkey('J', 'soundcloud previous song', function () {
 },{domain: /soundcloud\.com/i});
 mapkey('K', 'soundcloud next song', function () {
     document.getElementsByClassName('skipControl sc-ir playControls__control playControls__next skipControl__next').click();
-},{domain: /soundcloud\.com/i});
+},{domain: /soundcloud\.com\/books/i});
 mapkey('L', 'soundcloud like', function () {
     document.getElementsByClassName('sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive').click();
-},{domain: /soundcloud\.com/i});
+},{domain: /soundcloud\.com\/books/i});
 
 
 // TODO: 동작하지 않음
