@@ -527,10 +527,6 @@ mapkey('L', 'soundcloud like', function () {
 },{domain: /soundcloud\.com/i});
 
 mapkey('ZT', 'remove element', function () {
-    elem = document.getElementsByClassName('iUha30');
-    elem.parentNode.removeChild(elem);
-    elee = document.getElementsByClassName('fl');
-    elem.parentNode.removeChild(elem);
     elem = document.getElementById('slim_appbar');
     elem.parentNode.removeChild(elem);
     elem = document.getElementById('searchform');
@@ -540,6 +536,10 @@ mapkey('ZT', 'remove element', function () {
     elem = document.getElementById('hdtb-msb');
     elem.parentNode.removeChild(elem);
     elem = document.getElementById('foot-cnt');
+    elem.parentNode.removeChild(elem);
+    elem = document.getElementsByClassName('iUha30');
+    elem.parentNode.removeChild(elem);
+    elee = document.getElementsByClassName('fl');
     elem.parentNode.removeChild(elem);
 });
 //p, ''df viewer mapping 
