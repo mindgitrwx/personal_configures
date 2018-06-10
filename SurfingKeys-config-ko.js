@@ -526,6 +526,10 @@ mapkey('L', 'soundcloud like', function () {
     document.getElementsByClassName('sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive').click();
 },{domain: /soundcloud\.com/i});
 
+//
+mapkey('ZT', 'remove text', function () {
+    document.querySelectorAll('div').innerHTML().replace('안녕하세요', '');
+});
 //pdf viewer mapping 
 
 // mapkey('D', 'github readme 스크롤', function () {
