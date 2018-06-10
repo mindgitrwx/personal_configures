@@ -527,6 +527,9 @@ mapkey('L', 'soundcloud like', function () {
 },{domain: /soundcloud\.com/i});
 
 mapkey('ZT', 'remove element', function () {
+
+    elem = document.getElementsByClassName('ctr-p');
+    elem.parentNode.removeChild(elem);
     elem = document.getElementById('slim_appbar');
     elem.parentNode.removeChild(elem);
     elem = document.getElementById('searchform');
@@ -537,8 +540,8 @@ mapkey('ZT', 'remove element', function () {
     elem.parentNode.removeChild(elem);
     elem = document.getElementById('foot-cnt');
     elem.parentNode.removeChild(elem);
-
     ele = document.getElementsByClassName('iUha30s');
+
     for (var i = 0; i < ele.length; i++ ) {
         ele[i].parentNode.removeChild = ele[i];
     }
