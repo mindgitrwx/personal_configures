@@ -330,7 +330,7 @@ vmapkey('~cy', "Added comma", function () {
 vmapkey('~dy', "Delete first 1 character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
-vmapkey('~Dy', "Delete surronded", function () {
+vmapkey('~Dy', "Delete surrounded", function () {
     Clipboard.write(window.getSelection().toString().slice(1, -1));
 });
 vmapkey('~sy', "Remove special character (blank is not considered as special character", function () { //TODO: Black is not work
@@ -341,7 +341,7 @@ vmapkey('~dy', "Markdown Strikethrough", function () {
 });
 //Todo
 /*
-vmapkey('~diy', "remove inner dobule quoates strings", function () {
+vmapkey('~diy', "remove inner double quoates strings", function () {
     Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
 });
 vmapkey('~siy', "remove inner single quoates strings", function () {
