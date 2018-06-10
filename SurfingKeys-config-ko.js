@@ -514,7 +514,6 @@ mapkey('l', 'slideshare next page', function () {
 },{domain: /www\.slideshare\.net/i});
 
 
-document.getElementsByName
 mapkey('h', 'google book previous page', function () {
     document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-left').click();
 },{domain: /play\.google\.com/i});
