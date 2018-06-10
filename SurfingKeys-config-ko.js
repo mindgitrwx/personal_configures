@@ -510,6 +510,14 @@ mapkey('l', 'slideshare next page', function () {
     document.getElementById('btnNext').click();
 },{domain: /www\.slideshare\.net/i});
 
+
+mapkey('h', 'google book previous page', function () {
+    document.getElementsByClassName('gb-pagination-controls gb-pagination-controls-left').click();
+},{domain: /play\.google\.com/i});
+mapkey('l', 'google book next page', function () {
+    document.getElementsByClassName('gb-pagination-controls gb-pagination-controls-right').click();
+},{domain: /play\.google\.com/i});
+
 // skipControl sc-ir playControls__control playControls__prev skipControl__previous
 // skipControl sc-ir playControls__control playControls__next skipControl__next
 // sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive
@@ -527,12 +535,12 @@ mapkey('L', 'soundcloud like', function () {
 },{domain: /soundcloud\.com/i});
 
 
-//동작하지 않음
+// TODO: 동작하지 않음
 mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
-    window.location.href = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1])++).toString();
+    window.location.assign = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1])++).toString();
 });
 mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
-    window.location.href = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1])--).toString();
+    window.location.assign = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1])--).toString();
 });
 
 mapkey('ZT', 'remove element', function () {
