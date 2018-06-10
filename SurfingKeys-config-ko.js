@@ -35,6 +35,14 @@ unmap('<Ctrl-6>');
 map(']',']]');
 map('[','[[');
 
+// for surfingkeys PDF autokey-----------------------------------------
+
+map(']','fs');
+map(']','fd');
+map(']','ff');
+
+
+//---------------------------------------------------------------------
 mapkey('on', '#3Open Firefox newtab', function() {
     tabOpenLink("www.google.com");
 });
@@ -183,15 +191,7 @@ addSearchAliasX('pC', 'CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
 //knowledge
 //blog
 
-mapkey('Q', '#8Open omnibar for word translation', function () {
-    Front.openOmniquery({
-        url        : 'https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=en&dt=t&dt=bd&q=',
-        query      : Visual.getWordUnderCursor(),
-        style      : 'opacity: 0.8;',
-        parseResult: res => [render(JSON.parse(res.text))]
-    });
-});
-Visual.setTranslationService('https://translate.googleapis.com/translate_a/single?client=gtx&sl=auto&tl=ja&dt=t&dt=bd&q=', res => render(JSON.parse(res.text)));
+
 /* mapkey('q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", Hints.dispatchMouseClick);
     searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
@@ -539,7 +539,7 @@ mapkey(']', 'google book next page', function () {
 mapkey('J', 'soundcloud previous song', function () {
     document.getElementsByClassName('sc-ir.playControls__control.playControls__prev.skipControl__previous').click();
 },{domain: /soundcloud\.com/i});
-mapkey('K', 'soundcloud next song', function () {
+mapkey('K', 'soundcltud next song', function () {
     document.getElementsByClassName('skipControl.sc-ir.playControls__control.playControls__next.skipControl__next').click();
 },{domain: /soundcloud\.com/i});
 mapkey('L', 'soundcloud like', function () {
