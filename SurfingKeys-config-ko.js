@@ -557,7 +557,7 @@ mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
 
 // TODO: 동작하지 않음 
 
-mapkey('ZT', 'remove element', function () {
+mapkey('zt', 'remove element', function () {
 
     /*
     ele = document.getElementsByClassName('ctr-p');
