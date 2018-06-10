@@ -28,7 +28,7 @@ settings.defaultSearchEngine = 'L';
 
 //google search 바를 없애버림 
 elem = document.getElementById('searchform');
-if(elem != NUll){ elem.parentNode.removeChild(elem);}
+if(elem !== NULL){ elem.parentNode.removeChild(elem);}
 
 //unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
 unmap('<Ctrl-6>');
