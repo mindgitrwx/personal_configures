@@ -526,9 +526,14 @@ mapkey('L', 'soundcloud like', function () {
     document.getElementsByClassName('sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive').click();
 },{domain: /soundcloud\.com/i});
 
-//
 mapkey('ZT', 'remove element', function () {
-    elem = document.getElementById('searchform')
+    elem = document.getElementsByClassName('iUha30');
+    elem.parentNode.removeChild(elem);
+    elee = document.getElementsByClassName('fl');
+    elem.parentNode.removeChild(elem);
+    elem = document.getElementById('slim_appbar');
+    elem.parentNode.removeChild(elem);
+    elem = document.getElementById('searchform');
     elem.parentNode.removeChild(elem);
     elem = document.getElementById('sfcnt');
     elem.parentNode.removeChild(elem);
