@@ -51,6 +51,7 @@
         [ "master", "slave" ],   
 
         [ "ip", "mac" ],
+        [ "TCP", "UDP" ],
 
         [ "jpg","png","gif" ],
         [ "png","ppt" ],
@@ -79,8 +80,11 @@
         [ "Created", "terminated" ],
         [ "Wating", "Running", "Blocked" ],
         [ "single", "multi"],
-        [ "thread", "process"]
-        [ "Hold", "wait"]
+        [ "thread", "process"],
+        [ "Hold", "wait"],
+
+//web developted
+        [ "getElementById", "getElementByClassName"],
 
     ]
 }
