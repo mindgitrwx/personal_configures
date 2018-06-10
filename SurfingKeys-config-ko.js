@@ -535,7 +535,7 @@ mapkey('K', 'soundcloud next song', function () {
 },{domain: /soundcloud\.com/i});
 mapkey('L', 'soundcloud like', function () {
     document.getElementsByClassName('sc-button-like.playbackSoundBadge__like.sc-button.sc-button-small.sc-button-icon.sc-button-responsive').click();
-},{domain: /soundcloud\.com\i});
+},{domain: /soundcloud\.com/i});
 
 
 // TODO: 동작하지 않음
