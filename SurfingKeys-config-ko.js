@@ -550,8 +550,8 @@ mapkey('ZT', 'remove element', function () {
     elem.parentNode.removeChild(elem);
     elem = document.getElementById('foot-cnt');
     elem.parentNode.removeChild(elem);
+*/
     ele = document.getElementsByClassName('iUha30s');
-    */
 
     for (var i = 0; i < ele.length; i++ ) {
         ele[i].parentNode.removeChild = ele[i];
