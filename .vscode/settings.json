@@ -1,9 +1,11 @@
 {
-    "editor.tabSize"        : 2,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys"       : true,
-    "vim.hlsearch"          : true,
-    "vim.handleKeys"        : {
+    "editor.fontSize"           : 12,
+    "metaGo.decoration.fontSize": 16,
+    "editor.tabSize"            : 2,
+    "vim.useSystemClipboard"    : true,
+    "vim.useCtrlKeys"           : true,
+    "vim.hlsearch"              : true,
+    "vim.handleKeys"            : {
         "<C-f>": false,
         "<C-b>": false,
     },
@@ -88,8 +90,35 @@
         [ "Hold", "wait"],
 
 //web developted
-        [ "getElementById", "getElementByClassName"],
+        [ "getElementById", "getElementByClassName"]
 
+    ],
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "go",
+        "handlebars",
+        "html",
+        "jade",
+        "javascriptreact",
+        "json",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "pub",
+        "python",
+        "restructuredtext",
+        "rust",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml"
     ]
 }
 /*

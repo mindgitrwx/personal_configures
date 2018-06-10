@@ -414,7 +414,7 @@ map('<Ctrl-V>', 'sm'); // markdown preview
 function DownController(lineQuery = 'pre' , offset = 0) {
     pageHeadLine = document.querySelectorAll(lineQuery);
     if(pageHeadLine.length){
-        if(pageHeadLine.length > lineNum){ lineNum++;}
+        if(pageHeadLine.length > jlineNum){ lineNum++;}
         pageHeadLine[lineNum].scrollIntoView();
         window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
     }
@@ -573,8 +573,11 @@ mapkey('ZT', 'remove element', function () {
     elem = document.getElementById('foot-cnt');
     elem.parentNode.removeChild(elem);
 */
+    ele = document.getElementsById('am-b5');
+    for (var i = 0; i < ele.length; i++ ) {
+        ele[i].parentNode.removeChild = ele[i];
+    }/
     ele = document.getElementsByClassName('iUha30s');
-
     for (var i = 0; i < ele.length; i++ ) {
         ele[i].parentNode.removeChild = ele[i];
     }
@@ -616,6 +619,7 @@ map('k', '<ArrowUp>', {domain: /map\.naver\.com/i});
 map('l', '<ArrowRight>', {domain: /map\.naver\.com/i});
 */
 // 지도 이동 
+
 
 /* 이것도 잘 되지 않는다 
 map( '<ArrowLeft>','h');
