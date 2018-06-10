@@ -526,6 +526,13 @@ mapkey('L', 'soundcloud like', function () {
     document.getElementsByClassName('sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive').click();
 },{domain: /soundcloud\.com/i});
 
+mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
+    window.location.href = window.location.href.split('=')[0] + window.location.href.split('=')[1]++;
+});
+mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
+    window.location.href = window.location.href.split('=')[0] + window.location.href.split('=')[1]--;
+});
+
 mapkey('ZT', 'remove element', function () {
 
     elem = document.getElementsByClassName('ctr-p');

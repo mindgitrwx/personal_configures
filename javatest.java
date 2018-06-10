@@ -4,7 +4,7 @@
 //    you may not use this file except in compliance with the License.
 //    You may obtain a copy of the License at
 // 
-//        http://www.apache.org/licenses/LICENSE-2.0
+//        http://nameofsidequerter.apache.org/licenses/LICENSE-2.0
 // 
 //    Unless required by applicable law or agreed to in writing, software
 //    distributed under the License is distributed on an "AS IS" BASIS,
@@ -56,8 +56,12 @@ public class concatvstackhstackpad {
     * 
     * @ii woeij oijew jo jojaojeoaijwe
     * 
-    a ("The big enchilada, as this extraordinarily comprehensive study clearly demonstrates, is how people live their lives: whether they smoke, what and how much they eat, and whether they abuse alcohol or drugs. These, along with high levels of blood sugar and blood pressure, both of which are influenced by diet, are the main factors dictating poor health.)=4.5^2
-    * 
+    a ("The big name is not encountered as you omprehensive study clearly demonstrates, is hopeople live their lives: whether they smoke, what and how much they eat, and whether they abuse alcohol or drugs. These, along with high levels of blood sugar and blood pressure, both of which are influenced by diet, are the main factors dictating poor health.)=4.5^2
+a ("The big name is not encountered as you omprehensive study clearly demonstrates, is hopeople live their lives: whether they smoke, what and how much they eat, and whether they abuse alcohol or drugs. These, along with high levels of blood sugar and blood pressure, both of which are influenced by diet, are the main factors dictating poor health.)=4.5^2
+a ("The big name is not encountered as you omprehensive study clearly demonstrates, is hopeople live their lives: whether they smoke, what and how much they eat, and whether they abuse alcohol or drugs. These, along with high levels of blood sugar and blood pressure, both of which are influenced by diet, are the main factors dictating poor health.)=4.5^2
+a ("The big name is not encountered as you omprehensive study clearly demonstrates, is hopeople live their lives: whether they smoke, what and how much they eat, and whether they abuse alcohol or drugs. These, along with high levels of blood sugar and blood pressure, both of which are influenced by diet, are the main factors dictating poor health.)=4.5^2
+a ("The big name is not encountered as you omprehensive study clearly demonstrates, is hopeople live their lives: whether they smoke, what and how much they eat, and whether they abuse alcohol or drugs. These, along with high levels of blood sugar and blood pressure, both of which are influenced by diet, are the main factors dictating poor health.)=4.5^2
+    * omprehensiveomprehensiveomprehensive
     * 
     ----wef-ewf---
     * 
@@ -153,3 +157,5 @@ public class concatvstackhstackpad {
     }
 
 }
+
+

@@ -4,9 +4,215 @@
     "vim.useCtrlKeys"       : true,
     "vim.hlsearch"          : true,
     "vim.handleKeys"        : {
-        "<C-f>": false
+        "<C-f>": false,
+        "<C-b>": false,
     },
     "cSpell.words": [
         "domain"
+    ],
+    // toggler - alt-r
+    "toggler.toggles": [
+        [ "and", "or" ],
+        [ "exclusive", "inclusive" ],
+
+        [ "absolute", "relative" ],
+        [ "C:", "D:" ],
+        [ "HDD", "SDD" ],
+        [ "Install", "Uninstall" ],
+
+        // file,algorithm, structure
+        [ "stack", "queue"],
+        [ "read", "write" ],
+        [ "ifstream", "ofstream" ],
+        [ "int", "float", "double" ],
+        [ "string", "char" ],
+        [ "vector", "list" ],
+        [ "read", "write" ],
+        [ "tree", "graph" ],
+        [ "binary", "decimal" ],
+        [ "bin", "usr", "tmp"],
+        [ "ctrl", "alt" ],
+        [ "back", "front" ],
+        [ "begin", "end" ],
+        [ "cbegin", "cend" ],
+        [ "push_back", "pop_back" ],
+        [ "insert", "erase" ],
+        [ "emplace", "emplace_back" ],
+        [ "edge", "vertex" ],
+        [ "directed", "undirected" ],
+        [ "combination", "punctuation" ],
+        [ "decode", "incode" ],
+
+        [ "interface", "extend" ],
+
+        [ "email", "address" ],
+        [ "id", "password" ],
+
+        [ "master", "slave" ],   
+
+        [ "ip", "mac" ],
+
+        [ "jpg","png","gif" ],
+        [ "png","ppt" ],
+
+        [ "ctrl", "alt", "shift" ],
+        [ "upArrow", "downArrow" ],   
+        [ "leftArrow", "rightArrow" ],
+        [ "pageUp", "pageDown" ],
+
+        [ "upperCase", "lowercase" ],
+        [ "backspace", "delete" ],
+
+        [ "success", "fail" ],
+
+        // math
+        [ "bound", "unbound" ],
+        [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+
+        [ "linux", "window"],
+        [ "soundcloud", "youtube" ],
+        [ "musixmatch", "genius" ],
+        [ "facebook", "google" ],
+        [ "naver", "daum" ],
+
+        // OS
+        [ "Created", "terminated" ],
+        [ "Wating", "Running", "Blocked" ],
+        [ "single", "multi"],
+        [ "thread", "process"]
+        [ "Hold", "wait"]
+
     ]
 }
+/*
+[
+  ["0", "1"],
+  ["enable", "disable"],
+  ["enabled", "disabled"],
+  ["on", "off"],
+  ["true", "false"],
+  ["yes", "no"],
+
+  ["(", ")"],
+  ["[", "]"],
+  ["[]", "{}"],
+  ["{", "}"],
+  ["'", "\"", "`"],
+
+  ["*", "/"],
+  ["*=", "/="],
+  ["&", "|"],
+  ["&&", "||"],
+  ["+", "-"],
+  ["++", "--"],
+  ["+=", "-="],
+  ["<", ">"],
+  ["<<", ">>"],
+  ["<=", ">="],
+  ["==", "!="],
+  ["===", "!=="],
+
+  ["absolute", "relative"],
+  ["high", "low"],
+  ["horizontal", "vertical"],
+  ["in", "out"],
+  ["inner", "outer"],
+  ["left", "right"],
+  ["top", "bottom"],
+  ["up", "down"],
+
+  ["black", "white"],
+  ["gray", "maroon", "red", "purple", "fuchsia", "green", "yellow", "blue", "aqua"],
+
+  ["const", "let", "var"],
+  ["import", "export"],
+  ["join", "split"],
+  ["JSON.parse", "JSON.stringify"],
+  ["parse", "stringify"],
+  ["pop", "push"],
+  ["shift", "unshift"],
+  ["test", "test.only"],
+
+  ["atan", "tan"],
+  ["ceil", "floor"],
+  ["cos", "sin"],
+  ["Math.atan", "Math.tan"],
+  ["Math.ceil", "Math.floor"],
+  ["Math.cos", "Math.sin"],
+  ["Math.min", "Math.max"],
+  ["min", "max"],
+
+  ["addEventListener", "removeEventListener"],
+  ["animationstart", "animationend"],
+  ["change", "input", "submit"],
+  ["click", "dblclick"],
+  ["compositionstart", "compositionend"],
+  ["copy", "cut", "paste"],
+  ["dragenter", "dragleave"],
+  ["dragstart", "dragend"],
+  ["focus", "blur"],
+  ["keydown", "keyup"],
+  ["mousedown", "mouseup"],
+  ["mouseenter", "mouseleave"],
+  ["onAnimationStart", "onAnimationEnd"],
+  ["onChange", "onInput", "onSubmit"],
+  ["onClick", "onDoubleClick"],
+  ["onCompositionStart", "onCompositionEnd"],
+  ["onCopy", "onCut", "onPaste"],
+  ["onDragEnter", "onDragLeave"],
+  ["onDragStart", "onDragEnd"],
+  ["onFocus", "onBlur"],
+  ["onKeyDown", "onKeyUp"],
+  ["onMouseDown", "onMouseUp"],
+  ["onMouseEnter", "onMouseLeave"],
+  ["onTouchStart", "onTouchEnd"],
+  ["touchstart", "touchend"],
+
+  ["div", "span"],
+  ["head", "body"],
+  ["header", "footer"],
+  ["ol", "ul"],
+  ["tr", "td"],
+
+  ["componentDidMount", "componentWillUnmount"],
+  ["getState", "setState"],
+
+  ["activate", "deactivate"],
+  ["add", "remove"],
+  ["address", "port"],
+  ["available", "unavailable"],
+  ["background", "foreground"],
+  ["before", "after"],
+  ["client", "server"],
+  ["connect", "disconnect"],
+  ["connected", "disconnected"],
+  ["drag", "drop"],
+  ["file", "folder"],
+  ["first", "last"],
+  ["from", "to"],
+  ["get", "set"],
+  ["input", "output"],
+  ["install", "uninstall"],
+  ["key", "value"],
+  ["load", "unload"],
+  ["minor", "major"],
+  ["online", "offline"],
+  ["open", "close"],
+  ["parent", "child"],
+  ["positive", "negative"],
+  ["prefix", "suffix"],
+  ["previous", "next"],
+  ["public", "private"],
+  ["req", "res"],
+  ["request", "response"],
+  ["row", "column"],
+  ["short", "long"],
+  ["show", "hide"],
+  ["source", "destination"],
+  ["start", "stop"],
+  ["valid", "invalid"],
+  ["visible", "hidden"],
+  ["width", "height"],
+  ["x", "y"]
+]
+*/
