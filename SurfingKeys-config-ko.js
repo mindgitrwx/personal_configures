@@ -527,8 +527,13 @@ mapkey('L', 'soundcloud like', function () {
 },{domain: /soundcloud\.com/i});
 
 //
-mapkey('ZT', 'remove text', function () {
-    document.querySelectorAll('div').innerHTML().replace(/안녕하세요/g, "");
+mapkey('ZT', 'remove element', function () {
+    elem = document.getElementById('sfcnt');
+    elem.parentNode.removeChild(elem);
+    elem = document.getElementById('hdtb-msb');
+    elem.parentNode.removeChild(elem);
+    elem = document.getElementById('foot-cnt');
+    elem.parentNode.removeChild(elem);
 });
 //p, ''df viewer mapping 
 
