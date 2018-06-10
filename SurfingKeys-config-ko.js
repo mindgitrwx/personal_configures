@@ -573,18 +573,9 @@ mapkey('ZT', 'remove element', function () {
     elem = document.getElementById('foot-cnt');
     elem.parentNode.removeChild(elem);
 */
-    ele = document.getElementsById('am-b5');
-    for (var i = 0; i < ele.length; i++ ) {
-        ele[i].parentNode.removeChild = ele[i];
-    }
-    ele = document.getElementsByClassName('iUha30s');
-    for (var i = 0; i < ele.length; i++ ) {
-        ele[i].parentNode.removeChild = ele[i];
-    }
-    ele = document.getElementsByClassName('fi');
-    for (var i = 0; i < ele.length; i++ ) {
-        ele[i].parentNode.removeChild = ele[i];
-    }
+
+    ELEMENT.classList.remove("iUha30s");
+    ELEMENT.classList.remove("fi");
 });
 //p, ''df viewer mapping 
 
