@@ -280,6 +280,10 @@ Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(r
     var res = JSON.parse(res.text);
     return renderShanbay(res);
 });
+
+mapkey('yr', "Copy url as regex", function () {
+    Clipboard.write(window.getSelection().toString().replace(/\[*\]/g, ''));
+});
 mapkey('yr', "Copy url as regex", function () {
     Clipboard.write('domain: ' + '\/' + window.location.href.slice(8,).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
