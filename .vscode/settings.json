@@ -15,6 +15,9 @@
         [ "and", "or" ],
         [ "exclusive", "inclusive" ],
 
+        [ "map","vmap", "unmap" ],
+        [ "zip", "unzip" ],
+
         [ "absolute", "relative" ],
         [ "C:", "D:" ],
         [ "HDD", "SDD" ],
@@ -71,6 +74,7 @@
         [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
 
         [ "linux", "window"],
+        [ "eclipse", "intellij"],
         [ "soundcloud", "youtube" ],
         [ "musixmatch", "genius" ],
         [ "facebook", "google" ],
