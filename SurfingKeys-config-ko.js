@@ -529,10 +529,10 @@ mapkey('L', 'soundcloud like', function () {
 
 //동작하지 않음
 mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
-    window.location.href = window.location.href.split('=')[0] + '=' + parseInt(window.location.href.split('=')[1])++;
+    window.location.href = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1])++).toString();
 });
 mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
-    window.location.href = window.location.href.split('=')[0] + '=' + parseInt(window.location.href.split('=')[1])--;
+    window.location.href = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1])--).toString();
 });
 
 mapkey('ZT', 'remove element', function () {
