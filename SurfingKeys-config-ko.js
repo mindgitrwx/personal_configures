@@ -530,7 +530,6 @@ mapkey('[', 'google book previous page', function () {
 mapkey(']', 'google book next page', function () {
     document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-right').click();
 },{domain: /play\.google\.com\/books/i});
-
 // skipControl sc-ir playControls__control playControls__prev skipControl__previous
 // skipControl sc-ir playControls__control playControls__next skipControl__next
 // sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive
