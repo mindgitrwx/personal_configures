@@ -528,6 +528,8 @@ mapkey('L', 'soundcloud like', function () {
 
 //
 mapkey('ZT', 'remove element', function () {
+    elem = document.getElementById('searchform')
+    elem.parentNode.removeChild(elem);
     elem = document.getElementById('sfcnt');
     elem.parentNode.removeChild(elem);
     elem = document.getElementById('hdtb-msb');
