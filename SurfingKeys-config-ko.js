@@ -280,13 +280,14 @@ Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(r
     var res = JSON.parse(res.text);
     return renderShanbay(res);
 });
+// wiki를 copy 할때 [1] 이런 정보가 나오느 것이 annoying 하므로 없애준다. 
+mapkey('y', "Copy url as regex", function () {
+    Clipboard.write(window.getSelection().toString().replace(/\[*\]/g, ''));
+}, {domain: /www\.wikiwand\.com/i});
 
 mapkey('yr', "Copy url as regex", function () {
-    Clipboard.write(window.getSelection().toString().replace(/\[*\]/g, ''));
-});
-mapkey('yr', "Copy url as regex", function () {
     Clipboard.write('domain: ' + '\/' + window.location.href.slice(8,).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
-});
+k);
 mapkey('yk', "Copy url before keyowrd insertion", function () {
     Clipboard.write(window.location.href.split('=')[0] + '=');
 });
@@ -521,6 +522,7 @@ mapkey('l', 'slideshare next page', function () {
 },{domain: /www\.slideshare\.net/i});
 
 
+// TODO: 잘 동작하지 않음 (이미 단축키가 assign 되어 있는 사이트라서 그런 것 처럼 보임)
 mapkey('[', 'google book previous page', function () {
     document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-left').click();
 },{domain: /play\.google\.com\/books/i});
@@ -533,7 +535,7 @@ mapkey(']', 'google book next page', function () {
 // sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive
 //Soundcloud shortcuts
 // . 이 들어가야 하는지 아닌지 테스트 
-// TODO: 잘 동작하지 않음
+// TODO: 잘 동작하지 않음 (이미 단축키가 assign 되어 있는 사이트라서 그런 것 처럼 보임)
 mapkey('J', 'soundcloud previous song', function () {
     document.getElementsByClassName('sc-ir.playControls__control.playControls__prev.skipControl__previous').click();
 },{domain: /soundcloud\.com/i});
