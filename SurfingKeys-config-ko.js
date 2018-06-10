@@ -514,11 +514,12 @@ mapkey('l', 'slideshare next page', function () {
 },{domain: /www\.slideshare\.net/i});
 
 
+document.getElementsByName
 mapkey('h', 'google book previous page', function () {
-    document.getElementsByClassName('gb-pagination-controls gb-pagination-controls-left').click();
+    document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-left').click();
 },{domain: /play\.google\.com/i});
 mapkey('l', 'google book next page', function () {
-    document.getElementsByClassName('gb-pagination-controls gb-pagination-controls-right').click();
+    document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-right').click();
 },{domain: /play\.google\.com/i});
 
 // skipControl sc-ir playControls__control playControls__prev skipControl__previous
