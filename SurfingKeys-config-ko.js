@@ -280,7 +280,8 @@ Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(r
     var res = JSON.parse(res.text);
     return renderShanbay(res);
 });
-// wiki를 copy 할때 [1] 이런 정보가 나오느 것이 annoying 하므로 없애준다. 
+
+// wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 mapkey('y', "Copy url as regex", function () {
     Clipboard.write(window.getSelection().toString().replace(/\[*\]/g, ''));
 }, {domain: /www\.wikiwand\.com/i});
