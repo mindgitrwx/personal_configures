@@ -560,7 +560,7 @@ mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
 mapkey('ZT', 'remove element', function () {
 
     /*
-    elem = document.getElementsByClassName('ctr-p');
+    ele = document.getElementsByClassName('ctr-p');
     elem.parentNode.removeChild(elem);
     elem = document.getElementById('slim_appbar');
     elem.parentNode.removeChild(elem);
@@ -576,7 +576,7 @@ mapkey('ZT', 'remove element', function () {
     ele = document.getElementsById('am-b5');
     for (var i = 0; i < ele.length; i++ ) {
         ele[i].parentNode.removeChild = ele[i];
-    }/
+    }
     ele = document.getElementsByClassName('iUha30s');
     for (var i = 0; i < ele.length; i++ ) {
         ele[i].parentNode.removeChild = ele[i];
