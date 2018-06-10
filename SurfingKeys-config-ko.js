@@ -528,9 +528,9 @@ mapkey('L', 'soundcloud like', function () {
 
 //
 mapkey('ZT', 'remove text', function () {
-    document.querySelectorAll('div').innerHTML().replace('안녕하세요', '');
+    document.querySelectorAll('div').innerHTML().replace(/안녕하세요/g, "");
 });
-//pdf viewer mapping 
+//p, ''df viewer mapping 
 
 // mapkey('D', 'github readme 스크롤', function () {
 //     stackAnswer++;
