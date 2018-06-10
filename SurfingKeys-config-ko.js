@@ -573,9 +573,9 @@ mapkey('ZT', 'remove element', function () {
     elem = document.getElementById('foot-cnt');
     elem.parentNode.removeChild(elem);
 */
+    document.classList.remove("iUh30");
+    document.classList.remove("fl");
 
-    document.classList.remove("iUha30s");
-    document.classList.remove("fi");
 });
 //p, ''df viewer mapping 
 
