@@ -516,10 +516,10 @@ mapkey('l', 'slideshare next page', function () {
 
 mapkey('[', 'google book previous page', function () {
     document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-left').click();
-},{domain: /play\.google\.com/i});
+},{domain: /play\.google\.com\/books/i});
 mapkey(']', 'google book next page', function () {
     document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-right').click();
-},{domain: /play\.google\.com/i});
+},{domain: /play\.google\.com\/books/i});
 
 // skipControl sc-ir playControls__control playControls__prev skipControl__previous
 // skipControl sc-ir playControls__control playControls__next skipControl__next
@@ -532,10 +532,10 @@ mapkey('J', 'soundcloud previous song', function () {
 },{domain: /soundcloud\.com/i});
 mapkey('K', 'soundcloud next song', function () {
     document.getElementsByClassName('skipControl.sc-ir.playControls__control.playControls__next.skipControl__next').click();
-},{domain: /soundcloud\.com\/books/i});
+},{domain: /soundcloud\.com/i});
 mapkey('L', 'soundcloud like', function () {
     document.getElementsByClassName('sc-button-like.playbackSoundBadge__like.sc-button.sc-button-small.sc-button-icon.sc-button-responsive').click();
-},{domain: /soundcloud\.com\/books/i});
+},{domain: /soundcloud\.com\i});
 
 
 // TODO: 동작하지 않음
