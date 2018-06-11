@@ -23,27 +23,30 @@ var naverAnswer = 0;
 var codeWrapper = 0;
 var lineNum     = 0;
 
-settings.caseSensitive       = true; settings.omnibarSuggestion = true;
+settings.caseSensitive       = true;
+settings.omnibarSuggestion   = true;
 settings.defaultSearchEngine = 'L';
 
 //google search 바를 없애버림 
 elem = document.getElementById('searchform');
-if(elem !== null){ elem.parentNode.removeChild(elem);}
+if (elem !== null) {
+    elem.parentNode.removeChild(elem);
+}
 
 //unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
 unmap('<Ctrl-6>');
-map(']',']]');
-map('[','[[');
+map(']', ']]');
+map('[', '[[');
 
 // for surfingkeys PDF autokey-----------------------------------------
 
-map('<Shift-1>','fs');
-map('<Shift-2>','fd');
-map('<Shift-3>','ff');
+map('<Shift-1>', 'fs');
+map('<Shift-2>', 'fd');
+map('<Shift-3>', 'ff');
 
 
 //----------------i-----------------------------------------------------
-mapkey('on', '#3Open Firefox newtab', function() {
+mapkey('on', '#3Open Firefox newtab', function () {
     tabOpenLink("www.google.com");
 });
 // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
@@ -181,8 +184,8 @@ addSearchAliasX('nW', '나무위키', 'https://namu.wiki/w/');
 addSearchAliasX('eW', '영문위키', 'https://www.wikiwand.com/en/');
 addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 http:   //www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=
-//papaers
-addSearchAliasX('pG', '구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
+    //papaers
+    addSearchAliasX('pG', '구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
 addSearchAliasX('pN', 'nCBI', 'https://www.ncbi.nlm.nih.gov/search/?term=');
 addSearchAliasX('pR', 'RISS', 'http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=');
 addSearchAliasX('pE', 'ELSEVIER', 'https://www.elsevier.com/search-results?query=');
@@ -252,14 +255,14 @@ function renderGoogleTranslate(res) {
         var tmp = [];
         for (var reg in res.data.pronunciations) {
             tmp.push('<div>[{0}] {1}</div>'.format(reg, res.data.pronunciations[reg]));
-            tmp.push('<div><audio src="{0}" controls></audio></div>'.format(res.data[reg+'_audio']));
+            tmp.push('<div><audio src="{0}" controls></audio></div>'.format(res.data[reg + '_audio']));
         }
         tmp.push('<div>{0}</div>'.format(res.data.definition));
         exp = '<div>{0}</div>'.format(tmp.join('\n'));
     }
     return exp;
 }
-mapkey('Q', '#8Open omnibar for word translation', function() {
+mapkey('Q', '#8Open omnibar for word translation', function () {
     Front.openOmniquery({
         url: "https://translate.google.cn/#auto/en/",
         /*
@@ -270,9 +273,9 @@ mapkey('Q', '#8Open omnibar for word translation', function() {
         */
         query      : Visual.getWordUnderCursor(),
         style      : "opacity: 0.3;",
-        parseResult: function(res) {
+        parseResult: function (res) {
             var res = JSON.parse(res.text);
-            return [ renderGoogleTranslate(res) ];
+            return [renderGoogleTranslate(res)];
         }
     });
 });
@@ -281,11 +284,40 @@ mapkey('Q', '#8Open omnibar for word translation', function() {
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 vmapkey('y', "Copy url as regex", function () {
     Clipboard.write(window.getSelection().toString().replace(/\[[0-9]*\]/g, ''));
-}, {domain: /www\.wikiwand\.com/i}); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
+}, {
+    domain: /www\.wikiwand\.com/i
+}); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
 
 mapkey('yr', "Copy url as regex", function () {
-    Clipboard.write('domain: ' + '\/' + window.location.href.slice(8,).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
+    Clipboard.write('domain: ' + '\/' + window.location.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
+mapkey('gyq', "Copy first pre", function () { // 꼭 만들어져야 하는 기능이라고 생각됨 
+    Clipboard.write();
+});
+mapkey('yQ', "Copy first pre", function () {
+    var cssSelector = "pre";
+
+    //보이는 것 중에서 pre element존재하는지 찾기 
+    var elements = getVisibleElements(function (e, v) {
+        if (e.matches(cssSelector)) {
+            v.push(e);
+        }
+    });
+    // pre Element가 보이는 것 중에서 존재하지 않을 때 
+    if (elements.length === 0 &&
+        document.querySelector(cssSelector) !== null) {
+        document.querySelector(cssSelector).scrollIntoView();
+        elements = getVisibleElements(function (e, v) {
+            if (e.matches(cssSelector)) {
+                v.push(e);
+            }
+        });
+    }
+    if (element.length > 0) {
+        Clipboard.write(element[0].innerText);
+    }
+});
+
 mapkey('yk', "Copy url before keyowrd insertion", function () {
     Clipboard.write(window.location.href.split('=')[0] + '=');
 });
@@ -359,12 +391,14 @@ vmapkey('msy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
 // etc
-mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function() {
+mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function () {
     var linksToYank = [];
-    Hints.create('*[href]', function(element) {
+    Hints.create('*[href]', function (element) {
         linksToYank.push('"' + element.href + '"');
         Clipboard.write(linksToYank.join('\n'));
-    }, {multipleHits: true});
+    }, {
+        multipleHits: true
+    });
 });
 
 //setting 
@@ -432,73 +466,117 @@ mapkey('U', '나무위키 목차 대단위 up스크롤', UpController('.wiki-hea
 
 mapkey('D', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
-    if(pageHeadLine.length > codeWrapper){ codeWrapper++;}
+    if (pageHeadLine.length > codeWrapper) {
+        codeWrapper++;
+    }
     pageHeadLine[codeWrapper].scrollIntoView();
 });
 mapkey('U', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
-    if(0 < codeWrapper){ codeWrapper--;}
+    if (0 < codeWrapper) {
+        codeWrapper--;
+    }
     pageHeadLine[codeWrapper].scrollIntoView();
 });
 
 mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".wiki-heading");
-    if(pageHeadLine.length > namuPage){ namuPage++;}
+    if (pageHeadLine.length > namuPage) {
+        namuPage++;
+    }
     pageHeadLine[namuPage].scrollIntoView();
-},{domain: /namu\.wiki/i});
+}, {
+    domain: /namu\.wiki/i
+});
 mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
     pageHeadLine = document.querySelectorAll(".wiki-heading");
-    if(0 < namuPage){ namuPage--;}
+    if (0 < namuPage) {
+        namuPage--;
+    }
     pageHeadLine[namuPage].scrollIntoView();
-},{domain: /namu\.wiki/i});
+}, {
+    domain: /namu\.wiki/i
+});
 
 mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
-    if(pageHeadLine.length > wikiPage){ wikiPage++;}
+    if (pageHeadLine.length > wikiPage) {
+        wikiPage++;
+    }
     wikiPage++;
     pageHeadLine[wikiPage].scrollIntoView();
-},{domain: /\.wikipedia\.org/i});
+}, {
+    domain: /\.wikipedia\.org/i
+});
 mapkey('U', '위키 목차 대단위 up스크롤', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
-    if(0 < wikiPage){ wikiPage--;}
+    if (0 < wikiPage) {
+        wikiPage--;
+    }
     pageHeadLine[wikiPage].scrollIntoView();
-},{domain: /\.wikipedia\.org/i});
+}, {
+    domain: /\.wikipedia\.org/i
+});
 
 mapkey('D', 'wikiwand 목차 대단위 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
-    if(pageHeadLine.length > wikiPage){ wikiPage++;}
+    if (pageHeadLine.length > wikiPage) {
+        wikiPage++;
+    }
     pageHeadLine[wikiPage].scrollIntoView();
-},{domain: /www\.wikiwand\.com/i});
+}, {
+    domain: /www\.wikiwand\.com/i
+});
 mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
-    if(0 < wikiPage){ wikiPage--;}
+    if (0 < wikiPage) {
+        wikiPage--;
+    }
     pageHeadLine[wikiPage].scrollIntoView();
-},{domain: /www\.wikiwand\.com/i});
+}, {
+    domain: /www\.wikiwand\.com/i
+});
 
 // query select all 내부에서 regular expression 이 먹히지 않음 
 mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
     pageHeadLine = document.querySelectorAll(".answer");
-    if(pageHeadLine.length > stackAnswer){ stackAnswer++;}
+    if (pageHeadLine.length > stackAnswer) {
+        stackAnswer++;
+    }
     pageHeadLine[stackAnswer].scrollIntoView();
     window.scrollBy(0, -47); // Adjust scrolling with a negative value : stackoverflow upper bar
-},{domain: /stackoverflow\.com/i});
+}, {
+    domain: /stackoverflow\.com/i
+});
 mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".answer");
-    if(0 < stackAnswer){ stackAnswer--;}
+    if (0 < stackAnswer) {
+        stackAnswer--;
+    }
     pageHeadLine[stackAnswer].scrollIntoView();
     window.scrollBy(0, -47); // Adjust scrolling with a negative value here : stackoverflow upper bar
-},{domain: /stackoverflow\.com/i});
+}, {
+    domain: /stackoverflow\.com/i
+});
 domain: /kin\.naver\.com/i
 mapkey('D', 'naver 답변 다운 스크롤', function () {
     pageHeadLine = document.querySelectorAll(".line_horizontal");
-    if(pageHeadLine.length > naverAnswer){ naverAnswer++;}
+    if (pageHeadLine.length > naverAnswer) {
+        naverAnswer++;
+    }
     pageHeadLine[naverAnswer].scrollIntoView();
-},{domain: /kin\.naver\.com/i});
+}, {
+    domain: /kin\.naver\.com/i
+});
 mapkey('U', 'naver 답변 up 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".line_horizontal");
-    if(0 < naverAnswer){ naverAnswer--;}
+    if (0 < naverAnswer) {
+        naverAnswer--;
+    }
     pageHeadLine[naverAnswer].scrollIntoView();
-},{domain: /kin\.naver\.com/i});
+}, {
+    domain: /kin\.naver\.com/i
+});
 //https://www.slideshare.net/mandrewmartin/regression-presentation
 //div.j-prev-btn.arrow-left  btnPrevious
 //div.j-prev-btn.arrow-right btnNext
@@ -514,19 +592,27 @@ window.onload = function(){
 // page 양 옆으로 넘길 수 있도록 하기
 mapkey('h', 'slideshare previous page', function () {
     document.getElementById('btnPrevious').click();
-},{domain: /www\.slideshare\.net/i});
+}, {
+    domain: /www\.slideshare\.net/i
+});
 mapkey('l', 'slideshare next page', function () {
     document.getElementById('btnNext').click();
-},{domain: /www\.slideshare\.net/i});
+}, {
+    domain: /www\.slideshare\.net/i
+});
 
 
 // TODO: 잘 동작하지 않음 (이미 단축키가 assign 되어 있는 사이트라서 그런 것 처럼 보임)
 mapkey('[', 'google book previous page', function () {
     document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-left').click();
-},{domain: /play\.google\.com\/books/i});
+}, {
+    domain: /play\.google\.com\/books/i
+});
 mapkey(']', 'google book next page', function () {
     document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-right').click();
-},{domain: /play\.google\.com\/books/i});
+}, {
+    domain: /play\.google\.com\/books/i
+});
 // skipControl sc-ir playControls__control playControls__prev skipControl__previous
 // skipControl sc-ir playControls__control playControls__next skipControl__next
 // sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive
@@ -535,21 +621,27 @@ mapkey(']', 'google book next page', function () {
 // TODO: 잘 동작하지 않음 (이미 단축키가 assign 되어 있는 사이트라서 그런 것 처럼 보임)
 mapkey('J', 'soundcloud previous song', function () {
     document.getElementsByClassName('sc-ir.playControls__control.playControls__prev.skipControl__previous').click();
-},{domain: /soundcloud\.com/i});
+}, {
+    domain: /soundcloud\.com/i
+});
 mapkey('K', 'soundcltud next song', function () {
     document.getElementsByClassName('skipControl.sc-ir.playControls__control.playControls__next.skipControl__next').click();
-},{domain: /soundcloud\.com/i});
+}, {
+    domain: /soundcloud\.com/i
+});
 mapkey('L', 'soundcloud like', function () {
     document.getElementsByClassName('sc-button-like.playbackSoundBadge__like.sc-button.sc-button-small.sc-button-icon.sc-button-responsive').click();
-},{domain: /soundcloud\.com/i});
+}, {
+    domain: /soundcloud\.com/i
+});
 
 
 // TODO: 동작하지 않음
 mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
-    window.location.assign = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1])++).toString();
+    window.location.assign = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1]) ++).toString();
 });
 mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
-    window.location.assign = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1])--).toString();
+    window.location.assign = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1]) --).toString();
 });
 
 // TODO: 동작하지 않음 

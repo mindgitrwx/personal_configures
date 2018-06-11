@@ -27,7 +27,7 @@ imapkey('<Ctrl-i>', '#15Open vim editor for current input', function() {
 });
 function toggleProxySite(host) {
     RUNTIME('updateProxy', {
-        host: host,
+        host     : host,
         operation: "toggle"
     });
     return true;
@@ -41,7 +41,7 @@ mapkey('cp', '#13Toggle proxy for current site', function() {
 mapkey(';cp', '#13Copy proxy info', function() {
     runtime.command({
         action: 'getSettings',
-        key: ['proxyMode', 'proxy', 'autoproxy_hosts']
+        key   : ['proxyMode', 'proxy', 'autoproxy_hosts']
     }, function(response) {
         Clipboard.write(JSON.stringify(response.settings, null, 4));
     });
@@ -50,10 +50,10 @@ mapkey(';ap', '#13Apply proxy info from clipboard', function() {
     Clipboard.read(function(response) {
         var proxyConf = JSON.parse(response.data);
         RUNTIME('updateProxy', {
-            host: proxyConf.autoproxy_hosts.join(","),
+            host     : proxyConf.autoproxy_hosts.join(","),
             operation: 'add',
-            proxy: proxyConf.proxy,
-            mode: proxyConf.proxyMode
+            proxy    : proxyConf.proxy,
+            mode     : proxyConf.proxyMode
         });
     });
 });
@@ -113,7 +113,7 @@ mapkey("sql", '#0Show last action', function() {
 }, {repeatIgnore: true});
 mapkey('ZZ', '#5Save session and quit', function() {
     RUNTIME('createSession', {
-        name: 'LAST',
+        name          : 'LAST',
         quitAfterSaved: true
     });
 });
@@ -191,10 +191,15 @@ mapkey('ymc', '#7Copy multiple columns of a table', function() {
         Clipboard.write(rows.join("\n"));
     }, {multipleHits: true});
 });
+
+// yq------------gyq,  i--------------gi ?
 mapkey('yq', '#7Copy pre text', function() {
     Hints.create("pre", function(element) {
         Clipboard.write(element.innerText);
     });
+});
+mapkey('gyq', '#7Copy to the first pre text', function() {
+    Hints.createPreElement();
 });
 mapkey('i', '#1Go to edit box', function() {
     Hints.create("input, textarea, *[contenteditable=true], select", Hints.dispatchMouseClick);
@@ -207,6 +212,7 @@ mapkey('I', '#1Go to edit box with vim editor', function() {
         Front.showEditor(element);
     });
 });
+//------------------------------------
 mapkey('O', '#1Open detected links from text', function() {
     Hints.create(runtime.conf.clickablePat, function(element) {
         createElement(`<a href=${element[2]}>`).click();
@@ -317,8 +323,8 @@ mapkey('Q', '#8Open omnibar for word translation', function() {
             return "https://api.shanbay.com/bdc/search/?word=" + q
         },
         */
-        query: Visual.getWordUnderCursor(),
-        style: "opacity: 0.3;",
+        query      : Visual.getWordUnderCursor(),
+        style      : "opacity: 0.3;",
         parseResult: function(res) {
             var res = JSON.parse(res.text);
             return [ renderShanbay(res) ];
@@ -335,7 +341,7 @@ mapkey('b', '#8Open a bookmark', function() {
 });
 mapkey('ab', '#8Bookmark current page to selected folder', function() {
     var page = {
-        url: window.location.href,
+        url  : window.location.href,
         title: document.title
     };
     Front.openOmnibar(({type: "AddBookmark", extra: page}));
@@ -421,7 +427,7 @@ mapkey('ys', "#7Copy current page's source", function() {
 mapkey('yj', "#7Copy current settings", function() {
     runtime.command({
         action: 'getSettings',
-        key: "RAW"
+        key   : "RAW"
     }, function(response) {
         Clipboard.write(JSON.stringify(response.settings, null, 4));
     });
@@ -436,7 +442,7 @@ mapkey(';pj', "#7Restore settings data from clipboard", function() {
 mapkey('yd', "#7Copy current downloading URL", function() {
     runtime.command({
         action: 'getDownloads',
-        query: {state: "in_progress"}
+        query : {state: "in_progress"}
     }, function(response) {
         var items = response.downloads.map(function(o) {
             return o.url;
@@ -492,8 +498,8 @@ mapkey('yg', '#7Capture current page', function() {
 mapkey('yp', '#7Copy form data for POST on current page', function() {
     var aa = [];
     document.querySelectorAll('form').forEach(function(form) {
-        var fd = {};
-        fd[(form.method || "get") + "::" + form.action] = getFormData(form);
+        var fd                                            = {};
+        fd  [(form.method || "get") + "::" + form.action] = getFormData(form);
         aa.push(fd);
     });
     Clipboard.write(JSON.stringify(aa, null, 4));
@@ -549,9 +555,9 @@ mapkey('gs', '#12View page source', function() {
 mapkey('gu', '#4Go up one path in the URL', function() {
     var pathname = location.pathname;
     if (pathname.length > 1) {
-        pathname = pathname.endsWith('/') ? pathname.substr(0, pathname.length - 1) : pathname;
-        var last = pathname.lastIndexOf('/'), repeats = RUNTIME.repeats;
-        RUNTIME.repeats = 1;
+                                                            pathname        = pathname.endsWith('/') ? pathname.substr(0, pathname.length - 1) : pathname;
+                                                        var last            = pathname.lastIndexOf('/'), repeats = RUNTIME.repeats;
+                                                            RUNTIME.repeats = 1;
         while (repeats-- > 1) {
             var p = pathname.lastIndexOf('/', last - 1);
             if (p === -1) {
@@ -634,7 +640,7 @@ addSearchAliasX('d', 'duckduckgo', 'https://duckduckgo.com/?q=', 's', 'https://d
 });
 addSearchAliasX('b', 'baidu', 'https://www.baidu.com/s?wd=', 's', 'http://suggestion.baidu.com/su?cb=&wd=', function(response) {
     var res = response.text.match(/,s:\[("[^\]]+")]}/);
-    return res ? res[1].replace(/"/g, '').split(",") : [];
+    return res ? res[1].replace(/"/g, '').split(","): [];
 });
 addSearchAliasX('w', 'bing', 'http://global.bing.com/search?setmkt=en-us&setlang=en-us&q=', 's', 'http://api.bing.com/osjson.aspx?query=', function(response) {
     var res = JSON.parse(response.text);
