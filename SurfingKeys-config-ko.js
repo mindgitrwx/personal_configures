@@ -294,6 +294,7 @@ mapkey('yr', "Copy url as regex", function () {
 mapkey('gyq', "Copy first pre", function () { // 꼭 만들어져야 하는 기능이라고 생각됨 
     Clipboard.write();
 });
+
 mapkey('yQ', "Copy first pre", function () {
     var cssSelector = "pre";
 
@@ -313,7 +314,7 @@ mapkey('yQ', "Copy first pre", function () {
             }
         });
     }
-    Clipboard.write(element[0].innerText);
+    Clipboard.write(elements[0].innerText);
 });
 
 mapkey('yk', "Copy url before keyowrd insertion", function () {
