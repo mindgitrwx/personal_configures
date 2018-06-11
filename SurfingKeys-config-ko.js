@@ -53,6 +53,7 @@ var request = require('request'),
     cheerio = require('cheerio');
 </script>
 
+
 request(url, function (err, res, html) {
     if (!err) {
         var $ = cheerio.load(html);
@@ -62,7 +63,10 @@ request(url, function (err, res, html) {
 mapkey('on', '#3Open Firefox newtab', function () {
     tabOpenLink("www.google.com");
 });
+*/
+
 // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
+
 removeSearchAliasX('b')
 removeSearchAliasX('g')
 removeSearchAliasX('w')
@@ -199,13 +203,14 @@ addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=')
 addSearchAliasX('nW', '나무위키', 'https://namu.wiki/w/');
 addSearchAliasX('eW', '영문위키', 'https://www.wikiwand.com/en/');
 addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
-http:   //www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=
-    //papaers
-    addSearchAliasX('pG', '구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
+
+//papaers
+addSearchAliasX('pG', '구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
 addSearchAliasX('pN', 'nCBI', 'https://www.ncbi.nlm.nih.gov/search/?term=');
 addSearchAliasX('pR', 'RISS', 'http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=');
 addSearchAliasX('pE', 'ELSEVIER', 'https://www.elsevier.com/search-results?query=');
 addSearchAliasX('pC', 'CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
+
 //news 
 //knowledge
 //blog
@@ -300,9 +305,7 @@ mapkey('Q', '#8Open omnibar for word translation', function () {
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 vmapkey('y', "Copy url as regex", function () {
     Clipboard.writewindow.getSelection().toString().replaceAll("/\[[0-9]*\]/g", "test"); // TODO: 동작하지 않음 
-}, {
-    domain: /www\.wikiwand\.com/i
-}); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
+}, { domain: /www\.wikiwand\.com/i }); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
 
 mapkey('yr', "Copy url as regex", function () {
     Clipboard.write('domain: ' + '\/' + window.location.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
