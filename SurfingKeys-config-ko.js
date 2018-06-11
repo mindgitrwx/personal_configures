@@ -44,7 +44,16 @@ map('<Shift-1>', 'fs');
 map('<Shift-2>', 'fd');
 map('<Shift-3>', 'ff');
 
-
+//////////////////////////
+// for url heml extract //
+//////////////////////////
+var request = require('request'),
+    cheerio = require('cheerio');
+request(url, function (err, res, html) {
+    if (!err) {
+        var $ = cheerio.load(html);
+    }
+})
 //----------------i-----------------------------------------------------
 mapkey('on', '#3Open Firefox newtab', function () {
     tabOpenLink("www.google.com");
@@ -135,6 +144,9 @@ addSearchAliasX('tE', '네어버사전example', 'http://endic.naver.com/search_e
 addSearchAliasX('tL', '가사해석', 'https://www.google.com/search?q=가사+해석+');
 addSearchAliasX('ll', '가사', 'https://www.google.com/search?q=lyrics+of+');
 
+//TODO: 검색을 통해서 google tlanslated 된 걸 clipboard에 복사 붙여넣는 것 만들기
+addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
+addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
 //navers
 addSearchAliasX('N', 'naver', 'https://www.naver.com/?query=');
 addSearchAliasX('nM', 'navermap', 'https://map.naver.com/?query=');
@@ -211,7 +223,7 @@ mapkey('q', '#1get image link and google image search', function () {
     Hints.create("img, button", function (element) {
         Clipboard.write(element.src);
         searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
-        // Todo: copy 하는 방법은 없는지 알아보기
+    // TODO: Copy 하는 방법은 없는지 알아보기
     });
 });
 
@@ -385,7 +397,30 @@ vmapkey('~sy', "Remove special character (blank is not considered as special cha
 vmapkey('~dy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
-//Todo
+
+//addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
+//addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
+// request(URL, function (err, response, html) {
+//      URL로부터 가져온 페이지 소스가 html이란 변수에 담긴다.
+//})
+//TODO: google tlanslation auto copy make
+//TODO: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기
+vmapkey('ty', "한글 영어번역 clipboard", function () { //TODO:  
+    url = "https://translate.google.co.kr/?hl=ko#ko/en/" + window.getSelection().toString();
+    request(url, function(err, response, html){
+    if (!err) {
+        var $ = cheerio.load(html);
+        Clipboard.write($('#result_box').innerText());
+    }
+});
+vmapkey('Ty', "영어 한글번역 clipboard", function () {
+    url = "https://translate.google.co.kr/?hl=ko#en/ko/" + window.getSelection().toString();
+    request(url, function(err, response, html){
+    if (!err) {
+        var $ = cheerio.load(html);
+        Clipboard.write($('#result_box').innerText());
+    }
+});
 /*
 vmapkey('~diy', "remove inner double quoates strings", function () {
     Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
@@ -683,6 +718,7 @@ mapkey('zt', 'remove element', function () {
     document.classList.remove("fl");
 
 });
+//TODO: google tlanslation auto copy make: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기 
 //p, ''df viewer mapping 
 
 // mapkey('D', 'github readme 스크롤', function () {
