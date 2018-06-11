@@ -292,7 +292,25 @@ mapkey('yr', "Copy url as regex", function () {
     Clipboard.write('domain: ' + '\/' + window.location.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
 mapkey('gyq', "Copy first pre", function () { // 꼭 만들어져야 하는 기능이라고 생각됨 
-    Clipboard.write();
+    var cssSelector = "pre";
+
+    //보이는 것 중에서 pre element존재하는지 찾기 
+    var elements = getVisibleElements(function (e, v) {
+        if (e.matches(cssSelector)) {
+            v.push(e);
+        }
+    });
+    // pre Element가 보이는 것 중에서 존재하지 않을 때 
+    if (elements.length === 0 &&
+        document.querySelector(cssSelector) !== null) {
+        document.querySelector(cssSelector).scrollIntoView();
+        elements = getVisibleElements(function (e, v) {
+            if (e.matches(cssSelector)) {
+                v.push(e);
+            }
+        });
+    }
+    Clipboard.write(elements[0].innerText);
 });
 
 mapkey('yQ', "Copy first pre", function () {
