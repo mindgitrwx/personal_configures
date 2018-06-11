@@ -313,9 +313,7 @@ mapkey('yQ', "Copy first pre", function () {
             }
         });
     }
-    if (element.length > 0) {
-        Clipboard.write(element[0].innerText);
-    }
+    Clipboard.write(element[0].innerText);
 });
 
 mapkey('yk', "Copy url before keyowrd insertion", function () {
