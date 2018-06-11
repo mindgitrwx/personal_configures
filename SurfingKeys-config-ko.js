@@ -47,7 +47,8 @@ map('<Shift-3>', 'ff');
 //////////////////////////
 // for url heml extract //
 //////////////////////////
-<script>
+/*
+<script> // script 긁어오는 것이 안됨 
 var request = require('request'),
     cheerio = require('cheerio');
 </script>
@@ -408,6 +409,7 @@ vmapkey('~dy', "Markdown Strikethrough", function () {
 //})
 //TODO: google tlanslation auto copy make
 //TODO: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기
+/*
 vmapkey('ty', "한글 영어번역 clipboard", function () { //TODO:  
     url = "https://translate.google.co.kr/?hl=ko#ko/en/" + window.getSelection().toString();
     request(url, function(err, response, html){
@@ -426,6 +428,8 @@ vmapkey('Ty', "영어 한글번역 clipboard", function () {
         }
     })
 });
+*/
+
 /*
 vmapkey('~diy', "remove inner double quoates strings", function () {
     Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
