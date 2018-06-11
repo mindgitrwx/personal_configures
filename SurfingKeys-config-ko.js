@@ -276,10 +276,7 @@ mapkey('Q', '#8Open omnibar for word translation', function() {
         }
     });
 });
-Visual.setTranslationService("https://translate.google.cn/#auto/en/", function(res) {
-    var res = JSON.parse(res.text);
-    return renderShanbay(res);
-});
+
 
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 vmapkey('y', "Copy url as regex", function () {
