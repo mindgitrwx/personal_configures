@@ -408,18 +408,20 @@ vmapkey('~dy', "Markdown Strikethrough", function () {
 vmapkey('ty', "한글 영어번역 clipboard", function () { //TODO:  
     url = "https://translate.google.co.kr/?hl=ko#ko/en/" + window.getSelection().toString();
     request(url, function(err, response, html){
-    if (!err) {
-        var $ = cheerio.load(html);
-        Clipboard.write($('#result_box').innerText());
-    }
+        if (!err) {
+            var $ = cheerio.load(html);
+            Clipboard.write($('#result_box').innerText());
+        }
+    })
 });
 vmapkey('Ty', "영어 한글번역 clipboard", function () {
     url = "https://translate.google.co.kr/?hl=ko#en/ko/" + window.getSelection().toString();
     request(url, function(err, response, html){
-    if (!err) {
-        var $ = cheerio.load(html);
-        Clipboard.write($('#result_box').innerText());
-    }
+        if (!err) {
+            var $ = cheerio.load(html);
+            Clipboard.write($('#result_box').innerText());
+        }
+    })
 });
 /*
 vmapkey('~diy', "remove inner double quoates strings", function () {
