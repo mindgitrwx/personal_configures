@@ -47,8 +47,11 @@ map('<Shift-3>', 'ff');
 //////////////////////////
 // for url heml extract //
 //////////////////////////
+<script>
 var request = require('request'),
     cheerio = require('cheerio');
+</script>
+
 request(url, function (err, res, html) {
     if (!err) {
         var $ = cheerio.load(html);
