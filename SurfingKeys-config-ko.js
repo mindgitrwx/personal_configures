@@ -307,6 +307,13 @@ vmapkey('y', "Copy url as regex", function () {
     Clipboard.writewindow.getSelection().toString().replaceAll("/\[[0-9]*\]/g", "test"); // TODO: 동작하지 않음 
 }, { domain: /www\.wikiwand\.com/i }); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
 
+mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function() {
+    var linksToYank = [];
+    Hints.create('*[href]', function(element) {
+        linksToYank.push('domain: ' + '\/' + element.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
+        Clipboard.write(linksToYank.join('\n'));
+    }, {multipleHits: true});
+});
 mapkey('yr', "Copy url as regex", function () {
     Clipboard.write('domain: ' + '\/' + window.location.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
