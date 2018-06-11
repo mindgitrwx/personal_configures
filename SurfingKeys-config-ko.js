@@ -283,7 +283,7 @@ mapkey('Q', '#8Open omnibar for word translation', function () {
 
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 vmapkey('y', "Copy url as regex", function () {
-    Clipboard.write(window.getSelection().toString().replace(/\[[0-9]*\]/g, ''));
+    Clipboard.write(window.getSelection().toString().replace(/\[[0-9]*\]/g, 'test')); // TODO: 동작하지 않음 
 }, {
     domain: /www\.wikiwand\.com/i
 }); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
@@ -291,7 +291,7 @@ vmapkey('y', "Copy url as regex", function () {
 mapkey('yr', "Copy url as regex", function () {
     Clipboard.write('domain: ' + '\/' + window.location.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
-mapkey('gyq', "Copy first pre", function () { // 꼭 만들어져야 하는 기능이라고 생각됨 
+mapkey('gyq', "Copy first pre", function () {  
     var cssSelector = "pre";
 
     //보이는 것 중에서 pre element존재하는지 찾기 
@@ -334,7 +334,7 @@ mapkey('yQ', "Copy first pre", function () {
     }
     Clipboard.write(elements[0].innerText);
 });
-
+// yQ와 동일함 
 mapkey('yk', "Copy url before keyowrd insertion", function () {
     Clipboard.write(window.location.href.split('=')[0] + '=');
 });
@@ -736,3 +736,4 @@ map( 'j' ,'<ArrowDown>' );
 map( 'k' ,'<ArrowUp>' );
 map( 'l' ,'<Arrowright>' );
 */
+
