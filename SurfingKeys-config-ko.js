@@ -368,6 +368,11 @@ mapkey('yk', "Copy url before keyowrd insertion", function () {
 mapkey('"yy', "surround url with double quotation mark", function () {
     Clipboard.write('"' + window.location.href + '"');
 });
+
+
+//////////////////////////////////////////////////////////
+// visualmode setting - vsual mode에 진입했을 때 동작가능 //
+//////////////////////////////////////////////////////////
 vmapkey('"y', "surround selection with doube quotation mark", function () {
     Clipboard.write('"' + window.getSelection().toString().replace(/\n/g, " ") + '"');
 });
