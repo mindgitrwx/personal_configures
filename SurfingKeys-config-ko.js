@@ -1,5 +1,9 @@
 
 //////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Korean Specific Surfing Keys config
+// Version - 1.0
+//
 // Surfing keys config (SurfingKeys)                                                            //
 // Korean specific surfing key config                                                           //
 // Please copy this url to text box [load settings from:], and 'Save'                           //
@@ -37,7 +41,7 @@ var lineNum     = 0;
 var linkCounter = 0;
 
 settings.caseSensitive       = true;
-settings.omnibarSuggestion   = truengkeyf
+settings.omnibarSuggestion   = true;
 settings.defaultSearchEngine = 'L';
 
 //google search 바를 없애버림 
