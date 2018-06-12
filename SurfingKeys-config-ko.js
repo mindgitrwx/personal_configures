@@ -411,7 +411,14 @@ vmapkey('~sy', "Remove special character (blank is not considered as special cha
 vmapkey('~dy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
-
+//TODO: multiple clipboard test
+vmapkey('ma', '#7Copy multiple link URLs to the clipboard', function() {
+    var linksToYank = [];
+    Hints.create('*[href]', function(element) {
+        linksToYank.push(element.href);
+        Clipboard.write(linksToYank.join('\n'));
+    }, {multipleHits: true});
+});
 //addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
 //addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
 // request(URL, function (err, response, html) {
@@ -791,4 +798,3 @@ map( 'j' ,'<ArrowDown>' );
 map( 'k' ,'<ArrowUp>' );
 map( 'l' ,'<Arrowright>' );
 */
-
