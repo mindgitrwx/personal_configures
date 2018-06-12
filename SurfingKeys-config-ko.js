@@ -42,7 +42,7 @@ var linkCounter = 0;
 
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
-settings.defaultSearchEngine = 'L';
+settings.defaultSearchEngine = 'L';   // Google I'm Feeling Luckey
 
 //google search 바를 없애버림 
 elem = document.getElementById('searchform');
@@ -50,14 +50,20 @@ if (elem !== null) {
     elem.parentNode.removeChild(elem);
 }
 
-//unmap (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
-unmap('<Ctrl-6>');
-map(']', ']]');
+////////////////////////////////
+// unmap default key mapings //
+////////////////////////////////
+unmap('<Ctrl-6>'); // (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
+map(']', ']]');    // 두번 누르는건 자연스럽지 않음 
 map('[', '[[');
+// 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
+removeSearchAliasX('b')
+removeSearchAliasX('g')
+removeSearchAliasX('w')
+removeSearchAliasX('s')
 
 // for surfingkeys PDF autokey-----------------------------------------
-
-map('<Shift-1>', 'fs');
+map('<Shift-1>', 'fs'); // 잘 되는 느낌은 아님
 map('<Shift-2>', 'fd');
 map('<Shift-3>', 'ff');
 
@@ -81,14 +87,6 @@ mapkey('on', '#3Open Firefox newtab', function () {
     tabOpenLink("www.google.com");
 });
 */
-
-// 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
-
-removeSearchAliasX('b')
-removeSearchAliasX('g')
-removeSearchAliasX('w')
-removeSearchAliasX('s')
-
 //General
 addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
 addSearchAliasX('G', 'Google', 'https://www.google.com/search?q=');
