@@ -741,7 +741,7 @@ mapkey('L', 'soundcloud like', function () {
     domain: /soundcloud\.com/i
 });
 
-// TODO: 동작하지 않음
+// TODO: 동작하지 않음 (양쪽으로 다 동자확지 않음)
 mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
 
     var last     = pathname.lastIndexOf('/'),
@@ -766,6 +766,8 @@ mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
         lastPartOfURL++;
     }
     window.location.href = location.origin + pathname + lastPartOfURL;
+
+    Front.showPopup(window.location.href);
 });
 
 mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
@@ -792,6 +794,8 @@ mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
         lastPartOfURL--;
     }
     window.location.href = location.origin + pathname + lastPartOfURL;
+
+    Front.showPopup(window.location.href);
 });
 
 // TODO: 동작하지 않음 
