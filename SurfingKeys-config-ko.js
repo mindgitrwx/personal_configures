@@ -446,7 +446,7 @@ vmapkey('my', '#7Copy multiple link URLs to the clipboard', function() {
     var textToYank = [];
     textToYank.push(window.getSelection.toString());
     Clipboard.write( '"' + textToYank.join('\n') + '"');
-}
+});
 //addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
 //addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
 // request(URL, function (err, response, html) {
@@ -793,7 +793,6 @@ mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
 });
 
 // TODO: 동작하지 않음 
-
 mapkey('zt', 'remove element', function () {
 
     /*
