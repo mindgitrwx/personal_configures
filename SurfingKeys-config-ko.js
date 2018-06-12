@@ -764,9 +764,10 @@ mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
     lastPartOfURL = window.location.href.split('/').pop();
     if(isNaN(lastPartOfURL)){
         lastPartOfURL++;
-        window.location.href = location.origin + pathname + lastPartOfURL
+        window.location.href = location.origin + pathname + lastPartOfURL;
     }
 });
+
 mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
 
     var last     = pathname.lastIndexOf('/'),
@@ -789,6 +790,7 @@ mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
     lastPartOfURL = window.location.href.split('/').pop();
     if(isNaN(lastPartOfURL)){
         lastPartOfURL--;
+        window.location.href = location.origin + pathname + lastPartOfURL;
     }
 });
 
