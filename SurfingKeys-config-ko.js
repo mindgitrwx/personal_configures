@@ -907,3 +907,29 @@ mapkey('yA', "#7Copy all tabs url", function() {
     })();
     Clipboard.write(URLsToYank);
 });
+
+mapkey('yA', "#7Copy all tabs url", function() {
+    //get numbers of tabs
+    chrome.tabs.query({windowType:'normal'}, function(tabs) {
+        tabNums=tabs.length;
+    });
+    Front.showPopup('tabNums');//debug
+
+    var URLsToYank = [];
+    chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+        for(i=0;i<tabNums;i++)
+        var url = tabs[i].url;
+        URLsToYank.push(url);
+    })();
+    Clipboard.write(URLsToYank);
+});
+
+// TODO: 두개 이상일 때는 어떻게 처리할 지 생각하기
+mapkey('gm', "#7 goto memo element", function() {
+    pageHeadLine = document.getElementById("memo");
+    pageHeadLine.scrollIntoView();
+});
+// TODO: 동작 확인하기
+mapkey('gc', "#7 goto comment element", function() {
+    $("*[id^=comment]").scrollIntoView();
+});
