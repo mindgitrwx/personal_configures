@@ -2,7 +2,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Korean Specific Surfing Keys config
-// Version - 1.0
+// Version - 1.0 - added copy all tab urls
 //
 // Surfing keys config (SurfingKeys)                                                            //
 // Korean specific surfing key config                                                           //
