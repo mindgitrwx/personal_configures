@@ -317,8 +317,8 @@ mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function() {
     }, {multipleHits: true});
 });
 
-//TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기 
-mapkey('yMr', '#7Copy multiple link regex URLs to the clipboard and add commas', function() {
+//TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기  (대문자를 박을때는 맨 뒤에 박는 편이 낫겠다.) --단축키 네개 이상? 
+mapkey('ymR', '#7Copy multiple link regex URLs to the clipboard and add commas', function() {
     var linksToYank = [];
     Hints.create('*[href]', function(element) {
         if(linkCounter === 0){
@@ -330,6 +330,7 @@ mapkey('yMr', '#7Copy multiple link regex URLs to the clipboard and add commas',
     }, {multipleHits: true});
 });
 
+// Copy url as regex of SurfingKeys
 mapkey('yr', "Copy url as regex", function () {
     Clipboard.write('domain: ' + '\/' + window.location.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
@@ -740,13 +741,16 @@ mapkey('L', 'soundcloud like', function () {
     domain: /soundcloud\.com/i
 });
 
-
 // TODO: 동작하지 않음
 mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
-    window.location.assign = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1]) ++).toString();
+    lastPartOfURL = window.location.href.split('/').pop();
+    if(isNaN(lastPartOfURL)){
+    }
 });
 mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
-    window.location.assign = window.location.href.split('=')[0] + '=' + (parseInt(window.location.href.split('=')[1]) --).toString();
+    lastPartOfURL = window.location.href.split('/').pop();
+    if(isNaN(lastPartOfURL)){
+    }
 });
 
 // TODO: 동작하지 않음 
