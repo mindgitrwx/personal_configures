@@ -20,7 +20,8 @@
 // map('<Ctrl-E>', 'T');                                                                                              //
 //                                                                                                                    //
 // 이런 식으로 맵핑해야 함                                                                                                      //
-// jonghyeon.rw@gmail.com                                                                                             //
+//
+// email:jonghyeon.rw@gmail.com                                                                                             //
 //                                                                                                                    //
 //                                                                                                                    //
 // ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// //
@@ -832,6 +833,7 @@ mapkey('zt', 'remove element', function () {
     document.classList.remove("fl");
 
 });
+
 //TODO: google tlanslation auto copy make: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기 
 //p, ''df viewer mapping 
 
@@ -886,3 +888,21 @@ map( 'j' ,'<ArrowDown>' );
 map( 'k' ,'<ArrowUp>' );
 map( 'l' ,'<Arrowright>' );
 */
+
+//TODO: it from sadid https://github.com/brookhong/Surfingkeys/issues/768
+//HOTFIX:
+//ISSUE: 주석에서 auto로 ISSUE를 붙여주는 것이 있었으면 좋겠다
+mapkey('yA', "#7Copy all tabs url", function() {
+    //get numbers of tabs
+    chrome.tabs.query({windowType:'normal'}, function(tabs) {
+        tabNums=tabs.length;
+    });
+
+    var URLsToYank = [];
+    chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
+        for(i=0;i<tabNums;i++)
+        var url = tabs[i].url;
+        URLsToYank.push(url);
+    })();
+    Clipboard.write(URLsToYank);
+});
