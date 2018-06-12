@@ -756,7 +756,7 @@ mapkey('L', 'soundcloud like', function () {
 });
 
 // TODO: 동작하지 않음 (양쪽으로 다 동자확지 않음)
-mapkey('<Shift>+]', '한페이지이동(주소창 숫자 증가)', function () {
+mapkey('<Shift-]>', '한페이지이동(주소창 숫자 증가)', function () {
 
     var last     = pathname.lastIndexOf('/'),
         repeats  = RUNTIME.repeats;
@@ -784,7 +784,7 @@ mapkey('<Shift>+]', '한페이지이동(주소창 숫자 증가)', function () {
     Front.showPopup(window.location.href);
 });
 
-mapkey('<Shift>+[', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
+mapkey('<Shift-[>', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
 
     var last     = pathname.lastIndexOf('/'),
         repeats  = RUNTIME.repeats;
@@ -924,7 +924,7 @@ mapkey('yA', "#7Copy all tabs url", function() {
     Clipboard.write(URLsToYank);
 });
 
-// TODO: 두개 이상일 때는 어떻게 처리할 지 생각하기
+// TODO: 두개 이상일 때는 어떻게 처리할 지 생각하기. 그리고 memo라는 id가 보편적인 id인지 생각하기 
 mapkey('gm', "#7 goto memo element", function() {
     pageHeadLine = document.getElementById("memo");
     pageHeadLine.scrollIntoView();
