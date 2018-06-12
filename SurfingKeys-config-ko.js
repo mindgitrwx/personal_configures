@@ -23,6 +23,8 @@ var naverAnswer = 0;
 var codeWrapper = 0;
 var lineNum     = 0;
 
+var jinkCounter = 0;
+
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
 settings.defaultSearchEngine = 'L';
@@ -314,9 +316,24 @@ mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function() {
         Clipboard.write(linksToYank.join('\n'));
     }, {multipleHits: true});
 });
+
+//TODO: 마지막에 끝날 때 대괄호를 닫아 주는 것 만들기 
+mapkey('yMr', '#7Copy multiple link regex URLs to the clipboard and add commas', function() {
+    var linksToYank = [];
+    Hints.create('*[href]', function(element) {
+        if(linkCounter === 0){
+           Clipboard.write('{') 
+        }
+        linksToYank.push('"' + element.href + '"' , );
+        Clipboard.write(linksToYank.join('\n'));
+        linkCounter++;
+    }, {multipleHits: true});
+});
+
 mapkey('yr', "Copy url as regex", function () {
     Clipboard.write('domain: ' + '\/' + window.location.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
+
 
 mapkey('gyq', "Copy first pre", function () {  
     var cssSelector = "pre";
@@ -416,12 +433,19 @@ vmapkey('~sy', "Remove special character (blank is not considered as special cha
 vmapkey('~dy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
-//TODO: multiple clipboard test
+//TODO: multiple clipboard test 동작하지 않음 FIX
 vmapkey('my', '#7Copy multiple link URLs to the clipboard', function() {
     var textToYank = [];
     textToYank.push(window.getSelection.toString());
     Clipboard.write( '"' + textToYank.join('\n') + '"');
 });
+
+//
+vmapkey('my', '#7Copy multiple link URLs to the clipboard', function() {
+    var textToYank = [];
+    textToYank.push(window.getSelection.toString());
+    Clipboard.write( '"' + textToYank.join('\n') + '"');
+}
 //addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
 //addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
 // request(URL, function (err, response, html) {
