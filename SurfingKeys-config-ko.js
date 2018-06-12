@@ -29,7 +29,7 @@
 // Debug 하는 방법: 다음 명령어를 사용한다.                                                                                     //
 // Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//
+// conventions: TODO, FIXME, REFACT
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
 var namuPage    = 0;
 var wikiPage    = 0;
@@ -932,4 +932,17 @@ mapkey('gm', "#7 goto memo element", function() {
 // TODO: 동작 확인하기 - 동작하지 않음 
 mapkey('gc', "#7 goto comment element", function() {
     $scrollTo = $("*[id^=comment]");
+});
+
+// TODO: Experimental
+function fnShellExecuteJ()
+{
+    var objShell = new ActiveXObject("shell.application");
+    
+    objShell.ShellExecute("notepad.exe", "", "", "open", 1);
+}
+
+// FIXME: what is number of #?
+mapkey('owN', "# open notepad", function(){
+    fnShellExecuteJ();
 });
