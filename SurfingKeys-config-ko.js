@@ -15,7 +15,7 @@
 // Advanced mode를 선택한 후, Load settings from에 위 주소를 입력하고 Save 해주시면 몇초 지나서 이 설정이 저장될 겁니다.                               //
 //                                                                                                                    //
 // 키 맵핑할 때 주의할 점                                                                                                      //
-// map('<Ctrl-Shif-e>', 'T');                                                                                         //
+// map('<Ctrl-Shift-e>', 'T');                                                                                         //
 // 이런식으로 맵핑하면 동작하지 않고                                                                                                 //
 // map('<Ctrl-E>', 'T');                                                                                              //
 //                                                                                                                    //
@@ -756,7 +756,7 @@ mapkey('L', 'soundcloud like', function () {
 });
 
 // TODO: 동작하지 않음 (양쪽으로 다 동자확지 않음)
-mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
+mapkey('<Shift>+]', '한페이지이동(주소창 숫자 증가)', function () {
 
     var last     = pathname.lastIndexOf('/'),
         repeats  = RUNTIME.repeats;
@@ -784,7 +784,7 @@ mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
     Front.showPopup(window.location.href);
 });
 
-mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
+mapkey('<Shift>+[', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
 
     var last     = pathname.lastIndexOf('/'),
         repeats  = RUNTIME.repeats;
