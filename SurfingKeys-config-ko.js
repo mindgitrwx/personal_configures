@@ -929,7 +929,7 @@ mapkey('gm', "#7 goto memo element", function() {
     pageHeadLine = document.getElementById("memo");
     pageHeadLine.scrollIntoView();
 });
-// TODO: 동작 확인하기
+// TODO: 동작 확인하기 - 동작하지 않음 
 mapkey('gc', "#7 goto comment element", function() {
-    $("*[id^=comment]").scrollIntoView();
+    $scrollTo = $("*[id^=comment]");
 });
