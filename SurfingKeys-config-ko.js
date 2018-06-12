@@ -413,11 +413,9 @@ vmapkey('~dy', "Markdown Strikethrough", function () {
 });
 //TODO: multiple clipboard test
 vmapkey('ma', '#7Copy multiple link URLs to the clipboard', function() {
-    var linksToYank = [];
-    Hints.create('*[href]', function(element) {
-        textToYank.push(window.getSelection.toString());
-        Clipboard.write( '"' + textToYank.join('\n') + '"');
-    }, {multipleHits: true});
+    var textToYank = [];
+    textToYank.push(window.getSelection.toString());
+    Clipboard.write( '"' + textToYank.join('\n') + '"');
 });
 //addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
 //addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
