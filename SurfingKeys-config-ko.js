@@ -943,6 +943,6 @@ function fnShellExecuteJ()
 }
 
 // FIXME: what is number of #?
-mapkey('owN', "# open notepad", function(){
+mapkey('oWN', "# open notepad", function(){
     fnShellExecuteJ();
 });
