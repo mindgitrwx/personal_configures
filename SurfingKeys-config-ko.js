@@ -317,7 +317,7 @@ mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function() {
     }, {multipleHits: true});
 });
 
-//TODO: 마지막에 끝날 때 대괄호를 닫아 주는 것 만들기 
+//TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기 
 mapkey('yMr', '#7Copy multiple link regex URLs to the clipboard and add commas', function() {
     var linksToYank = [];
     Hints.create('*[href]', function(element) {
