@@ -2,7 +2,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Korean Specific Surfing Keys config
-// Version - 1.0 - added copy all tab urls
+// Version - 1.0 - debug copy all tab urls 
 //
 // Surfing keys config (SurfingKeys)                                                            //
 // Korean specific surfing key config                                                           //
@@ -897,6 +897,7 @@ mapkey('yA', "#7Copy all tabs url", function() {
     chrome.tabs.query({windowType:'normal'}, function(tabs) {
         tabNums=tabs.length;
     });
+    Front.showPopup('tabNums');//debug
 
     var URLsToYank = [];
     chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
