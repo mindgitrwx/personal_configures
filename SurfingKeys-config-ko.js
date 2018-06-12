@@ -934,15 +934,9 @@ mapkey('gc', "#7 goto comment element", function() {
     $scrollTo = $("*[id^=comment]");
 });
 
-// TODO: Experimental
-function fnShellExecuteJ()
-{
-    var objShell = new ActiveXObject("shell.application");
-    
-    objShell.ShellExecute("notepad.exe", "", "", "open", 1);
-}
 
 // FIXME: what is number of #?
-mapkey('oWN', "# open notepad", function(){
-    fnShellExecuteJ();
+mapkey('oWN', "#7 open notepad", function(){
+    var objShell = new ActiveXObject("shell.application");
+    objShell.ShellExecute("notepad.exe", "", "", "open", 1);
 });
