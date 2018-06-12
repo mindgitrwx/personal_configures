@@ -743,13 +743,52 @@ mapkey('L', 'soundcloud like', function () {
 
 // TODO: 동작하지 않음
 mapkey('}', '한페이지이동(주소창 숫자 증가)', function () {
+
+    var last     = pathname.lastIndexOf('/'),
+        repeats  = RUNTIME.repeats;
+    var pathname = location.pathname;
+    if (pathname.length > 1) {
+        pathname        = pathname.endsWith('/') ? pathname.substr(0, pathname.length - 1) : pathname;
+        RUNTIME.repeats = 1;
+        while (repeats-- > 1) {
+            var p = pathname.lastIndexOf('/', last - 1);
+            if (p === -1) {
+                break;
+            } else {
+                last = p;
+            }
+        }
+        pathname = pathname.substr(0, last);
+    }
+
     lastPartOfURL = window.location.href.split('/').pop();
     if(isNaN(lastPartOfURL)){
+        lastPartOfURL++;
+        window.location.href = location.origin + pathname + lastPartOfURL
     }
 });
 mapkey('{', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
+
+    var last     = pathname.lastIndexOf('/'),
+        repeats  = RUNTIME.repeats;
+    var pathname = location.pathname;
+    if (pathname.length > 1) {
+        pathname        = pathname.endsWith('/') ? pathname.substr(0, pathname.length - 1) : pathname;
+        RUNTIME.repeats = 1;
+        while (repeats-- > 1) {
+            var p = pathname.lastIndexOf('/', last - 1);
+            if (p === -1) {
+                break;
+            } else {
+                last = p;
+            }
+        }
+        pathname = pathname.substr(0, last);
+    }
+
     lastPartOfURL = window.location.href.split('/').pop();
     if(isNaN(lastPartOfURL)){
+        lastPartOfURL--;
     }
 });
 
