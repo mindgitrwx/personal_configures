@@ -1,20 +1,30 @@
-/*
-Surfing keys config (SurfingKeys)
-Korean specific surfing key config
-Please copy this url to text box [load settings from:], and 'Save'
-https:   //raw.githubusercontent.com/mindgitrwx/gitconventions/master/SurfingKeys-config-ko.js
 
-Surfing key 에서 se를 누르면 setting surfing key 의 setting으로 들어가집니다. 이때 보여지는 화면에서
-Advanced mode를 선택한 후, Load settings from에 위 주소를 입력하고 Save 해주시면 몇초 지나서 이 설정이 저장될 겁니다.
-
-키 맵핑할 때 주의할 점
-map('<Ctrl-Shif-e>', 'T');
-이런식으로 맵핑하면 동작하지 않고
-map('<Ctrl-E>', 'T');
-이런 식으로 맵핑해야 함 
-jonghyeon.rw@gmail.com
-    */
-
+//////////////////////////////////////////////////////////////////////////////////////////////////
+// Surfing keys config (SurfingKeys)                                                            //
+// Korean specific surfing key config                                                           //
+// Please copy this url to text box [load settings from:], and 'Save'                           //
+// https:   raw.githubusercontent.com/mindgitrwx/gitconventions/master/SurfingKeys-config-ko.js //
+//                                                                                              //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                                    //
+// Surfing key 에서 se를 누르면 setting surfing key 의 setting으로 들어가집니다. 이때 보여지는 화면에서                                        //
+// Advanced mode를 선택한 후, Load settings from에 위 주소를 입력하고 Save 해주시면 몇초 지나서 이 설정이 저장될 겁니다.                               //
+//                                                                                                                    //
+// 키 맵핑할 때 주의할 점                                                                                                      //
+// map('<Ctrl-Shif-e>', 'T');                                                                                         //
+// 이런식으로 맵핑하면 동작하지 않고                                                                                                 //
+// map('<Ctrl-E>', 'T');                                                                                              //
+//                                                                                                                    //
+// 이런 식으로 맵핑해야 함                                                                                                      //
+// jonghyeon.rw@gmail.com                                                                                             //
+//                                                                                                                    //
+//                                                                                                                    //
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Debug 하는 방법: 다음 명령어를 사용한다.                                                                                     //
+// Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
 var namuPage    = 0;
 var wikiPage    = 0;
@@ -22,11 +32,12 @@ var stackAnswer = 0;  // 변수 통합 생각중
 var naverAnswer = 0;
 var codeWrapper = 0;
 var lineNum     = 0;
-
-var jinkCounter = 0;
+// -----------------------------------------------------
+// 중괄호 닫기용
+var linkCounter = 0;
 
 settings.caseSensitive       = true;
-settings.omnibarSuggestion   = true;
+settings.omnibarSuggestion   = truengkeyf
 settings.defaultSearchEngine = 'L';
 
 //google search 바를 없애버림 
