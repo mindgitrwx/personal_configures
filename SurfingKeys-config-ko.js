@@ -415,8 +415,8 @@ vmapkey('~dy', "Markdown Strikethrough", function () {
 vmapkey('ma', '#7Copy multiple link URLs to the clipboard', function() {
     var linksToYank = [];
     Hints.create('*[href]', function(element) {
-        linksToYank.push(element.href);
-        Clipboard.write(linksToYank.join('\n'));
+        textToYank.push(window.getSelection.toString());
+        Clipboard.write( '"' + textToYank.join('\n') + '"');
     }, {multipleHits: true});
 });
 //addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
