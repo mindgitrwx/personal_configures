@@ -417,7 +417,7 @@ vmapkey('~dy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
 //TODO: multiple clipboard test
-vmapkey('ma', '#7Copy multiple link URLs to the clipboard', function() {
+vmapkey('my', '#7Copy multiple link URLs to the clipboard', function() {
     var textToYank = [];
     textToYank.push(window.getSelection.toString());
     Clipboard.write( '"' + textToYank.join('\n') + '"');
