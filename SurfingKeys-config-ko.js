@@ -62,6 +62,7 @@ if (elem !== null) {
 unmap('<Ctrl-6>'); // (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
 map(']', ']]');    // 두번 누르는건 자연스럽지 않음 
 map('[', '[[');
+
 // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
 removeSearchAliasX('b')
 removeSearchAliasX('g')
@@ -76,23 +77,21 @@ map('<Shift-3>', 'ff');
 //////////////////////////
 // for url heml extract //
 //////////////////////////
-/*
-<script> // script 긁어오는 것이 안됨 
+
 var request = require('request'),
     cheerio = require('cheerio');
-</script>
-
 
 request(url, function (err, res, html) {
     if (!err) {
         var $ = cheerio.load(html);
     }
 })
+
 //----------------i-----------------------------------------------------
 mapkey('on', '#3Open Firefox newtab', function () {
     tabOpenLink("www.google.com");
 });
-*/
+
 //General
 addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
 addSearchAliasX('G', 'Google', 'https://www.google.com/search?q=');
@@ -106,6 +105,8 @@ addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
 addSearchAliasX('gH', 'github', 'https://github.com/search?q=', 'o');
+addSearchAliasX('cS', 'slant', 'https://www.slant.co/search?query=', 'o');
+
 
 //language -- 
 //
@@ -944,5 +945,6 @@ mapkey('gc', "#7 goto comment element", function() {
 
 // FIXME: what is number of #? 동작하지 않음
 mapkey('oWN', "#7 open notepad", function(){
-    var objShell = new ActiveXObject("shell.application"); objShell.ShellExecute("notepad.exe", "", "", "open", 1);
+    var objShell = new ActiveXObject("shell.application");
+    objShell.ShellExecute("notepad.exe", "", "", "open", 1);
 });
