@@ -78,14 +78,14 @@ map('<Shift-3>', 'ff');
 // for url heml extract //
 //////////////////////////
 
-var request = require('request'),
-    cheerio = require('cheerio');
+// var request = require('request'),
+//     cheerio = require('cheerio');
 
-request(url, function (err, res, html) {
-    if (!err) {
-        var $ = cheerio.load(html);
-    }
-})
+// request(url, function (err, res, html) {
+//     if (!err) {
+//         var $ = cheerio.load(html);
+//     }
+// })
 
 //----------------i-----------------------------------------------------
 mapkey('on', '#3Open Firefox newtab', function () {
@@ -105,7 +105,7 @@ addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
 addSearchAliasX('gH', 'github', 'https://github.com/search?q=', 'o');
-addSearchAliasX('cS', 'slant', 'https://www.slant.co/search?query=', 'o');
+addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=', 'o');
 
 
 //language -- 
