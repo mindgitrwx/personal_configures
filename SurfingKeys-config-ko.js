@@ -23,6 +23,11 @@
 //
 // email:jonghyeon.rw@gmail.com                                                                                             //
 //                                                                                                                    //
+// 앞으로 만들고자 하는 기능 - visualmode에서 복사를 할 시 바로 구글 번역한 후 Clipboard로 넘기는 기능
+//                         - Q에서 쓰여지는 사전 데이터의 변경 
+//                         - stackoverflow에서 검색시 바로 첫번째 결과의 pre데이터를 Clipboard로 넘기는 기능  
+//                         - 구글 검색시 불필요한 정보를 지워주고자 하는 기능 
+//                         - Chrome 상에서 cmd를 열수 있는 것으로 보이는 데 그걸 이용해서 무엇인가를 진행하는 것 
 //                                                                                                                    //
 // ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -207,6 +212,7 @@ addSearchAliasX('msI', 'soundcloudid', 'https://soundcloud.com/');
 addSearchAliasX('mS', 'spotify', 'https://open.spotify.com/search/results/');
 addSearchAliasX('msA', 'spotify', 'https://open.spotify.com/search/albums/');
 addSearchAliasX('mL', 'melon', 'https://www.melon.com/search/total/index.htm?q=');
+addSearchAliasX('mfM', 'lastfm', 'https://www.last.fm/search?q=');
 addSearchAliasX('mH', 'hiphople', 'http://hiphople.com/index.php?_filter=search&mid=lyrics&search_keyword=');
 addSearchAliasX('mG', 'Genius', 'https://genius.com/search?q=');
 addSearchAliasX('mP', 'pitchfork', 'https://pitchfork.com/search/?query=');
@@ -908,6 +914,7 @@ mapkey('yA', "#7Copy all tabs url", function() {
     Clipboard.write(URLsToYank);
 });
 
+// FIXME:  동작하지 않음 
 mapkey('yA', "#7Copy all tabs url", function() {
     //get numbers of tabs
     chrome.tabs.query({windowType:'normal'}, function(tabs) {
@@ -935,8 +942,7 @@ mapkey('gc', "#7 goto comment element", function() {
 });
 
 
-// FIXME: what is number of #?
+// FIXME: what is number of #? 동작하지 않음
 mapkey('oWN', "#7 open notepad", function(){
-    var objShell = new ActiveXObject("shell.application");
-    objShell.ShellExecute("notepad.exe", "", "", "open", 1);
+    var objShell = new ActiveXObject("shell.application"); objShell.ShellExecute("notepad.exe", "", "", "open", 1);
 });
