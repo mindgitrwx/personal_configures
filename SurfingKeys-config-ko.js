@@ -1,5 +1,3 @@
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Korean Specific Surfing Keys config
@@ -37,7 +35,9 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // conventions: TODO, FIXME, REFACT
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
-src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+
+// jQuery added 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 
 var namuPage    = 0;
 var wikiPage    = 0;
