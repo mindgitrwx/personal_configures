@@ -308,7 +308,6 @@ mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
         copyElement(element);
         Clipboard.write(element.src);
-        searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
         // TODO: Copy 하는 방법은 없는지 알아보기
     });
 });
