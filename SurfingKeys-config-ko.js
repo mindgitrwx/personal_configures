@@ -90,10 +90,11 @@ map('<Shift-3>', 'ff');
 // })
 
 // 광고차단 즉시 실행
-(function stop(){
-    document.getElementById('slide-close').click();
-    document.getElementByClassName('slide-close').click();
-})();
+// 
+// (function stop(){
+    // document.getElementById('slide-close').click(); // NULL 실행 안됨
+    // document.getElementByClassName('slide-close').click();
+// })();
 
 //----------------i-----------------------------------------------------
 mapkey('on', '#3Open Firefox newtab', function () {
