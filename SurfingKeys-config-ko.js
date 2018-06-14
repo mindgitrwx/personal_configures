@@ -747,11 +747,18 @@ mapkey('h', 'slidePlayer previous page', function () {
             var $ = window.jQuery;
             // Use $ here...
 
+            $("component_container control_panel").click(function () {
+                var $row = $(this).closest("tr"),         // Finds the closest row <tr> 
+                    $tds = $row.find("td:nth-child(2)");  // Finds the 2nd <td> element
+                $tds.click();
+            });
         };
     });
 }, {
     domain: /slideplayer\.com/i
 });
+
+// 동작하지 않음
 mapkey('l', 'slidePlayer next page', function () {
 
     (function () {
@@ -763,7 +770,7 @@ mapkey('l', 'slidePlayer next page', function () {
             var $ = window.jQuery;
             // Use $ here...
 
-            $(".use-address").click(function () {
+            $(".component_container.control_panel").click(function () {
                 var $row = $(this).closest("tr"),         // Finds the closest row <tr> 
                     $tds = $row.find("td:nth-child(2)");  // Finds the 2nd <td> element
                 $tds.click();
