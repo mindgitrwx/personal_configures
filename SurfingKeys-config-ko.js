@@ -307,7 +307,7 @@ function copyElement(element) {
 mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
         copyElement(element);
-        Clipboard.write(element.src);
+        // Clipboard.write(element.src);
         // TODO: Copy 하는 방법은 없는지 알아보기
     });
 });
