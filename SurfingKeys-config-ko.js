@@ -1,4 +1,5 @@
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 //////////////////////////////////////////////////////////////////////////////////////////////////
 //
 // Korean Specific Surfing Keys config
@@ -36,6 +37,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // conventions: TODO, FIXME, REFACT
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
+src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+
 var namuPage    = 0;
 var wikiPage    = 0;
 var stackAnswer = 0;  // 변수 통합 생각중
