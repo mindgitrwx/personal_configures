@@ -300,10 +300,6 @@ function copyElement(element) {
     .then(function(blob) {
       var reader        = new FileReader();
           reader.onload = function() {
-        document.body.appendChild(text);
-        text.value = reader.result;
-        text.select();
-        alert("Press CTRL+C to copy image to clipboard");
       }
       reader.readAsDataURL(blob)
     })
