@@ -36,17 +36,7 @@
 // conventions: TODO, FIXME, REFACT
 
 // Anonymous "self-invoking" function - TO LOAD JQUERY
-(function() {
-    // Load the script
-    var script        = document.createElement("SCRIPT");
-        script.src    = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
-        script.type   = 'text/javascript';
-        script.onload = function() {
-        var $ = window.jQuery;
-        // Use $ here...
-    };
-    document.getElementsByTagName("head")[0].appendChild(script);
-})();
+
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
 var namuPage    = 0;
 var wikiPage    = 0;
@@ -72,7 +62,7 @@ if (elem !== null) {
 // unmap default key mapings //
 ////////////////////////////////
 unmap('<Ctrl-6>'); // (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
-map(']', ']]');    // 두번 누르는건 자연스럽지 않음 
+map(']', ']]'); // 두번 누르는건 자연스럽지 않음 
 map('[', '[[');
 
 // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
@@ -267,7 +257,7 @@ mapkey('q', '#1get image link and google image search', function () {
     Hints.create("img, button", function (element) {
         Clipboard.write(element.src);
         searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
-    // TODO: Copy 하는 방법은 없는지 알아보기
+        // TODO: Copy 하는 방법은 없는지 알아보기
     });
 });
 
@@ -340,27 +330,33 @@ mapkey('Q', '#8Open omnibar for word translation', function () {
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 vmapkey('y', "Copy url as regex", function () {
     Clipboard.writewindow.getSelection().toString().replaceAll("/\[[0-9]*\]/g", "test"); // TODO: 동작하지 않음 
-}, { domain: /www\.wikiwand\.com/i }); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
+}, {
+    domain: /www\.wikiwand\.com/i
+}); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
 
-mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function() {
+mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
     var linksToYank = [];
-    Hints.create('*[href]', function(element) {
+    Hints.create('*[href]', function (element) {
         linksToYank.push('domain: ' + '\/' + element.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
         Clipboard.write(linksToYank.join('\n'));
-    }, {multipleHits: true});
+    }, {
+        multipleHits: true
+    });
 });
 
 //TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기  (대문자를 박을때는 맨 뒤에 박는 편이 낫겠다.) --단축키 네개 이상? 
-mapkey('ymR', '#7Copy multiple link regex URLs to the clipboard and add commas', function() {
+mapkey('ymR', '#7Copy multiple link regex URLs to the clipboard and add commas', function () {
     var linksToYank = [];
-    Hints.create('*[href]', function(element) {
-        if(linkCounter === 0){
-           Clipboard.write('{') 
+    Hints.create('*[href]', function (element) {
+        if (linkCounter === 0) {
+            Clipboard.write('{')
         }
-        linksToYank.push('"' + element.href + '"' , );
+        linksToYank.push('"' + element.href + '"', );
         Clipboard.write(linksToYank.join('\n'));
         linkCounter++;
-    }, {multipleHits: true});
+    }, {
+        multipleHits: true
+    });
 });
 
 // Copy url as regex of SurfingKeys
@@ -369,7 +365,7 @@ mapkey('yr', "Copy url as regex", function () {
 });
 
 
-mapkey('gyq', "Copy first pre", function () {  
+mapkey('gyq', "Copy first pre", function () {
     var cssSelector = "pre";
 
     //보이는 것 중에서 pre element존재하는지 찾기 
@@ -468,17 +464,17 @@ vmapkey('~dy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
 //TODO: multiple clipboard test 동작하지 않음 FIX
-vmapkey('my', '#7Copy multiple link URLs to the clipboard', function() {
+vmapkey('my', '#7Copy multiple link URLs to the clipboard', function () {
     var textToYank = [];
     textToYank.push(window.getSelection.toString());
-    Clipboard.write( '"' + textToYank.join('\n') + '"');
+    Clipboard.write('"' + textToYank.join('\n') + '"');
 });
 
 //
-vmapkey('my', '#7Copy multiple link URLs to the clipboard', function() {
+vmapkey('my', '#7Copy multiple link URLs to the clipboard', function () {
     var textToYank = [];
     textToYank.push(window.getSelection.toString());
-    Clipboard.write( '"' + textToYank.join('\n') + '"');
+    Clipboard.write('"' + textToYank.join('\n') + '"');
 });
 //addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
 //addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
@@ -796,7 +792,7 @@ mapkey('<Shift-]>', '한페이지이동(주소창 숫자 증가)', function () {
     }
 
     lastPartOfURL = window.location.href.split('/').pop();
-    if(isNaN(lastPartOfURL)){
+    if (isNaN(lastPartOfURL)) {
         lastPartOfURL++;
     }
     window.location.href = location.origin + pathname + lastPartOfURL;
@@ -824,7 +820,7 @@ mapkey('<Shift-[>', '한페이지 뒤로이동(주소창 숫자 감소)', functi
     }
 
     lastPartOfURL = window.location.href.split('/').pop();
-    if(isNaN(lastPartOfURL)){
+    if (isNaN(lastPartOfURL)) {
         lastPartOfURL--;
     }
     window.location.href = location.origin + pathname + lastPartOfURL;
@@ -912,62 +908,82 @@ map( 'l' ,'<Arrowright>' );
 //TODO: it from sadid https://github.com/brookhong/Surfingkeys/issues/768
 //HOTFIX:
 //ISSUE: 주석에서 auto로 ISSUE를 붙여주는 것이 있었으면 좋겠다
-mapkey('yA', "#7Copy all tabs url", function() {
+mapkey('yA', "#7Copy all tabs url", function () {
     //get numbers of tabs
-    chrome.tabs.query({windowType:'normal'}, function(tabs) {
+    chrome.tabs.query({
+        windowType: 'normal'
+    }, function (tabs) {
         tabNums = tabs.length;
     });
-    Front.showPopup('tabNums');//debug
+    Front.showPopup('tabNums'); //debug
 
     var URLsToYank = [];
-    chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
-        for(i=0;i<tabNums;i++)
-        var url = tabs[i].url;
+    chrome.tabs.query({
+        'active'           : true,
+        'lastFocusedWindow': true
+    }, function (tabs) {
+        for (i = 0; i < tabNums; i++)
+            var url = tabs[i].url;
         URLsToYank.push(url);
     })();
     Clipboard.write(URLsToYank);
 });
 
 // FIXME:  동작하지 않음 
-mapkey('yA', "#7Copy all tabs url", function() {
+mapkey('yA', "#7Copy all tabs url", function () {
     //get numbers of tabs
-    chrome.tabs.query({windowType:'normal'}, function(tabs) {
+    chrome.tabs.query({
+        windowType: 'normal'
+    }, function (tabs) {
         tabNums = tabs.length;
     });
-    Front.showPopup('tabNums');//debug
+    Front.showPopup('tabNums'); //debug
 
     var URLsToYank = [];
-    chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
-        for(i=0;i<tabNums;i++)
-        var url = tabs[i].url;
+    chrome.tabs.query({
+        'active'           : true,
+        'lastFocusedWindow': true
+    }, function (tabs) {
+        for (i = 0; i < tabNums; i++)
+            var url = tabs[i].url;
         URLsToYank.push(url);
     })();
     Clipboard.write(URLsToYank);
 });
 
 // TODO: 두개 이상일 때는 어떻게 처리할 지 생각하기. 그리고 memo라는 id가 보편적인 id인지 생각하기 
-mapkey('gm', "#7 goto memo element", function() {
+mapkey('gm', "#7 goto memo element", function () {
     pageHeadLine = document.getElementById("memo");
     pageHeadLine.scrollIntoView();
 });
 // TODO: 동작 확인하기 - 동작하지 않음 
-mapkey('gc', "#7 goto comment element", function() {
+mapkey('gc', "#7 goto comment element", function () {
     $scrollTo = $("*[id^=comment]");
 });
 
 // FIXME: what is number of #? 동작하지 않음
-mapkey('oWN', "#7 open notepad", function(){
+mapkey('oWN', "#7 open notepad", function () {
     var objShell = new ActiveXObject("shell.application");
     objShell.ShellExecute("notepad.exe", "", "", "open", 1);
 });
 
 // TODO: 구글 번역 자동 clipboad 복사
-vmapkey('zT', "#7 web crolling", function(){
-    var name = window.getSelection.toString();
-    var url  = "http://anyorigin.com/go?url=" + encodeURIComponent("https://translate.google.co.kr/?hl=ko#ko/en/") + name + "&callback=?";
-    $.get(url, function(response) {
-        console.log(response);
-        Clipboard.write(response);
-    });
+vmapkey('zT', "#7 web crolling", function () {
+    (function () {
+        // Load the script
+        var script        = document.createElement("SCRIPT");
+            script.src    = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
+            script.type   = 'text/javascript';
+            script.onload = function () {
+            var $ = window.jQuery;
+            // Use $ here...
+            var name = window.getSelection.toString();
+            var url  = "http://anyorigin.com/go?url=" + encodeURIComponent("https://translate.google.co.kr/?hl=ko#ko/en/") + name + "&callback=?";
+            $.get(url, function (response) {
+                console.log(response);
+                Clipboard.write(response);
+            });
+        };
+        document.getElementsByTagName("head")[0].appendChild(script);
+    })();
 });
-
