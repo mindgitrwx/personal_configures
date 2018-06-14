@@ -46,9 +46,9 @@
         // Use $ here...
     };
     document.getElementsByTagName("head")[0].appendChild(script);
-})();var namuPage    = 0;
-
+})();
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
+var namuPage    = 0;
 var wikiPage    = 0;
 var stackAnswer = 0;  // 변수 통합 생각중
 var naverAnswer = 0;
