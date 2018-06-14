@@ -717,6 +717,7 @@ window.onload = function(){
 
 
 // page 양 옆으로 넘길 수 있도록 하기
+// TODO: slidePlayer 사이트 추가하기 
 mapkey('h', 'slideshare previous page', function () {
     document.getElementById('btnPrevious').click();
 }, {
@@ -942,7 +943,6 @@ mapkey('gc', "#7 goto comment element", function() {
     $scrollTo = $("*[id^=comment]");
 });
 
-
 // FIXME: what is number of #? 동작하지 않음
 mapkey('oWN', "#7 open notepad", function(){
     var objShell = new ActiveXObject("shell.application");
@@ -952,9 +952,9 @@ mapkey('oWN', "#7 open notepad", function(){
 // TODO: 구글 번역 자동 clipboad 복사
 vmapkey('zT', "#7 web crolling", function(){
     var url = 'https://translate.google.co.kr/?hl=ko#ko/en/' + window.getSelection.toString();
-    Clipboard.write(url);
-    // $.get(url,function(content) {
-    //     var content = $(content);
-    //     Clipboard.write($('result_box')[0]);
-    // });
+    $.get(url,function(response) {
+        console.log(response);
+        Clipboard.write(response);
+    });
 });
+
