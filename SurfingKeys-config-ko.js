@@ -972,7 +972,7 @@ vmapkey('zT', "#7 web crolling", function () {
     (function () {
         // Load the script
         var script        = document.createElement("SCRIPT");
-            script.src    = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
+            script.src    = 'https://code.jquery.com/jquery-3.1.1.min.js';
             script.type   = 'text/javascript';
             script.onload = function () {
             var $ = window.jQuery;
