@@ -34,13 +34,21 @@
 // Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // conventions: TODO, FIXME, REFACT
+
+// Anonymous "self-invoking" function - TO LOAD JQUERY
+(function() {
+    // Load the script
+    var script        = document.createElement("SCRIPT");
+        script.src    = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js';
+        script.type   = 'text/javascript';
+        script.onload = function() {
+        var $ = window.jQuery;
+        // Use $ here...
+    };
+    document.getElementsByTagName("head")[0].appendChild(script);
+})();var namuPage    = 0;
+
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
-
-// jQuery added 
-src = "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
-
-
-var namuPage    = 0;
 var wikiPage    = 0;
 var stackAnswer = 0;  // 변수 통합 생각중
 var naverAnswer = 0;
