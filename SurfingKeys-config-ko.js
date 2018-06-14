@@ -954,7 +954,8 @@ vmapkey('zT', "#7 web crolling", function(){
     var name = window.getSelection.toString();
     var url  = "http://anyorigin.com/go?url=" + encodeURIComponent("https://translate.google.co.kr/?hl=ko#ko/en/") + name + "&callback=?";
     $.get(url, function(response) {
-    console.log(response);
+        console.log(response);
+        Clipboard.write(response);
     });
 });
 
