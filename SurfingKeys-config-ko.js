@@ -89,6 +89,12 @@ map('<Shift-3>', 'ff');
 //     }
 // })
 
+// 광고차단 즉시 실행
+(function stop(){
+    document.getElementById('slide-close').click();
+    document.getElementByClassName('slide-close').click();
+})();
+
 //----------------i-----------------------------------------------------
 mapkey('on', '#3Open Firefox newtab', function () {
     tabOpenLink("www.google.com");
@@ -736,6 +742,8 @@ mapkey('l', 'slideshare next page', function () {
 }, {
     domain: /www\.slideshare\.net/i
 });
+
+// FIXME: 동작하지 않음
 mapkey('h', 'slidePlayer previous page', function () {
 
     (function () {
@@ -758,7 +766,7 @@ mapkey('h', 'slidePlayer previous page', function () {
     domain: /slideplayer\.com/i
 });
 
-// 동작하지 않음
+// FIXME: 동작하지 않음
 mapkey('l', 'slidePlayer next page', function () {
 
     (function () {
@@ -1030,3 +1038,5 @@ vmapkey('zT', "#7 web crolling", function () {
         document.getElementsByTagName("head")[0].appendChild(script);
     })();
 });
+
+//2018-06-14 21: 27: 49
