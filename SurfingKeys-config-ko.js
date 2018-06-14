@@ -283,24 +283,40 @@ function SelectText(element) {
         selection.addRange(range);
     }
 }
+*/
 
+function copyElement(element) {
+  //var element = document.getElementById(id);  //TodoChange
+
+//   document.oncopy = function(e) {
+//     e.clipboardData.setData("text/plain", text.value);
+//     console.log(e.clipboardData.getData("text/plain"));
+//   }
+
+  fetch(element.src.replace(/^(http:|https:)/, location.protocol))
+    .then(function(response) {
+      return response.blob()
+    })
+    .then(function(blob) {
+      var reader        = new FileReader();
+          reader.onload = function() {
+        document.body.appendChild(text);
+        text.value = reader.result;
+        text.select();
+        alert("Press CTRL+C to copy image to clipboard");
+      }
+      reader.readAsDataURL(blob)
+    })
+}
 mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
-        $(this).attr("contenteditable", true);
-        //Select the image
-        SelectText($(this).get(0));
-        //Execute copy Command
-        //Note: This will ONLY work directly inside a click listenner
-        document.execCommand('copy');
-        //Unselect the content
-        window.getSelection().removeAllRanges();
-        //Make the container Div uneditable again
-        $(this).removeAttr("contenteditable");
-        //Success!!
-        alert("image copied!");
+        copyElement(element);
+        Clipboard.write(element.src);
+        searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
+        // TODO: Copy 하는 방법은 없는지 알아보기
     });
 });
-*/
+
 
 function renderGoogleTranslate(res) {
     var exp = res.msg;
@@ -315,15 +331,16 @@ function renderGoogleTranslate(res) {
     }
     return exp;
 }
+/*
 mapkey('Q', '#8Open omnibar for word translation', function () {
     Front.openOmniquery({
         url: "https://translate.google.cn/#auto/en/",
-        /*
+        
          * or
         url: function(q) {
             return "https://api.shanbay.com/bdc/search/?word=" + q
         },
-        */
+        
         query      : Visual.getWordUnderCursor(),
         style      : "opacity: 0.3;",
         parseResult: function (res) {
@@ -333,6 +350,7 @@ mapkey('Q', '#8Open omnibar for word translation', function () {
     });
 });
 
+*/
 
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 vmapkey('y', "Copy url as regex", function () {
@@ -1041,3 +1059,12 @@ vmapkey('zT', "#7 web crolling", function () {
 });
 
 //2018-06-14 21: 27: 49
+// TODO: make phone number catcher
+// ^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$
+// email regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+//
+//<div>
+//  <img id="image" width="100" src="https://placehold.it/100x100?text=✔">
+//  <button onclick="copyElement('image');">Copy image</button>
+//</div>
+//
