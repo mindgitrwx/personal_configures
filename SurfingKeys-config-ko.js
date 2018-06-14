@@ -953,7 +953,7 @@ mapkey('oWN', "#7 open notepad", function(){
 vmapkey('zT', "#7 web crolling", function(){
     var url = 'https://translate.google.co.kr/?hl=ko#ko/en/' + window.getSelection.toString();
     $.get(url,function(content) {
-        var content = $(content).find('.result_box');
+        var content = $(content);
+        Clipboard.write($('result_box')[0]);
     });
-    Clipboard.write(content);
 });
