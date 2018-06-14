@@ -736,7 +736,43 @@ mapkey('l', 'slideshare next page', function () {
 }, {
     domain: /www\.slideshare\.net/i
 });
+mapkey('h', 'slidePlayer previous page', function () {
 
+    (function () {
+        // Load the script
+        var script        = document.createElement("SCRIPT");
+            script.src    = 'https://code.jquery.com/jquery-3.1.1.min.js';
+            script.type   = 'text/javascript';
+            script.onload = function () {
+            var $ = window.jQuery;
+            // Use $ here...
+
+        };
+    });
+}, {
+    domain: /slideplayer\.com/i
+});
+mapkey('l', 'slidePlayer next page', function () {
+
+    (function () {
+        // Load the script
+        var script        = document.createElement("SCRIPT");
+            script.src    = 'https://code.jquery.com/jquery-3.1.1.min.js';
+            script.type   = 'text/javascript';
+            script.onload = function () {
+            var $ = window.jQuery;
+            // Use $ here...
+
+            $(".use-address").click(function () {
+                var $row = $(this).closest("tr"),         // Finds the closest row <tr> 
+                    $tds = $row.find("td:nth-child(2)");  // Finds the 2nd <td> element
+                $tds.click();
+            });
+        };
+    });
+}, {
+    domain: /slideplayer\.com/i
+});
 
 // TODO: 잘 동작하지 않음 (이미 단축키가 assign 되어 있는 사이트라서 그런 것 처럼 보임)
 mapkey('[', 'google book previous page', function () {
@@ -967,7 +1003,7 @@ mapkey('oWN', "#7 open notepad", function () {
     objShell.ShellExecute("notepad.exe", "", "", "open", 1);
 });
 
-// TODO: 구글 번역 자동 clipboad 복사
+// TODO: 구글 번역 자동 clipboad 복사 동작하지 않음.
 vmapkey('zT', "#7 web crolling", function () {
     (function () {
         // Load the script
