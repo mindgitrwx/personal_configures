@@ -37,7 +37,8 @@
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
 
 // jQuery added 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+src = "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+
 
 var namuPage    = 0;
 var wikiPage    = 0;
