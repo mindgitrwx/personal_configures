@@ -295,13 +295,14 @@ function copyElement(element) {
 
   fetch(element.src.replace(/^(http:|https:)/, location.protocol))
     .then(function(response) {
-      return response.blob()
+      return response.blob();
     })
     .then(function(blob) {
       var reader        = new FileReader();
           reader.onload = function() {
       }
-      reader.readAsDataURL(blob)
+      reader.readAsDataURL(blob);
+      Clipboard.write(reader);
     })
 }
 mapkey('Q', '#1Click on an Image or a button', function () {
