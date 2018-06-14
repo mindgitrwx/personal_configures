@@ -174,7 +174,7 @@ addSearchAliasX('tE', '네어버사전example', 'http://endic.naver.com/search_e
 addSearchAliasX('tL', '가사해석', 'https://www.google.com/search?q=가사+해석+');
 addSearchAliasX('ll', '가사', 'https://www.google.com/search?q=lyrics+of+');
 
-//TODO: 검색을 통해서 google tlanslated 된 걸 clipboard에 복사 붙여넣는 것 만들기
+//TODO: 검색을 통해서 google tlanslated 된 걸 clipboard에 복사 붙여넣는 것 만들기 (겹쳐서 동작하지 않음)
 addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
 addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
 //navers
@@ -902,7 +902,7 @@ map( 'l' ,'<Arrowright>' );
 mapkey('yA', "#7Copy all tabs url", function() {
     //get numbers of tabs
     chrome.tabs.query({windowType:'normal'}, function(tabs) {
-        tabNums=tabs.length;
+        tabNums = tabs.length;
     });
     Front.showPopup('tabNums');//debug
 
@@ -919,7 +919,7 @@ mapkey('yA', "#7Copy all tabs url", function() {
 mapkey('yA', "#7Copy all tabs url", function() {
     //get numbers of tabs
     chrome.tabs.query({windowType:'normal'}, function(tabs) {
-        tabNums=tabs.length;
+        tabNums = tabs.length;
     });
     Front.showPopup('tabNums');//debug
 
@@ -947,4 +947,13 @@ mapkey('gc', "#7 goto comment element", function() {
 mapkey('oWN', "#7 open notepad", function(){
     var objShell = new ActiveXObject("shell.application");
     objShell.ShellExecute("notepad.exe", "", "", "open", 1);
+});
+
+// TODO: 구글 번역 자동 clipboad 복사
+vmapkey('zT', "#7 web crolling", function(){
+    var url = 'https://translate.google.co.kr/?hl=ko#ko/en/' + window.getSelection.toString();
+    $.get(url,function(content) {
+        var content = $(content).find('result_box').html();
+    });
+    Clipboard.write(content);
 });
