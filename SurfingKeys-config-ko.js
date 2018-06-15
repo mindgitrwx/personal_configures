@@ -100,6 +100,9 @@ map('<Shift-3>', 'ff');
     // document.getElementById('slide-close').click(); // NULL 실행 안됨
     // document.getElementByClassName('slide-close').click();
 // })();
+function getElementsByText(str, tag = 'a') {
+  return Array.prototype.slice.call(document.getElementsByTagName(tag)).filter(el => el.textContent.trim() === str.trim());
+}
 
 //----------------i-----------------------------------------------------
 mapkey('on', '#3Open Firefox newtab', function () {
@@ -124,27 +127,27 @@ addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/s
 
 //language -- 
 //
-addSearchAliasX('lJ', 'Javascript', 'https://www.google.com/search?q=Javascript+');
-addSearchAliasX('lj', 'java', 'https://www.google.com/search?q=Java+');
+addSearchAliasX('lJ', 'language Javascript', 'https://www.google.com/search?q=Javascript+');
+addSearchAliasX('lj', 'language java', 'https://www.google.com/search?q=Java+');
 //addSearchAliasX('lC', 'C++', 'https://www.google.com/search?q=C++');
-addSearchAliasX('lc', 'c', 'https://www.google.com/search?q=c+language+');
-addSearchAliasX('l#', 'C#', 'https://www.google.com/search?q=c%23+');
-addSearchAliasX('lR', 'R', 'https://www.google.com/search?q=languag+');
-addSearchAliasX('lr', 'Ruby', 'https://www.google.com/search?q=Ruby+');
-addSearchAliasX('lP', 'Python', 'https://www.google.com/search?q=Python+');
-addSearchAliasX('lp', 'php', 'https://www.google.com/search?q=php+');
-addSearchAliasX('lK', 'Kotlin', 'https://www.google.com/search?q=Kotlin+');
-addSearchAliasX('lS', 'Swi=t', 'https://www.google.com/search?q=Swift+');
-addSearchAliasX('lQ', 'SQL Query', 'https://www.google.com/search?q=SQL+');
-addSearchAliasX('ls', 'Shell script', 'https://www.google.com/search?q=Shell+Schript+');
-addSearchAliasX('lT', 'Typescript', 'https://www.google.com/search?q=TypeScript+');
-addSearchAliasX('lH', 'HTML', 'https://www.google.com/search?q=HTML+');
+addSearchAliasX('lc', 'language c', 'https://www.google.com/search?q=c+language+');
+addSearchAliasX('l#', 'language C#', 'https://www.google.com/search?q=c%23+');
+addSearchAliasX('lR', 'language R', 'https://www.google.com/search?q=languag+');
+addSearchAliasX('lr', 'language Ruby', 'https://www.google.com/search?q=Ruby+');
+addSearchAliasX('lP', 'language Python', 'https://www.google.com/search?q=Python+');
+addSearchAliasX('lp', 'language php', 'https://www.google.com/search?q=php+');
+addSearchAliasX('lK', 'language Kotlin', 'https://www.google.com/search?q=Kotlin+');
+addSearchAliasX('lS', 'language Swift', 'https://www.google.com/search?q=Swift+');
+addSearchAliasX('lQ', 'language SQL Query', 'https://www.google.com/search?q=SQL+');
+addSearchAliasX('ls', 'language Shell script', 'https://www.google.com/search?q=Shell+Schript+');
+addSearchAliasX('lT', 'language Typescript', 'https://www.google.com/search?q=TypeScript+');
+addSearchAliasX('lH', 'language HTML', 'https://www.google.com/search?q=HTML+');
 
 //sns
-addSearchAliasX('fB', 'facebook(페이스북)', 'https://www.facebook.com/search/top/?q=');
-addSearchAliasX('tW', 'twitter', 'https://twitter.com/search?q=');
-addSearchAliasX('ig', 'instagram HashTag', 'https://www.instagram.com/explore/tags/');
-addSearchAliasX('rD', 'reddit', 'https://www.reddit.com/search?q=');
+addSearchAliasX('fB', 'faceBook(페이스북)', 'https://www.facebook.com/search/top/?q=');
+addSearchAliasX('tW', 'tWitter', 'https://twitter.com/search?q=');
+addSearchAliasX('ig', 'InstaGram HashTag', 'https://www.instagram.com/explore/tags/');
+addSearchAliasX('rD', 'redDit', 'https://www.reddit.com/search?q=');
 
 //shorten - what is.. who is.. where is..  
 addSearchAliasX('wA', 'advanced', 'https://www.google.com/search?q=advanced+');
@@ -181,11 +184,11 @@ addSearchAliasX('hwP', 'hwp', 'https://www.google.com/search?hl=en&biw=1600&bih=
 addSearchAliasX('ppT', 'ppt', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Appt+');
 
 //translation
-addSearchAliasX('t', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
-addSearchAliasX('T', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
-addSearchAliasX('tA', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
-addSearchAliasX('tE', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
-addSearchAliasX('tL', '가사해석', 'https://www.google.com/search?q=가사+해석+');
+addSearchAliasX('t', 'tlanslate Hangle to English 한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
+addSearchAliasX('T', 'tlanslate English to Hangle 영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
+addSearchAliasX('tA', 'tlanslate All 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+addSearchAliasX('tE', 'tlanslate Examples 네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
+addSearchAliasX('tL', 'tlanslate lyrics 가사해석', 'https://www.google.com/search?q=가사+해석+');
 addSearchAliasX('ll', '가사', 'https://www.google.com/search?q=lyrics+of+');
 
 //TODO: 검색을 통해서 google tlanslated 된 걸 clipboard에 복사 붙여넣는 것 만들기 (겹쳐서 동작하지 않음)
@@ -194,9 +197,9 @@ addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=
 //navers
 addSearchAliasX('N', 'naver', 'https://www.naver.com/?query=');
 addSearchAliasX('nM', 'navermap', 'https://map.naver.com/?query=');
-addSearchAliasX('nA', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
-addSearchAliasX('nD', '네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
-addSearchAliasX('nE', '네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
+addSearchAliasX('nA', 'naver all 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+addSearchAliasX('nD', 'naver Dictionary 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+addSearchAliasX('nE', 'naver Example 네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 
 //Damm 
 addSearchAliasX('D', '다음', 'https://search.daum.net/search?w=');
@@ -207,31 +210,31 @@ addSearchAliasX('dM', '다음 map', 'http://local.daum.net/map/index.jsp?q=');
 
 //shop
 addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
-addSearchAliasX('sA', '아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민 
-addSearchAliasX('sC', '쿠팡', 'http://www.coupang.com/np/search?component=&q=');
-addSearchAliasX('sD', '다나와', 'http://search.danawa.com/dsearch.php?k1=');
-addSearchAliasX('sI', '인터파크', 'http://isearch.interpark.com/isearch?q=');
-addSearchAliasX('sT', '티몬', 'http://search.ticketmonster.co.kr/search/?keyword=');
-addSearchAliasX('sY', 'yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
-addSearchAliasX('sW', '위메프', 'http://search.wemakeprice.com/search?search_cate=top&search_keyword=');
-addSearchAliasX('saU', '옥션', 'http://search.auction.co.kr/search/search.aspx?keyword=');
+addSearchAliasX('sA', 'shop아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민 
+addSearchAliasX('sC', 'shop 쿠팡', 'http://www.coupang.com/np/search?component=&q=');
+addSearchAliasX('sD', 'shop 다나와', 'http://search.danawa.com/dsearch.php?k1=');
+addSearchAliasX('sI', 'shop 인터파크', 'http://isearch.interpark.com/isearch?q=');
+addSearchAliasX('sT', 'shop 티몬', 'http://search.ticketmonster.co.kr/search/?keyword=');
+addSearchAliasX('sY', 'shop yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
+addSearchAliasX('sW', 'shop 위메프', 'http://search.wemakeprice.com/search?search_cate=top&search_keyword=');
+addSearchAliasX('saU', 'shop 옥션', 'http://search.auction.co.kr/search/search.aspx?keyword=');
 //addSearchAliasX('sG', '지마켓', ''); 쿼리를 알 수 없음
-addSearchAliasX('s11', '11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
-addSearchAliasX('siH', '아이허브', ' https://kr.iherb.com/search?kw=');
-addSearchAliasX('s11', '11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
-addSearchAliasX('sdC', '다이닝코드 (음식점)', 'https://www.diningcode.com/isearch.php?query=');
+addSearchAliasX('s11', 'shop 11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
+addSearchAliasX('siH', 'shop 아이허브', ' https://kr.iherb.com/search?kw=');
+addSearchAliasX('s11', 'shop 11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
+addSearchAliasX('sdC', 'shop 다이닝코드 (음식점)', 'https://www.diningcode.com/isearch.php?query=');
 
 //music
 addSearchAliasX('msC', 'soundcloud', 'https://soundcloud.com/search?q=');
 addSearchAliasX('msI', 'soundcloudid', 'https://soundcloud.com/');
 addSearchAliasX('mS', 'spotify', 'https://open.spotify.com/search/results/');
-addSearchAliasX('msA', 'spotify', 'https://open.spotify.com/search/albums/');
-addSearchAliasX('mL', 'melon', 'https://www.melon.com/search/total/index.htm?q=');
-addSearchAliasX('mfM', 'lastfm', 'https://www.last.fm/search?q=');
-addSearchAliasX('mH', 'hiphople', 'http://hiphople.com/index.php?_filter=search&mid=lyrics&search_keyword=');
+addSearchAliasX('msA', 'spotify Albums', 'https://open.spotify.com/search/albums/');
+addSearchAliasX('mL', 'meLon', 'https://www.melon.com/search/total/index.htm?q=');
+addSearchAliasX('mfM', 'lastFm', 'https://www.last.fm/search?q=');
+addSearchAliasX('mH', 'Hiphople', 'http://hiphople.com/index.php?_filter=search&mid=lyrics&search_keyword=');
 addSearchAliasX('mG', 'Genius', 'https://genius.com/search?q=');
-addSearchAliasX('mP', 'pitchfork', 'https://pitchfork.com/search/?query=');
-addSearchAliasX('mC', 'metacritic', 'http://www.metacritic.com/search/all/');
+addSearchAliasX('mP', 'Pitchfork', 'https://pitchfork.com/search/?query=');
+addSearchAliasX('mC', 'metaCritic', 'http://www.metacritic.com/search/all/');
 
 //Video
 addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
@@ -242,11 +245,11 @@ addSearchAliasX('eW', '영문위키', 'https://www.wikiwand.com/en/');
 addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 
 //papaers
-addSearchAliasX('pG', '구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
-addSearchAliasX('pN', 'nCBI', 'https://www.ncbi.nlm.nih.gov/search/?term=');
-addSearchAliasX('pR', 'RISS', 'http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=');
-addSearchAliasX('pE', 'ELSEVIER', 'https://www.elsevier.com/search-results?query=');
-addSearchAliasX('pC', 'CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
+addSearchAliasX('pG', 'paper 구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
+addSearchAliasX('pN', 'paper nCBI', 'https://www.ncbi.nlm.nih.gov/search/?term=');
+addSearchAliasX('pR', 'paper RISS', 'http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=');
+addSearchAliasX('pE', 'paper ELSEVIER', 'https://www.elsevier.com/search-results?query=');
+addSearchAliasX('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
 
 //news 
 //knowledge
@@ -358,11 +361,11 @@ mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
 
 //TODO: git clone , get id
 mapkey('yg', '#7 git clone', function () {
-    Clipboard.write('git clone ' +  window.location.href + '.git');
+    Clipboard.write('yank git - for clone' +  window.location.href + '.git');
 }, {
     domain: /github\.com/i
 }); 
-mapkey('ye', '#7 copy link element id or classname', function () {
+mapkey('ye', '#7 Yank Element info. copy link element id or classname', function () {
     var linksToYank = [];
     Hints.create('*[href]', function (element) {
 
@@ -372,7 +375,7 @@ mapkey('ye', '#7 copy link element id or classname', function () {
         (Clipboard.write(linksToYank.join('\n')));
     });
 });
-mapkey('yme', '#7 copy multiple link element id or classname', function () {
+mapkey('yme', '#7 Yank Multiple Element info  (copy multiple link element id or classname)', function () {
     var linksToYank = [];
     Hints.create('*[href]', function (element) {
 
@@ -385,7 +388,7 @@ mapkey('yme', '#7 copy multiple link element id or classname', function () {
     });
 });
 //TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기  (대문자를 박을때는 맨 뒤에 박는 편이 낫겠다.) --단축키 네개 이상? 
-mapkey('ymR', '#7Copy multiple link regex URLs to the clipboard and add commas', function () {
+mapkey('ymR', '#7Copy multiple link Regex URLs to the clipboard and add commas', function () {
     var linksToYank = [];
     Hints.create('*[href]', function (element) {
         if (linkCounter === 0) {
@@ -448,7 +451,7 @@ mapkey('yQ', "Copy first pre", function () {
     Clipboard.write(elements[0].innerText);
 });
 // yQ와 동일함 
-mapkey('yk', "Copy url before keyowrd insertion", function () {
+mapkey('yk', "Copy url before Keyowrd insertion", function () {
     Clipboard.write(window.location.href.split('=')[0] + '=');
 });
 // surround   
@@ -510,12 +513,6 @@ vmapkey('my', '#7Copy multiple link URLs to the clipboard', function () {
     Clipboard.write('"' + textToYank.join('\n') + '"');
 });
 
-//
-vmapkey('my', '#7Copy multiple link URLs to the clipboard', function () {
-    var textToYank = [];
-    textToYank.push(window.getSelection.toString());
-    Clipboard.write('"' + textToYank.join('\n') + '"');
-});
 //addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
 //addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
 // request(URL, function (err, response, html) {
@@ -577,10 +574,10 @@ mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function () {
 });
 
 //setting 
-mapkey('gs', '#12Open Chrome Settings', function () {
+mapkey('gs', '#12 go Setting - Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
-mapkey('gE', '#12Open Chrome extensions Shortcut setting', function () {
+mapkey('gE', '#12 go Extensions - Open Chrome extensions Shortcut setting', function () {
     tabOpenLink("chrome://extensions/shortcuts");
 });
 // intellij bind
@@ -850,22 +847,8 @@ mapkey('l', 'slideshare next page', function () {
 // FIXME: 동작하지 않음
 mapkey('h', 'slidePlayer previous page', function () {
 
-    (function () {
-        // Load the script
-        var script        = document.createElement("SCRIPT");
-            script.src    = 'https://code.jquery.com/jquery-3.1.1.min.js';
-            script.type   = 'text/javascript';
-            script.onload = function () {
-            var $ = window.jQuery;
-            // Use $ here...
-
-            $("component_container control_panel").click(function () {
-                var $row = $(this).closest("tr"),         // Finds the closest row <tr> 
-                    $tds = $row.find("td:nth-child(2)");  // Finds the 2nd <td> element
-                $tds.click();
-            });
-        };
-    });
+    var matches = document.querySelectorAll(".back");
+    matches[0].click();
 }, {
     domain: /slideplayer\.com/i
 });
@@ -873,22 +856,8 @@ mapkey('h', 'slidePlayer previous page', function () {
 // FIXME: 동작하지 않음
 mapkey('l', 'slidePlayer next page', function () {
 
-    (function () {
-        // Load the script
-        var script        = document.createElement("SCRIPT");
-            script.src    = 'https://code.jquery.com/jquery-3.1.1.min.js';
-            script.type   = 'text/javascript';
-            script.onload = function () {
-            var $ = window.jQuery;
-            // Use $ here...
-
-            $(".component_container.control_panel").click(function () {
-                var $row = $(this).closest("tr"),         // Finds the closest row <tr> 
-                    $tds = $row.find("td:nth-child(2)");  // Finds the 2nd <td> element
-                $tds.click();
-            });
-        };
-    });
+    var matches = document.querySelectorAll(".forward");
+    matches[0].click();
 }, {
     domain: /slideplayer\.com/i
 });
@@ -1150,3 +1119,4 @@ vmapkey('zT', "#7 web crolling", function () {
 //<div>
 //  <img id="image" width="100" src="https://placehold.it/100x100?text=✔">
 //  <button onclick="copyElement('image');">Copy image</button>
+
