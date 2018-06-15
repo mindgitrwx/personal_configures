@@ -50,11 +50,11 @@ var linkCounter = 0;
 
 // Properties list
 Hints.numericHints           = false;
-Hints.characters             = "fjdkslatyrueiwoqpvnmczx";
+Hints.characters             = "asdfgqwertzxcvbyuiopmnlkjh";
 Hints.scrollKeys             = "G";
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
-settings.defaultSearchEngine = 'L';                          // Google I'm Feeling Luckey
+settings.defaultSearchEngine = 'L';                           // Google I'm Feeling Luckey
 settings.nextLinkRegex       = /((forward|>>|next)+)/i;
 settings.prevLinkRegex       = /((back|<<|prev(ious)?)+)/i;
 //google search 바를 없애버림 
@@ -64,7 +64,7 @@ if (elem !== null) {
 }
 
 ////////////////////////////////
-// unmap default key mapings //
+// unmap default key mapings  //
 ////////////////////////////////
 unmap('<Ctrl-6>'); // (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
 map(']', ']]'); // 두번 누르는건 자연스럽지 않음 
