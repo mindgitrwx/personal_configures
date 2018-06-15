@@ -341,7 +341,7 @@ mapkey('Q', '#8Open omnibar for word translation', function () {
 
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 vmapkey('y', "Copy url as regex", function () {
-    Clipboard.writewindow.getSelection().toString().replaceAll("/\[[0-9]*\]/g", "test"); // TODO: 동작하지 않음 
+    Clipboard.write(getSelection().toString().replaceAll("/\[[0-9]*\]/g", "test")); // TODO: 동작하지 않음 
 }, {
     domain: /www\.wikiwand\.com/i
 }); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
@@ -950,7 +950,6 @@ map( '<ArrowUp>','k');
 map( '<Arrowright>','l');
 */
 
-//naver mapㄱ
 /*
 unmap( 'h' );
 unmap( 'j' );
