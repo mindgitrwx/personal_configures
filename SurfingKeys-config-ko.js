@@ -369,7 +369,7 @@ mapkey('ye', '#7 copy link element id or classname', function () {
         linksToYank.push('id: ' + element.id + '\n');
         linksToYank.push('innertext: ' + element.innerText+ '\n');
         linksToYank.push('className: ' + element.className+ '\n');
-        (Clipboard.write(linksToYank.join('\n'));
+        (Clipboard.write(linksToYank.join('\n')));
 });
 mapkey('yme', '#7 copy multiple link element id or classname', function () {
     var linksToYank = [];
@@ -378,7 +378,7 @@ mapkey('yme', '#7 copy multiple link element id or classname', function () {
         linksToYank.push('id: ' + element.id + '\n');
         linksToYank.push('innertext: ' + element.innerText+ '\n');
         linksToYank.push('className: ' + element.className+ '\n');
-        (Clipboard.write(linksToYank.join('\n'));
+        (Clipboard.write(linksToYank.join('\n')));
     }, {
         multipleHits: true
     });
