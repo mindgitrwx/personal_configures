@@ -365,7 +365,7 @@ mapkey('yg', '#7 git clone', function () {
 mapkey('ye', '#7 copy link element id or classname', function () {
     var linksToYank = [];
     Hints.create('*[href]', function (element) {
-        Clipboard.write(element);
+        Clipboard.write(element.id);
     }, {
         multipleHits: true
     });
