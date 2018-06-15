@@ -50,11 +50,11 @@ var linkCounter = 0;
 
 // Properties list
 Hints.numericHints           = false;
-Hints.characters             = "asdfghjkltyvnqpwoeiruzmxcb";
+Hints.characters             = "fjdkslatyrueiwoqpvnmczx";
 Hints.scrollKeys             = "G";
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
-settings.defaultSearchEngine = 'L';                           // Google I'm Feeling Luckey
+settings.defaultSearchEngine = 'L';                        // Google I'm Feeling Luckey
 
 //google search 바를 없애버림 
 elem = document.getElementById('searchform');
