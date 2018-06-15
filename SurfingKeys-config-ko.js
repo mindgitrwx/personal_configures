@@ -847,8 +847,8 @@ mapkey('l', 'slideshare next page', function () {
 // FIXME: 동작하지 않음
 mapkey('h', 'slidePlayer previous page', function () {
 
-    var matches = document.querySelectorAll(".back");
-    matches[0].onclick();
+    var myVar = document.querySelectorAll('.component_container.control_panel img');
+    myVar[1].click();
 }, {
     domain: /slideplayer\.com/i
 });
@@ -856,8 +856,8 @@ mapkey('h', 'slidePlayer previous page', function () {
 // FIXME: 동작하지 않음
 mapkey('l', 'slidePlayer next page', function () {
 
-    var matches = document.querySelectorAll(".forward");
-    matches[0].onclick();
+    var myVar = document.querySelectorAll('.component_container.control_panel img');
+    myVar[3].click();
 }, {
     domain: /slideplayer\.com/i
 });
