@@ -10,17 +10,17 @@
 //                                                                                              //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                                                                                                    //
-// Surfing key 에서 se를 누르면 setting surfing key 의 setting으로 들어가집니다. 이때 보여지는 화면에서                                        //
-// Advanced mode를 선택한 후, Load settings from에 위 주소를 입력하고 Save 해주시면 몇초 지나서 이 설정이 저장될 겁니다.                               //
+// Surfing key 에서 se를 누르면 setting surfing key 의 setting으로 들어가집니다. 이때 보여지는 화면에서                   //
+// Advanced mode를 선택한 후, Load settings from에 위 주소를 입력하고 Save 해주시면 몇초 지나서 이 설정이 저장될 겁니다     //
 //                                                                                                                    //
-// 키 맵핑할 때 주의할 점                                                                                                      //
-// map('<Ctrl-Shift-e>', 'T');                                                                                         //
-// 이런식으로 맵핑하면 동작하지 않고                                                                                                 //
+// 키 맵핑할 때 주의할 점                                                                                               //
+// map('<Ctrl-Shift-e>', 'T');                                                                                        //
+// 이런식으로 맵핑하면 동작하지 않고                                                                                     //
 // map('<Ctrl-E>', 'T');                                                                                              //
 //                                                                                                                    //
-// 이런 식으로 맵핑해야 함                                                                                                      //
-//
-// email:jonghyeon.rw@gmail.com                                                                                             //
+// 이런 식으로 맵핑해야 함                                                                                              //
+//                                                                                                                    //
+// email:jonghyeon.rw@gmail.com                                                                                       //
 //                                                                                                                    //
 // 앞으로 만들고자 하는 기능 - visualmode에서 복사를 할 시 바로 구글 번역한 후 Clipboard로 넘기는 기능
 //                         - Q에서 쓰여지는 사전 데이터의 변경 
@@ -28,9 +28,9 @@
 //                         - 구글 검색시 불필요한 정보를 지워주고자 하는 기능 
 //                         - Chrome 상에서 cmd를 열수 있는 것으로 보이는 데 그걸 이용해서 무엇인가를 진행하는 것 
 //                                                                                                                    //
-// ////////////////////////////////////////////////////////////////////////////////////////////////////////////////// //
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////// //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Debug 하는 방법: 다음 명령어를 사용한다.                                                                                     //
+// Debug 하는 방법: 다음 명령어를 사용한다.                                                                          //
 // Front.showPopup('a well-known phrase uttered by characters in the 1996 film Jerry Maguire (Escape to close).');//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // conventions: TODO, FIXME, REFACT
@@ -253,6 +253,7 @@ addSearchAliasX('pC', 'CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
 //blog
 
 
+//TODO: image copy 는 구글 image 검색에서 잘 지원 해 주지 않는 걸로 보임 
 /* mapkey('q', '#1Click on an Image or a button', function() {
     Hints.create("img, button", Hints.dispatchMouseClick);
     searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
@@ -949,7 +950,7 @@ map( '<ArrowUp>','k');
 map( '<Arrowright>','l');
 */
 
-//naver map
+//naver mapㄱ
 /*
 unmap( 'h' );
 unmap( 'j' );
@@ -964,6 +965,7 @@ map( 'l' ,'<Arrowright>' );
 //TODO: it from sadid https://github.com/brookhong/Surfingkeys/issues/768
 //HOTFIX:
 //ISSUE: 주석에서 auto로 ISSUE를 붙여주는 것이 있었으면 좋겠다
+
 mapkey('yA', "#7Copy all tabs url", function () {
     //get numbers of tabs
     chrome.tabs.query({
@@ -1052,4 +1054,3 @@ vmapkey('zT', "#7 web crolling", function () {
 //  <img id="image" width="100" src="https://placehold.it/100x100?text=✔">
 //  <button onclick="copyElement('image');">Copy image</button>
 //</div>
-//
