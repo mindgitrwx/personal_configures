@@ -356,10 +356,16 @@ mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
     });
 });
 
+//TODO: git clone , get id
+mapkey('yg', '#7 git clone', function () {
+    Clipboard.write('git clone ' +  window.location.href + '.git');
+}, {
+    domain: /github\.com/i
+}); 
 mapkey('ye', '#7 copy link element id or classname', function () {
     var linksToYank = [];
     Hints.create('*[href]', function (element) {
-        Clipboard.write(element.name);
+        Clipboard.write(element);
     }, {
         multipleHits: true
     });
