@@ -665,6 +665,26 @@ mapkey('U', '위키 목차 대단위 up스크롤', function () {
     domain: /\.wikipedia\.org/i
 });
 
+mapkey('D', '위키 목차 대단위 다운스크롤', function () {
+    pageHeadLine = document.querySelectorAll(".mw-headline");
+    if (pageHeadLine.length > wikiPage) {
+        wikiPage++;
+    }
+    wikiPage++;
+    pageHeadLine[wikiPage].scrollIntoView();
+}, {
+    domain: /en\.wiktionary\.org/i
+});
+
+mapkey('U', '위키 목차 대단위 up스크롤', function () {
+    pageHeadLine = document.querySelectorAll(".mw-headline");
+    if (0 < wikiPage) {
+        wikiPage--;
+    }
+    pageHeadLine[wikiPage].scrollIntoView();
+}, {
+    domain: /en\.wiktionary\.org/i
+});
 mapkey('D', 'wikiwand 목차 대단위 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
     if (pageHeadLine.length > wikiPage) {
