@@ -48,9 +48,13 @@ var lineNum     = 0;
 // 중괄호 닫기용
 var linkCounter = 0;
 
+// Properties list
+Hints.numericHints           = false;
+Hints.characters             = "asdfghjkltyvnqpwoeiruzmxcb";
+Hints.scrollKeys             = "G";
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
-settings.defaultSearchEngine = 'L';   // Google I'm Feeling Luckey
+settings.defaultSearchEngine = 'L';                           // Google I'm Feeling Luckey
 
 //google search 바를 없애버림 
 elem = document.getElementById('searchform');
@@ -286,25 +290,10 @@ function SelectText(element) {
 */
 
 function copyElement(element) {
-  //var element = document.getElementById(id);  //TodoChange
 
-//   document.oncopy = function(e) {
-//     e.clipboardData.setData("text/plain", text.value);
-//     console.log(e.clipboardData.getData("text/plain"));
-//   }
-
-  fetch(element.src.replace(/^(http:|https:)/, location.protocol))
-    .then(function(response) {
-      return response.blob();
-    })
-    .then(function(blob) {
-      var reader        = new FileReader();
-          reader.onload = function() {
-      }
-      reader.readAsDataURL(blob);
-      Clipboard.write(reader);
-    })
 }
+
+    
 mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
         copyElement(element);
