@@ -50,7 +50,7 @@ var linkCounter = 0;
 
 // Properties list
 Hints.numericHints           = false;
-Hints.characters             = "asdfgqwertzxcvbyuiopmnlkjh";
+Hints.characters             = "asdfgqwertzxcvbyuiopmnhlkj";
 Hints.scrollKeys             = "G";
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
