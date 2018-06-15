@@ -356,6 +356,14 @@ mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
     });
 });
 
+mapkey('ye', '#7 copy link element id or classname', function () {
+    var linksToYank = [];
+    Hints.create('*[href]', function (element) {
+        Clipboard.write(element.name);
+    }, {
+        multipleHits: true
+    });
+});
 //TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기  (대문자를 박을때는 맨 뒤에 박는 편이 낫겠다.) --단축키 네개 이상? 
 mapkey('ymR', '#7Copy multiple link regex URLs to the clipboard and add commas', function () {
     var linksToYank = [];
@@ -665,6 +673,8 @@ mapkey('U', '위키 목차 대단위 up스크롤', function () {
     domain: /\.wikipedia\.org/i
 });
 
+
+// Domain을 여러개 넣을 수 있는가?
 mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
     if (pageHeadLine.length > wikiPage) {
@@ -755,7 +765,55 @@ window.onload = function(){
 }
 */
 
+// github default shortcut lists
+// https: //help.github.com/articles/using-keyboard-shortcuts/
+/*
+mapkey('gC', 'Go to the code tab', function () {
+    document.getElementById('btnPrevious').click();
+}, {
+    domain: /github\.com/i
+});
 
+mapkey('gI', 'Go to the Issues tab. ', function () {
+    document.getElementById('btnNext').click();
+}, {
+    domain: /github\.com/i
+});
+
+mapkey('gP', 'Go to the Pull requests tab.  ', function () {
+    document.getElementById('btnPrevious').click();
+}, {
+    domain: /github\.com/i
+});
+
+mapkey('gB', 'Go to the Projects tab. "', function () {
+    document.getElementById('btnPrevious').click();
+}, {
+    domain: /github\.com/i
+});
+
+mapkey('gW', 'Go to the Wiki tab. ', function () {
+    document.getElementById('btnPrevious').click();
+}, {
+    domain: /github\.com/i
+});
+//end of github
+
+*/
+
+mapkey('h', '', function () {
+    document.getElementById('btnPrevious').click();
+}, {
+    domain: /www\.slideshare\.net/i
+});mapkey('h', 'slideshare previous page', function () {
+    document.getElementById('btnPrevious').click();
+}, {
+    domain: /www\.slideshare\.net/i
+});mapkey('h', 'slideshare previous page', function () {
+    document.getElementById('btnPrevious').click();
+}, {
+    domain: /www\.slideshare\.net/i
+});
 // page 양 옆으로 넘길 수 있도록 하기
 // TODO: slidePlayer 사이트 추가하기 
 mapkey('h', 'slideshare previous page', function () {
