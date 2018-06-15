@@ -365,7 +365,20 @@ mapkey('yg', '#7 git clone', function () {
 mapkey('ye', '#7 copy link element id or classname', function () {
     var linksToYank = [];
     Hints.create('*[href]', function (element) {
-        Clipboard.write(element.id);
+
+        linksToYank.push('id: ' + element.id + '\n');
+        linksToYank.push('innertext: ' + element.innerText+ '\n');
+        linksToYank.push('className: ' + element.className+ '\n');
+        (Clipboard.write(linksToYank.join('\n'));
+});
+mapkey('yme', '#7 copy multiple link element id or classname', function () {
+    var linksToYank = [];
+    Hints.create('*[href]', function (element) {
+
+        linksToYank.push('id: ' + element.id + '\n');
+        linksToYank.push('innertext: ' + element.innerText+ '\n');
+        linksToYank.push('className: ' + element.className+ '\n');
+        (Clipboard.write(linksToYank.join('\n'));
     }, {
         multipleHits: true
     });
