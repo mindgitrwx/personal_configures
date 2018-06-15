@@ -55,7 +55,8 @@ Hints.scrollKeys             = "G";
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
 settings.defaultSearchEngine = 'L';                        // Google I'm Feeling Luckey
-
+settings.nextLinkRegex       = /((>>|next)+)/i;
+settings.prevLinkRegex       = /((<<|prev(ious)?)+)/i;
 //google search 바를 없애버림 
 elem = document.getElementById('searchform');
 if (elem !== null) {
