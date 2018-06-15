@@ -370,6 +370,7 @@ mapkey('ye', '#7 copy link element id or classname', function () {
         linksToYank.push('innertext: ' + element.innerText+ '\n');
         linksToYank.push('className: ' + element.className+ '\n');
         (Clipboard.write(linksToYank.join('\n')));
+    });
 });
 mapkey('yme', '#7 copy multiple link element id or classname', function () {
     var linksToYank = [];
@@ -1149,4 +1150,3 @@ vmapkey('zT', "#7 web crolling", function () {
 //<div>
 //  <img id="image" width="100" src="https://placehold.it/100x100?text=✔">
 //  <button onclick="copyElement('image');">Copy image</button>
-//</div>
