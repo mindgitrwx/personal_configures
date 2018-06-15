@@ -848,7 +848,7 @@ mapkey('l', 'slideshare next page', function () {
 mapkey('h', 'slidePlayer previous page', function () {
 
     var matches = document.querySelectorAll(".back");
-    matches[0].click();
+    matches[0].onClick();
 }, {
     domain: /slideplayer\.com/i
 });
@@ -857,7 +857,7 @@ mapkey('h', 'slidePlayer previous page', function () {
 mapkey('l', 'slidePlayer next page', function () {
 
     var matches = document.querySelectorAll(".forward");
-    matches[0].click();
+    matches[0].onClick();
 }, {
     domain: /slideplayer\.com/i
 });
