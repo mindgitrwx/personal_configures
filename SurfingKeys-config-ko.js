@@ -39,11 +39,12 @@
 
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
 var namuPage    = 0;
-var wikiPage    = 0;
-var stackAnswer = 0;  // 변수 통합 생각중
-var naverAnswer = 0;
-var codeWrapper = 0;
-var lineNum     = 0;
+    wikiPage    = 0;
+    stackAnswer = 0;  // 변수 통합 생각중
+    naverAnswer = 0;
+    codeWrapper = 0;
+    lineNum     = 0;
+    slidePage   = 0;
 // -----------------------------------------------------
 // 중괄호 닫기용
 var linkCounter = 0;
@@ -783,46 +784,48 @@ window.onload = function(){
 */
 
 // github default shortcut lists
-// https: //help.github.com/articles/using-keyboard-shortcuts/
-/*
+// https://help.github.com/articles/using-keyboard-shortcuts/
+
 mapkey('gC', 'Go to the code tab', function () {
-    document.getElementById('btnPrevious').click();
+    document.querySelectorAll('.js-selected-navigation-item.reponav-item')[0].click();
 }, {
     domain: /github\.com/i
 });
 
 mapkey('gI', 'Go to the Issues tab. ', function () {
-    document.getElementById('btnNext').click();
+    document.querySelectorAll('.js-selected-navigation-item.reponav-item')[1].click();
 }, {
     domain: /github\.com/i
 });
 
 mapkey('gP', 'Go to the Pull requests tab.  ', function () {
-    document.getElementById('btnPrevious').click();
+    document.querySelectorAll('.js-selected-navigation-item.reponav-item')[2].click();
 }, {
     domain: /github\.com/i
 });
 
 mapkey('gB', 'Go to the Projects tab. "', function () {
-    document.getElementById('btnPrevious').click();
+    document.querySelectorAll('.js-selected-navigation-item.reponav-item')[3].click();
 }, {
     domain: /github\.com/i
 });
 
 mapkey('gW', 'Go to the Wiki tab. ', function () {
-    document.getElementById('btnPrevious').click();
+    document.querySelectorAll('.js-selected-navigation-item.reponav-item')[4].click();
 }, {
     domain: /github\.com/i
 });
 //end of github
 
-*/
+
 
 mapkey('h', '', function () {
+    slidePage++;
     document.getElementById('btnPrevious').click();
 }, {
     domain: /www\.slideshare\.net/i
 });mapkey('h', 'slideshare previous page', function () {
+    slidePage--;
     document.getElementById('btnPrevious').click();
 }, {
     domain: /www\.slideshare\.net/i
@@ -853,7 +856,7 @@ mapkey('h', 'slidePlayer previous page', function () {
     domain: /slideplayer\.com/i
 });
 
-// FIXME: 동작하지 않음
+// FIXME: 버튼을 눌러야 동작 동작하지 않음
 mapkey('l', 'slidePlayer next page', function () {
 
     var myVar = document.querySelectorAll('.component_container.control_panel img');
