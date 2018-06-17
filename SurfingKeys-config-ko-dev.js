@@ -366,10 +366,11 @@ mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
 
 //TODO: git clone , get id
 mapkey('yg', '#7 git clone', function () {
-    Clipboard.write('yank git - for clone' +  window.location.href + '.git');
+    Clipboard.write('git clone' +  window.location.href + '.git');
 }, {
     domain: /github\.com/i
 }); 
+
 mapkey('ye', '#7 Yank Element info. copy link element id or classname', function () {
     var linksToYank = [];
     Hints.create('links', function (element) {
@@ -381,6 +382,7 @@ mapkey('ye', '#7 Yank Element info. copy link element id or classname', function
         (Clipboard.write(linksToYank.join('\n')));
     });
 });
+
 mapkey('yme', '#7 Yank Multiple Element info  (copy multiple link element id or classname)', function () {
     var linksToYank = [];
     Hints.create('*[href]', function (element) {
