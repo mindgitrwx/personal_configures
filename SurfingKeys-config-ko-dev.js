@@ -277,20 +277,19 @@ function handlePaste (e) {
 
 mapkey('osA', '#7 open stackoverflow write', function () {
     window.location.replace("https://stackoverflow.com/questions/ask");
-    document.getElementById('title').focus();      // 제목에 포커스
-    
+    //It cannot be happened document.getElementById('title').focus();      // 제목에 포커스
+    //
     //document.getElementById('wmd-input').focus();
 });
 
 mapkey('oSA', '#7 open stackoverflow write', function () { 
-    window.location.replace("https://stackoverflow.com/questions/ask");
-    document.getElementById('wmd-input').addEventListener('paste',handlePaste).focus();
-
+    window.location.replace("https://stackoverflow.com/questions/ask").getElementById('wmd-input').addEventListener('paste', handlePaste).focus();
+    // It cannot be happened
+    // document.getElementById('wmd-input').addEventListener('paste',handlePaste).focus();
 });
 
 mapkey('oGM', '#7 open gmail send ', function () { window.location.replace("https://mail.google.com/mail/u/1/#inbox?compose=new") });
 mapkey('oGD', '#7 open google docs send ', function () { window.location.replace("https://docs.google.com/document/u/0/") });
-
 
 //news 
 //knowledge
@@ -415,6 +414,9 @@ mapkey('ye', '#7 Yank Element info. copy link element id or classname', function
         linksToYank.push('innertext: ' + element.innerText+ '\n');
         linksToYank.push('className: ' + element.className+ '\n');
         linksToYank.push('href: ' + element.href+ '\n');
+        linksToYank.push('type: ' + element.type+ '\n');
+        linksToYank.push('style: ' + element.style+ '\n');
+        linksToYank.push('src: ' + element.src+ '\n');
         (Clipboard.write(linksToYank.join('\n')));
     });
 });
@@ -1190,3 +1192,13 @@ vmapkey('zT', "#7 web crolling", function () {
 //  <img id="image" width="100" src="https://placehold.it/100x100?text=✔">
 //  <button onclick="copyElement('image');">Copy image</button>
 
+
+////////////////////////////////////////////////////////////////////////
+//                                                                    //
+// kami     : pagenumber                                              //
+// id       : pageNumber                                              //
+// innertext:                                                         //
+// className: pageNumber ng-pristine ng-valid ng-not-empty ng-touched //
+// href     : undefined                                               //
+//                                                                    //
+////////////////////////////////////////////////////////////////////////
