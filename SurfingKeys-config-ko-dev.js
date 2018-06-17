@@ -106,7 +106,7 @@ function getElementsByText(str, tag = 'a') {
 }
 
 //----------------i-----------------------------------------------------
-mapkey('on', '#3Open Firefox newtab', function () {
+mapkey('on', '#3Open newtab', function () {
     tabOpenLink("www.google.com");
 });
 
@@ -253,21 +253,44 @@ addSearchAliasX('pR', 'paper RISS', 'http://www.riss.kr/search/Search.do?detailS
 addSearchAliasX('pE', 'paper ELSEVIER', 'https://www.elsevier.com/search-results?query=');
 addSearchAliasX('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
 
+/**
+ * 클립보드에 있는 것을 복사 붙여넣기 하기 위한 함수 
+ *
+ * https:   //stackoverflow.com/questions/2176861/javascript-get-clipboard-data-on-paste-event-cross-browser TODO: how to 
+ * 
+ */
+
+function handlePaste (e) {
+    var clipboardData, pastedData;
+
+    // Stop data actually being pasted into div
+    e.stopPropagation();
+    e.preventDefault();
+
+    // Get pasted data via clipboard API
+    clipboardData = e.clipboardData || window.clipboardData;
+    pastedData    = clipboardData.getData('Text');
+
+    // Do whatever with pasteddata
+    alert(pastedData);
+}
+
 mapkey('osA', '#7 open stackoverflow write', function () {
-    window.location.replace("https://stackoverflow.com/questions/ask")
+    window.location.replace("https://stackoverflow.com/questions/ask");
+    document.getElementById('title').focus();      // 제목에 포커스
+    
+    //document.getElementById('wmd-input').focus();
 });
 
-mapkey('oGM', '#7 open gmail send ', function () {
-    window.location.replace("https://mail.google.com/mail/u/1/#inbox?compose=new")
+mapkey('oSA', '#7 open stackoverflow write', function () { 
+    window.location.replace("https://stackoverflow.com/questions/ask");
+    document.getElementById('wmd-input').addEventListener('paste',handlePaste).focus();
+
 });
 
-mapkey('oGD', '#7 open google docs send ', function () {
-    window.location.replace("https://docs.google.com/document/u/0/")
-});
+mapkey('oGM', '#7 open gmail send ', function () { window.location.replace("https://mail.google.com/mail/u/1/#inbox?compose=new") });
+mapkey('oGD', '#7 open google docs send ', function () { window.location.replace("https://docs.google.com/document/u/0/") });
 
-mapkey('oGD', '#7 open google docs ', function () {
-    window.location.replace("https://docs.google.com/document/u/0/")
-});
 
 //news 
 //knowledge
