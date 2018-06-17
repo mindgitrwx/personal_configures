@@ -98,11 +98,11 @@ map('<Shift-3>', 'ff');
 // 광고차단 즉시 실행
 // 
 // (function stop(){
-    // document.getElementById('slide-close').click(); // NULL 실행 안됨
-    // document.getElementByClassName('slide-close').click();
+// document.getElementById('slide-close').click(); // NULL 실행 안됨
+// document.getElementByClassName('slide-close').click();
 // })();
 function getElementsByText(str, tag = 'a') {
-  return Array.prototype.slice.call(document.getElementsByTagName(tag)).filter(el => el.textContent.trim() === str.trim());
+    return Array.prototype.slice.call(document.getElementsByTagName(tag)).filter(el => el.textContent.trim() === str.trim());
 }
 
 //----------------i-----------------------------------------------------
@@ -260,7 +260,7 @@ addSearchAliasX('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=
  * 
  */
 
-function handlePaste (e) {
+function handlePaste(e) {
     var clipboardData, pastedData;
 
     // Stop data actually being pasted into div
@@ -282,14 +282,18 @@ mapkey('osA', '#7 open stackoverflow write', function () {
     //document.getElementById('wmd-input').focus();
 });
 
-mapkey('oSA', '#7 open stackoverflow write', function () { 
+mapkey('oSA', '#7 open stackoverflow write', function () {
     window.location.replace("https://stackoverflow.com/questions/ask").getElementById('wmd-input').addEventListener('paste', handlePaste).focus();
     // It cannot be happened
     // document.getElementById('wmd-input').addEventListener('paste',handlePaste).focus();
 });
 
-mapkey('oGM', '#7 open gmail send ', function () { window.location.replace("https://mail.google.com/mail/u/1/#inbox?compose=new") });
-mapkey('oGD', '#7 open google docs send ', function () { window.location.replace("https://docs.google.com/document/u/0/") });
+mapkey('oGM', '#7 open gmail send ', function () {
+    window.location.replace("https://mail.google.com/mail/u/1/#inbox?compose=new")
+});
+mapkey('oGD', '#7 open google docs send ', function () {
+    window.location.replace("https://docs.google.com/document/u/0/")
+});
 
 //news 
 //knowledge
@@ -337,7 +341,7 @@ function copyElement(element) {
 
 }
 
-    
+
 mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
         element;
@@ -401,22 +405,22 @@ mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
 
 //TODO: git clone , get id
 mapkey('yg', '#7 git clone', function () {
-    Clipboard.write('git clone' +  window.location.href + '.git');
+    Clipboard.write('git clone' + window.location.href + '.git');
 }, {
     domain: /github\.com/i
-}); 
+});
 
 mapkey('ye', '#7 Yank Element info. copy link element id or classname', function () {
     var linksToYank = [];
     Hints.create("", function (element) {
 
         linksToYank.push('id: ' + element.id + '\n');
-        linksToYank.push('innertext: ' + element.innerText+ '\n');
-        linksToYank.push('className: ' + element.className+ '\n');
-        linksToYank.push('href: ' + element.href+ '\n');
-        linksToYank.push('type: ' + element.type+ '\n');
-        linksToYank.push('style: ' + element.style+ '\n');
-        linksToYank.push('src: ' + element.src+ '\n');
+        linksToYank.push('innertext: ' + element.innerText + '\n');
+        linksToYank.push('className: ' + element.className + '\n');
+        linksToYank.push('href: ' + element.href + '\n');
+        linksToYank.push('type: ' + element.type + '\n');
+        linksToYank.push('style: ' + element.style + '\n');
+        linksToYank.push('src: ' + element.src + '\n');
         (Clipboard.write(linksToYank.join('\n')));
     });
 });
@@ -426,8 +430,8 @@ mapkey('yme', '#7 Yank Multiple Element info  (copy multiple link element id or 
     Hints.create('*[href]', function (element) {
 
         linksToYank.push('id: ' + element.id + '\n');
-        linksToYank.push('innertext: ' + element.innerText+ '\n');
-        linksToYank.push('className: ' + element.className+ '\n');
+        linksToYank.push('innertext: ' + element.innerText + '\n');
+        linksToYank.push('className: ' + element.className + '\n');
         (Clipboard.write(linksToYank.join('\n')));
     }, {
         multipleHits: true
@@ -883,21 +887,23 @@ mapkey('gS', 'Go to the Stars tab. ', function () {
 });
 
 className: 
-//end of github
+    //end of github
 
 
 
-mapkey('h', '', function () {
-    slidePage++;
-    document.getElementById('btnPrevious').click();
-}, {
-    domain: /www\.slideshare\.net/i
-});mapkey('h', 'slideshare previous page', function () {
+    mapkey('h', '', function () {
+        slidePage++;
+        document.getElementById('btnPrevious').click();
+    }, {
+        domain: /www\.slideshare\.net/i
+    });
+mapkey('h', 'slideshare previous page', function () {
     slidePage--;
     document.getElementById('btnPrevious').click();
 }, {
     domain: /www\.slideshare\.net/i
-});mapkey('h', 'slideshare previous page', function () {
+});
+mapkey('h', 'slideshare previous page', function () {
     document.getElementById('btnPrevious').click();
 }, {
     domain: /www\.slideshare\.net/i
@@ -1183,7 +1189,6 @@ vmapkey('zT', "#7 web crolling", function () {
     })();
 });
 
-
 //2018-06-14 21: 27: 49
 // ^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$
 // email regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -1191,7 +1196,6 @@ vmapkey('zT', "#7 web crolling", function () {
 //<div>
 //  <img id="image" width="100" src="https://placehold.it/100x100?text=✔">
 //  <button onclick="copyElement('image');">Copy image</button>
-
 
 ////////////////////////////////////////////////////////////////////////
 //                                                                    //
@@ -1202,3 +1206,26 @@ vmapkey('zT', "#7 web crolling", function () {
 // href     : undefined                                               //
 //                                                                    //
 ////////////////////////////////////////////////////////////////////////
+
+//mapkey('m', '#10Add current URL to vim-like marks', Normal.addVIMark);
+//mapkey("'", '#10Jump to vim-like mark', Normal.jumpVIMark);
+//---------------------------------------------------
+var localPDFMarks = {};
+
+addPDFVIMark = function (mark, url) {
+    if (/^[a-z]$/.test(mark)) {
+        // local mark
+        localPDFMarks[mark] = {
+            pageNumber: parseInt(document.getElementById("pageNumber"))
+        };
+    }
+};
+mapkey('m', '#10Add current PDF URL to vim-like marks', Normal.addPDFVIMark);
+
+jumpPDFVIMark = function (mark, newTab) {
+    if (localPDFMarks.hasOwnProperty(mark)) {
+        var                     markInfo            = localPDFMarks[mark];
+        document.getElementById('pageNumber').value = localPDFMarks[mark].pageNumber;
+    }
+};
+mapkey("'", '#10Jump to PDF vim-like mark', Normal.jumpPDFVIMark);
