@@ -1191,7 +1191,7 @@ vmapkey('zT', "#7 web crolling", function () {
 //mapkey("'", '#10Jump to vim-like mark', Normal.jumpVIMark);
 //---------------------------------------------------
 
-var localPDFMarks = {};
+var localPDFMarks = {"a":1,"b":2,"c":3};
 
 addPDFVIMark = function (mark) {
     if (/^[a-z]$/.test(mark)) {
