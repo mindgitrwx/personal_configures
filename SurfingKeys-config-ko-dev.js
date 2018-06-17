@@ -256,6 +256,13 @@ mapkey('osA', '#7 open stackoverflow write', function () {
     window.location.replace("https://stackoverflow.com/questions/ask")
 });
 
+mapkey('oGM', '#7 open gmail send ', function () {
+    window.location.replace("https://mail.google.com/mail/u/1/#inbox?compose=new")
+});
+
+mapkey('oGD', '#7 open google docs send ', function () {
+    window.location.replace("https://docs.google.com/document/u/0/")
+});
 //news 
 //knowledge
 //blog
@@ -373,7 +380,7 @@ mapkey('yg', '#7 git clone', function () {
 
 mapkey('ye', '#7 Yank Element info. copy link element id or classname', function () {
     var linksToYank = [];
-    Hints.create('links', function (element) {
+    Hints.create("", function (element) {
 
         linksToYank.push('id: ' + element.id + '\n');
         linksToYank.push('innertext: ' + element.innerText+ '\n');
