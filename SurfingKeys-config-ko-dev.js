@@ -27,6 +27,7 @@
 //                         - stackoverflow에서 검색시 바로 첫번째 결과의 pre데이터를 Clipboard로 넘기는 기능  
 //                         - 구글 검색시 불필요한 정보를 지워주고자 하는 기능 
 //                         - Chrome 상에서 cmd를 열수 있는 것으로 보이는 데 그걸 이용해서 무엇인가를 진행하는 것 
+//                         -  상에서 cmd를 열수 있는 것으로 보이는 데 그걸 이용해서 무엇인가를 진행하는 것 
 //                                                                                                                    //
 // //////////////////////////////////////////////////////////////////////////////////////////////////////////////// //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -101,6 +102,8 @@ map('<Shift-3>', 'ff');
 // document.getElementById('slide-close').click(); // NULL 실행 안됨
 // document.getElementByClassName('slide-close').click();
 // })();
+
+// FIXME: 쓰이지 않음
 function getElementsByText(str, tag = 'a') {
     return Array.prototype.slice.call(document.getElementsByTagName(tag)).filter(el => el.textContent.trim() === str.trim());
 }
@@ -125,7 +128,6 @@ addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
 addSearchAliasX('gH', 'github', 'https://github.com/search?q=');
 addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
-
 
 //language -- 
 //
@@ -196,21 +198,22 @@ addSearchAliasX('ll', '가사', 'https://www.google.com/search?q=lyrics+of+');
 //TODO: 검색을 통해서 google tlanslated 된 걸 clipboard에 복사 붙여넣는 것 만들기 (겹쳐서 동작하지 않음)
 addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
 addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
-//navers
+
+//naver : naver is one of the most famous potal site of korea
 addSearchAliasX('N', 'naver', 'https://www.naver.com/?query=');
 addSearchAliasX('nM', 'navermap', 'https://map.naver.com/?query=');
 addSearchAliasX('nA', 'naver all 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
 addSearchAliasX('nD', 'naver Dictionary 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
 addSearchAliasX('nE', 'naver Example 네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 
-//Damm 
+//Daum : daum is one of the most famous potal site of korea
 addSearchAliasX('D', '다음', 'https://search.daum.net/search?w=');
 addSearchAliasX('dA', '다음 사전all', 'http://dic.daum.net/search.do?q=');
 addSearchAliasX('dD', '다음 사전all', 'http://dic.daum.net/search.do?q=');
 addSearchAliasX('dE', '다음 사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 addSearchAliasX('dM', '다음 map', 'http://local.daum.net/map/index.jsp?q=');
 
-//shop
+//shop : without amazon, all the sites are korean-specific sites.
 addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
 addSearchAliasX('sA', 'shop아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민 
 addSearchAliasX('sC', 'shop 쿠팡', 'http://www.coupang.com/np/search?component=&q=');
@@ -1216,3 +1219,10 @@ mapkey("'", '#10Jump to PDF vim-like mark', Normal.jumpPDFVIMark, {domain: /web\
 
 mapkey('M', '#10Add current PDF vim-like marks', Normal.addVIMark, {domain: /web\.kamihq\.com/i});
 mapkey("`", '#10Jump to PDF vim-like mark', Normal.jumpVIMark, {domain: /web\.kamihq\.com/i});
+
+mapkey("gDV", '#10 vote up', function () {
+    document.getElementById('recommend_vote_up').click();
+});
+mapkey("gDD", '#10 vote down', function () {
+    document.getElementById('recommend_vote_down').click();
+});
