@@ -1212,3 +1212,6 @@ jumpPDFVIMark = function (mark) {
 };
 mapkey('m', '#10Add current PDF vim-like marks', Normal.addPDFVIMark, {domain: /web\.kamihq\.com/i});
 mapkey("'", '#10Jump to PDF vim-like mark', Normal.jumpPDFVIMark, {domain: /web\.kamihq\.com/i});
+
+mapkey('M', '#10Add current PDF vim-like marks', Normal.addVIMark, {domain: /web\.kamihq\.com/i});
+mapkey("`", '#10Jump to PDF vim-like mark', Normal.jumpVIMark, {domain: /web\.kamihq\.com/i});
