@@ -82,25 +82,6 @@ map('<Shift-1>', 'fs'); // 잘 되는 느낌은 아님
 map('<Shift-2>', 'fd');
 map('<Shift-3>', 'ff');
 
-//////////////////////////
-// for url heml extract //
-//////////////////////////
-
-// var request = require('request'),
-//     cheerio = require('cheerio');
-
-// request(url, function (err, res, html) {
-//     if (!err) {
-//         var $ = cheerio.load(html);
-//     }
-// })
-
-// 광고차단 즉시 실행
-// 
-// (function stop(){
-    // document.getElementById('slide-close').click(); // NULL 실행 안됨
-    // document.getElementByClassName('slide-close').click();
-// })();
 function getElementsByText(str, tag = 'a') {
   return Array.prototype.slice.call(document.getElementsByTagName(tag)).filter(el => el.textContent.trim() === str.trim());
 }
@@ -173,11 +154,7 @@ addSearchAliasX('wR', '랭킹', 'https://www.google.com/search?q=rank+of+');
 addSearchAliasX('wS', '공통점', 'https://www.google.com/search?q=common+point+of+');
 addSearchAliasX('wT', '표', 'https://www.google.com/search?q=q=table+of+');
 addSearchAliasX('wU', '사용예', 'https://www.google.com/search?q=usage+of+');
-// addSearchAliasX('wW', '사용예', 'https://www.google.com/search?q=usage+of+'); //  w에만 지나치게 만이 추가 가능 
-// addSearchAliasX('wX', '사용예', 'https://www.google.com/search?q=usage+of+');
-// addSearchAliasX('wY', '사용예', 'https://www.google.com/search?q=usage+of+');
-// addSearchAliasX('wZ', '사용예', 'https://www.google.com/search?q=usage+of+');
-// 
+
 //file 확장자
 addSearchAliasX('pdF', 'pdf', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Apdf+');
 addSearchAliasX('cpP', 'cpp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Acpp+');
