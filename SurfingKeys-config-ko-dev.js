@@ -122,8 +122,8 @@ addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMa
 addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
-addSearchAliasX('gH', 'github', 'https://github.com/search?q=', 'o');
-addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=', 'o');
+addSearchAliasX('gH', 'github', 'https://github.com/search?q=');
+addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
 
 
 //language -- 
@@ -255,7 +255,6 @@ addSearchAliasX('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=
 mapkey('osA', '#7 open stackoverflow write', function () {
     window.location.replace("https://stackoverflow.com/questions/ask")
 });
-
 
 //news 
 //knowledge
