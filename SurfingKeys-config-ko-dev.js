@@ -425,6 +425,7 @@ mapkey('ye', '#7 Yank Element info. copy link element id or classname', function
         linksToYank.push('type: ' + element.type + '\n');
         linksToYank.push('style: ' + element.style + '\n');
         linksToYank.push('src: ' + element.src + '\n');
+        linksToYank.push('alt: ' + element.alt + '\n');
         (Clipboard.write(linksToYank.join('\n')));
     });
 });
@@ -1225,4 +1226,13 @@ mapkey("gDV", '#10 vote up', function () {
 });
 mapkey("gDD", '#10 vote down', function () {
     document.getElementById('recommend_vote_down').click();
+});
+mapkey("gDR", '#10 vote down', function () {
+    var recommend_img = $a.getElementsByTagName("img")[0];
+    for(var i=0;i<100;i++){
+        if(recommend_img.alt === "개념글"){
+            recommend_img.click();
+            break;
+        }
+    }
 });
