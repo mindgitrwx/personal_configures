@@ -1202,12 +1202,11 @@ addPDFVIMark = function (mark) {
     }
 };
 
-
 jumpPDFVIMark = function (mark) {
     if (localPDFMarks.hasOwnProperty(mark)) {
         var                     markInfo            = localPDFMarks[mark];
-        document.getElementById('pageNumber').value = localPDFMarks[mark].pageNumber;
+        document.getElementById('pageNumber').value = markInfo.pageNumber;
     }
 };
-mapkey('m', '#10Add current PDF URL to vim-like marks', Normal.addPDFVIMark, {domain: /web\.kamihq\.com/i});
+mapkey('m', '#10Add current PDF vim-like marks', Normal.addPDFVIMark, {domain: /web\.kamihq\.com/i});
 mapkey("'", '#10Jump to PDF vim-like mark', Normal.jumpPDFVIMark, {domain: /web\.kamihq\.com/i});
