@@ -22,12 +22,3 @@
 # chrome://extensions/shortcuts
 
 (여기에는 shortcut이 필요함)
-
-markdown test
-
-{e}^{i\pi}+1=0
-
-$$ {e}^{i\pi}+1=0  $$
-
-markdown - gif 도 잘 움직임 
-![test.gif](test.gif)

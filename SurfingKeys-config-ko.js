@@ -302,7 +302,8 @@ function copyElement(element) {
     
 mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
-        copyElement(element);
+        element;
+        element.src;
         // Clipboard.write(element.src);
         // TODO: Copy 하는 방법은 없는지 알아보기
     });
@@ -1138,9 +1139,6 @@ vmapkey('zT', "#7 web crolling", function () {
         document.getElementsByTagName("head")[0].appendChild(script);
     })();
 });
-
-
-
 
 
 //2018-06-14 21: 27: 49
