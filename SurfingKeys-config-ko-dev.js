@@ -1191,22 +1191,22 @@ vmapkey('zT', "#7 web crolling", function () {
 //mapkey("'", '#10Jump to vim-like mark', Normal.jumpVIMark);
 //---------------------------------------------------
 
-var localPDFMarks = {"a":1,"b":2,"c":3};
+// var localPDFMarks = {"a":1,"b":2,"c":3};
 
-addPDFVIMark = function (mark) {
-    if (/^[a-z]$/.test(mark)) {
-        // local mark
-        localPDFMarks[mark] = {
-            pageNumber: parseInt(document.getElementById("pageNumber"))
-        };
-    }
-};
+// addPDFVIMark = function (mark) {
+//     if (/^[a-z]$/.test(mark)) {
+//         // local mark
+//         localPDFMarks[mark] = {
+//             pageNumber: parseInt(document.getElementById("pageNumber"))
+//         };
+//     }
+// };
 
-jumpPDFVIMark = function (mark) {
-    if (localPDFMarks.hasOwnProperty(mark)) {
-        var                     markInfo            = localPDFMarks[mark];
-        document.getElementById('pageNumber').value = markInfo.pageNumber;
-    }
-};
-mapkey('m', '#10Add current PDF vim-like marks', Normal.addPDFVIMark, {domain: /web\.kamihq\.com/i});
-mapkey("'", '#10Jump to PDF vim-like mark', Normal.jumpPDFVIMark, {domain: /web\.kamihq\.com/i});
+// jumpPDFVIMark = function (mark) {
+//     if (localPDFMarks.hasOwnProperty(mark)) {
+//         var                     markInfo            = localPDFMarks[mark];
+//         document.getElementById('pageNumber').value = markInfo.pageNumber;
+//     }
+// };
+// mapkey('m', '#10Add current PDF vim-like marks', Normal.addPDFVIMark, {domain: /web\.kamihq\.com/i});
+// mapkey("'", '#10Jump to PDF vim-like mark', Normal.jumpPDFVIMark, {domain: /web\.kamihq\.com/i});
