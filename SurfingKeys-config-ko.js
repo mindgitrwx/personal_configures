@@ -278,38 +278,6 @@ mapkey('q', '#1get image link and google image search', function () {
     });
 });
 
-/*
-function SelectText(element) {
-    var doc = document;
-    if (doc.body.createTextRange) {
-        var range = document.body.createTextRange();
-        range.moveToElementText(element);
-        range.select();
-    } else if (window.getSelection) {
-        var selection = window.getSelection();
-        var range     = document.createRange();
-        range.selectNodeContents(element);
-        selection.removeAllRanges();
-        selection.addRange(range);
-    }
-}
-*/
-
-function copyElement(element) {
-
-}
-
-    
-mapkey('Q', '#1Click on an Image or a button', function () {
-    Hints.create("img, button", function (element) {
-        element;
-        element.src;
-        // Clipboard.write(element.src);
-        // TODO: Copy 하는 방법은 없는지 알아보기
-    });
-});
-
-
 function renderGoogleTranslate(res) {
     var exp = res.msg;
     if (res.data.definition) {
@@ -323,29 +291,9 @@ function renderGoogleTranslate(res) {
     }
     return exp;
 }
-/*
-mapkey('Q', '#8Open omnibar for word translation', function () {
-    Front.openOmniquery({
-        url: "https://translate.google.cn/#auto/en/",
-        
-         * or
-        url: function(q) {
-            return "https://api.shanbay.com/bdc/search/?word=" + q
-        },
-        
-        query      : Visual.getWordUnderCursor(),
-        style      : "opacity: 0.3;",
-        parseResult: function (res) {
-            var res = JSON.parse(res.text);
-            return [renderGoogleTranslate(res)];
-        }
-    });
-});
 
-*/
-
-// wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
-vmapkey('y', "copy without reference notation on wikipedia", function () {
+// FIXME: wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
+vmapkey('y', "copy without reference notation on wikipedia (not working)", function () {
     Clipboard.write(window.getSelection().toString().replace(/\[[0-9]*\]/g, "test")); // TODO: 동작하지 않음 
 }, {
     domain: /www\.wikiwand\.com/i
@@ -361,12 +309,12 @@ mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
     });
 });
 
-//TODO: git clone , get id
-mapkey('yg', '#7 git clone', function () {
+mapkey('yg', '#7 git clone - git clone address', function () {
     Clipboard.write('yank git - for clone' +  window.location.href + '.git');
 }, {
     domain: /github\.com/i
 }); 
+
 mapkey('ye', '#7 Yank Element info. copy link element id or classname', function () {
     var linksToYank = [];
     Hints.create('*[href]', function (element) {
@@ -378,6 +326,7 @@ mapkey('ye', '#7 Yank Element info. copy link element id or classname', function
         (Clipboard.write(linksToYank.join('\n')));
     });
 });
+
 mapkey('yme', '#7 Yank Multiple Element info  (copy multiple link element id or classname)', function () {
     var linksToYank = [];
     Hints.create('*[href]', function (element) {
@@ -391,10 +340,6 @@ mapkey('yme', '#7 Yank Multiple Element info  (copy multiple link element id or 
     });
 });
 
-
-
-
-//TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기  (대문자를 박을때는 맨 뒤에 박는 편이 낫겠다.) --단축키 네개 이상? 
 mapkey('ymR', '#7Copy multiple link Regex URLs to the clipboard and add commas', function () {
     var linksToYank = [];
     Hints.create('*[href]', function (element) {
@@ -409,11 +354,9 @@ mapkey('ymR', '#7Copy multiple link Regex URLs to the clipboard and add commas',
     });
 });
 
-// Copy url as regex of SurfingKeys
 mapkey('yr', "Copy url as regex", function () {
     Clipboard.write('domain: ' + '\/' + window.location.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
-
 
 mapkey('gyq', "Copy first pre", function () {
     var cssSelector = "pre";
@@ -457,10 +400,12 @@ mapkey('yQ', "Copy first pre", function () {
     }
     Clipboard.write(elements[0].innerText);
 });
+
 // yQ와 동일함 
 mapkey('yk', "Copy url before Keyowrd insertion", function () {
     Clipboard.write(window.location.href.split('=')[0] + '=');
 });
+
 // surround   
 mapkey('"yy', "surround url with double quotation mark", function () {
     Clipboard.write('"' + window.location.href + '"');
@@ -520,42 +465,7 @@ vmapkey('my', '#7Copy multiple link URLs to the clipboard', function () {
     Clipboard.write('"' + textToYank.join('\n') + '"');
 });
 
-//addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
-//addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
-// request(URL, function (err, response, html) {
-//      URL로부터 가져온 페이지 소스가 html이란 변수에 담긴다.
-//})
-//TODO: google tlanslation auto copy make
-//TODO: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기
-/*
-vmapkey('ty', "한글 영어번역 clipboard", function () { //TODO:  
-    url = "https://translate.google.co.kr/?hl=ko#ko/en/" + window.getSelection().toString();
-    request(url, function(err, response, html){
-        if (!err) {
-            var $ = cheerio.load(html);
-            Clipboard.write($('#result_box').innerText());
-        }
-    })
-});
-vmapkey('Ty', "영어 한글번역 clipboard", function () {
-    url = "https://translate.google.co.kr/?hl=ko#en/ko/" + window.getSelection().toString();
-    request(url, function(err, response, html){
-        if (!err) {
-            var $ = cheerio.load(html);
-            Clipboard.write($('#result_box').innerText());
-        }
-    })
-});
-*/
 
-/*
-vmapkey('~diy', "remove inner double quoates strings", function () {
-    Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
-});
-vmapkey('~siy', "remove inner single quoates strings", function () {
-    Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
-});
-*/
 // markdown
 vmapkey('miy', "Markdown italic", function () {
     Clipboard.write('*' + window.getSelection().toString() + '*');
@@ -592,57 +502,32 @@ mapkey('<Ctrl-Alt-s>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
 
-// 정상적으로 동작하지 않음 
+// move
+mapkey('gm', "#7 goto memo element", function () {
+    pageHeadLine = document.getElementById("memo");
+    pageHeadLine.scrollIntoView();
+});
+
+
 // vscode bind
 mapkey('<Ctrl-X>', '#12Open Chrome extensions', function () {
     tabOpenLink("chrome://extensions/");
 });
+
 // intellij bind
 map('<Ctrl-E>', 'T');
 map('<Ctrl-N>', 'T');
-// intellij bind - 동작 하지 않음
-mapkey('<Alt-F12>', '#12Open Chrome Settings', function () {
-    tabOpenLink("chrome.send('inspect',[String(data.processId), String(data.routeId)])");
-});
 
-// vscode bind 동작 하지 않음  
-mapkey('<Ctrl-\>', '#12Open Chrome extensions', function () {
+mapkey('<Ctrl-\>', '#12Open Chrome extensions (deprecated)', function () {
     RUNTIME("duplicateTab");
     RUNTIME("newWindow");
 });
-//todo
-mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
+mapkey('<Ctrl-]>', '#12Open Chrome extensions (deprecated)', function () {
     RUNTIME("duplicateTab");
     RUNTIME("");
 });
+
 map('<Ctrl-V>', 'sm'); // markdown preview
-
-//-------------- D key and U key ---------------------- 함수화 필요
-//TODO: add rage of scroll
-//sysntax, code
-/* 잘 동작하지 않음 
-function DownController(lineQuery = 'pre' , offset = 0) {
-    pageHeadLine = document.querySelectorAll(lineQuery);
-    if(pageHeadLine.length){
-        if(pageHeadLine.length > jlineNum){ lineNum++;}
-        pageHeadLine[lineNum].scrollIntoView();
-        window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
-    }
-}
-function UpController(lineQuery = 'pre' , offset = 0) {
-    pageHeadLine = document.querySelectorAll(lineQuery);
-    if(pageHeadLine.length){
-        if(0 < lineNum){ lineNum--;}
-        pageHeadLine[lineNum].scrollIntoView();
-        window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
-    }
-}
-mapkey('D', '', DownController('pre',0));
-mapkey('U', '', UpController('pre',0));
-mapkey('D', '나무위키 목차 대단위 다운스크롤', DownController('.wiki-heading', 0) , {domain: /namu\.wiki/i});
-mapkey('U', '나무위키 목차 대단위 up스크롤', UpController('.wiki-heading',0) , {domain: /namu\.wiki/i});
-*/
-
 mapkey('D', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
     if (pageHeadLine.length > codeWrapper) {
@@ -778,19 +663,12 @@ mapkey('U', 'naver 답변 up 스크롤 ', function () {
 }, {
     domain: /kin\.naver\.com/i
 });
-//https://www.slideshare.net/mandrewmartin/regression-presentation
-//div.j-prev-btn.arrow-left  btnPrevious
-//div.j-prev-btn.arrow-right btnNext
-//
-//--------------End of D key and U key ----------------------
 
-/*
-window.onload = function(){
-}
-*/
 
-// github default shortcut lists
-// https://help.github.com/articles/using-keyboard-shortcuts/
+////////////////////////////////////////////////////////////////
+// github default shortcut lists                              //
+// https:help.github.com/articles/using-keyboard-shortcuts/   //
+////////////////////////////////////////////////////////////////
 
 mapkey('gC', 'Go to the code tab', function () {
     document.querySelectorAll('.js-selected-navigation-item.reponav-item')[0].click();
@@ -839,10 +717,14 @@ mapkey('gS', 'Go to the Stars tab. ', function () {
     domain: /github\.com/i
 });
 
-className: 
-//end of github
+//////////////////
+// end of github//
+//////////////////
 
 
+//////////////////////////////////////
+// SlideShare, SlidePlayer function //
+//////////////////////////////////////
 
 mapkey('h', '', function () {
     slidePage++;
@@ -859,8 +741,7 @@ mapkey('h', '', function () {
 }, {
     domain: /www\.slideshare\.net/i
 });
-// page 양 옆으로 넘길 수 있도록 하기
-// TODO: slidePlayer 사이트 추가하기 
+
 mapkey('h', 'slideshare previous page', function () {
     document.getElementById('btnPrevious').click();
 }, {
@@ -872,7 +753,6 @@ mapkey('l', 'slideshare next page', function () {
     domain: /www\.slideshare\.net/i
 });
 
-// FIXME: 동작하지 않음
 mapkey('h', 'slidePlayer previous page', function () {
 
     var myVar = document.querySelectorAll('.component_container.control_panel img');
@@ -881,7 +761,6 @@ mapkey('h', 'slidePlayer previous page', function () {
     domain: /slideplayer\.com/i
 });
 
-// FIXME: 버튼을 눌러야 동작 동작하지 않음
 mapkey('l', 'slidePlayer next page', function () {
 
     var myVar = document.querySelectorAll('.component_container.control_panel img');
@@ -890,262 +769,4 @@ mapkey('l', 'slidePlayer next page', function () {
     domain: /slideplayer\.com/i
 });
 
-// TODO: 잘 동작하지 않음 (이미 단축키가 assign 되어 있는 사이트라서 그런 것 처럼 보임)
-mapkey('[', 'google book previous page', function () {
-    document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-left').click();
-}, {
-    domain: /play\.google\.com\/books/i
-});
-mapkey(']', 'google book next page', function () {
-    document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-right').click();
-}, {
-    domain: /play\.google\.com\/books/i
-});
-// skipControl sc-ir playControls__control playControls__prev skipControl__previous
-// skipControl sc-ir playControls__control playControls__next skipControl__next
-// sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive
-//Soundcloud shortcuts
-// . 이 들어가야 하는지 아닌지 테스트 
-// TODO: 잘 동작하지 않음 (이미 단축키가 assign 되어 있는 사이트라서 그런 것 처럼 보임)
-mapkey('J', 'soundcloud previous song', function () {
-    document.getElementsByClassName('sc-ir.playControls__control.playControls__prev.skipControl__previous').click();
-}, {
-    domain: /soundcloud\.com/i
-});
-mapkey('K', 'soundcltud next song', function () {
-    document.getElementsByClassName('skipControl.sc-ir.playControls__control.playControls__next.skipControl__next').click();
-}, {
-    domain: /soundcloud\.com/i
-});
-mapkey('L', 'soundcloud like', function () {
-    document.getElementsByClassName('sc-button-like.playbackSoundBadge__like.sc-button.sc-button-small.sc-button-icon.sc-button-responsive').click();
-}, {
-    domain: /soundcloud\.com/i
-});
-
-// TODO: 동작하지 않음 (양쪽으로 다 동자확지 않음)
-mapkey('<Shift-]>', '한페이지이동(주소창 숫자 증가)', function () {
-
-    var last     = pathname.lastIndexOf('/'),
-        repeats  = RUNTIME.repeats;
-    var pathname = location.pathname;
-    if (pathname.length > 1) {
-        pathname        = pathname.endsWith('/') ? pathname.substr(0, pathname.length - 1) : pathname;
-        RUNTIME.repeats = 1;
-        while (repeats-- > 1) {
-            var p = pathname.lastIndexOf('/', last - 1);
-            if (p === -1) {
-                break;
-            } else {
-                last = p;
-            }
-        }
-        pathname = pathname.substr(0, last);
-    }
-
-    lastPartOfURL = window.location.href.split('/').pop();
-    if (isNaN(lastPartOfURL)) {
-        lastPartOfURL++;
-    }
-    window.location.href = location.origin + pathname + lastPartOfURL;
-
-    Front.showPopup(window.location.href);
-});
-
-mapkey('<Shift-[>', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
-
-    var last     = pathname.lastIndexOf('/'),
-        repeats  = RUNTIME.repeats;
-    var pathname = location.pathname;
-    if (pathname.length > 1) {
-        pathname        = pathname.endsWith('/') ? pathname.substr(0, pathname.length - 1) : pathname;
-        RUNTIME.repeats = 1;
-        while (repeats-- > 1) {
-            var p = pathname.lastIndexOf('/', last - 1);
-            if (p === -1) {
-                break;
-            } else {
-                last = p;
-            }
-        }
-        pathname = pathname.substr(0, last);
-    }
-
-    lastPartOfURL = window.location.href.split('/').pop();
-    if (isNaN(lastPartOfURL)) {
-        lastPartOfURL--;
-    }
-    window.location.href = location.origin + pathname + lastPartOfURL;
-
-    Front.showPopup(window.location.href);
-});
-
-// TODO: 동작하지 않음 
-mapkey('zt', 'remove element', function () {
-
-    /*
-    ele = document.getElementsByClassName('ctr-p');
-    elem.parentNode.removeChild(elem);
-    elem = document.getElementById('slim_appbar');
-    elem.parentNode.removeChild(elem);
-    elem = document.getElementById('searchform');
-    elem.parentNode.removeChild(elem);
-    elem = document.getElementById('sfcnt');
-    elem.parentNode.removeChild(elem);
-    elem = document.getElementById('hdtb-msb');
-    elem.parentNode.removeChild(elem);
-    elem = document.getElementById('foot-cnt');
-    elem.parentNode.removeChild(elem);
-*/
-    document.classList.remove("iUh30");
-    document.classList.remove("fl");
-
-});
-
-//TODO: google tlanslation auto copy make: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기 
-//p, ''df viewer mapping 
-
-// mapkey('D', 'github readme 스크롤', function () {
-//     stackAnswer++;
-//     pageHeadLine = document.querySelectorAll(".answers");
-//     pageHeadLine[stackAnswer].scrollIntoView();
-// },{domain: /\\pdf_viewer.html*/i});
-// mapkey('U', 'github readme up 스크롤 ', function () {
-//     stackAnswer--;
-//     pageHeadLine = document.querySelectorAll(".answers");
-//     pageHeadLine[stackAnswer].scrollIntoView();
-// },{domain: /\\pdf_viewer.html*/i});
-
-// mapkey('D', 'github readme 스크롤', function () {
-//     stackAnswer++;
-//     pageHeadLine = document.querySelectorAll(".wp_syntax", ".wp_");
-//     pageHeadLine[stackAnswer].scrollIntoView();
-// },{domain: /\\pdf_viewer.html*/i});
-// mapkey('U', 'github readme up 스크롤 ', function () {
-//     stackAnswer--;
-//     pageHeadLine = document.querySelectorAll(".answers");
-//     pageHeadLine[stackAnswer].scrollIntoView();
-// },{domain: /\*pdf_viewer.html*/i});
-// */
-
-//네이버 맵 지도 이동
-/*
-map('h', '<ArrowLeft>', {domain: /map\.naver\.com/i});
-map('j', '<ArrowDown>',  {domain: /map\.naver\.com/i});
-map('k', '<ArrowUp>', {domain: /map\.naver\.com/i});
-map('l', '<ArrowRight>', {domain: /map\.naver\.com/i});
-*/
-// 지도 이동 
-
-
-/* 이것도 잘 되지 않는다 
-map( '<ArrowLeft>','h');
-map( '<ArrowDown>','j');
-map( '<ArrowUp>','k');
-map( '<Arrowright>','l');
-*/
-
-/*
-unmap( 'h' );
-unmap( 'j' );
-unmap( 'k' );
-unmap( 'l' );
-map( 'h','<ArrowLeft>');
-map( 'j' ,'<ArrowDown>' );
-map( 'k' ,'<ArrowUp>' );
-map( 'l' ,'<Arrowright>' );
-*/
-
-//TODO: it from sadid https://github.com/brookhong/Surfingkeys/issues/768
-//HOTFIX:
-//ISSUE: 주석에서 auto로 ISSUE를 붙여주는 것이 있었으면 좋겠다
-
-mapkey('yA', "#7Copy all tabs url", function () {
-    //get numbers of tabs
-    chrome.tabs.query({
-        windowType: 'normal'
-    }, function (tabs) {
-        tabNums = tabs.length;
-    });
-    Front.showPopup('tabNums'); //debug
-
-    var URLsToYank = [];
-    chrome.tabs.query({
-        'active'           : true,
-        'lastFocusedWindow': true
-    }, function (tabs) {
-        for (i = 0; i < tabNums; i++)
-            var url = tabs[i].url;
-        URLsToYank.push(url);
-    })();
-    Clipboard.write(URLsToYank);
-});
-
-// FIXME:  동작하지 않음 
-mapkey('yA', "#7Copy all tabs url", function () {
-    //get numbers of tabs
-    chrome.tabs.query({
-        windowType: 'normal'
-    }, function (tabs) {
-        tabNums = tabs.length;
-    });
-    Front.showPopup('tabNums'); //debug
-
-    var URLsToYank = [];
-    chrome.tabs.query({
-        'active'           : true,
-        'lastFocusedWindow': true
-    }, function (tabs) {
-        for (i = 0; i < tabNums; i++)
-            var url = tabs[i].url;
-        URLsToYank.push(url);
-    })();
-    Clipboard.write(URLsToYank);
-});
-
-// TODO: 두개 이상일 때는 어떻게 처리할 지 생각하기. 그리고 memo라는 id가 보편적인 id인지 생각하기 
-mapkey('gm', "#7 goto memo element", function () {
-    pageHeadLine = document.getElementById("memo");
-    pageHeadLine.scrollIntoView();
-});
-// TODO: 동작 확인하기 - 동작하지 않음 
-mapkey('gc', "#7 goto comment element", function () {
-    $scrollTo = $("*[id^=comment]");
-});
-
-// FIXME: what is number of #? 동작하지 않음
-mapkey('oWN', "#7 open notepad", function () {
-    var objShell = new ActiveXObject("shell.application");
-    objShell.ShellExecute("notepad.exe", "", "", "open", 1);
-});
-
-// TODO: 구글 번역 자동 clipboad 복사 동작하지 않음.
-vmapkey('zT', "#7 web crolling", function () {
-    (function () {
-        // Load the script
-        var script        = document.createElement("SCRIPT");
-            script.src    = 'https://code.jquery.com/jquery-3.1.1.min.js';
-            script.type   = 'text/javascript';
-            script.onload = function () {
-            var $ = window.jQuery;
-            // Use $ here...
-            var name = window.getSelection.toString();
-            var url  = "http://anyorigin.com/go?url=" + encodeURIComponent("https://translate.google.co.kr/?hl=ko#ko/en/") + name + "&callback=?";
-            $.get(url, function (response) {
-                console.log(response);
-                Clipboard.write(response);
-            });
-        };
-        document.getElementsByTagName("head")[0].appendChild(script);
-    })();
-});
-
-
-//2018-06-14 21: 27: 49
-// ^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$
-// email regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-//
-//<div>
-//  <img id="image" width="100" src="https://placehold.it/100x100?text=✔">
-//  <button onclick="copyElement('image');">Copy image</button>
 
