@@ -103,8 +103,8 @@ addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMa
 addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
-addSearchAliasX('gH', 'github', 'https://github.com/search?q=', 'o');
-addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=', 'o');
+addSearchAliasX('gH', 'github', 'https://github.com/search?q=');
+addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
 
 
 //language -- 
@@ -284,6 +284,14 @@ mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
     }, {
         multipleHits: true
     });
+});
+
+// similar behavior as an HTTP redirect
+// similar behavior as clicking on a link
+window.location.href = "http://stackoverflow.com";
+
+mapkey('osA', '#7 open stackoverflow write', function () {
+    window.location.replace("https://stackoverflow.com/questions/ask")
 });
 
 mapkey('yg', '#7 git clone - git clone address', function () {
