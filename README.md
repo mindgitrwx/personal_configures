@@ -1,3 +1,4 @@
+# This is just start from scratch
 
 # vimrc 
 (Generally used for Vim editor and Intellij)
