@@ -1119,7 +1119,7 @@ mapkey('oWN', "#7 open notepad", function () {
 });
 
 // TODO: 구글 번역 자동 clipboad 복사 동작하지 않음.
-tvmapkey('zT', "#7 web crolling", function () {
+vmapkey('zT', "#7 web crolling", function () {
     (function () {
         // Load the script
         var script        = document.createElement("SCRIPT");
