@@ -373,6 +373,7 @@ mapkey('ye', '#7 Yank Element info. copy link element id or classname', function
         linksToYank.push('id: ' + element.id + '\n');
         linksToYank.push('innertext: ' + element.innerText+ '\n');
         linksToYank.push('className: ' + element.className+ '\n');
+        linksToYank.push('href: ' + element.href+ '\n');
         (Clipboard.write(linksToYank.join('\n')));
     });
 });
@@ -388,6 +389,10 @@ mapkey('yme', '#7 Yank Multiple Element info  (copy multiple link element id or 
         multipleHits: true
     });
 });
+
+
+
+
 //TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기  (대문자를 박을때는 맨 뒤에 박는 편이 낫겠다.) --단축키 네개 이상? 
 mapkey('ymR', '#7Copy multiple link Regex URLs to the clipboard and add commas', function () {
     var linksToYank = [];
@@ -815,6 +820,25 @@ mapkey('gW', 'Go to the Wiki tab. ', function () {
 }, {
     domain: /github\.com/i
 });
+
+
+mapkey('gO', 'Go to the Overview tab. ', function () {
+    document.querySelectorAll('.UnderlineNav-item')[0].click();
+}, {
+    domain: /github\.com/i
+});
+mapkey('gR', 'Go to the Repository tab. ', function () {
+    document.querySelectorAll('.UnderlineNav-item')[1].click();
+}, {
+    domain: /github\.com/i
+});
+mapkey('gS', 'Go to the Stars tab. ', function () {
+    document.querySelectorAll('.UnderlineNav-item')[2].click();
+}, {
+    domain: /github\.com/i
+});
+
+className: 
 //end of github
 
 
@@ -1095,7 +1119,7 @@ mapkey('oWN', "#7 open notepad", function () {
 });
 
 // TODO: 구글 번역 자동 clipboad 복사 동작하지 않음.
-vmapkey('zT', "#7 web crolling", function () {
+tvmapkey('zT', "#7 web crolling", function () {
     (function () {
         // Load the script
         var script        = document.createElement("SCRIPT");
@@ -1114,6 +1138,10 @@ vmapkey('zT', "#7 web crolling", function () {
         document.getElementsByTagName("head")[0].appendChild(script);
     })();
 });
+
+
+
+
 
 //2018-06-14 21: 27: 49
 // ^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$
