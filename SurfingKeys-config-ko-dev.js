@@ -1227,8 +1227,10 @@ mapkey("gDV", '#10 vote up', function () {
 mapkey("gDD", '#10 vote down', function () {
     document.getElementById('recommend_vote_down').click();
 });
-mapkey("gDR", '#10 vote down', function () {
-    var recommend_img = $a.getElementsByTagName("img")[0];
+
+//FIXME: 돌아가지 않음 
+mapkey("gDR", '#10 recommend', function () {
+    var recommend_img = document.getElementsByTagName("img");
     for(var i=0;i<100;i++){
         if(recommend_img.alt === "개념글"){
             recommend_img.click();
@@ -1236,3 +1238,4 @@ mapkey("gDR", '#10 vote down', function () {
         }
     }
 });
+
