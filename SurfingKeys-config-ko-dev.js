@@ -113,6 +113,7 @@ mapkey('on', '#3Open Firefox newtab', function () {
 //General
 addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
 addSearchAliasX('G', 'Google', 'https://www.google.com/search?q=');
+addSearchAliasX('d', 'download', 'https://www.google.com/search?q=download+');
 
 //map
 addSearchAliasX('gM', '구글맵', 'https://www.google.com/maps?q=');
@@ -263,6 +264,11 @@ mapkey('oGM', '#7 open gmail send ', function () {
 mapkey('oGD', '#7 open google docs send ', function () {
     window.location.replace("https://docs.google.com/document/u/0/")
 });
+
+mapkey('oGD', '#7 open google docs ', function () {
+    window.location.replace("https://docs.google.com/document/u/0/")
+});
+
 //news 
 //knowledge
 //blog
