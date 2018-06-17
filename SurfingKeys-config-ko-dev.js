@@ -248,10 +248,11 @@ addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 
 //papaers
 addSearchAliasX('pG', 'paper 구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
-addSearchAliasX('pN', 'paper nCBI', 'https://www.ncbi.nlm.nih.gov/search/?term=');
+addSearchAliasX('pn', 'paper nCBI', 'https://www.ncbi.nlm.nih.gov/search/?term=');
 addSearchAliasX('pR', 'paper RISS', 'http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=');
 addSearchAliasX('pE', 'paper ELSEVIER', 'https://www.elsevier.com/search-results?query=');
 addSearchAliasX('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
+addSearchAliasX('pN', 'paper Nature', 'https://www.nature.com/search?q=test');
 
 /**
  * 클립보드에 있는 것을 복사 붙여넣기 하기 위한 함수 
