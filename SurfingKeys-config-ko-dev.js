@@ -252,10 +252,14 @@ addSearchAliasX('pR', 'paper RISS', 'http://www.riss.kr/search/Search.do?detailS
 addSearchAliasX('pE', 'paper ELSEVIER', 'https://www.elsevier.com/search-results?query=');
 addSearchAliasX('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
 
+mapkey('osA', '#7 open stackoverflow write', function () {
+    window.location.replace("https://stackoverflow.com/questions/ask")
+});
+
+
 //news 
 //knowledge
 //blog
-
 
 //TODO: image copy 는 구글 image 검색에서 잘 지원 해 주지 않는 걸로 보임 
 /* mapkey('q', '#1Click on an Image or a button', function() {
