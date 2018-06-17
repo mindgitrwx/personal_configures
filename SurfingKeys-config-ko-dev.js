@@ -1207,7 +1207,7 @@ jumpPDFVIMark = function (mark) {
         var                     markInfo            = localPDFMarks[mark];
         document.getElementById('pageNumber').value = markinfo.pageNumber;
 
-        document.getElementById('pageContainer' + (document.getElementById('pageNumber').value)).scrollTop;
+        document.getElementById('pageContainer' + (document.getElementById('pageNumber').value)).scrollTop();
     }
 };
 mapkey('m', '#10Add current PDF vim-like marks', Normal.addPDFVIMark, {domain: /web\.kamihq\.com/i});
