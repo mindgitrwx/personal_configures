@@ -1029,27 +1029,7 @@ mapkey('<Shift-[>', '한페이지 뒤로이동(주소창 숫자 감소)', functi
     Front.showPopup(window.location.href);
 });
 
-// TODO: 동작하지 않음 
-mapkey('zt', 'remove element', function () {
 
-    /*
-    ele = document.getElementsByClassName('ctr-p');
-    elem.parentNode.removeChild(elem);
-    elem = document.getElementById('slim_appbar');
-    elem.parentNode.removeChild(elem);
-    elem = document.getElementById('searchform');
-    elem.parentNode.removeChild(elem);
-    elem = document.getElementById('sfcnt');
-    elem.parentNode.removeChild(elem);
-    elem = document.getElementById('hdtb-msb');
-    elem.parentNode.removeChild(elem);
-    elem = document.getElementById('foot-cnt');
-    elem.parentNode.removeChild(elem);
-*/
-    document.classList.remove("iUh30");
-    document.classList.remove("fl");
-
-});
 
 //TODO: google tlanslation auto copy make: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기 
 //p, ''df viewer mapping 
@@ -1210,9 +1190,10 @@ vmapkey('zT', "#7 web crolling", function () {
 //mapkey('m', '#10Add current URL to vim-like marks', Normal.addVIMark);
 //mapkey("'", '#10Jump to vim-like mark', Normal.jumpVIMark);
 //---------------------------------------------------
+
 var localPDFMarks = {};
 
-addPDFVIMark = function (mark, url) {
+addPDFVIMark = function (mark) {
     if (/^[a-z]$/.test(mark)) {
         // local mark
         localPDFMarks[mark] = {
@@ -1220,12 +1201,13 @@ addPDFVIMark = function (mark, url) {
         };
     }
 };
-mapkey('m', '#10Add current PDF URL to vim-like marks', Normal.addPDFVIMark);
 
-jumpPDFVIMark = function (mark, newTab) {
+mapkey('m', '#10Add current PDF URL to vim-like marks', Normal.addPDFVIMark(mark), {domain: /web\.kamihq\.com/i});
+
+jumpPDFVIMark = function (mark) {
     if (localPDFMarks.hasOwnProperty(mark)) {
         var                     markInfo            = localPDFMarks[mark];
         document.getElementById('pageNumber').value = localPDFMarks[mark].pageNumber;
     }
 };
-mapkey("'", '#10Jump to PDF vim-like mark', Normal.jumpPDFVIMark);
+mapkey("'", '#10Jump to PDF vim-like mark', Normal.addPDFVIMark(mark), {domain: /web\.kamihq\.com/i});
