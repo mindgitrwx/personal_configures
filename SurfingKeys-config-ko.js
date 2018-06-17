@@ -295,7 +295,7 @@ mapkey('osA', '#7 open stackoverflow write', function () {
 });
 
 mapkey('yg', '#7 git clone - git clone address', function () {
-    Clipboard.write('yank git - for clone' +  window.location.href + '.git');
+    Clipboard.write('git clone' +  window.location.href + '.git');
 }, {
     domain: /github\.com/i
 }); 
