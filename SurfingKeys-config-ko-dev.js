@@ -409,7 +409,7 @@ mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
 
 //TODO: git clone , get id
 mapkey('yg', '#7 git clone', function () {
-    Clipboard.write('git clone' + window.location.href + '.git');
+    Clipboard.write('git clone ' + window.location.href + '.git');
 }, {
     domain: /github\.com/i
 });
@@ -1238,4 +1238,20 @@ mapkey("gDR", '#10 recommend', function () {
         }
     }
 });
+
+//etc
+//https: //www.wikiwand.com/en/Sandbox_(software_development)
+// time, location, type, name, user indetifier, size, protection
+
+// ps pid ppid pgid winpid tty uid stime command
+// name, type, location, protection, useridentifiery size
+
+// file- sequence of byte
+// certain directory sstructure
+
+
+// file pointer, file open counter, access right
+// shared lock , exclusive lock
+// mandatory, advisory
+
 
