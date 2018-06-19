@@ -414,7 +414,7 @@ mapkey('yg', '#7 git clone', function () {
     domain: /github\.com/i
 });
 
-mapkey('ye', '#7 Yank Element info. copy link element id or classname', function () {
+mapkey('yE', '#7 Yank Element info. copy link element id or classname', function () {
     var linksToYank = [];
     Hints.create("", function (element) {
 
@@ -429,6 +429,11 @@ mapkey('ye', '#7 Yank Element info. copy link element id or classname', function
         (Clipboard.write(linksToYank.join('\n')));
     });
 });
+mepkey('yeI', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.id + '\n')); });
+mepkey('yeC', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.className + '\n')); });
+mepkey('yeT', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.type + '\n')); });
+mepkey('yeS', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.style + '\n')); });
+mepkey('yeA', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.alt + '\n')); });
 
 mapkey('yme', '#7 Yank Multiple Element info  (copy multiple link element id or classname)', function () {
     var linksToYank = [];
