@@ -928,7 +928,7 @@ mapkey('gV', 'Volume click ', function () {
 
 //TODO: TEST This for disqus
 mapkey('gT', 'Goto Text Area', function () {
-    documents.getElementsByClassName('testarea')[0].click();
+    documents.getElementsByClassName('.textarea')[0].click();
 });
 //end of amazon
 
