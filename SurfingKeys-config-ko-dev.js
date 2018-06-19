@@ -429,11 +429,12 @@ mapkey('yE', '#7 Yank Element info. copy link element id or classname', function
         (Clipboard.write(linksToYank.join('\n')));
     });
 });
-mepkey('yeI', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.id + '\n')); });
-mepkey('yeC', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.className + '\n')); });
-mepkey('yeT', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.type + '\n')); });
-mepkey('yeS', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.style + '\n')); });
-mepkey('yeA', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.alt + '\n')); });
+
+mapkey('yeI', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.id + '\n')); });
+mapkey('yeC', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.className + '\n')); });
+mapkey('yeT', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.type + '\n')); });
+mapkey('yeS', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.style + '\n')); });
+mapkey('yeA', '#7 Yank Element info. copy link element id or classname', function () { (Clipboard.write('id: ' + element.alt + '\n')); });
 
 mapkey('yme', '#7 Yank Multiple Element info  (copy multiple link element id or classname)', function () {
     var linksToYank = [];
