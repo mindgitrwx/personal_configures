@@ -913,7 +913,7 @@ mapkey('gS', 'security group click', function () {
     domain: /us-east-2\.console\.aws\.amazon\.com/i
 });
 
-mapkey('gI', 'Elastic group click ', function () {
+mapkey('gE', 'Elastic group click ', function () {
     document.getElementById('gwt-debug-leftNav-Addresses').click();
 }, {
     domain: /us-east-2\.console\.aws\.amazon\.com/i
