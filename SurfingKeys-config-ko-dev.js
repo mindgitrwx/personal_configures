@@ -298,6 +298,9 @@ mapkey('oGM', '#7 open gmail send ', function () {
 mapkey('oGD', '#7 open google docs send ', function () {
     window.location.replace("https://docs.google.com/document/u/0/")
 });
+mapkey('oGI', '#7 open gist', function () {
+    window.location.replace("https://gist.github.com/")
+});
 
 //news 
 //knowledge
@@ -950,7 +953,7 @@ mapkey('gm', "#7 goto memo element", function () {
 });
 // TODO: 동작 확인하기 - 동작하지 않음 
 mapkey('gc', "#7 goto comment element", function () {
-    documents.getElementById('comment').click(); // focus, comment?
+    documents.querySelectorAll('*comment*').click(); // focus, comment?
 });
 // 
 
