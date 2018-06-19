@@ -968,25 +968,16 @@ mapkey('h', '', function () {
     domain: /www\.slideshare\.net/i
 });
 
+// page 양 옆으로 넘길 수 있도록 하기
+// TODO: slidePlayer 사이트 추가하기 
 mapkey('h', 'slideshare previous page', function () {
     slidePage--;
     document.getElementById('btnPrevious').click();
 }, {
     domain: /www\.slideshare\.net/i
 });
-mapkey('h', 'slideshare previous page', function () {
-    document.getElementById('btnPrevious').click();
-}, {
-    domain: /www\.slideshare\.net/i
-});
-// page 양 옆으로 넘길 수 있도록 하기
-// TODO: slidePlayer 사이트 추가하기 
-mapkey('h', 'slideshare previous page', function () {
-    document.getElementById('btnPrevious').click();
-}, {
-    domain: /www\.slideshare\.net/i
-});
 mapkey('l', 'slideshare next page', function () {
+    slidePage++;
     document.getElementById('btnNext').click();
 }, {
     domain: /www\.slideshare\.net/i
