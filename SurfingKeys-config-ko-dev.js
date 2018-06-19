@@ -431,11 +431,11 @@ mapkey('yE', '#7 Yank Element info. copy link element id or classname', function
 });
 
 // ADD: read like this yank element ~~~
-mapkey('yeI', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('id: ' + element.id + '\n')); });
-mapkey('yeC', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('id: ' + element.className + '\n')); });
-mapkey('yeT', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('id: ' + element.type + '\n')); });
-mapkey('yeS', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('id: ' + element.style + '\n')); });
-mapkey('yeA', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('id: ' + element.alt + '\n')); });
+mapkey('yeI', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.id')); });
+mapkey('yeC', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.className')); });
+mapkey('yeT', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.type')); });
+mapkey('yeS', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.style')); });
+mapkey('yeA', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.alt')); });
 
 mapkey('ymE', '#7 Yank Multiple Element info  (copy multiple link element id or classname)', function () {
     var linksToYank = [];
