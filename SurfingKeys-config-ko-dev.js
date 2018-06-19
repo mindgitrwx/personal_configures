@@ -467,8 +467,11 @@ mapkey('yr', "Copy url as regex", function () {
 });
 
 
+// pre is often used for insert codeblocks on webpage. some code blocks just in pre, 
 mapkey('gyq', "Copy first pre", function () {
-    var cssSelector = "pre";
+    var cssSelector = "^(pre|)$"
+
+;
 
     //보이는 것 중에서 pre element존재하는지 찾기 
     var elements = getVisibleElements(function (e, v) {
@@ -513,7 +516,7 @@ mapkey('yQ', "Copy first pre", function () {
 mapkey('yk', "Copy url before Keyowrd insertion", function () {
     Clipboard.write(window.location.href.split('=')[0] + '=');
 });
-// surround   
+// surrounded   
 mapkey('"yy', "surround url with double quotation mark", function () {
     Clipboard.write('"' + window.location.href + '"');
 });
@@ -861,7 +864,6 @@ mapkey('gP', 'Go to the Pull requests tab.  ', function () {
 }, {
     domain: /github\.com/i
 });
-
 mapkey('gB', 'Go to the Projects tab. "', function () {
     document.querySelectorAll('.js-selected-navigation-item.reponav-item')[3].click();
 }, {
@@ -873,7 +875,6 @@ mapkey('gW', 'Go to the Wiki tab. ', function () {
 }, {
     domain: /github\.com/i
 });
-
 
 mapkey('gO', 'Go to the Overview tab. ', function () {
     document.querySelectorAll('.UnderlineNav-item')[0].click();
@@ -891,17 +892,47 @@ mapkey('gS', 'Go to the Stars tab. ', function () {
     domain: /github\.com/i
 });
 
-className: 
-    //end of github
+// TODO: test
+mapkey('V', 'view', function () {
+    document.querySelectorAll('.btn.btn-sm.tooltipped.tooltipped-nw')[0].click();
+}, {
+    domain: /github\.com/i
+});
+//end of github
 
+//start of amazon
+mapkey('gI', 'Instance click ', function () {
+    document.getElementById('gwt-debug-leftNav-Instances').click();
+}, {
+    domain: /us-east-2\.console\.aws\.amazon\.com/i
+});
 
+mapkey('gS', 'security group click', function () {
+    document.getElementById('gwt-debug-leftNav-SecurityGroups').click();
+}, {
+    domain: /us-east-2\.console\.aws\.amazon\.com/i
+});
 
-    mapkey('h', '', function () {
-        slidePage++;
-        document.getElementById('btnPrevious').click();
-    }, {
-        domain: /www\.slideshare\.net/i
-    });
+mapkey('gI', 'Elastic group click ', function () {
+    document.getElementById('gwt-debug-leftNav-Addresses').click();
+}, {
+    domain: /us-east-2\.console\.aws\.amazon\.com/i
+});
+
+mapkey('gV', 'Volume click ', function () {
+    document.getElementById('gwt-debug-leftNav-Volumes').click();
+}, {
+    domain: /us-east-2\.console\.aws\.amazon\.com/i
+});
+//end of amazon
+
+mapkey('h', '', function () {
+    slidePage++;
+    document.getElementById('btnPrevious').click();
+}, {
+    domain: /www\.slideshare\.net/i
+});
+
 mapkey('h', 'slideshare previous page', function () {
     slidePage--;
     document.getElementById('btnPrevious').click();
@@ -1239,7 +1270,6 @@ mapkey("gDR", '#10 recommend', function () {
     }
 });
 
-//etc
 //https: //www.wikiwand.com/en/Sandbox_(software_development)
 // time, location, type, name, user indetifier, size, protection
 
