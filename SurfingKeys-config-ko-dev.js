@@ -926,6 +926,13 @@ mapkey('gV', 'Volume click ', function () {
 });
 //end of amazon
 
+//TODO: TEST This for disqus
+mapkey('gT', 'Goto Text Area', function () {
+    documents.getElementsByClassName('testarea')[0].click();
+});
+//end of amazon
+
+
 mapkey('h', '', function () {
     slidePage++;
     document.getElementById('btnPrevious').click();
