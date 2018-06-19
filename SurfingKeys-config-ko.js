@@ -716,22 +716,6 @@ mapkey('gS', 'Go to the Stars tab. ', function () {
 // SlideShare, SlidePlayer function //
 //////////////////////////////////////
 
-mapkey('h', '', function () {
-    slidePage++;
-    document.getElementById('btnPrevious').click();
-}, {
-    domain: /www\.slideshare\.net/i
-});mapkey('h', 'slideshare previous page', function () {
-    slidePage--;
-    document.getElementById('btnPrevious').click();
-}, {
-    domain: /www\.slideshare\.net/i
-});mapkey('h', 'slideshare previous page', function () {
-    document.getElementById('btnPrevious').click();
-}, {
-    domain: /www\.slideshare\.net/i
-});
-
 mapkey('h', 'slideshare previous page', function () {
     document.getElementById('btnPrevious').click();
 }, {
@@ -760,56 +744,3 @@ mapkey('l', 'slidePlayer next page', function () {
 });
 
 //---------------------------------------------------
-var localMarks     = {};
-    self.addVIMark = function(mark, url) {
-    if (/^[a-z]$/.test(mark)) {
-        // local mark
-        localMarks[mark] = {
-            scrollLeft: document.scrollingElement.scrollLeft,
-            scrollTop : document.scrollingElement.scrollTop
-        };
-    } else {
-        // global mark
-                                                                                url    = url || window.location.href;
-                                                                            var mo     = {};
-                                                                            mo  [mark] = {
-            url       : url,
-            scrollLeft: document.scrollingElement.scrollLeft,
-            scrollTop : document.scrollingElement.scrollTop
-        };
-        RUNTIME('addVIMark', {mark: mo});
-        Front.showBanner("Mark '{0}' added for: {1}.".format(mark, url));
-    }
-};
-
-self.jumpVIMark = function(mark, newTab) {
-    if (localMarks.hasOwnProperty(mark)) {
-        var markInfo                             = localMarks[mark];
-            document.scrollingElement.scrollLeft = markInfo.scrollLeft;
-            document.scrollingElement.scrollTop  = markInfo.scrollTop;
-    } else {
-        runtime.command({
-            action: 'getSettings',
-            key   : 'marks'
-        }, function(response) {
-            var marks = response.settings.marks;
-            if (marks.hasOwnProperty(mark)) {
-                var markInfo = marks[mark];
-                if (typeof(markInfo) === "string") {
-                    markInfo = {
-                        url       : markInfo,
-                        scrollLeft: 0,
-                        scrollTop : 0
-                    };
-                }
-                markInfo.tab = {
-                    tabbed: newTab,
-                    active: true
-                };
-                RUNTIME("openLink", markInfo);
-            } else {
-                Front.showBanner("No mark '{0}' defined.".format(mark));
-            }
-        });
-    }
-};
