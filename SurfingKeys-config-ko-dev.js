@@ -944,6 +944,7 @@ mapkey('gT', 'Goto Text Area', function () {
 });
 
 mapkey('gtT', 'Goto comment and click', function () {
+
     documents.getElementById('comment').click(); // focus, comment?
 });
 // TODO: 두개 이상일 때는 어떻게 처리할 지 생각하기. 그리고 memo라는 id가 보편적인 id인지 생각하기 
@@ -953,7 +954,10 @@ mapkey('gm', "#7 goto memo element", function () {
 });
 // TODO: 동작 확인하기 - 동작하지 않음 
 mapkey('gc', "#7 goto comment element", function () {
-    documents.querySelectorAll('textarea')[0].click(); // focus, comment?
+    element = documents.querySelectorAll('textarea')[0];  // focus, comment?
+    Normal.passFocus(true);
+    elements[0].focus();
+    Insert.enter(elements[0]);
 });
 // 
 
