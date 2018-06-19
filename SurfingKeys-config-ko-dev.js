@@ -953,7 +953,7 @@ mapkey('gm', "#7 goto memo element", function () {
 });
 // TODO: 동작 확인하기 - 동작하지 않음 
 mapkey('gc', "#7 goto comment element", function () {
-    documents.querySelectorAll('*comment*')[0].click(); // focus, comment?
+    documents.querySelectorAll('textarea')[0].focus(); // focus, comment?
 });
 // 
 
