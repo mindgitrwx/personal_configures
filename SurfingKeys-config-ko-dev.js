@@ -931,6 +931,7 @@ mapkey('gV', 'Volume click ', function () {
 mapkey('gT', 'Goto Text Area', function () {
     documents.getElementsByClassName('.textarea')[0].click();
 });
+
 mapkey('gtT', 'Goto comment and click', function () {
     documents.getElementById('comment').click(); // focus, comment?
 });
@@ -941,7 +942,7 @@ mapkey('gm', "#7 goto memo element", function () {
 });
 // TODO: 동작 확인하기 - 동작하지 않음 
 mapkey('gc', "#7 goto comment element", function () {
-    $scrollTo = $("*[id^=comment]");
+    documents.getElementById('comment').click(); // focus, comment?
 });
 // 
 
@@ -1190,8 +1191,7 @@ mapkey('yA', "#7Copy all tabs url", function () {
 
 
 // FIXME: what is number of #? 동작하지 않음
-mapkey('oWN', "#7 open notepad", function () {
-    var objShell = new ActiveXObject("shell.application");
+mapkey('oWN', "#7 open notepad", function () { var objShell = new ActiveXObject("shell.application");
     objShell.ShellExecute("notepad.exe", "", "", "open", 1);
 });
 
