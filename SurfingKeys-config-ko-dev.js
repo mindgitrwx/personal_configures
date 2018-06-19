@@ -926,12 +926,24 @@ mapkey('gV', 'Volume click ', function () {
 });
 //end of amazon
 
-//TODO: TEST This for disqus
+// goto comment - Usually comments are in textarea format
+//TODO: TEST This for disqus, and integrate all the ways of move comment if possible
 mapkey('gT', 'Goto Text Area', function () {
     documents.getElementsByClassName('.textarea')[0].click();
 });
-//end of amazon
-
+mapkey('gtT', 'Goto comment and click', function () {
+    documents.getElementById('comment').click(); // focus, comment?
+});
+// TODO: 두개 이상일 때는 어떻게 처리할 지 생각하기. 그리고 memo라는 id가 보편적인 id인지 생각하기 
+mapkey('gm', "#7 goto memo element", function () {
+    pageHeadLine = document.getElementById("memo");
+    pageHeadLine.scrollIntoView();
+});
+// TODO: 동작 확인하기 - 동작하지 않음 
+mapkey('gc', "#7 goto comment element", function () {
+    $scrollTo = $("*[id^=comment]");
+});
+// 
 
 mapkey('h', '', function () {
     slidePage++;
@@ -1175,15 +1187,7 @@ mapkey('yA', "#7Copy all tabs url", function () {
     Clipboard.write(URLsToYank);
 });
 
-// TODO: 두개 이상일 때는 어떻게 처리할 지 생각하기. 그리고 memo라는 id가 보편적인 id인지 생각하기 
-mapkey('gm', "#7 goto memo element", function () {
-    pageHeadLine = document.getElementById("memo");
-    pageHeadLine.scrollIntoView();
-});
-// TODO: 동작 확인하기 - 동작하지 않음 
-mapkey('gc', "#7 goto comment element", function () {
-    $scrollTo = $("*[id^=comment]");
-});
+
 
 // FIXME: what is number of #? 동작하지 않음
 mapkey('oWN', "#7 open notepad", function () {
