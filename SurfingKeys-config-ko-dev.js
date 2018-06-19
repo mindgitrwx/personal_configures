@@ -431,7 +431,7 @@ mapkey('yE', '#7 Yank Element info. copy link element id or classname', function
 });
 
 // ADD: read like this yank element ~~~
-mapkey('yeI', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('id: ' + element.id + '\n')); });w
+mapkey('yeI', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('id: ' + element.id + '\n')); });
 mapkey('yeC', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('id: ' + element.className + '\n')); });
 mapkey('yeT', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('id: ' + element.type + '\n')); });
 mapkey('yeS', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('id: ' + element.style + '\n')); });
