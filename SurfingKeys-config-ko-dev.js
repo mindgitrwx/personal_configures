@@ -72,6 +72,12 @@ unmap('<Ctrl-6>'); // (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바
 map(']', ']]'); // 두번 누르는건 자연스럽지 않음 
 map('[', '[[');
 
+// My default vim key binding: https://gist.github.com/millermedeiros/1262085
+//--Like Nerd Tree--- TODO: FIX IT LIKE VERTICALLY
+map(',nt', 'T'); 
+imap('jj', '<ESC>'); 
+imap('jk', '<ESC>'); 
+
 // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
 removeSearchAliasX('b')
 removeSearchAliasX('g')
@@ -1240,8 +1246,6 @@ vmapkey('zT', "#7 web crolling", function () {
 //                                                                    //
 ////////////////////////////////////////////////////////////////////////
 
-mapkey('m', '#10Add current URL to vim-like marks', Normal.addVIMark);
-mapkey("'", '#10Jump to vim-like mark', Normal.jumpVIMark);
 //---------------------------------------------------
 
 var localPDFMarks = {"a":1,"b":2,"c":3};
@@ -1269,6 +1273,7 @@ mapkey("'", '#10Jump to PDF vim-like mark', Normal.jumpPDFVIMark, {domain: /web\
 mapkey('M', '#10Add current PDF vim-like marks', Normal.addVIMark, {domain: /web\.kamihq\.com/i});
 mapkey("`", '#10Jump to PDF vim-like mark', Normal.jumpVIMark, {domain: /web\.kamihq\.com/i});
 
+//FIXME: 동작하지 않음
 mapkey("gDV", '#10 vote up', function () {
     document.getElementById('recommend_vote_up').click();
 });
