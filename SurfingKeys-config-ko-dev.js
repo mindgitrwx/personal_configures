@@ -75,6 +75,13 @@ map('[', '[[');
 // My default vim key binding: https://gist.github.com/millermedeiros/1262085
 //--Like Nerd Tree--- TODO: FIX IT LIKE VERTICALLY
 map(',nt', 'T'); 
+
+mapkey(',s', 'opne new tab and split', function () {
+    var url = window.location.href;
+    window.open(url, windowName, "height=200,width=200");
+});
+
+
 imap('jj', '<ESC>'); 
 imap('jk', '<ESC>'); 
 
