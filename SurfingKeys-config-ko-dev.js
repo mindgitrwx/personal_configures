@@ -77,8 +77,7 @@ map('[', '[[');
 map(',nt', 'T'); 
 
 mapkey(',s', 'opne new tab and split', function () {
-    var url = window.location.href;
-    window.open(url, windowName, "height=200,width=200");
+    RUNTIME("newWindow");
 });
 
 
