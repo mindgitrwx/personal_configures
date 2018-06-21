@@ -137,7 +137,6 @@ addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/s
 addSearchAliasX('gH', 'github', 'https://github.com/search?q=');
 addSearchAliasX('ghS', 'githubStars', 'https://github.com/mindgitrwx?page=1&q=face&tab=stars&utf8=%E2%9C%93&utf8=%E2%9C%93&q=');
 
-
 //language -- 
 //
 addSearchAliasX('lJ', 'language Javascript', 'https://www.google.com/search?q=Javascript+');
@@ -488,9 +487,7 @@ mapkey('yr', "Copy url as regex", function () {
 // pre is often used for insert codeblocks on webpage. some code blocks just in pre, 
 // yQ와 동일함 
 mapkey('gyq', "Copy first pre", function () {
-    var cssSelector = "^(pre|)$"
-
-;
+    var cssSelector = "^(pre|)$";
 
     //보이는 것 중에서 pre element존재하는지 찾기 
     var elements = getVisibleElements(function (e, v) {
@@ -1286,13 +1283,8 @@ mapkey("gDD", '#10 vote down', function () {
 
 //FIXME: 돌아가지 않음 
 mapkey("gDR", '#10 recommend', function () {
-    var recommend_img = document.getElementsByTagName("img");
-    for(var i=0;i<100;i++){
-        if(recommend_img.alt === "개념글"){
-            recommend_img.click();
-            break;
-        }
-    }
+    var recommend_img = document.querySelectorAll(".개념글");
+    recommend_img[0].click();
 });
 
 //https: //www.wikiwand.com/en/Sandbox_(software_development)
@@ -1304,9 +1296,7 @@ mapkey("gDR", '#10 recommend', function () {
 // file- sequence of byte
 // certain directory sstructure
 
-
 // file pointer, file open counter, access right
 // shared lock , exclusive lock
 // mandatory, advisory
-
 
