@@ -53,7 +53,6 @@ if(typeof rfs!="undefined" && rfs){
      wscript.SendKeys("{F11}");
   }
 }
-el();
 
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
 var namuPage    = 0;
