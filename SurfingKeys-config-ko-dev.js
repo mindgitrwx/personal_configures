@@ -486,7 +486,7 @@ mapkey('yr', "Copy url as regex", function () {
 
 // pre is often used for insert codeblocks on webpage. some code blocks just in pre, 
 // yQ와 동일함 
-mapkey('gyq', "Copy first pre", function () {
+mapkey('gyq', "Copy first pre and exist", function () {
     var cssSelector = "^(pre|)$";
 
     //보이는 것 중에서 pre element존재하는지 찾기 
@@ -506,6 +506,7 @@ mapkey('gyq', "Copy first pre", function () {
         });
     }
     Clipboard.write(elements[0].innerText);
+    RUNTIME("closeTab");
 });
 mapkey('yQ', "Copy first pre", function () {
     var cssSelector = "pre";
