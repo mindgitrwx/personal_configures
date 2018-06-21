@@ -2,13 +2,15 @@
 
 # VimSetting
 
-## vimrc 
+## ideavimrc 
 
-(Generally used for Vim editor and Intellij)
+for  Intellij editor.
 
-## vimrc 
+## .vimrc 
 
-I using this vimrc: https://gist.github.com/millermedeiros/1262085
+I have used this vimrc: https://gist.github.com/millermedeiros/1262085
+
+location `~/.vimrc`
 
 # VSCDOE
 
@@ -21,8 +23,7 @@ I using this vimrc: https://gist.github.com/millermedeiros/1262085
 code --list-extensions | xargs -L 1 echo code --install-extension > vscode_installed_extensions.txt
 ```
 
-example: vscode_installed_extensions.txt
-
+example: `vscode_installed_extensions.txt `
 
 # vim.ahk.exe
 (notepad, powerpoint, word keybinding as vim editor . exe file - no need for any configure without removing predefined configure of VSCODE)
@@ -30,14 +31,15 @@ example: vscode_installed_extensions.txt
 # HidraMouse setting 
 (Logitec mouse setting)
 
+To be continued...
+
 # Surfingkeys-config-ko.js  
 (google chrome vim binding) - surfingkeys
 
 # Auto Text Expander setting json
-(google chrome Auto Text Expander seting ) 
+(google chrome Auto Text Expander setting.) 
 
 (TODO: make json file for import) 
 
 # chrome://extensions/shortcuts
 
-(여기에는 shortcut이 필요함)
