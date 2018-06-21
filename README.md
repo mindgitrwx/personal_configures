@@ -17,9 +17,9 @@ I using this vimrc: https://gist.github.com/millermedeiros/1262085
 
 ## How to extract and migrate installed vscode extensions
 
-'''
+```
 code --list-extensions | xargs -L 1 echo code --install-extension > vscode_installed_extensions.txt
-'''
+```
 
 example: vscode_installed_extensions.txt
 
