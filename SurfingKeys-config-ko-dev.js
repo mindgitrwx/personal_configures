@@ -1274,21 +1274,6 @@ mapkey("'", '#10Jump to PDF vim-like mark', Normal.jumpPDFVIMark, {domain: /web\
 mapkey('M', '#10Add current PDF vim-like marks', Normal.addVIMark, {domain: /web\.kamihq\.com/i});
 mapkey("`", '#10Jump to PDF vim-like mark', Normal.jumpVIMark, {domain: /web\.kamihq\.com/i});
 
-//FIXME: 동작하지 않음
-mapkey("gDV", '#10 vote up', function () {
-    document.getElementById('recommend_vote_up').click();
-});
-mapkey("gDD", '#10 vote down', function () {
-    document.getElementById('recommend_vote_down').click();
-});
-
-//FIXME: 돌아가지 않음 
-mapkey("gDR", '#10 recommend', function () {
-    var recommend_img = document.querySelectorAll(".http://nstatic.dcinside.com/dgn/gallery/images/update/btn_bottom_best_1_off.png");
-    recommend_img[0].click();
-});
-
-
 //https: //www.wikiwand.com/en/Sandbox_(software_development)
 // time, location, type, name, user indetifier, size, protection
 
