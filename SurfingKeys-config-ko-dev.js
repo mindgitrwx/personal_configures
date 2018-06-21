@@ -75,7 +75,7 @@ map('[', '[[');
 // My default vim key binding: https://gist.github.com/millermedeiros/1262085
 //--Like Nerd Tree--- TODO: FIX IT LIKE VERTICALLY
 map(',nt', 'T'); 
-
+map(',q', 'x'); 
 mapkey(',s', 'opne new tab and split', function () {
     RUNTIME("newWindow");
 });
