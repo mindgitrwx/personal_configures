@@ -49,10 +49,11 @@ if(typeof rfs!="undefined" && rfs){
 } else if(typeof window.ActiveXObject!="undefined"){
   // for Internet Explorer
   var wscript = new ActiveXObject("WScript.Shell");
-  if (wscript!=null) {
+  if (wscript!==null) {
      wscript.SendKeys("{F11}");
   }
 }
+el();
 
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
 var namuPage    = 0;
@@ -1252,6 +1253,7 @@ vmapkey('zT', "#7 web crolling", function () {
     })();
 });
 
+// Anonymous "self-invoking" function - TO LOAD JQUERY
 //2018-06-14 21: 27: 49
 // ^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$
 // email regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -1271,32 +1273,6 @@ vmapkey('zT', "#7 web crolling", function () {
 ////////////////////////////////////////////////////////////////////////
 
 //---------------------------------------------------
-
-var localPDFMarks = {"a":1,"b":2,"c":3};
-
-addPDFVIMark = function (mark) {
-    if (/^[a-z]$/.test(mark)) {
-        // local mark
-        localPDFMarks[mark] = {
-            pageNumber: parseInt(document.getElementById("pageNumber"))
-        };
-    }
-};
-
-jumpPDFVIMark = function (mark) {
-    if (localPDFMarks.hasOwnProperty(mark)) {
-        var                     markInfo            = localPDFMarks[mark];
-        document.getElementById('pageNumber').value = markinfo.pageNumber;
-
-        document.getElementById('pageContainer' + (document.getElementById('pageNumber').value)).scrollIntoView();
-    }
-};
-mapkey('m', '#10Add current PDF vim-like marks', Normal.addPDFVIMark, {domain: /web\.kamihq\.com/i});
-mapkey("'", '#10Jump to PDF vim-like mark', Normal.jumpPDFVIMark, {domain: /web\.kamihq\.com/i});
-
-mapkey('M', '#10Add current PDF vim-like marks', Normal.addVIMark, {domain: /web\.kamihq\.com/i});
-mapkey("`", '#10Jump to PDF vim-like mark', Normal.jumpVIMark, {domain: /web\.kamihq\.com/i});
-
 //https: //www.wikiwand.com/en/Sandbox_(software_development)
 // time, location, type, name, user indetifier, size, protection
 
