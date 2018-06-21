@@ -1284,9 +1284,10 @@ mapkey("gDD", '#10 vote down', function () {
 
 //FIXME: 돌아가지 않음 
 mapkey("gDR", '#10 recommend', function () {
-    var recommend_img = document.querySelectorAll(".개념글");
+    var recommend_img = document.querySelectorAll("http://nstatic.dcinside.com/dgn/gallery/images/update/btn_bottom_best_1_off.png");
     recommend_img[0].click();
 });
+
 
 //https: //www.wikiwand.com/en/Sandbox_(software_development)
 // time, location, type, name, user indetifier, size, protection
