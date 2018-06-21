@@ -52,11 +52,11 @@ var linkCounter = 0;
 
 // Properties list
 Hints.numericHints           = false;
-Hints.characters             = "asdfgqwertzxcvbyuiopmnhlkj";
+Hints.characters             = "asdfgqwertzxcvbyuiopmnhlk";  // remove j for esc (TODO: jj for esc when hints mode)
 Hints.scrollKeys             = "G";
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
-settings.defaultSearchEngine = 'L';                           // Google I'm Feeling Luckey
+settings.defaultSearchEngine = 'L';                          // Google I'm Feeling Luckey
 settings.nextLinkRegex       = /((forward|>>|next)+)/i;
 settings.prevLinkRegex       = /((back|<<|prev(ious)?)+)/i;
 //google search 바를 없애버림 
@@ -119,6 +119,7 @@ mapkey('on', '#3Open newtab', function () {
     tabOpenLink("www.google.com");
 });
 
+// TODO: to try think conflict prefix g,c (google and github)
 //General
 addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
 addSearchAliasX('G', 'Google', 'https://www.google.com/search?q=');
@@ -132,8 +133,10 @@ addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMa
 addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
-addSearchAliasX('gH', 'github', 'https://github.com/search?q=');
 addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
+addSearchAliasX('gH', 'github', 'https://github.com/search?q=');
+addSearchAliasX('ghS', 'githubStars', 'https://github.com/mindgitrwx?page=1&q=face&tab=stars&utf8=%E2%9C%93&utf8=%E2%9C%93&q=');
+
 
 //language -- 
 //
