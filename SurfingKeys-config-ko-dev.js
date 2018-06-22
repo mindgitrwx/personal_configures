@@ -45,7 +45,7 @@ function isFullScreen()
 }
 
 
-!function requestFullScreen(element)
+(function requestFullScreen(element)
 {
     if (element.requestFullscreen)
         element.requestFullscreen();
@@ -55,7 +55,7 @@ function isFullScreen()
         element.mozRequestFullScreen();
     else if (element.webkitRequestFullscreen)
         element.webkitRequestFullscreen();
-}
+})();
 
 function exitFullScreen()
 {
