@@ -295,6 +295,7 @@ function handlePaste(e) {
     alert(pastedData);
 }
 
+// FIXME: focus 관련 명령어는 바로 redirect 되지 않음
 mapkey('osA', '#7 open stackoverflow write', function () {
     window.location.replace("https://stackoverflow.com/questions/ask");
     //It cannot be happened document.getElementById('title').focus();      // 제목에 포커스
@@ -308,12 +309,18 @@ mapkey('oSA', '#7 open stackoverflow write', function () {
     // document.getElementById('wmd-input').addEventListener('paste',handlePaste).focus();
 });
 
+mapkey('oR', '#7 open reddit write', function () {
+    window.location.replace("https://www.reddit.com/submit");
+});
+
 mapkey('oGM', '#7 open gmail send ', function () {
     window.location.replace("https://mail.google.com/mail/u/1/#inbox?compose=new")
 });
+
 mapkey('oGD', '#7 open google docs send ', function () {
     window.location.replace("https://docs.google.com/document/u/0/")
 });
+
 mapkey('oGI', '#7 open gist', function () {
     window.location.replace("https://gist.github.com/")
 });
@@ -1127,7 +1134,7 @@ mapkey('<Shift-[>', '한페이지 뒤로이동(주소창 숫자 감소)', functi
 //     pageHeadLine = document.querySelectorAll(".wp_syntax", ".wp_");
 //     pageHeadLine[stackAnswer].scrollIntoView();
 // },{domain: /\\pdf_viewer.html*/i});
-// mapkey('U', 'github readme up 스크롤 ', function () {
+// mapkey('U', 'github readme up 스크롤 ', function () ,{
 //     stackAnswer--;
 //     pageHeadLine = document.querySelectorAll(".answers");
 //     pageHeadLine[stackAnswer].scrollIntoView();
@@ -1269,4 +1276,3 @@ vmapkey('zT', "#7 web crolling", function () {
 // file pointer, file open counter, access right
 // shared lock , exclusive lock
 // mandatory, advisory
-
