@@ -81,6 +81,8 @@ mapkey(',s', 'opne new tab and split', function () {
 
 // FIXME: it doesn't work
 imap('jj', "<Esc>");
+imap('<Ctrl-[>', "<Esc>");
+vmap('<Ctrl-[>', "<Esc>");
 aceVimMap('jj', '<Esc>', 'insert');
 
 // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
