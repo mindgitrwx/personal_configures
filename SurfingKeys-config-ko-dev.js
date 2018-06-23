@@ -47,8 +47,8 @@ function isFullScreen()
 
 (function requestFullScreen(element)
 {
-    if (element.requestFullscreen)
-        element.requestFullscreen();
+    if (element.requestFullScreen)
+        element.requestFullScreen();
     else if (element.msRequestFullscreen)
         element.msRequestFullscreen();
     else if (element.mozRequestFullScreen)
