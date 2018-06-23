@@ -188,7 +188,7 @@ addSearchAliasX('wO', '순서', 'https://www.google.com/search?q=order+of+');
 addSearchAliasX('wP', '문제', 'https://www.google.com/search?q=problem+of+');
 addSearchAliasX('wQ', '질문', 'https://www.google.com/search?q=questions+of+');
 addSearchAliasX('wR', '랭킹', 'https://www.google.com/search?q=rank+of+');
-addSearchAliasX('wS', '공통점', 'https://www.google.com/search?q=common+point+of+');
+addSearchAliasX('wS', '공통점', 'https://www.google.com/search?q=common+point+of+')k
 addSearchAliasX('wT', '표', 'https://www.google.com/search?q=q=table+of+');
 addSearchAliasX('wU', '사용예', 'https://www.google.com/search?q=usage+of+');
 // addSearchAliasX('wW', '사용예', 'https://www.google.com/search?q=usage+of+'); //  w에만 지나치게 만이 추가 가능 
