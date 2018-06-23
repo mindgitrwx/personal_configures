@@ -36,47 +36,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // conventions: TODO, FIXME, REFACT
 
-// AUTO FullScreen 
-function isFullScreen()
-{
-    return (document.fullScreenElement && document.fullScreenElement !== null)
-         || document.mozFullScreen
-         || document.webkitIsFullScreen;
-}
-
-
-(function requestFullScreen(element)
-{
-    if (element.requestFullScreen)
-        element.requestFullScreen();
-    else if (element.msRequestFullscreen)
-        element.msRequestFullscreen();
-    else if (element.mozRequestFullScreen)
-        element.mozRequestFullScreen();
-    else if (element.webkitRequestFullscreen)
-        element.webkitRequestFullscreen();
-})();
-
-function exitFullScreen()
-{
-    if (document.exitFullscreen)
-        document.exitFullscreen();
-    else if (document.msExitFullscreen)
-        document.msExitFullscreen();
-    else if (document.mozCancelFullScreen)
-        document.mozCancelFullScreen();
-    else if (document.webkitExitFullscreen)
-        document.webkitExitFullscreen();
-}
-
-function toggleFullScreen(element)
-{
-    if (isFullScreen())
-        exitFullScreen();
-    else
-        requestFullScreen(element || document.documentElement);
-}
-
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
 var namuPage    = 0;
     wikiPage    = 0;
