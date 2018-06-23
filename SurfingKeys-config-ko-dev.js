@@ -79,9 +79,9 @@ mapkey(',s', 'opne new tab and split', function () {
 });
 //TODO: making spell check ,ts 
 
-
-imap('jj', '<ESC>'); 
-imap('jk', '<ESC>'); 
+// FIXME: it doesn't work
+imap('jj', "<Esc>");
+aceVimMap('jk', '<Esc>', 'insert');
 
 // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
 removeSearchAliasX('b')
