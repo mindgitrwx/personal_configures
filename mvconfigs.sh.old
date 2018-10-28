@@ -1,0 +1,6 @@
+cp -r  ~/personal_configures/nvim ~/.config/nvim
+cp -r  ~/personal_configures/settings.json ~/.config/Code/User/settings.json
+cp -r  ~/personal_configures/.spacemacs ~/.spacemacs
+cp -r  ~/personal_configures/.zshrc ~/.zshrc
+cp -r  ~/personal_configures/.ideavimrc ~/.ideavimrc
+./vscode_installed_extensions.sh
