@@ -4,4 +4,6 @@ cp -r  .spacemacs ~/.spacemacs
 cp -r  .zshrc ~/.zshrc
 cp -r  .ideavimrc ~/.ideavimrc
 cp -r  settings.json ~/.config/Code/User/settings.json
+source ~/.zshrc
+source ~/.ideavimrc
 ./vscode_installed_extensions.sh
