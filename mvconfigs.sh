@@ -1,3 +1,4 @@
+XKBOPTIONS=ctrl:nocaps >> /etc/default/keyboard
 cp -r  nvim ~/.config/nvim
 cp -r  settings.json ~/.config/Code/User/settings.json
 cp -r  .spacemacs ~/.spacemacs
