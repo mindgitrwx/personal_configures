@@ -1,11 +1,12 @@
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
+#R
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-#sudo apt-get install curl
-#sudo curl -sf -L https://static.rust-lang.org/rustup.sh | sh
-#sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-#sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
-#sudo apt install r-base
+sudo apt-get install curl
+sudo curl -sf -L https://static.rust-lang.org/rustup.sh | sh
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
+sudo apt install r-base
 
 #keyboard
 sudo apt-get install gnome-tweak-tool
