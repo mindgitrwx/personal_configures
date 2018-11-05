@@ -9,3 +9,4 @@ cp -r  settings.json ~/.config/Code/User/settings.json
 source ~/.zshrc
 source ~/.ideavimrc
 ./vscode_installed_extensions.sh
+vim -c 'PluginInstall' -c 'qa!'

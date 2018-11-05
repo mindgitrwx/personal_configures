@@ -1,5 +1,3 @@
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
 #R
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 sudo apt-get install curl
@@ -16,8 +14,8 @@ sudo apt-get update
 sudo apt install python3-dev python3-pip
 sudo apt install python-dev python-pip
 sudo pip3 install -U virtualenv
-virtualenv --system-site-packages -p python3 ./venv
-source ./venv/bin/activate  # sh, bash, ksh, or zsh
+#virtualenv --system-site-packages -p python3 ./venv
+#source ./venv/bin/activate  # sh, bash, ksh, or zsh
 pip install --upgrade pip
 pip list  # show packages installed within the virtual environment
 deactivate
@@ -41,3 +39,9 @@ cd ~
 mv .emacs.d .emacs.d.bak
 mv .emacs .emacs.bak
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+#zsh installs
+sudo apt-get install zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
+
