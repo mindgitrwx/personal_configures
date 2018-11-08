@@ -1,3 +1,11 @@
+#vim like live installs
+#terminal hacks
+sudo apt-get install neovim
+sudo apt-get install ranger
+sudo apt-get install libopenjp2-7
+sudo apt-get install mupdf mupdf-tools
+sudo apt-get install tmux
+
 #R
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 sudo apt-get install curl
@@ -33,14 +41,6 @@ rm -rf /usr/local/texlive/2018
 rm -rf ~/.texlive2018
 sudo apt-get install texlive
 
-#vim like live installs
-#terminal hacks
-sudo apt-get install neovim
-sudo apt-get install ranger
-sudo apt-get install libopenjp2-7
-sudo apt-get install mupdf mupdf-tools
-sudo apt-get install tmux
-
 #emacs installs
 sudo apt-get install emacs
 cd ~
@@ -51,13 +51,21 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 #configs run
 sudo ./mvconfigs.sh
 
-#zsh installs
-sudo apt-get install zsh
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
 #shell check installs
 sudo apt-get install shellcheck
 
 #reddit terminal viewr
 sudo apt-get install rtv
+
+# LMAP install
+sudo apt install tasksel
+sudo tasksel install lamp-server
+
+# npm install
+sudo apt-get install npm
+
+#zsh installs
+sudo apt-get install zsh
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
 

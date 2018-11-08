@@ -1,6 +1,6 @@
 XKBOPTIONS=ctrl:nocaps >> /etc/default/keyboard
 
-cp -n  nvim ~/.config/nvim
+cp -r  nvim ~/.config/nvim
 cp -r  settings.json ~/.config/Code/User/settings.json
 cp -r  .spacemacs ~/.spacemacs
 cp -r  Surfingkeys-config-ko.js ~/.surfingkeys.js
