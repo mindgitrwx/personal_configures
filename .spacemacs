@@ -307,8 +307,11 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   )
-
 (defun dotspacemacs/user-config ()
+  ;;Exit insert mode by pressing j and then j quickly
+  (setq key-chord-two-keys-delay 0.5)
+  (key-chord-define evil-insert-state-map "jj" 'evil-normal-state)
+  (key-chord-mode 1)
   "Configuration function for user code.
 This function is called at the very end of Spacemacs initialization after
 layers configuration.

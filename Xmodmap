@@ -1,0 +1,18 @@
+! Swap Caps_Lock and Control_L
+! https://superuser.com/questions/268269/how-to-swap-ctrl-and-caps-lock-using-xmodmap
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L
+
+! vim arrow keybinding
+keycode 133 = Mode_switch
+keysym h = h H Left
+keysym l = l L Right
+keysym k = k K Up
+keysym j = j J Down
+
+
+
