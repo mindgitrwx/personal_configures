@@ -36,15 +36,15 @@ sudo apt-get update
 #virtualenv --system-site-packages -p python3 ./venv
 #source ./venv/bin/activate  # sh, bash, ksh, or zsh
 
-pip install --upgrade pip
-pip list  # show packages installed within the virtual environment
+sudo pip install --upgrade pip
+sudo pip list  # show packages installed within the virtual environment
 
-pip install howdoi
-pip install --upgrade tensorflow-gpu
+sudo pip install howdoi
+sudo pip install --upgrade tensorflow-gpu
 
 #tex live installs
-rm -rf /usr/local/texlive/2018
-rm -rf ~/.texlive2018
+sudo rm -rf /usr/local/texlive/2018
+sudo rm -rf ~/.texlive2018
 sudo apt-get install texlive
 
 #emacs installs
@@ -52,7 +52,7 @@ sudo apt-get install emacs
 cd ~
 mv .emacs.d .emacs.d.bak
 mv .emacs .emacs.bak
-git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+sudo git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 #configs run
 sudo ./mvconfigs.sh

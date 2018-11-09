@@ -21,6 +21,9 @@ sudo su -c "echo -n 0x02 > /sys/module/hid_apple/parameters/fnmode"
 echo options hid_apple fnmode=2 | sudo tee -a /etc/modprobe.d/hid_apple.conf
 sudo update-initramfs -u -k all
 
+# keyboard setting
+xmodmap Xmodmap
+
 emacs README.md
 
 
