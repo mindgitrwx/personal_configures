@@ -23,18 +23,24 @@ sudo apt-get install nabi
 sudo xmodmap Xmodmap
 
 #python
-sudo apt-get update
-sudo apt install python3-dev python3-pip
-sudo apt install python-dev python-pip
-sudo pip3 install -U virtualenv
+#sudo apt-get update
+#sudo apt install python3-dev
+#sudo apt install python-dev
 
+#python
+#sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+#python get-pip.py
+#sudo apt-get update
+#sudo apt install python3-dev python3-pip
+#sudo apt install python-dev python-pip
 #virtualenv --system-site-packages -p python3 ./venv
 #source ./venv/bin/activate  # sh, bash, ksh, or zsh
-pip install --upgrade pip
-pip list  # show packages installed within the virtual environment
-deactivate
-pip install howdoi
-pip install --upgrade tensorflow-gpu
+
+# pip install --upgrade pip
+# pip list  # show packages installed within the virtual environment
+
+# pip install howdoi
+# pip install --upgrade tensorflow-gpu
 
 #tex live installs
 rm -rf /usr/local/texlive/2018
