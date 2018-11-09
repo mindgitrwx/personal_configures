@@ -1,12 +1,12 @@
 XKBOPTIONS=ctrl:nocaps >> /etc/default/keyboard
 
-cp -r  nvim ~/.config/nvim
-cp -r  settings.json ~/.config/Code/User/settings.json
-cp -r  .spacemacs ~/.spacemacs
-cp -r  Surfingkeys-config-ko.js ~/.surfingkeys.js
-cp -r  .zshrc ~/.zshrc
-cp -r  .ideavimrc ~/.ideavimrc
-cp -r  settings.json ~/.config/Code/User/settings.json
+sudo cp -r  nvim ~/.config/nvim
+sudo cp -r  settings.json ~/.config/code/user/settings.json
+sudo cp -r  .spacemacs ~/.spacemacs
+sudo cp -r  surfingkeys-config-ko.js ~/.surfingkeys.js
+sudo cp -r  .zshrc ~/.zshrc
+sudo cp -r  .ideavimrc ~/.ideavimrc
+sudo cp -r  settings.json ~/.config/code/user/settings.json
 
 source ~/.zshrc
 source ~/.ideavimrc
