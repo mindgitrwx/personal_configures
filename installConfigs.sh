@@ -73,6 +73,9 @@ sudo apt-get install npm
 # For window move 
 sudo apt-get install compizconfig-settings-manager compiz-plugins-extra
 
+# For Youtube video streaming 
+sudo apt-get install ffmpeg
+
 #zsh installs
 sudo apt-get install zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
