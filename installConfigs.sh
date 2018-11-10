@@ -22,6 +22,8 @@ sudo apt-get install xev
 sudo apt-get install nabi
 sudo xmodmap Xmodmap
 
+Modified-by: root <hybridkernal@gmail.com>
+
 # For clipboard  
 sudo apt-get xclip
 
