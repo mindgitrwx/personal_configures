@@ -59,6 +59,7 @@ values."
    dotspacemacs-additional-packages '(
                                       restart-emacs
                                       magit
+                                      howdoi
                                       ranger
                                       latex-preview-pane 
                                       latex-math-preview 

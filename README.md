@@ -1,5 +1,15 @@
 # This is just start from scratch
 
+# How to run this configure?
+
+tested on ubuntu 18.04
+
+clone this project on your home directory
+
+run  `~/personal_configures/installConfigs.sh`
+
+and run `~/personal_configures/mvconfigs.sh`
+
 # VimSetting
 
 ## ideavimrc 
