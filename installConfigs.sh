@@ -22,6 +22,9 @@ sudo apt-get install xev
 sudo apt-get install nabi
 sudo xmodmap Xmodmap
 
+# For clipboard  
+sudo apt-get xclip
+
 #python
 sudo apt-get update
 sudo apt install python3-dev
@@ -62,6 +65,8 @@ sudo apt-get install shellcheck
 
 #reddit terminal viewr
 sudo apt-get install rtv
+sudo apt-get install ruby-dev
+gem install t # twiiter 
 
 # LMAP install
 sudo apt install tasksel
@@ -74,8 +79,10 @@ sudo apt-get install npm
 sudo apt-get install compizconfig-settings-manager compiz-plugins-extra
 
 # For Youtube video streaming 
+sudo apt-get install mesa-utills
 sudo apt-get install ffmpeg
-
+sudo add-apt-repository ppa:obsproject/obs-studio
+sudo apt-get install obs-studio
 #zsh installs
 sudo apt-get install zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
