@@ -5,7 +5,7 @@ sudo apt-get install ranger
 sudo apt-get install libopenjp2-7
 sudo apt-get install mupdf mupdf-tools
 sudo apt-get install tmux
-
+sudo apt-get install gawk m4 libglib2.0-dev libwxgtk3.0-dev cmake g++ git
 #R
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 sudo apt-get install curl
