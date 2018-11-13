@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="ys"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -61,9 +61,17 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+# sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 plugins=(
   git
+  zsh-syntax-highlighting
+  vscode
+  vi-mode
+  tmux
+  google
 )
+
+ZSH_TMUX_AUTOSTART=true
 
 source $ZSH/oh-my-zsh.sh
 
@@ -398,3 +406,6 @@ sd ()
 {
  cal -y | GREP_COLORS="mt=07;32" \grep --color=always -EC 4 " 1 |^1 |^1 " | GREP_COLORS="sl=11;33:mt=07;33" \grep --color=always -B2 -A6 '[A-Z][a-z] '
 }
+
+
+#Terminal

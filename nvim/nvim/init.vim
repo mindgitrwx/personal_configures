@@ -20,6 +20,9 @@ filetype off                " force reloading *after* pathogen loaded
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" set the system clipboard
+set clipboard=unnamed
+
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 

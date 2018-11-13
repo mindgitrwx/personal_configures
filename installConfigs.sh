@@ -70,12 +70,16 @@ sudo apt-get install rtv
 sudo apt-get install ruby-dev
 gem install t # twiiter 
 
-# LMAP install
+# LMAP install Apache mysql php
 sudo apt install tasksel
 sudo tasksel install lamp-server
 
 # npm install
 sudo apt-get install npm
+
+# For compiler
+sudo apt-get install llvm
+sudo apt-get install clang
 
 # For window move 
 sudo apt-get install compizconfig-settings-manager compiz-plugins-extra
