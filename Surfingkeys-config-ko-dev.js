@@ -443,7 +443,7 @@ mapkey('yG', '#7 git clone', function () {
     Clipboard.write(window.location.href + '.git');
 }, {
     domain: /github\.com/i
-});
+}); 
 
 mapkey('yE', '#7 Yank Element info. copy link element id or classname', function () {
     var linksToYank = [];
@@ -1267,7 +1267,7 @@ vmapkey('zT', "#7 web crolling", function () {
 //2018-06-14 21: 27: 49
 // ^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$
 // email regex: /^(([^<>()
-\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+//\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 //
 //<div>
 //  <img id="image" width="100" src="https://placehold.it/100x100?text=✔">
