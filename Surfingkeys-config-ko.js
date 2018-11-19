@@ -1270,7 +1270,7 @@ vmapkey('zT', "#7 web crolling", function () {
 // name, type, location, protection, useridentifiery size
 
 // file- sequence of byte
-// certain directory sstructure
+// certain directory structure
 
 // file pointer, file open counter, access right
 // shared lock , exclusive lock

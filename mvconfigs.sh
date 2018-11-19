@@ -27,6 +27,12 @@ sudo update-initramfs -u -k all
 # keyboard setting
 xmodmap Xmodmap
 
+# taskbar setting
+gsettings set org.gnome.shell.extensions.dash-to-dock extend-height false
+gsettings set org.gnome.shell.extensions.dash-to-dock dock-position BOTTOM
+gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode FIXED
+gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 24
+gsettings set org.gnome.shell.extensions.dash-to-dock unity-backlit-items true
 
 # spacemacs plugins install automatically
 emacs README.md

@@ -1021,6 +1021,20 @@ mapkey('l', 'slidePlayer next page', function () {
     domain: /slideplayer\.com/i
 });
 
+//
+mapkey('h', 'slideshare previous page', function () {
+    slidePage--;
+    document.getElementById('btnPrevious').click();
+}, {
+    domain: /www\.slideshare\.net/i
+});
+mapkey('l', 'slideshare next page', function () {
+    slidePage++;
+    document.getElementById('stage_slide_carousel').click();
+}, {
+    domain: /www\.slideshare\.net/i
+});
+
 // TODO: 잘 동작하지 않음 (이미 단축키가 assign 되어 있는 사이트라서 그런 것 처럼 보임)
 mapkey('[', 'google book previous page', function () {
     document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-left').click();

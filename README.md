@@ -1,8 +1,10 @@
-# This is just start from scratch
+### (This is just start from scratch)
 
-# How to run this configure?
+# Enviroment
 
-tested on ubuntu 18.04
+This configure is on ubuntu 18.04
+
+# QickStart
 
 run  `~/personal_configures/installConfigs.sh`
 
