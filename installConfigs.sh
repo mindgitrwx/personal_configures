@@ -95,8 +95,11 @@ sudo apt-get install ffmpeg
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt-get install obs-studio
 
-# Monitoring tool
-bash <(curl -Ss https://my-netdata.io/kickstart.sh)
+# Monitoring tool 
+bash <(curl -Ss https://my-netdata.io/kickstart.sh) #Operating system
+sudo apt-get install bmon
+sudo apt-get install iftop
+sudo apt-get install nettop
 
 #zsh installs
 sudo apt-get install zsh

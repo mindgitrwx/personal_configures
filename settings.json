@@ -637,9 +637,6 @@
             }]
         },
     ],
-
-
-    "window.zoomLevel"                        : -3,
     "git.autofetch"                           : true,
     "editor.accessibilitySupport"             : "off",
     "gitlens.historyExplorer.enabled"         : true,
@@ -658,7 +655,7 @@
         }
     },
     "workbench.colorTheme": "Default Light+",
-    "editor.fontSize"     : 18,
+    "editor.fontSize"     : 12,
     "editor.tabSize"      : 4,
     "cSpell.words"        : [
         "domain"
