@@ -438,6 +438,13 @@ mapkey('yg', '#7 git clone', function () {
     domain: /github\.com/i
 });
 
+//TODO: git clone , get id
+mapkey('yG', '#7 git clone', function () {
+    Clipboard.write(window.location.href + '.git');
+}, {
+    domain: /github\.com/i
+});
+
 mapkey('yE', '#7 Yank Element info. copy link element id or classname', function () {
     var linksToYank = [];
     Hints.create("", function (element) {

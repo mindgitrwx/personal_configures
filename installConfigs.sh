@@ -94,12 +94,16 @@ sudo apt-get install mesa-utills
 sudo apt-get install ffmpeg
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt-get install obs-studio
+sudo add-apt-repository -y ppa:samrog131/ppa # Keystroke visualizer
+sudo apt-get update
+sudo apt-get install keystroke
 
 # Monitoring tool 
 bash <(curl -Ss https://my-netdata.io/kickstart.sh) #Operating system
 sudo apt-get install bmon
 sudo apt-get install iftop
 sudo apt-get install nettop
+sudo apt-get install netdata
 
 #zsh installs
 sudo apt-get install zsh
