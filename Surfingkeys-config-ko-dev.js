@@ -996,15 +996,15 @@ mapkey('gc', "#7 goto comment element", function () {
 });
 // 
 
-mapkey('h', '', function () {
+/*mapkey('h', '', function () {
     slidePage++;
     document.getElementById('btnPrevious').click();
 }, {
     domain: /www\.slideshare\.net/i
 });
+*/
 
 // page 양 옆으로 넘길 수 있도록 하기
-// TODO: slidePlayer 사이트 추가하기 
 mapkey('h', 'slideshare previous page', function () {
     slidePage--;
     document.getElementById('btnPrevious').click();
