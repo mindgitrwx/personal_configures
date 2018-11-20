@@ -143,6 +143,7 @@ addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/sea
 addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
 addSearchAliasX('gH', 'github', 'https://github.com/search?q=');
 addSearchAliasX('ghS', 'githubStars', 'https://github.com/mindgitrwx?page=1&q=face&tab=stars&utf8=%E2%9C%93&utf8=%E2%9C%93&q=');
+addSearchAliasX('ss', 'slideshare', 'https://www.slideshare.net/search/slideshow?searchfrom=header&q=');
 
 //language -- 
 //
@@ -228,7 +229,7 @@ addSearchAliasX('dD', '다음 사전all', 'http://dic.daum.net/search.do?q=');
 addSearchAliasX('dE', '다음 사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 addSearchAliasX('dM', '다음 map', 'http://local.daum.net/map/index.jsp?q=');
 
-//shop : without amazon, all the sites are korean-specific sites.
+//Shopping : without amazon, all the sites are korean-specific sites.
 addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
 addSearchAliasX('sA', 'shop아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민 
 addSearchAliasX('sC', 'shop 쿠팡', 'http://www.coupang.com/np/search?component=&q=');
