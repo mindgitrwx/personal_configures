@@ -295,14 +295,21 @@ function handlePaste(e) {
 }
 
 // FIXME: focus 관련 명령어는 바로 redirect 되지 않음
-mapkey('osA', '#7 open stackoverflow write', function () {
+mapkey('osA', '#7 open stackoverflow ask', function () {
     window.location.replace("https://stackoverflow.com/questions/ask");
     //It cannot be happened document.getElementById('title').focus();      // 제목에 포커스
     //
     //document.getElementById('wmd-input').focus();
 });
 
-mapkey('oSA', '#7 open stackoverflow write', function () {
+mapkey('ouA', '#7 open ubuntu ask', function () {
+    window.location.replace("https://askubuntu.com/questions/ask");
+    //It cannot be happened document.getElementById('title').focus();      // 제목에 포커스
+    //
+    //document.getElementById('wmd-input').focus();
+});
+
+mapkey('oSA', '#7 open stackoverflow ask', function () {
     window.location.replace("https://stackoverflow.com/questions/ask").getElementById('wmd-input').addEventListener('paste', handlePaste).focus();
     // It cannot be happened
     // document.getElementById('wmd-input').addEventListener('paste',handlePaste).focus();
