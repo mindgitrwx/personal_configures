@@ -43,8 +43,6 @@ var namuPage    = 0;
     naverAnswer = 0;
     codeWrapper = 0;
     lineNum     = 0;
-    slidePage   = 0;
-// -----------------------------------------------------
 // 중괄호 닫기용
 var linkCounter = 0;
 
@@ -86,10 +84,10 @@ vmap('<Ctrl-[>', "<Esc>");
 aceVimMap('jj', '<Esc>', 'insert');
 
 // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
-removeSearchAliasX('b')
-removeSearchAliasX('g')
-removeSearchAliasX('w')
-removeSearchAliasX('s')
+removeSearchAliasX('b');
+removeSearchAliasX('g');
+removeSearchAliasX('w');
+removeSearchAliasX('s');
 
 // for surfingkeys PDF autokey-----------------------------------------
 map('<Shift-1>', 'fs'); // 잘 되는 느낌은 아님

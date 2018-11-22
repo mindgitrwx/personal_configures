@@ -20,12 +20,17 @@ sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic
 sudo apt install r-base
 
 #keyboard
-sudo apt-get install gnome-tweak-tool
-sudo bash -c "echo 2 > /sys/module/hid_apple/parameters/fnmode" # fn key as intuitive
-sudo apt-get install xbindkeys
-sudo apt-get install xev
-sudo apt-get install nabi
-sudo xmodmap Xmodmap
+read -p "Do you want to use keyboard configure of mindgit?" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    sudo apt-get install gnome-tweak-tool
+    sudo bash -c "echo 2 > /sys/module/hid_apple/parameters/fnmode" # fn key as intuitive
+    sudo apt-get install xbindkeys
+    sudo apt-get install xev
+    sudo apt-get install nabi
+    sudo xmodmap Xmodmap
+fi
 
 Modified-by: root <hybridkernal@gmail.com>
 
@@ -36,6 +41,7 @@ sudo apt-get xclip
 sudo apt-get update
 sudo apt install python3-dev
 sudo apt install python-dev
+sudo apt-get install graphviz
 
 #python
 sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -53,16 +59,27 @@ sudo pip install howdoi
 sudo pip install --upgrade tensorflow-gpu
 
 #tex live installs
-sudo rm -rf /usr/local/texlive/2018
-sudo rm -rf ~/.texlive2018
-sudo apt-get install texlive
+read -p "Are you want to install texlive?" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    sudo rm -rf /usr/local/texlive/2018
+    sudo rm -rf ~/.texlive2018
+    sudo apt-get install texlive   
+fi
+
 
 #emacs installs
-sudo apt-get install emacs
-cd ~
-mv .emacs.d .emacs.d.bak
-mv .emacs .emacs.bak
-sudo git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+read -p "Do you want to install emacs?" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    sudo apt-get install emacs
+    cd ~
+    mv .emacs.d .emacs.d.bak
+    mv .emacs .emacs.bak
+    sudo git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+fi
 
 #configs run
 sudo ./mvconfigs.sh
