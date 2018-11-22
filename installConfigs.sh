@@ -32,8 +32,6 @@ then
     sudo xmodmap Xmodmap
 fi
 
-Modified-by: root <hybridkernal@gmail.com>
-
 # For clipboard  
 sudo apt-get xclip
 
