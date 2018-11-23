@@ -19,7 +19,10 @@ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD
 sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
 sudo apt install r-base
 
-#keyboard
+#Markdown
+sudo apt-get install pandoc
+
+#Keyboard
 read -p "Do you want to use keyboard configure of mindgit?" -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]

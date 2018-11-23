@@ -1,8 +1,14 @@
-### (This is just start from scratch)
+### Pre Alpha version
+
+Download | Linux & macOS | Windows | Dependencies | Build system | Source
+-------- | ------------- | ------- | ------------ | ------------ | ------
+(black)  | (blank)       | (blank) | (blank)      | (blank)      | (blank)
 
 # Enviroment
 
-This configure is on ubuntu 18.04
+This configure is tested on ubuntu 18.04
+
+Feel free to ask install issue.
 
 # QickStart
 
@@ -21,6 +27,7 @@ for  Intellij editor.
 I have used this vimrc: https://gist.github.com/millermedeiros/1262085
 
 location `~/.vimrc`
+
 
 # VSCDOE
 
@@ -43,8 +50,16 @@ example: `vscode_installed_extensions.txt `
 
 To be continued...
 
-# Surfingkeys-config-ko.js  
+# Surfingkeys-config-ko.js 
+
+Surfingkeys is one of the best chrome extension I ever used. 
+
+I added some features for surfingkeys for Korean.
+
+And some useful ergonomics features also added.
+
 (google chrome vim binding) - surfingkeys
+
 
 # Auto Text Expander setting json
 (google chrome Auto Text Expander setting.) 
