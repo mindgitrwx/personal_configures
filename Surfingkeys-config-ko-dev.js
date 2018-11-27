@@ -204,7 +204,7 @@ addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=
 addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
 
 //naver : naver is one of the most famous potal site of korea
-addSearchAliasX('N', 'naver', 'https://www.naver.com/?query=');
+addSearchAliasX('N', 'naver', 'https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=');
 addSearchAliasX('nM', 'navermap', 'https://map.naver.com/?query=');
 addSearchAliasX('nA', 'naver all 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
 addSearchAliasX('nD', 'naver Dictionary 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
