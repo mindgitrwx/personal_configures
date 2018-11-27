@@ -320,6 +320,18 @@ mapkey('oGI', '#7 open gist', function () {
     window.location.replace("https://gist.github.com/")
 });
 
+mapkey('oP', '#7 open pastebin', function () {
+    window.location.replace("https://pastebin.com/")
+});
+
+mapkey('oP', '#7 open pastebin', function () {
+    window.location.replace("https://pastebin.com/")
+});
+
+mapkey('oK', '#7 open kindle', function () {
+    window.location.replace("https://read.amazon.com/")
+});
+
 //news 
 //knowledge
 //blog
