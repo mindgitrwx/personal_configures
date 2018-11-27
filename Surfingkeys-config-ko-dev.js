@@ -255,7 +255,7 @@ addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 
 //papaers
 addSearchAliasX('pG', 'paper 구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
-addSearchAliasX('pB', 'paper (biology) nCBI', 'https: //www.ncbi.nlm.nih.gov/search/?term=');
+addSearchAliasX('pB', 'paper (biology) nCBI', 'https://www.ncbi.nlm.nih.gov/search/?term=');
 addSearchAliasX('pR', 'paper RISS', 'http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=');
 addSearchAliasX('pE', 'paper ELSEVIER', 'https://www.elsevier.com/search-results?query=');
 addSearchAliasX('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
