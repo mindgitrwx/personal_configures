@@ -960,82 +960,15 @@ mapkey('gV', 'Volume click ', function () {
 });
 //end of amazon
 
-// goto comment - Usually comments are in textarea format
-//TODO: TEST This for disqus, and integrate all the ways of move comment if possible
-mapkey('gT', 'Goto Text Area', function () {
-    documents.getElementsByClassName('.textarea')[0].click();
-});
-
-mapkey('gtT', 'Goto comment and click', function () {
-
-    documents.getElementById('comment').click(); // focus, comment?
-});
-// TODO: 두개 이상일 때는 어떻게 처리할 지 생각하기. 그리고 memo라는 id가 보편적인 id인지 생각하기 
-mapkey('gm', "#7 goto memo element", function () {
-    pageHeadLine = document.getElementById("memo");
-    pageHeadLine.scrollIntoView();
-});
-// TODO: 동작 확인하기 - 동작하지 않음 
-mapkey('gc', "#7 goto comment element", function () {
-    element = documents.querySelectorAll('textarea')[0];  // focus, comment?
-    Normal.passFocus(true);
-    elements[0].focus();
-    Insert.enter(elements[0]);
-});
 // 
-
-/*mapkey('h', '', function () {
-    slidePage++;
-    document.getElementById('btnPrevious').click();
-}, {
-    domain: /www\.slideshare\.net/i
-});
-*/
-
 // page 양 옆으로 넘길 수 있도록 하기
 mapkey('h', 'slideshare previous page', function () {
-    slidePage--;
     document.getElementById('btnPrevious').click();
-}, {
-    domain: /www\.slideshare\.net/i
-});
+}, {domain: /www\.slideshare\.net/i});
 mapkey('l', 'slideshare next page', function () {
-    slidePage++;
     document.getElementById('btnNext').click();
-}, {
-    domain: /www\.slideshare\.net/i
-});
+}, {domain: /www\.slideshare\.net/i});
 
-// FIXME: 동작하지 않음
-mapkey('h', 'slidePlayer previous page', function () {
-
-    var myVar = document.querySelectorAll('.component_container.control_panel img');
-    myVar[1].click();
-}, {
-    domain: /slideplayer\.com/i
-});
-
-// FIXME: 버튼을 눌러야 동작 동작하지 않음
-mapkey('l', 'slidePlayer next page', function () {
-
-    var myVar = document.querySelectorAll('.component_container.control_panel img');
-    myVar[3].click();
-}, {
-    domain: /slideplayer\.com/i
-});
-
-
-// TODO: 잘 동작하지 않음 (이미 단축키가 assign 되어 있는 사이트라서 그런 것 처럼 보임)
-mapkey('[', 'google book previous page', function () {
-    document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-left').click();
-}, {
-    domain: /play\.google\.com\/books/i
-});
-mapkey(']', 'google book next page', function () {
-    document.getElementsByClassName('gb-pagination-controls.gb-pagination-controls-right').click();
-}, {
-    domain: /play\.google\.com\/books/i
-});
 // skipControl sc-ir playControls__control playControls__prev skipControl__previous
 // skipControl sc-ir playControls__control playControls__next skipControl__next
 // sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive
