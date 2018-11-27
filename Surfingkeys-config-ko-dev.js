@@ -2,8 +2,6 @@
 //
 // Korean Specific Surfing Keys config
 // Version - 1.0 - debug copy all tab urls 
-//
-// Surfing keys config (SurfingKeys)                                                            //
 // Korean specific surfing key config                                                           //
 // Please copy this url to text box [load settings from:], and 'Save'                           //
 // https:   raw.githubusercontent.com/mindgitrwx/gitconventions/master/SurfingKeys-config-ko.js //
@@ -22,9 +20,9 @@
 //                                                                                                                    //
 // email:jonghyeon.rw@gmail.com                                                                                       //
 //                                                                                                                    //
-// 앞으로 만들고자 하는 기능 - visualmode에서 복사를 할 시 바로 구글 번역한 후 Clipboard로 넘기는 기능
+// 앞으로 만들고자 하는 기능 - visualmode 에서 복사를 할 시 바로 구글 번역한 후 Clipboard로 넘기는 기능
 //                         - Q에서 쓰여지는 사전 데이터의 변경 
-//                         - stackoverflow에서 검색시 바로 첫번째 결과의 pre데이터를 Clipboard로 넘기는 기능  
+//                         - stackoverflow 에서 검색시 바로 첫번째 결과의 pre데이터를 Clipboard로 넘기는 기능  
 //                         - 구글 검색시 불필요한 정보를 지워주고자 하는 기능 
 //                         - Chrome 상에서 cmd를 열수 있는 것으로 보이는 데 그걸 이용해서 무엇인가를 진행하는 것 
 //                         -  상에서 cmd를 열수 있는 것으로 보이는 데 그걸 이용해서 무엇인가를 진행하는 것 
@@ -55,12 +53,6 @@ settings.omnibarSuggestion   = true;
 settings.defaultSearchEngine = 'L';                          // Google I'm Feeling Luckey
 settings.nextLinkRegex       = /((forward|>>|next)+)/i;
 settings.prevLinkRegex       = /((back|<<|prev(ious)?)+)/i;
-//google search 바를 없애버림 
-elem = document.getElementById('searchform');
-if (elem !== null) {
-    elem.parentNode.removeChild(elem);
-}
-
 ////////////////////////////////
 // unmap default key mapings  //
 ////////////////////////////////
@@ -78,10 +70,8 @@ mapkey(',s', 'opne new tab and split', function () {
 //TODO: making spell check ,ts 
 
 // FIXME: it doesn't work
-imap('jj', "<Esc>");
 imap('<Ctrl-[>', "<Esc>");
 vmap('<Ctrl-[>', "<Esc>");
-aceVimMap('jj', '<Esc>', 'insert');
 
 // 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
 removeSearchAliasX('b');
@@ -1289,3 +1279,9 @@ vmapkey('zT', "#7 web crolling", function () {
 // file pointer, file open counter, access right
 // shared lock , exclusive lock
 // mandatory, advisory
+//google search 바를 없애버림 
+// elem = document.getElementById('searchform');
+// if (elem !== null) {
+//     elem.parentNode.removeChild(elem);
+// }
+
