@@ -451,7 +451,7 @@ mapkey('yg', '#7 git blog', function () {
     var githubId = address[0].replace(/(^\w+:|^)\/\//, '');
     var githubAddress = 'github.com' + '/' + githubId;
     Clipboard.write(githubAddress);
-    window.location.replace(githubAddress);
+    window.location.href(githubAddress);
 })
 
 //TODO: git clone , get id
