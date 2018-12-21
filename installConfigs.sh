@@ -5,8 +5,10 @@ sudo apt-get install neovim
 sudo apt-get install ranger
 sudo apt-get install libopenjp2-7
 sudo apt-get install mupdf mupdf-tools
+sudo apt-get install zathura 
 sudo apt-get install ack
 sudo apt-get install gawk m4 libglib2.0-dev libwxgtk3.0-dev cmake g++ git
+sudo apt-get install tty-clock
 
 sudo apt-get install s3fs # for amazon cloud access (cannot work properly)
 echo ACCESS_KEY:SECRET_KEY > ~/.passwd-s3fs
@@ -21,6 +23,9 @@ sudo apt install r-base
 
 #Markdown
 sudo apt-get install pandoc
+
+#Markdown
+sudo apt-get install tesseract-ocr
 
 #Keyboard
 read -p "Do you want to use keyboard configure of mindgit?" -n 1 -r
@@ -104,6 +109,16 @@ sudo apt-get install npm
 sudo apt-get install llvm
 sudo apt-get install clang
 
+# For timer, clock, time
+sudo apt-get install stopwatch
+
+# For image Capture
+sudo apt-get install shutter
+# sudo apt-get install kazam
+
+# For Documentation
+sudo apt-get install unoconv
+
 # For window move 
 sudo apt-get install compizconfig-settings-manager compiz-plugins-extra
 
@@ -114,14 +129,28 @@ sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt-get install obs-studio
 sudo add-apt-repository -y ppa:samrog131/ppa # Keystroke visualizer
 sudo apt-get update
-sudo apt-get install keystroke
-
-# Monitoring tool 
+sudo apt-get install keystroke # Monitoring tool
 bash <(curl -Ss https://my-netdata.io/kickstart.sh) #Operating system
 sudo apt-get install bmon
 sudo apt-get install iftop
 sudo apt-get install nettop
 sudo apt-get install netdata
+
+# cpp library
+sudo apt-get install libboost-all-dev
+sudo apt-get install libclang-dev
+
+# Inode tool 
+# wget -O ~/bin/inodes https://raw.smyl.es/inodes/master/inodes
+# chmod +x ~/bin/inodes
+
+#Mercurial
+sudo apt-get install mercurial # hg
+
+#hstr - 
+sudo add-apt-repository ppa:ultradvorka/ppa
+sudo apt-get update
+sudo apt-get install hstr
 
 #zsh installs
 sudo apt-get install zsh

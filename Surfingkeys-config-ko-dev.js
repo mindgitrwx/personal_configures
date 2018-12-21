@@ -46,7 +46,7 @@ var linkCounter = 0;
 
 // Properties list
 Hints.numericHints           = false;
-Hints.characters             = "asdfgqwertzxcvbyuiopmnhlk";  // remove j for esc (TODO: jj for esc when hints mode)
+Hints.characters             = "asdfgqwertzxcvbyuiopmnhlk";  // without j for esc (TODO: jj for esc when hints mode)
 Hints.scrollKeys             = "G";
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
@@ -160,7 +160,7 @@ addSearchAliasX('rD', 'redDit', 'https://www.reddit.com/search?q=');
 //shorten - what is.. who is.. where is..  
 addSearchAliasX('wA', 'advanced', 'https://www.google.com/search?q=advanced+');
 addSearchAliasX('wB', 'basic', 'https://www.google.com/search?q=basic+');
-addSearchAliasX('wC', '분류', 'https://www.google.com/search?q=classfication+of+');
+addSearchAliasX('wC', '분류', 'https://www.google.com/search?q=classification+of+');
 addSearchAliasX('wD', '차이점', 'https://www.google.com/search?q=difference+between+');
 addSearchAliasX('wE', '예제', 'https://www.google.com/search?q=example+of+');
 addSearchAliasX('wF', '어디서부터', 'https://www.google.com/search?q=where+from+');
@@ -324,8 +324,8 @@ mapkey('oP', '#7 open pastebin', function () {
     window.location.replace("https://pastebin.com/")
 });
 
-mapkey('oP', '#7 open pastebin', function () {
-    window.location.replace("https://pastebin.com/")
+mapkey('oGB', '#7 open google Book', function () {
+    window.location.replace("https://books.google.com/books?")
 });
 
 mapkey('oK', '#7 open kindle', function () {
@@ -445,6 +445,12 @@ mapkey('yg', '#7 git clone', function () {
 }, {
     domain: /github\.com/i
 });
+
+mapkey('yg', '#7 git blog', function () {
+    var address = window.location.href.split(".");
+    var githubId = address[0].replace(/(^\w+:|^)\/\//, '');
+    Clipboard.write('github.com' + '/' + githubId);
+})
 
 //TODO: git clone , get id
 mapkey('yG', '#7 git clone', function () {
@@ -1219,7 +1225,7 @@ vmapkey('zT', "#7 web crolling", function () {
 // name, type, location, protection, useridentifiery size
 
 // file- sequence of byte
-// certain directory sstructure
+// certain directory structure
 
 // file pointer, file open counter, access right
 // shared lock , exclusive lock
@@ -1229,4 +1235,5 @@ vmapkey('zT', "#7 web crolling", function () {
 // if (elem !== null) {
 //     elem.parentNode.removeChild(elem);
 // }
+
 

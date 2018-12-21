@@ -165,7 +165,8 @@ alias path='echo -e ${PATH//:/\\n}'
 #alias background='xv -root -quit -max -rmode 5' # 백그라운드 배경 그림
 #
 alias vi='vim'
-alias vi='vim'
+alias e='emacs'
+alias pdf='zathura'
 
 alias du='du -h'
 alias df='df -kh'
@@ -410,3 +411,4 @@ sd ()
 
 
 #Terminal
+

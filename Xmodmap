@@ -15,5 +15,38 @@ keysym l = l L Right
 keysym k = k K Up
 keysym j = j J Down
 
+! vim friendly Special Characters binding
+keysym a = a A exclam
+keysym s = s S at
+keysym d = d D numbersign
+keysym f = f F dollar  
+keysym g = g G percent  
+keysym y = y Y asciicircum  
+keysym u = u U ampersand  
+
+keysym q = q Q asterisk  
+keysym w = w W plus  
+keysym e = e E minus  
+keysym r = r R underscore  
+keysym b = b B underscore  
+
+keysym semicolon = semicolon colon equal  
+
+keysym comma = comma greater parenleft  
+keysym period = period less parenright  
+
+keysym i = i I braceleft 
+keysym o = o O braceright
+
+keysym comma = comma less parenleft  
+keysym period = period greater parenright  
+keysym slash = slash question question  
+
+keysym apostrophe = apostrophe quotedbl quotedbl
+keysym m = m M backslash
+
+!keysym space = space space backslash  
+
+
 
 

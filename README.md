@@ -28,8 +28,7 @@ I have used this vimrc: https://gist.github.com/millermedeiros/1262085
 
 location `~/.vimrc`
 
-
-# VSCDOE
+# VSCODE
 
 ## settings.json for VSCODE 
 (TODO: Sometimes settings.json text had been removed. fix it.)
