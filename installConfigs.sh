@@ -5,10 +5,10 @@ sudo apt-get install neovim
 sudo apt-get install ranger
 sudo apt-get install libopenjp2-7
 sudo apt-get install mupdf mupdf-tools
-sudo apt-get install zathura 
 sudo apt-get install ack
 sudo apt-get install gawk m4 libglib2.0-dev libwxgtk3.0-dev cmake g++ git
 sudo apt-get install tty-clock
+sudo apt-get install pcregrep
 
 sudo apt-get install s3fs # for amazon cloud access (cannot work properly)
 echo ACCESS_KEY:SECRET_KEY > ~/.passwd-s3fs
@@ -153,7 +153,7 @@ sudo apt-get update
 sudo apt-get install hstr
 
 #zsh installs
-sudo apt-get install zsh
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+
 
 

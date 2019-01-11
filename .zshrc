@@ -165,8 +165,7 @@ alias path='echo -e ${PATH//:/\\n}'
 #alias background='xv -root -quit -max -rmode 5' # 백그라운드 배경 그림
 #
 alias vi='vim'
-alias e='emacs'
-alias pdf='zathura'
+alias vi='vim'
 
 alias du='du -h'
 alias df='df -kh'
@@ -409,6 +408,29 @@ sd ()
  cal -y | GREP_COLORS="mt=07;32" \grep --color=always -EC 4 " 1 |^1 |^1 " | GREP_COLORS="sl=11;33:mt=07;33" \grep --color=always -B2 -A6 '[A-Z][a-z] '
 }
 
+alias E="SUDO_EDITOR=\"emacsclient -t -a emacs\" sudoedit"
 
-#Terminal
+e()   {sudo emacs "$1"}
+pdf() {sudo zathura "$1"}
+ocr() {sudo tesseract "$1" "output"}
 
+alias xmm='xmodmap ~/personal_configures/Xmodmap'
+alias bos='zathura ~/books/Computer/operatingsystem/Operating-System-Concepts-9th-Edition.pdf'
+alias bnetwork='zathura ~/books/Computer/network/out.pdf'
+alias barcitecture='zathura ~/books/Computer/architecture/Computer_Organization_and_Architecture_(9th_Edition).pdf'
+alias bcompiler='zathura ~/books/Computer/compiler/CompilerDragon.pdf'
+alias bdiscrete='zathura ~/books/mathmatics/computer/discrete/Rosen_Discrete_Mathematics_and_Its_Applications_7th_Edition.pdf'
+alias bconcrete='zathura ~/books/mathmatics/computer/knuth/Concrete Mathematics 2e.pdf'
+
+alias csapp='zathura ~/books/Computer/operatingsystem/csapp.pdf'
+alias category='zathura ~/books/mathmatics/computer/category.pdf'
+alias dragon='zathura ~/books/Computer/compiler/CompilerDragon.pdf'
+alias dinosaur='zathura ~/books/Computer/operatingsystem/Operating-System-Concepts-9th-Edition.pdf'
+alias concrete='zathura ~/books/mathmatics/computer/knuth/Concrete Mathematics 2e.pdf'
+alias network='zathura ~/books/Computer/network/out.pdf'
+alias pattern='zathura ~/books/headfirst/head_first_design_patterns.pdf'
+
+alias musicophilia='zathura ~/books/general_knowledge/musicophilia.pdf'
+alias outofcontrol='zathura ~/books/general_knowledge/outofcontrol.pdf'
+alias power='zathura ~/books/general_knowledge/psychologypower.pdf'
+alias reality='zathura ~/books/general_knowledge/Penr04.pdf'

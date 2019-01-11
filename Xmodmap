@@ -29,6 +29,7 @@ keysym w = w W plus
 keysym e = e E minus  
 keysym r = r R underscore  
 keysym b = b B underscore  
+keysym n = n N minus  
 
 keysym semicolon = semicolon colon equal  
 
@@ -46,7 +47,6 @@ keysym apostrophe = apostrophe quotedbl quotedbl
 keysym m = m M backslash
 
 !keysym space = space space backslash  
-
 
 
 

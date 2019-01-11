@@ -800,7 +800,9 @@
         "TODO" : {},
         "FIXME": {}
     },
-    "latex-workshop.view.pdf.viewer": "browser"
+    "latex-workshop.view.pdf.viewer": "browser",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true
 }
 
 
