@@ -3,8 +3,6 @@ XKBOPTIONS=ctrl:nocaps >> /etc/default/keyboard
 # zsh configure
 $ZSH_CUSTOM
 sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-
-sudo cp -r  nvim ~/.config/nvim
 sudo cp -r  settings.json ~/.config/Code/User/settings.json
 sudo cp -r  .spacemacs ~/.spacemacs
 sudo cp -r  surfingkeys-config-ko.js ~/.surfingkeys-config-ko.js

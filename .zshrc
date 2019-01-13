@@ -415,6 +415,7 @@ pdf() {sudo zathura "$1"}
 ocr() {sudo tesseract "$1" "output"}
 
 alias xmm='xmodmap ~/personal_configures/Xmodmap'
+alias XMM='xmodmap ~/personal_configures/Xmodmap'
 alias bos='zathura ~/books/Computer/operatingsystem/Operating-System-Concepts-9th-Edition.pdf'
 alias bnetwork='zathura ~/books/Computer/network/out.pdf'
 alias barcitecture='zathura ~/books/Computer/architecture/Computer_Organization_and_Architecture_(9th_Edition).pdf'
