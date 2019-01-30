@@ -231,6 +231,7 @@ addSearchAliasX('dM', '다음 map', 'http://local.daum.net/map/index.jsp?q=');
 //shop : without amazon, all the sites are korean-specific sites.
 addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
 addSearchAliasX('sA', 'shop아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민 
+addSearchAliasX('sE', 'shopEbay', 'https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw='); 
 addSearchAliasX('sC', 'shop 쿠팡', 'http://www.coupang.com/np/search?component=&q=');
 addSearchAliasX('sD', 'shop 다나와', 'http://search.danawa.com/dsearch.php?k1=');
 addSearchAliasX('sI', 'shop 인터파크', 'http://isearch.interpark.com/isearch?q=');

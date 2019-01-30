@@ -9,6 +9,10 @@ sudo apt-get install ack
 sudo apt-get install gawk m4 libglib2.0-dev libwxgtk3.0-dev cmake g++ git
 sudo apt-get install tty-clock
 sudo apt-get install pcregrep
+sudo apt-get peco
+sudo apt-get xkbset
+sudo apt-get install ncdu
+sudo apt-get install autokey-common
 
 sudo apt-get install s3fs # for amazon cloud access (cannot work properly)
 echo ACCESS_KEY:SECRET_KEY > ~/.passwd-s3fs

@@ -11,9 +11,15 @@ add Control = Control_L
 ! vim arrow keybinding
 keycode 133 = Mode_switch
 keysym h = h H Left
-keysym l = l L Right
-keysym k = k K Up
 keysym j = j J Down
+keysym k = k K Up
+keysym l = l L Right
+
+! keysym ㄴ = ㄴ H Left
+! keysym ㅈ = ㅈ L Right
+! keysym ㄱ = ㄱ K Up
+! keysym ㅇ = ㅇ J Down
+
 
 ! vim friendly Special Characters binding
 keysym a = a A exclam
@@ -23,7 +29,6 @@ keysym f = f F dollar
 keysym g = g G percent  
 keysym y = y Y asciicircum  
 keysym u = u U ampersand  
-
 keysym q = q Q asterisk  
 keysym w = w W plus  
 keysym e = e E minus  
@@ -43,10 +48,7 @@ keysym comma = comma less parenleft
 keysym period = period greater parenright  
 keysym slash = slash question question  
 
-keysym apostrophe = apostrophe quotedbl quotedbl
-keysym m = m M backslash
+keysym apostrophe = apostrophe quotedbl Escape
+keysym m = m M backslash 
 
 !keysym space = space space backslash  
-
-
-
