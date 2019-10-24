@@ -878,9 +878,6 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
 }, {
     domain: /stackoverflow\.com/i
 });
-domain: /kin\.naver\.com/i
-Cc: library added <patent.ego@gmail.com>
-Cc: add - library, rym <patent.ego@gmail.com>
 mapkey('D', 'naver 답변 다운 스크롤', function () {
     pageHeadLine = document.querySelectorAll(".line_horizontal");
     if (pageHeadLine.length > naverAnswer) {
