@@ -151,7 +151,14 @@ addSearchAliasX('ls', 'language Shell script', 'https://www.google.com/search?q=
 addSearchAliasX('lT', 'language Typescript', 'https://www.google.com/search?q=TypeScript+');
 addSearchAliasX('lH', 'language HTML', 'https://www.google.com/search?q=HTML+');
 
+//book
+addSearchAliasX('bS', 'snu library', 'https://primoapac01.hosted.exlibrisgroup.com/primo-explore/search?vid=82SNU&query=any,contains,');
+addSearchAliasX('bY', 'yonsei library', 'https://library.yonsei.ac.kr/main/searchBrief?q=');
 addSearchAliasX('bP', 'pnu library', 'https://lib.pusan.ac.kr/en/resource/?query=');
+
+//rate
+addSearchAliasX('rmA', 'rate your music artist', 'https://rateyourmusic.com/search?bx=82d55e544de2ee5b27b2fd0e7153bbee&searchtype=a&searchterm=');
+addSearchAliasX('rmR', 'rate your music releases', 'https://rateyourmusic.com/search?bx=dfd8f4911473234b6e1362952e1b29e4&searchtype=l&searchterm=');
 
 //sns
 addSearchAliasX('fB', 'faceBook(페이스북)', 'https://www.facebook.com/search/top/?q=');
@@ -871,7 +878,9 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
 }, {
     domain: /stackoverflow\.com/i
 });
-
+domain: /kin\.naver\.com/i
+Cc: library added <patent.ego@gmail.com>
+Cc: add - library, rym <patent.ego@gmail.com>
 mapkey('D', 'naver 답변 다운 스크롤', function () {
     pageHeadLine = document.querySelectorAll(".line_horizontal");
     if (pageHeadLine.length > naverAnswer) {
