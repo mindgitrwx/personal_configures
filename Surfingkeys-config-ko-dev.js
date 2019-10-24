@@ -151,7 +151,6 @@ addSearchAliasX('ls', 'language Shell script', 'https://www.google.com/search?q=
 addSearchAliasX('lT', 'language Typescript', 'https://www.google.com/search?q=TypeScript+');
 addSearchAliasX('lH', 'language HTML', 'https://www.google.com/search?q=HTML+');
 
-addSearchAliasX('rym', 'rate your music', 'https://rateyourmusic.com/search?bx=9f8526d22377e80b0109d5f8e90696bb&searchtype=l&searchterm=');
 addSearchAliasX('bP', 'pnu library', 'https://lib.pusan.ac.kr/en/resource/?query=');
 
 //sns
