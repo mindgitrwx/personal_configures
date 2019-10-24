@@ -151,6 +151,10 @@ addSearchAliasX('ls', 'language Shell script', 'https://www.google.com/search?q=
 addSearchAliasX('lT', 'language Typescript', 'https://www.google.com/search?q=TypeScript+');
 addSearchAliasX('lH', 'language HTML', 'https://www.google.com/search?q=HTML+');
 
+addSearchAliasX('bP', 'pnu library', 'https://www.google.com/search?q=HTML+');
+addSearchAliasX('bS', 'seoul national univ library', 'https://www.google.com/search?q=HTML+');
+addSearchAliasX('rym', 'rate your music', 'https://rateyourmusic.com/search?bx=9f8526d22377e80b0109d5f8e90696bb&searchtype=l&searchterm=');
+
 //sns
 addSearchAliasX('fB', 'faceBook(페이스북)', 'https://www.facebook.com/search/top/?q=');
 addSearchAliasX('tW', 'tWitter', 'https://twitter.com/search?q=');
@@ -870,6 +874,8 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
     domain: /stackoverflow\.com/i
 });
 domain: /kin\.naver\.com/i
+Cc: library added <patent.ego@gmail.com>
+Cc: add - library, rym <patent.ego@gmail.com>
 mapkey('D', 'naver 답변 다운 스크롤', function () {
     pageHeadLine = document.querySelectorAll(".line_horizontal");
     if (pageHeadLine.length > naverAnswer) {
