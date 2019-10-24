@@ -121,7 +121,7 @@ addSearchAliasX('G', 'Google', 'https://www.google.com/search?q=');
 addSearchAliasX('d', 'download', 'https://www.google.com/search?q=download+');
 
 //map
-addSearchAliasX('gM', '구글맵', 'https://www.google.com/maps?q=');
+addSearchAliasX('gM', 'Google map', 'https://www.google.com/maps?q=');
 addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
 //coding -- 미완성
@@ -151,8 +151,8 @@ addSearchAliasX('ls', 'language Shell script', 'https://www.google.com/search?q=
 addSearchAliasX('lT', 'language Typescript', 'https://www.google.com/search?q=TypeScript+');
 addSearchAliasX('lH', 'language HTML', 'https://www.google.com/search?q=HTML+');
 
-//addSearchAliasX('rym', 'rate your music', 'https://rateyourmusic.com/search?bx=9f8526d22377e80b0109d5f8e90696bb&searchtype=l&searchterm=');
-//addSearchAliasX('bP', 'pnu library', 'https://lib.pusan.ac.kr/en/resource/?query=');
+addSearchAliasX('rym', 'rate your music', 'https://rateyourmusic.com/search?bx=9f8526d22377e80b0109d5f8e90696bb&searchtype=l&searchterm=');
+addSearchAliasX('bP', 'pnu library', 'https://lib.pusan.ac.kr/en/resource/?query=');
 
 //sns
 addSearchAliasX('fB', 'faceBook(페이스북)', 'https://www.facebook.com/search/top/?q=');
@@ -1110,25 +1110,6 @@ map('k', '<ArrowUp>', {domain: /map\.naver\.com/i});
 map('l', '<ArrowRight>', {domain: /map\.naver\.com/i});
 */
 // 지도 이동 
-
-
-/* 이것도 잘 되지 않는다 
-map( '<ArrowLeft>','h');
-map( '<ArrowDown>','j');
-map( '<ArrowUp>','k');
-map( '<Arrowright>','l');
-*/
-
-/*
-unmap( 'h' );
-unmap( 'j' );
-unmap( 'k' );
-unmap( 'l' );
-map( 'h','<ArrowLeft>');
-map( 'j' ,'<ArrowDown>' );
-map( 'k' ,'<ArrowUp>' );
-map( 'l' ,'<Arrowright>' );
-*/
 
 //TODO: it from sadid https://github.com/brookhong/Surfingkeys/issues/768
 //HOTFIX:
