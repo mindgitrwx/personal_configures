@@ -1000,7 +1000,7 @@ mapkey('l', 'slideshare next page', function () {
 }, {domain: /www\.slideshare\.net/i});
 
 
-mapkey('f', '#7 santatoic next', function () {
+mapkey('F', '#7 santatoic next', function () {
     document.getElementsByClassName('jsx-1583171186').click();
 }, {
     domain: /santatoeic\.com/i
