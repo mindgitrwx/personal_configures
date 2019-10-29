@@ -1001,7 +1001,10 @@ mapkey('l', 'slideshare next page', function () {
 
 
 mapkey('F', '#7 santatoic next', function () {
-    document.getElementsByClassName('jsx-1583171186').click();
+    var buttonList = document.getElementsByClassName('jsx-1583171186');
+    for(var i=0;i<list.length;i++){
+      buttonList[i].click();
+    }
 }, {
     domain: /santatoeic\.com/i
 });
