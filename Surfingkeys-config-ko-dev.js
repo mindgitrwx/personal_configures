@@ -1000,7 +1000,7 @@ mapkey('l', 'slideshare next page', function () {
 }, {domain: /www\.slideshare\.net/i});
 
 
-mapkey('F', '#7 santatoic next', function () {
+mapkey('f', '#7 santatoic next', function () {
     var buttonList = document.getElementsByClassName('jsx-1583171186');
     for(var i=0;i<buttonList.length;i++){
       buttonList[i].click();
