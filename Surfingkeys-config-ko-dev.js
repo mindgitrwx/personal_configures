@@ -999,6 +999,13 @@ mapkey('l', 'slideshare next page', function () {
     document.getElementById('btnNext').click();
 }, {domain: /www\.slideshare\.net/i});
 
+
+mapkey('f', '#7 santatoic next', function () {
+    document.getElementsByClassName('jsx-1583171186').click();
+}, {
+    domain: /santatoeic\.com/i
+});
+
 // skipControl sc-ir playControls__control playControls__prev skipControl__previous
 // skipControl sc-ir playControls__control playControls__next skipControl__next
 // sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive
@@ -1211,7 +1218,7 @@ vmapkey('zT', "#7 web crolling", function () {
 ////////////////////////////////////////////////////////////////////////
 
 //---------------------------------------------------
-//https: //www.wikiwand.com/en/Sandbox_(software_development)
+//https: //www.wikiwan.com/en/Sandbox_(software_development)
 // time, location, type, name, user indetifier, size, protection
 
 // ps pid ppid pgid winpid tty uid stime command
