@@ -65,8 +65,13 @@ sudo apt-get update
 sudo pip install --upgrade pip
 sudo pip list  # show packages installed within the virtual environment
 
-sudo pip install howdoi
+
 sudo pip install --upgrade tensorflow-gpu
+
+#Search on terminal
+sudo pip install howdoi
+sudo apt-get install dictd 
+
 
 #tex live installs
 read -p "Are you want to install texlive?" -n 1 -r
