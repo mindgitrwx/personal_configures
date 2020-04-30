@@ -1240,3 +1240,10 @@ vmapkey('zT', "#7 web crolling", function () {
 // }
 
 
+// Get all the elements that you care about into an array
+let elements = Array.prototype.slice.call(document.querySelectorAll("p, header"));
+// Loop over the items in the array
+elements.forEach(function(el){
+// Do the replace on the element
+    el.textContent = el.textContent.replace(/javascript/g, "JS");
+});
