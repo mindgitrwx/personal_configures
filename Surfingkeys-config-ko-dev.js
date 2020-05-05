@@ -1246,4 +1246,6 @@ let elements = Array.prototype.slice.call(document.querySelectorAll("p, header")
 elements.forEach(function(el){
 // Do the replace on the element
     el.textContent = el.textContent.replace(/javascript/g, "JS");
+    el.textContent = el.textContent.replace(/JavaScript/g, "JS");
 });
+
