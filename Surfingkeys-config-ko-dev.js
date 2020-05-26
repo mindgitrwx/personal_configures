@@ -126,6 +126,7 @@ addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMa
 
 //coding -- 미완성
 addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
+addSearchAliasX('cA', 'Alternative', 'https://alternativeto.net/browse/search?q=');
 addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
 addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
