@@ -116,8 +116,7 @@ mapkey('on', '#3Open newtab', function () {
 
 // TODO: to try think conflict prefix g,c (google and github)
 //General
-addSearchAliasX('L', 'Im feeling lucky', 'https://www.google.com/search?btnI=1&q=');
-addSearchAliasX('G', 'Google', 'https://www.google.com/search?q=');
+addSearchAliasX('L', 'Im feeling lucky','https://duckduckgo.com/?q=\\');
 addSearchAliasX('d', 'download', 'https://www.google.com/search?q=download+');
 
 //map
