@@ -118,7 +118,7 @@ mapkey('on', '#3Open newtab', function () {
 //General
 addSearchAliasX('L', 'Im feeling lucky','https://duckduckgo.com/?q=\\');
 addSearchAliasX('d', 'download', 'https://www.google.com/search?q=download+');
-addSearchAliasX('G', 'download', 'https://www.google.com/search?');
+addSearchAliasX('G', 'google', 'https://www.google.com/search?q=');
 
 //map
 addSearchAliasX('gM', 'Google map', 'https://www.google.com/maps?q=');
