@@ -133,6 +133,7 @@ addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/s
 addSearchAliasX('gH', 'github', 'https://github.com/search?q=');
 addSearchAliasX('ghS', 'githubStars', 'https://github.com/mindgitrwx?page=1&q=face&tab=stars&utf8=%E2%9C%93&utf8=%E2%9C%93&q=');
 addSearchAliasX('ss', 'slideshare', 'https://www.slideshare.net/search/slideshow?searchfrom=header&q=');
+addSearchAliasX('sd', 'soundsnap', 'https://www.soundsnap.com/search/audio/');
 
 //language -- 
 //
