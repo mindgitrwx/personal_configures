@@ -142,6 +142,7 @@ addSearchAliasX('lj', 'language java', 'https://www.google.com/search?q=Java+');
 //addSearchAliasX('lC', 'C++', 'https://www.google.com/search?q=C++');
 addSearchAliasX('lc', 'language c', 'https://www.google.com/search?q=c+language+');
 addSearchAliasX('l#', 'language C#', 'https://www.google.com/search?q=c%23+');
+addSearchAliasX('lE', 'language E','https://ludwig.guru/s/');
 addSearchAliasX('lR', 'language R', 'https://www.google.com/search?q=languag+');
 addSearchAliasX('lr', 'language Ruby', 'https://www.google.com/search?q=Ruby+');
 addSearchAliasX('lP', 'language Python', 'https://www.google.com/search?q=Python+');
