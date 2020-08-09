@@ -137,6 +137,7 @@ sudo apt-get install ffmpeg
 sudo add-apt-repository ppa:obsproject/obs-studio
 sudo apt-get install obs-studio
 sudo add-apt-repository -y ppa:samrog131/ppa # Keystroke visualizer
+
 sudo apt-get update
 sudo apt-get install keystroke # Monitoring tool
 bash <(curl -Ss https://my-netdata.io/kickstart.sh) #Operating system
@@ -164,5 +165,7 @@ sudo apt-get install hstr
 #zsh installs
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-
-
+alias howdoi_bing='HOWDOI_SEARCH_ENGINE="bing" howdoi'
+alias howdoib='HOWDOI_SEARCH_ENGINE="bing" howdoi'
+alias howdoid='HOWDOI_SEARCH_ENGINE="duckduckgo" howdoi'
+alias howdoi_duck='HOWDOI_SEARCH_ENGINE="duckduckgo" howdoi'
