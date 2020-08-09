@@ -261,6 +261,7 @@ addSearchAliasX('mC', 'metaCritic', 'http://www.metacritic.com/search/all/');
 
 //Video
 addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
+addSearchAliasX('yg', 'youglish', 'https://https://youglish.com/pronounce/printing/');
 
 //Wiki
 addSearchAliasX('nW', '나무위키', 'https://namu.wiki/w/');
