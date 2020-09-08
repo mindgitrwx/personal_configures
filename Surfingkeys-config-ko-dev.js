@@ -1015,6 +1015,25 @@ mapkey('f', '#7 santatoic next', function () {
     domain: /santatoeic\.com/i
 });
 
+
+mapkey('l', 'next video', function () { 
+    s = window.location.hre;
+    dividedURL = s.replace(/&/g, '=&').split('=');
+    dividedURL[5]++; dividedURL[3]++;
+    mergedURL = dividedURL.join('=').replace(/=&/g, '&')
+    window.location.replace(mergedURL);
+}, {domain: /osam\.kr/i});
+
+mapkey('h', 'before video', function () { 
+    s = window.location.hre;
+    dividedURL = s.replace(/&/g, '=&').split('=');
+    dividedURL[5]--; dividedURL[3]--;
+    mergedURL = dividedURL.join('=').replace(/=&/g, '&')
+    window.location.replace(mergedURL);
+}, {domain: /osam\.kr/i});
+
+
+
 // skipControl sc-ir playControls__control playControls__prev skipControl__previous
 // skipControl sc-ir playControls__control playControls__next skipControl__next
 // sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive
