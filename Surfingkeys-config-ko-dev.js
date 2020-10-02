@@ -106,12 +106,6 @@ map('<Shift-3>', 'ff');
 // document.getElementByClassName('slide-close').click();
 // })();
 
-// FIXME: 쓰이지 않음
-function getElementsByText(str, tag = 'a') {
-    return Array.prototype.slice.call(document.getElementsByTagName(tag)).filter(el => el.textContent.trim() === str.trim());
-}
-
-//----------------i-----------------------------------------------------
 mapkey('on', '#3Open newtab', function () {
     tabOpenLink("www.google.com");
 });
@@ -278,28 +272,6 @@ addSearchAliasX('pE', 'paper ELSEVIER', 'https://www.elsevier.com/search-results
 addSearchAliasX('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
 addSearchAliasX('pN', 'paper Nature', 'https://www.nature.com/search?q=');
 
-/**
- * 클립보드에 있는 것을 복사 붙여넣기 하기 위한 함수 
- *
- * https:   //stackoverflow.com/questions/2176861/javascript-get-clipboard-data-on-paste-event-cross-browser TODO: how to 
- * 
- */
-
-function handlePaste(e) {
-    var clipboardData, pastedData;
-
-    // Stop data actually being pasted into div
-    e.stopPropagation();
-    e.preventDefault();
-
-    // Get pasted data via clipboard API
-    clipboardData = e.clipboardData || window.clipboardData;
-    pastedData    = clipboardData.getData('Text');
-
-    // Do whatever with pasteddata
-    alert(pastedData);
-}
-
 // FIXME: focus 관련 명령어는 바로 redirect 되지 않음
 mapkey('osA', '#7 open stackoverflow ask', function () {
     window.location.replace("https://stackoverflow.com/questions/ask");
@@ -349,53 +321,6 @@ mapkey('oK', '#7 open kindle', function () {
     window.location.replace("https://read.amazon.com/")
 });
 
-//news 
-//knowledge
-//blog
-
-//TODO: image copy 는 구글 image 검색에서 잘 지원 해 주지 않는 걸로 보임 
-/* mapkey('q', '#1Click on an Image or a button', function() {
-    Hints.create("img, button", Hints.dispatchMouseClick);
-    searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
-});
-mapkey('ya', '#7Copy a link URL to the clipboard', function() {
-    Hints.create('*[href]', function(element) {
-        Clipboard.write(element.href);
-    });
-});
-*/
-
-// q의 기능을 구글 이미지 검색으로 바꿈 (주소가 정확할 경우 잘 진행됨)
-mapkey('q', '#1get image link and google image search', function () {
-    Hints.create("img, button", function (element) {
-        Clipboard.write(element.src);
-        searchSelectedWith('http://images.google.com/searchbyimage?image_url=', false, false, '');
-        // TODO: Copy 하는 방법은 없는지 알아보기
-    });
-});
-
-/*
-function SelectText(element) {
-    var doc = document;
-    if (doc.body.createTextRange) {
-        var range = document.body.createTextRange();
-        range.moveToElementText(element);
-        range.select();
-    } else if (window.getSelection) {
-        var selection = window.getSelection();
-        var range     = document.createRange();
-        range.selectNodeContents(element);
-        selection.removeAllRanges();
-        selection.addRange(range);
-    }
-}
-*/
-
-function copyElement(element) {
-
-}
-
-
 mapkey('Q', '#1Click on an Image or a button', function () {
     Hints.create("img, button", function (element) {
         element;
@@ -404,40 +329,6 @@ mapkey('Q', '#1Click on an Image or a button', function () {
         // TODO: Copy 하는 방법은 없는지 알아보기
     });
 });
-
-
-function renderGoogleTranslate(res) {
-    var exp = res.msg;
-    if (res.data.definition) {
-        var tmp = [];
-        for (var reg in res.data.pronunciations) {
-            tmp.push('<div>[{0}] {1}</div>'.format(reg, res.data.pronunciations[reg]));
-            tmp.push('<div><audio src="{0}" controls></audio></div>'.format(res.data[reg + '_audio']));
-        }
-        tmp.push('<div>{0}</div>'.format(res.data.definition));
-        exp = '<div>{0}</div>'.format(tmp.join('\n'));
-    }
-    return exp;
-}
-/*
-mapkey('Q', '#8Open omnibar for word translation', function () {
-    Front.openOmniquery({
-        url: "https://translate.google.cn/#auto/en/",
-        
-         * or
-        url: function(q) {
-            return "https://api.shanbay.com/bdc/search/?word=" + q
-        },
-        
-        query      : Visual.getWordUnderCursor(),
-        style      : "opacity: 0.3;",
-        parseResult: function (res) {
-            var res = JSON.parse(res.text);
-            return [renderGoogleTranslate(res)];
-        }
-    });
-});
-*/
 
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 vmapkey('y', "copy without reference notation on wikipedia", function () {
@@ -513,8 +404,6 @@ mapkey('ymE', '#7 Yank Multiple Element info  (copy multiple link element id or 
         multipleHits: true
     });
 });
-
-
 
 //TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기  (대문자를 박을때는 맨 뒤에 박는 편이 낫겠다.) --단축키 네개 이상? 
 mapkey('ymR', '#7Copy multiple link Regex URLs to the clipboard and add commas', function () {
@@ -639,13 +528,6 @@ vmapkey('~sy', "Remove special character (blank is not considered as special cha
 vmapkey('~dy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
-//TODO: multiple clipboard test 동작하지 않음 FIX
-vmapkey('my', '#7Copy multiple link URLs to the clipboard', function () {
-    var textToYank = [];
-    textToYank.push(window.getSelection.toString());
-    Clipboard.write('"' + textToYank.join('\n') + '"');
-});
-
 //addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
 //addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
 // request(URL, function (err, response, html) {
@@ -718,56 +600,7 @@ mapkey('<Ctrl-Alt-s>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
 
-// 정상적으로 동작하지 않음 
-// vscode bind
-mapkey('<Ctrl-X>', '#12Open Chrome extensions', function () {
-    tabOpenLink("chrome://extensions/");
-});
-// intellij bind
-map('<Ctrl-E>', 'T');
-map('<Ctrl-N>', 'T');
-// intellij bind - 동작 하지 않음
-mapkey('<Alt-F12>', '#12Open Chrome Settings', function () {
-    tabOpenLink("chrome.send('inspect',[String(data.processId), String(data.routeId)])");
-});
-
-// vscode bind 동작 하지 않음  
-mapkey('<Ctrl-\>', '#12Open Chrome extensions', function () {
-    RUNTIME("duplicateTab");
-    RUNTIME("newWindow");
-});
-//todo
-mapkey('<Ctrl-]>', '#12Open Chrome extensions', function () {
-    RUNTIME("duplicateTab");
-    RUNTIME("");
-});
 map('<Ctrl-V>', 'sm'); // markdown preview
-
-//-------------- D key and U key ---------------------- 함수화 필요
-//TODO: add rage of scroll
-//sysntax, code
-/* 잘 동작하지 않음 
-function DownController(lineQuery = 'pre' , offset = 0) {
-    pageHeadLine = document.querySelectorAll(lineQuery);
-    if(pageHeadLine.length){
-        if(pageHeadLine.length > jlineNum){ lineNum++;}
-        pageHeadLine[lineNum].scrollIntoView();
-        window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
-    }
-}
-function UpController(lineQuery = 'pre' , offset = 0) {
-    pageHeadLine = document.querySelectorAll(lineQuery);
-    if(pageHeadLine.length){
-        if(0 < lineNum){ lineNum--;}
-        pageHeadLine[lineNum].scrollIntoView();
-        window.scrollBy(0, offset); // Adjust scrolling with a negative value here : stackoverflow upper bar
-    }
-}
-mapkey('D', '', DownController('pre',0));
-mapkey('U', '', UpController('pre',0));
-mapkey('D', '나무위키 목차 대단위 다운스크롤', DownController('.wiki-heading', 0) , {domain: /namu\.wiki/i});
-mapkey('U', '나무위키 목차 대단위 up스크롤', UpController('.wiki-heading',0) , {domain: /namu\.wiki/i});
-*/
 
 mapkey('D', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
@@ -1056,64 +889,6 @@ mapkey('L', 'soundcloud like', function () {
     domain: /soundcloud\.com/i
 });
 
-// TODO: 동작하지 않음 (양쪽으로 다 동자확지 않음)
-mapkey('<Shift-]>', '한페이지이동(주소창 숫자 증가)', function () {
-
-    var last     = pathname.lastIndexOf('/'),
-        repeats  = RUNTIME.repeats;
-    var pathname = location.pathname;
-    if (pathname.length > 1) {
-        pathname        = pathname.endsWith('/') ? pathname.substr(0, pathname.length - 1) : pathname;
-        RUNTIME.repeats = 1;
-        while (repeats-- > 1) {
-            var p = pathname.lastIndexOf('/', last - 1);
-            if (p === -1) {
-                break;
-            } else {
-                last = p;
-            }
-        }
-        pathname = pathname.substr(0, last);
-    }
-
-    lastPartOfURL = window.location.href.split('/').pop();
-    if (isNaN(lastPartOfURL)) {
-        lastPartOfURL++;
-    }
-    window.location.href = location.origin + pathname + lastPartOfURL;
-
-    Front.showPopup(window.location.href);
-});
-
-mapkey('<Shift-[>', '한페이지 뒤로이동(주소창 숫자 감소)', function () {
-
-    var last     = pathname.lastIndexOf('/'),
-        repeats  = RUNTIME.repeats;
-    var pathname = location.pathname;
-    if (pathname.length > 1) {
-        pathname        = pathname.endsWith('/') ? pathname.substr(0, pathname.length - 1) : pathname;
-        RUNTIME.repeats = 1;
-        while (repeats-- > 1) {
-            var p = pathname.lastIndexOf('/', last - 1);
-            if (p === -1) {
-                break;
-            } else {
-                last = p;
-            }
-        }
-        pathname = pathname.substr(0, last);
-    }
-
-    lastPartOfURL = window.location.href.split('/').pop();
-    if (isNaN(lastPartOfURL)) {
-        lastPartOfURL--;
-    }
-    window.location.href = location.origin + pathname + lastPartOfURL;
-
-    Front.showPopup(window.location.href);
-});
-
-
 
 //TODO: google tlanslation auto copy make: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기 
 //p, ''df viewer mapping 
@@ -1173,104 +948,5 @@ mapkey('yA', "#7Copy all tabs url", function () {
         URLsToYank.push(url);
     })();
     Clipboard.write(URLsToYank);
-});
-
-// FIXME:  동작하지 않음 
-mapkey('yA', "#7Copy all tabs url", function () {
-    //get numbers of tabs
-    chrome.tabs.query({
-        windowType: 'normal'
-    }, function (tabs) {
-        tabNums = tabs.length;
-    });
-    Front.showPopup('tabNums'); //debug
-
-    var URLsToYank = [];
-    chrome.tabs.query({
-        'active'           : true,
-        'lastFocusedWindow': true
-    }, function (tabs) {
-        for (i = 0; i < tabNums; i++)
-            var url = tabs[i].url;
-        URLsToYank.push(url);
-    })();
-    Clipboard.write(URLsToYank);
-});
-
-
-
-// FIXME: what is number of #? 동작하지 않음
-mapkey('oWN', "#7 open notepad", function () { var objShell = new ActiveXObject("shell.application");
-    objShell.ShellExecute("notepad.exe", "", "", "open", 1);
-});
-
-// TODO: 구글 번역 자동 clipboad 복사 동작하지 않음.
-vmapkey('zT', "#7 web crolling", function () {
-    (function () {
-        // Load the script
-        var script        = document.createElement("SCRIPT");
-            script.src    = 'https://code.jquery.com/jquery-3.1.1.min.js';
-            script.type   = 'text/javascript';
-            script.onload = function () {
-            var $ = window.jQuery;
-            // Use $ here...
-            var name = window.getSelection.toString();
-            var url  = "http://anyorigin.com/go?url=" + encodeURIComponent("https://translate.google.co.kr/?hl=ko#ko/en/") + name + "&callback=?";
-            $.get(url, function (response) {
-                console.log(response);
-                Clipboard.write(response);
-            });
-        };
-        document.getElementsByTagName("head")[0].appendChild(script);
-    })();
-});
-
-// Anonymous "self-invoking" function - TO LOAD JQUERY
-//2018-06-14 21: 27: 49
-// ^(?:\+\d{1,3}|0\d{1,3}|00\d{1,2})?(?:\s?\(\d+\))?(?:[-\/\s.]|\d)+$
-// email regex: /^(([^<>()
-//\\.,;:\s@"]+(\.[^<>()\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-//
-//<div>
-//  <img id="image" width="100" src="https://placehold.it/100x100?text=✔">
-//  <button onclick="copyElement('image');">Copy image</button>
-
-////////////////////////////////////////////////////////////////////////
-//                                                                    //
-// kami     : pagenumber                                              //
-// id       : pageNumber                                              //
-// innertext:                                                         //
-// className: pageNumber ng-pristine ng-valid ng-not-empty ng-touched //
-// href     : undefined                                               //
-//                                                                    //
-////////////////////////////////////////////////////////////////////////
-
-//---------------------------------------------------
-//https: //www.wikiwan.com/en/Sandbox_(software_development)
-// time, location, type, name, user indetifier, size, protection
-
-// ps pid ppid pgid winpid tty uid stime command
-// name, type, location, protection, useridentifiery size
-
-// file- sequence of byte
-// certain directory structure
-
-// file pointer, file open counter, access right
-// shared lock , exclusive lock
-// mandatory, advisory
-//google search 바를 없애버림 
-// elem = document.getElementById('searchform');
-// if (elem !== null) {
-//     elem.parentNode.removeChild(elem);
-// }
-
-
-// Get all the elements that you care about into an array
-let elements = Array.prototype.slice.call(document.querySelectorAll("p, header"));
-// Loop over the items in the array
-elements.forEach(function(el){
-// Do the replace on the element
-    el.textContent = el.textContent.replace(/javascript/g, "JS");
-    el.textContent = el.textContent.replace(/JavaScript/g, "JS");
 });
 
