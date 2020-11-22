@@ -117,10 +117,10 @@ addSearchAliasX('d', 'download', 'https://www.google.com/search?q=download+');
 addSearchAliasX('G', 'google', 'https://www.google.com/search?q=');
 
 //GoogleTrand
-addSearchAliasX('gT', 'google trend', ''addSearchAliasX('gT', 'google', 'trends.google.com/trends/explore?q=');
-addSearchAliasX('gtK', 'google trend Korea', ''addSearchAliasX('gtK', 'google', 'trends.google.com/trends/explore?geo=KR&q=');
-addSearchAliasX('gtA', 'google trend America', ''addSearchAliasX('gtA', 'google', 'trends.google.com/trends/explore?geo=US&q=');
-addSearchAliasX('gtI', 'google trend India', ''addSearchAliasX('gtI', 'google', 'trends.google.com/trends/explore?geo=IN&q=');
+addSearchAliasX('gT', 'google trend', 'addSearchAliasX','gT', 'google trend', 'trends.google.com/trends/explore?q=');
+addSearchAliasX('gtK', 'google trend Korea', 'addSearchAliasX', 'gtK', 'google trend Korea', 'trends.google.com/trends/explore?geo=KR&q=');
+addSearchAliasX('gtU', 'google trend USA', 'addSearchAliasX', 'gtU', 'google trend USA', 'trends.google.com/trends/explore?geo=US&q=');
+addSearchAliasX('gtI', 'google trend India', 'addSearchAliasX', 'gtI', 'google trend India', 'trends.google.com/trends/explore?geo=IN&q=');
 
 //map
 addSearchAliasX('gM', 'Google map', 'https://www.google.com/maps?q=');
