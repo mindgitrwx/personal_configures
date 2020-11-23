@@ -131,7 +131,8 @@ addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cA', 'Alternative', 'https://alternativeto.net/browse/search?q=');
 addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
 addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
-addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
+addSearchAliasX('cs', 'codesandbox (online interactive IDE)', 'https://www.slant.co/search?query=');
+addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=s://codesandbox.io/search?query=nextjs);
 addSearchAliasX('gH', 'github', 'https://github.com/search?q=');
 addSearchAliasX('ghS', 'githubStars', 'https://github.com/mindgitrwx?page=1&q=face&tab=stars&utf8=%E2%9C%93&utf8=%E2%9C%93&q=');
 addSearchAliasX('ss', 'slideshare', 'https://www.slideshare.net/search/slideshow?searchfrom=header&q=');
