@@ -2,13 +2,13 @@
 
 Download | Linux & macOS | Windows | Dependencies | Build system | Source
 -------- | ------------- | ------- | ------------ | ------------ | ------
-(black)  | (blank)       | (blank) | (blank)      | (blank)      | (blank)
+(black)  | ubuntu 18.04  | (blank) | (blank)      | (blank)      | (blank)
 
 # Enviroment
 
 This configure is tested on ubuntu 18.04
 
-Feel free to ask install issue.
+Feel free to ask question about install issue.
 
 # QickStart
 
