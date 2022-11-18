@@ -953,5 +953,4 @@ api.mapkey('yA', "#7Copy all tabs url", function () {
     })();
     Clipboard.write(URLsToYank);
 });
-n
 
