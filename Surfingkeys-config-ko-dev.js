@@ -34,9 +34,9 @@ var namuPage    = 0;
 var linkCounter = 0;
 
 // Properties list
-Hints.numericHints           = false;
-Hints.characters             = "asdfgqwertzxcvbyuiopmnhlk";  // without j for esc (TODO: jj for esc when hints mode)
-Hints.scrollKeys             = "G";
+// Hints.numericHints           = false;
+// Hints.characters             = "asdfgqwertzxcvbyuiopmnhlk";  // without j for esc (TODO: jj for esc when hints mode)
+// Hints.scrollKeys             = "G";
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
 settings.defaultSearchEngine = 'L';                          // Google I'm Feeling Luckey
@@ -317,31 +317,12 @@ mapkey('oK', '#7 open kindle', function () {
     window.location.replace("https://read.amazon.com/")
 });
 
-mapkey('Q', '#1Click on an Image or a button', function () {
-    Hints.create("img, button", function (element) {
-        element;
-        element.src;
-        // Clipboard.write(element.src);
-        // TODO: Copy 하는 방법은 없는지 알아보기
-    });
-});
-
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 vmapkey('y', "copy without reference notation on wikipedia", function () {
     Clipboard.write(window.getSelection().toString().replace(/\[[0-9]*\]/g, "test")); // TODO: 동작하지 않음 
 }, {
     domain: /www\.wikiwand\.com/i
 }); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
-
-mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
-    var linksToYank = [];
-    Hints.create('*[href]', function (element) {
-        linksToYank.push('domain: ' + '\/' + element.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
-        Clipboard.write(linksToYank.join('\n'));
-    }, {
-        multipleHits: true
-    });
-});
 
 //TODO: git clone , get id
 mapkey('yg', '#7 git clone', function () {
@@ -365,56 +346,12 @@ mapkey('yG', '#7 git clone', function () {
     domain: /github\.com/i
 }); 
 
-mapkey('yE', '#7 Yank Element info. copy link element id or classname', function () {
-    var linksToYank = [];
-    Hints.create("", function (element) {
-
-        linksToYank.push('id: ' + element.id + '\n');
-        linksToYank.push('innertext: ' + element.innerText + '\n');
-        linksToYank.push('className: ' + element.className + '\n');
-        linksToYank.push('href: ' + element.href + '\n');
-        linksToYank.push('type: ' + element.type + '\n');
-        linksToYank.push('style: ' + element.style + '\n');
-        linksToYank.push('src: ' + element.src + '\n');
-        linksToYank.push('alt: ' + element.alt + '\n');
-        (Clipboard.write(linksToYank.join('\n')));
-    });
-});
-
 // ADD: read like this yank element ~~~
 mapkey('yeI', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.id')); });
 mapkey('yeC', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.className')); });
 mapkey('yeT', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.type')); });
 mapkey('yeS', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.style')); });
 mapkey('yeA', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.alt')); });
-
-mapkey('ymE', '#7 Yank Multiple Element info  (copy multiple link element id or classname)', function () {
-    var linksToYank = [];
-    Hints.create('*[href]', function (element) {
-
-        linksToYank.push('id: ' + element.id + '\n');
-        linksToYank.push('innertext: ' + element.innerText + '\n');
-        linksToYank.push('className: ' + element.className + '\n');
-        (Clipboard.write(linksToYank.join('\n')));
-    }, {
-        multipleHits: true
-    });
-});
-
-//TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기  (대문자를 박을때는 맨 뒤에 박는 편이 낫겠다.) --단축키 네개 이상? 
-mapkey('ymR', '#7Copy multiple link Regex URLs to the clipboard and add commas', function () {
-    var linksToYank = [];
-    Hints.create('*[href]', function (element) {
-        if (linkCounter === 0) {
-            Clipboard.write('{')
-        }
-        linksToYank.push('"' + element.href + '"', );
-        Clipboard.write(linksToYank.join('\n'));
-        linkCounter++;
-    }, {
-        multipleHits: true
-    });
-});
 
 // Copy url as regex of SurfingKeys
 mapkey('yr', "Copy url as regex", function () {
@@ -572,16 +509,6 @@ vmapkey('mly', "Markdown link", function () {
 });
 vmapkey('msy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
-});
-// etc
-mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function () {
-    var linksToYank = [];
-    Hints.create('*[href]', function (element) {
-        linksToYank.push('"' + element.href + '"');
-        Clipboard.write(linksToYank.join('\n'));
-    }, {
-        multipleHits: true
-    });
 });
 
 //setting 
