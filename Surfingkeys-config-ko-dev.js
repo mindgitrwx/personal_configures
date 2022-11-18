@@ -836,10 +836,10 @@ api.mapkey('gV', 'Volume click ', function () {
 // 
 // page 양 옆으로 넘길 수 있도록 하기
 api.mapkey('h', 'slideshare previous page', function () {
-    document.getElementById('btnPrevious').click();
+    document.getElementById('previous-slide').click();
 }, {domain: /www\.slideshare\.net/i});
 api.mapkey('l', 'slideshare next page', function () {
-    document.getElementById('btnNext').click();
+    document.getElementById('next-slide').click();
 }, {domain: /www\.slideshare\.net/i});
 
 
@@ -953,4 +953,5 @@ api.mapkey('yA', "#7Copy all tabs url", function () {
     })();
     Clipboard.write(URLsToYank);
 });
+n
 
