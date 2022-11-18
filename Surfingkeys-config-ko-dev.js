@@ -173,7 +173,7 @@ api.addSearchAlias('wE', '예제', 'https://www.google.com/search?q=example+of+'
 api.addSearchAlias('wF', '어디서부터', 'https://www.google.com/search?q=where+from+');
 api.addSearchAlias('wG', '목적', 'https://www.google.com/search?q=what+is+goal+of+');
 api.addSearchAlias('wH', '역사', 'https://www.google.com/search?q=history+of+');
-api.addSearchAlias('wI', '소개', 'https://www.google.com/search?q=Introduction+of');
+api.addSearchAlias('wI', '소개', 'https://www.google.com/search?q=Introduction+of+');
 api.addSearchAlias('wJ', '직업', 'https://www.google.com/search?q=jo+of+');
 api.addSearchAlias('wK', '한국', 'https://www.google.com/search?q=Korea+');
 api.addSearchAlias('wL', '리스트', 'https://www.google.com/search?q=list+of+');
@@ -187,7 +187,7 @@ api.addSearchAlias('wR', '랭킹', 'https://www.google.com/search?q=rank+of+');
 api.addSearchAlias('wS', '공통점', 'https://www.google.com/search?q=common+point+of+');
 api.addSearchAlias('wT', '표', 'https://www.google.com/search?q=q=table+of+');
 api.addSearchAlias('wU', '사용예', 'https://www.google.com/search?q=usage+of+');
-api.addSearchAlias('wW', '사용예', 'https://www.google.com/search?q=usage+of+'); //  w에만 지나치게 만이 추가 가능 
+api.addSearchAlias('wW', '사용예', 'https://www.google.com/search?q=usage+of+'); 
 api.addSearchAlias('wX', '사용예', 'https://www.google.com/search?q=usage+of+');
 api.addSearchAlias('wY', '사용예', 'https://www.google.com/search?q=usage+of+');
 api.addSearchAlias('wZ', '사용예', 'https://www.google.com/search?q=usage+of+');
