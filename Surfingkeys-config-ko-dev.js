@@ -96,12 +96,12 @@ api.map('<Shift-3>', 'ff');
 // })();
 
 api.mapkey('on', '#3Open newtab', function () {
-    api.tabOpenLink("www.google.com");
+    api.tabOpenLink("www.google.com"); // TODO: addded api, but not work
 });
 
 // TODO: to try think conflict prefix g,c (google and github)
 //General
-// api.addSearchAliasX('L', 'Im feeling lucky','https://duckduckgo.com/?q=\\');
+api.addSearchAliasX('L', 'Im feeling lucky','https://duckduckgo.com/?q=\\');
 // api.addSearchAliasX('d', 'download', 'https://www.google.com/search?q=download+');
 // api.addSearchAliasX('G', 'google', 'https://www.google.com/search?q=');
 
