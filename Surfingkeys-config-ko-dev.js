@@ -115,8 +115,8 @@ api.addSearchAlias('gtK', 'google trend Korea', 'trends.google.com/trends/explor
 api.addSearchAlias('gtU', 'google trend USA',  'trends.google.com/trends/explore?geo=US&q=');
 api.addSearchAlias('gtI', 'google trend India', 'trends.google.com/trends/explore?geo=IN&q=');
 
-//api.map
-api.addSearchAlias('gM', 'Google api.map', 'https://www.google.com/api.maps?q=');
+//api
+api.addSearchAlias('gM', 'Google map', 'https://www.google.com/maps?q=');
 api.addSearchAlias('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
 //coding -- 미완성
