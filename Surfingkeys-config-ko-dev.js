@@ -327,14 +327,14 @@ api.mapkey('Q', '#1Click on an Image or a button', function () {
     api.Hints.create("img, button", function (element) {
         element;
         element.src;
-        // Clipboard.write(element.src);
+        // api.Clipboard.write(element.src);
         // TODO: Copy 하는 방법은 없는지 알아보기
     });
 });
 
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 api.vmapkey('y', "copy without reference notation on wikipedia", function () {
-    Clipboard.write(window.getSelection().toString().replace(/\[[0-9]*\]/g, "test")); // TODO: 동작하지 않음 
+    api.Clipboard.write(window.getSelection().toString().replace(/\[[0-9]*\]/g, "test")); // TODO: 동작하지 않음 
 }, {
     domain: /www\.wikiwand\.com/i
 }); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
@@ -343,7 +343,7 @@ api.mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function (
     var linksToYank = [];
     api.Hints.create('*[href]', function (element) {
         linksToYank.push('domain: ' + '\/' + element.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
-        Clipboard.write(linksToYank.join('\n'));
+        api.Clipboard.write(linksToYank.join('\n'));
     }, {
         multipleHits: true
     });
@@ -352,9 +352,9 @@ api.mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function (
 //TODO: git clone , get id
 api.mapkey('yg', '#7 git clone', function () {
     api.Hints.create('git clone ' + window.location.href + '.git', function(element) {
-        Clipboard.write('git clone ' + window.location.href + '.git');
+        api.Clipboard.write('git clone ' + window.location.href + '.git');
     });
-    // Clipboard.write('git clone ' + window.location.href + '.git');
+    // api.Clipboard.write('git clone ' + window.location.href + '.git');
 }, {
     domain: /github\.com/i
 });
@@ -363,13 +363,13 @@ api.mapkey('yg', '#7 git blog', function () {
     var address = window.location.href.split(".");
     var githubId = address[0].replace(/(^\w+:|^)\/\//, '');
     var githubAddress = 'github.com' + '/' + githubId;
-    Clipboard.write(githubAddress);
+    api.Clipboard.write(githubAddress);
     window.location.href(githubAddress);
 })
 
 //TODO: git clone , get id
 api.mapkey('yG', '#7 git clone', function () {
-    Clipboard.write(window.location.href + '.git');
+    api.Clipboard.write(window.location.href + '.git');
 }, {
     domain: /github\.com/i
 }); 
@@ -385,16 +385,16 @@ api.mapkey('yE', '#7 Yank Element info. copy link element id or classname', func
         linksToYank.push('style: ' + element.style + '\n');
         linksToYank.push('src: ' + element.src + '\n');
         linksToYank.push('alt: ' + element.alt + '\n');
-        (Clipboard.write(linksToYank.join('\n')));
+        (api.Clipboard.write(linksToYank.join('\n')));
     });
 });
 
 // ADD: read like this yank element ~~~
-api.mapkey('yeI', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.id')); });
-api.mapkey('yeC', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.className')); });
-api.mapkey('yeT', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.type')); });
-api.mapkey('yeS', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.style')); });
-api.mapkey('yeA', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.alt')); });
+api.mapkey('yeI', '#7 Yank Element info. copy link element id or classname', function (element) { (api.Clipboard.write('element.id')); });
+api.mapkey('yeC', '#7 Yank Element info. copy link element id or classname', function (element) { (api.Clipboard.write('element.className')); });
+api.mapkey('yeT', '#7 Yank Element info. copy link element id or classname', function (element) { (api.Clipboard.write('element.type')); });
+api.mapkey('yeS', '#7 Yank Element info. copy link element id or classname', function (element) { (api.Clipboard.write('element.style')); });
+api.mapkey('yeA', '#7 Yank Element info. copy link element id or classname', function (element) { (api.Clipboard.write('element.alt')); });
 
 api.mapkey('ymE', '#7 Yank Multiple Element info  (copy multiple link element id or classname)', function () {
     var linksToYank = [];
@@ -403,7 +403,7 @@ api.mapkey('ymE', '#7 Yank Multiple Element info  (copy multiple link element id
         linksToYank.push('id: ' + element.id + '\n');
         linksToYank.push('innertext: ' + element.innerText + '\n');
         linksToYank.push('className: ' + element.className + '\n');
-        (Clipboard.write(linksToYank.join('\n')));
+        (api.Clipboard.write(linksToYank.join('\n')));
     }, {
         multipleHits: true
     });
@@ -414,10 +414,10 @@ api.mapkey('ymR', '#7Copy multiple link Regex URLs to the clipboard and add comm
     var linksToYank = [];
     api.Hints.create('*[href]', function (element) {
         if (linkCounter === 0) {
-            Clipboard.write('{')
+            api.Clipboard.write('{')
         }
         linksToYank.push('"' + element.href + '"', );
-        Clipboard.write(linksToYank.join('\n'));
+        api.Clipboard.write(linksToYank.join('\n'));
         linkCounter++;
     }, {
         multipleHits: true
@@ -426,7 +426,7 @@ api.mapkey('ymR', '#7Copy multiple link Regex URLs to the clipboard and add comm
 
 // Copy url as regex of SurfingKeys
 api.mapkey('yr', "Copy url as regex", function () {
-    Clipboard.write('domain: ' + '\/' + window.location.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
+    api.Clipboard.write('domain: ' + '\/' + window.location.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
 
 
@@ -451,7 +451,7 @@ api.mapkey('gyq', "Copy first pre and exist", function () {
             }
         });
     }
-    Clipboard.write(elements[0].innerText);
+    api.Clipboard.write(elements[0].innerText);
     RUNTIME("closeTab");
 });
 api.mapkey('yQ', "Copy first pre", function () {
@@ -473,16 +473,16 @@ api.mapkey('yQ', "Copy first pre", function () {
             }
         });
     }
-    Clipboard.write(elements[0].innerText);
+    api.Clipboard.write(elements[0].innerText);
 });
 
 // for get search url
 api.mapkey('yk', "Copy url before Keyowrd insertion", function () {
-    Clipboard.write(window.location.href.split('=')[0] + '=');
+    api.Clipboard.write(window.location.href.split('=')[0] + '=');
 });
 // surrounded   
 api.mapkey('"yy', "surround url with double quotation mark", function () {
-    Clipboard.write('"' + window.location.href + '"');
+    api.Clipboard.write('"' + window.location.href + '"');
 });
 
 
@@ -490,47 +490,47 @@ api.mapkey('"yy', "surround url with double quotation mark", function () {
 // visualmode setting - vsual mode에 진입했을 때 동작가능 //
 //////////////////////////////////////////////////////////
 api.vmapkey('"y', "surround selection with doube quotation mark", function () {
-    Clipboard.write('"' + window.getSelection().toString().replace(/\n/g, " ") + '"');
+    api.Clipboard.write('"' + window.getSelection().toString().replace(/\n/g, " ") + '"');
 });
 api.vmapkey('<y', "surround selection ", function () {
-    Clipboard.write('<' + window.getSelection().toString() + '>');
+    api.Clipboard.write('<' + window.getSelection().toString() + '>');
 });
 api.mapkey('(y', "surround selection ", function () {
-    Clipboard.write('(' + window.getSelection().toString() + ')');
+    api.Clipboard.write('(' + window.getSelection().toString() + ')');
 });
 api.mapkey('[y', "surround selection ", function () {
-    Clipboard.write('[' + window.getSelection().toString() + ']');
+    api.Clipboard.write('[' + window.getSelection().toString() + ']');
 });
 api.vmapkey('{y', "surround selection ", function () {
-    Clipboard.write('{' + window.getSelection().toString() + '}');
+    api.Clipboard.write('{' + window.getSelection().toString() + '}');
 });
 api.vmapkey('/*y', "surround selection ", function () {
-    Clipboard.write('/*' + window.getSelection().toString() + '*/');
+    api.Clipboard.write('/*' + window.getSelection().toString() + '*/');
 });
 api.vmapkey('<--!y', "surround selection ", function () {
-    Clipboard.write('<--!' + window.getSelection().toString() + '-->');
+    api.Clipboard.write('<--!' + window.getSelection().toString() + '-->');
 });
 api.vmapkey('~y', "surround selection ", function () {
     var UpperSelected = window.getSelection().toString()
-    Clipboard.write(UpperSelected.toUpperCase());
+    api.Clipboard.write(UpperSelected.toUpperCase());
 });
 api.vmapkey('~jy', "Remove enter", function () {
-    Clipboard.write(window.getSelection().toString().replace(/\n/g, " "));
+    api.Clipboard.write(window.getSelection().toString().replace(/\n/g, " "));
 });
 api.vmapkey('~cy', "Added comma", function () {
-    Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
+    api.Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
 });
 api.vmapkey('~dy', "Delete first 1 character", function () {
-    Clipboard.write(window.getSelection().toString().substr(1));
+    api.Clipboard.write(window.getSelection().toString().substr(1));
 });
 api.vmapkey('~Dy', "Delete surrounded", function () {
-    Clipboard.write(window.getSelection().toString().slice(1, -1));
+    api.Clipboard.write(window.getSelection().toString().slice(1, -1));
 });
 api.vmapkey('~sy', "Remove special character (blank is not considered as special character", function () { //TODO: Black is not work
-    Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9:blank:]/ig, ""));
+    api.Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9:blank:]/ig, ""));
 });
 api.vmapkey('~dy', "Markdown Strikethrough", function () {
-    Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
+    api.Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
 //api.addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
 //api.addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
@@ -545,7 +545,7 @@ api.vmapkey('ty', "한글 영어번역 clipboard", function () { //TODO:
     request(url, function(err, response, html){
         if (!err) {
             var $ = cheerio.load(html);
-            Clipboard.write($('#result_box').innerText());
+            api.Clipboard.write($('#result_box').innerText());
         }
     })
 });
@@ -554,7 +554,7 @@ api.vmapkey('Ty', "영어 한글번역 clipboard", function () {
     request(url, function(err, response, html){
         if (!err) {
             var $ = cheerio.load(html);
-            Clipboard.write($('#result_box').innerText());
+            api.Clipboard.write($('#result_box').innerText());
         }
     })
 });
@@ -562,31 +562,31 @@ api.vmapkey('Ty', "영어 한글번역 clipboard", function () {
 
 /*
 api.vmapkey('~diy', "remove inner double quoates strings", function () {
-    Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
+    api.Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
 });
 api.vmapkey('~siy', "remove inner single quoates strings", function () {
-    Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
+    api.Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
 });
 */
 // markdown
 api.vmapkey('miy', "Markdown italic", function () {
-    Clipboard.write('*' + window.getSelection().toString() + '*');
+    api.Clipboard.write('*' + window.getSelection().toString() + '*');
 });
 api.vmapkey('mby', "Markdown bold", function () {
-    Clipboard.write('**' + window.getSelection().toString() + '**');
+    api.Clipboard.write('**' + window.getSelection().toString() + '**');
 });
 api.vmapkey('mly', "Markdown link", function () {
-    Clipboard.write('[replaceit](' + window.getSelection().toString() + ')');
+    api.Clipboard.write('[replaceit](' + window.getSelection().toString() + ')');
 });
 api.vmapkey('msy', "Markdown Strikethrough", function () {
-    Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
+    api.Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
 // etc
 api.mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function () {
     var linksToYank = [];
     api.Hints.create('*[href]', function (element) {
         linksToYank.push('"' + element.href + '"');
-        Clipboard.write(linksToYank.join('\n'));
+        api.Clipboard.write(linksToYank.join('\n'));
     }, {
         multipleHits: true
     });
@@ -951,6 +951,6 @@ api.mapkey('yA', "#7Copy all tabs url", function () {
             var url = tabs[i].url;
         URLsToYank.push(url);
     })();
-    Clipboard.write(URLsToYank);
+    api.Clipboard.write(URLsToYank);
 });
 
