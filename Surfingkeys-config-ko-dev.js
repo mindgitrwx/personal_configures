@@ -45,9 +45,9 @@ settings.prevLinkRegex       = /((back|<<|prev(ious)?)+)/i;
 ////////////////////////////////
 // api.unapi.map default key api.mapings  //
 ////////////////////////////////
-api.unapi.map('<Ctrl-6>'); // (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
-api.unapi.map('<Ctrl-p>'); 
-api.unapi.map('<Ctrl-n>'); 
+api.unmap('<Ctrl-6>'); // (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
+api.unmap('<Ctrl-p>'); 
+api.unmap('<Ctrl-n>'); 
 api.map(']', ']]'); // 두번 누르는건 자연스럽지 않음 
 api.map('[', '[[');
 
@@ -64,7 +64,7 @@ api.mapkey(',s', 'opne new tab and split', function () {
 // iapi.map('<Ctrl-[>', "<Esc>");
 // api.vmap('<Ctrl-[>', "<Esc>");
 
-// 바이두와 bing 을 굳이 사용할 필요가 없길래 api.unapi.map함 
+// 바이두와 bing 을 굳이 사용할 필요가 없길래 api.unapi함 
 api.removeSearchAliasX('b');
 api.removeSearchAliasX('g');
 api.removeSearchAliasX('w');
