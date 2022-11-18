@@ -43,31 +43,31 @@ settings.defaultSearchEngine = 'L';                          // Google I'm Feeli
 settings.nextLinkRegex       = /((forward|>>|next)+)/i;
 settings.prevLinkRegex       = /((back|<<|prev(ious)?)+)/i;
 
-map(']', ']]'); // 두번 누르는건 자연스럽지 않음 
-map('[', '[[');
+// map(']', ']]'); // 두번 누르는건 자연스럽지 않음 
+// map('[', '[[');
 
-// My default vim key binding: https://gist.github.com/millermedeiros/1262085
-//--Like Nerd Tree--- TODO: FIX IT LIKE VERTICALLY
-map(',nt', 'T'); 
-map(',q', 'x'); 
-mapkey(',s', 'opne new tab and split', function () {
-    RUNTIME("newWindow");
-});
-//TODO: making spell check ,ts 
+// // My default vim key binding: https://gist.github.com/millermedeiros/1262085
+// //--Like Nerd Tree--- TODO: FIX IT LIKE VERTICALLY
+// map(',nt', 'T'); 
+// map(',q', 'x'); 
+// mapkey(',s', 'opne new tab and split', function () {
+//     RUNTIME("newWindow");
+// });
+// //TODO: making spell check ,ts 
 
-// FIXME: it doesn't work
-imap('<Ctrl-[>', "<Esc>");
-vmap('<Ctrl-[>', "<Esc>");
+// // FIXME: it doesn't work
+// imap('<Ctrl-[>', "<Esc>");
+// vmap('<Ctrl-[>', "<Esc>");
 
-removeSearchAliasX('b');
-removeSearchAliasX('g');
-removeSearchAliasX('w');
-removeSearchAliasX('s');
+// removeSearchAliasX('b');
+// removeSearchAliasX('g');
+// removeSearchAliasX('w');
+// removeSearchAliasX('s');
 
-// for surfingkeys PDF autokey-----------------------------------------
-map('<Shift-1>', 'fs'); // 잘 되는 느낌은 아님
-map('<Shift-2>', 'fd');
-map('<Shift-3>', 'ff');
+// // for surfingkeys PDF autokey-----------------------------------------
+// map('<Shift-1>', 'fs'); // 잘 되는 느낌은 아님
+// map('<Shift-2>', 'fd');
+// map('<Shift-3>', 'ff');
 
 //////////////////////////
 // for url heml extract //
