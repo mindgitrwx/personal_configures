@@ -96,7 +96,7 @@ api.map('<Shift-3>', 'ff');
 // })();
 
 api.mapkey('on', '#3Open newtab', function () {
-    tabOpenLink("www.google.com");
+    api.tabOpenLink("www.google.com");
 });
 
 // TODO: to try think conflict prefix g,c (google and github)
@@ -368,7 +368,6 @@ api.mapkey('yG', '#7 git clone', function () {
 api.mapkey('yE', '#7 Yank Element info. copy link element id or classname', function () {
     var linksToYank = [];
     api.Hints.create("", function (element) {
-
         linksToYank.push('id: ' + element.id + '\n');
         linksToYank.push('innertext: ' + element.innerText + '\n');
         linksToYank.push('className: ' + element.className + '\n');
