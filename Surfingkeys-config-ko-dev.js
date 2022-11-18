@@ -42,12 +42,7 @@ settings.omnibarSuggestion   = true;
 settings.defaultSearchEngine = 'L';                          // Google I'm Feeling Luckey
 settings.nextLinkRegex       = /((forward|>>|next)+)/i;
 settings.prevLinkRegex       = /((back|<<|prev(ious)?)+)/i;
-////////////////////////////////
-// unmap default key mapings  //
-////////////////////////////////
-unmap('<Ctrl-6>'); // (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
-unmap('<Ctrl-p>'); 
-unmap('<Ctrl-n>'); 
+
 map(']', ']]'); // 두번 누르는건 자연스럽지 않음 
 map('[', '[[');
 
@@ -64,7 +59,6 @@ mapkey(',s', 'opne new tab and split', function () {
 imap('<Ctrl-[>', "<Esc>");
 vmap('<Ctrl-[>', "<Esc>");
 
-// 바이두와 bing 을 굳이 사용할 필요가 없길래 unmap함 
 removeSearchAliasX('b');
 removeSearchAliasX('g');
 removeSearchAliasX('w');
