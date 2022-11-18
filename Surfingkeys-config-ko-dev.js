@@ -267,7 +267,7 @@ api.addSearchAlias('pG', 'paper 구글 스콜라', 'https://scholar.google.co.kr
 api.addSearchAlias('pB', 'paper (biology) nCBI', 'http://www.ncbi.nlm.nih.gov/search/?term=');
 api.addSearchAlias('pR', 'paper RISS', 'http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=');
 api.addSearchAlias('pE', 'paper ELSEVIER', 'https://www.elsevier.com/search-results?query=');
-api.addSearchAlias('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
+api.addSearchAlias('pC', 'paper with code', 'https://paperswithcode.com/search?q_meta=&q_type=&q=');
 api.addSearchAlias('pN', 'paper Nature', 'https://www.nature.com/search?q=');
 
 // FIXME: focus 관련 명령어는 바로 redirect 되지 않음
