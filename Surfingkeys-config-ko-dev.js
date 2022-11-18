@@ -101,172 +101,172 @@ api.mapkey('on', '#3Open newtab', function () {
 
 // TODO: to try think conflict prefix g,c (google and github)
 //General
-api.addSearchAliasX('L', 'Im feeling lucky','https://duckduckgo.com/?q=\\');
-api.addSearchAliasX('d', 'download', 'https://www.google.com/search?q=download+');
-api.addSearchAliasX('G', 'google', 'https://www.google.com/search?q=');
+// api.addSearchAliasX('L', 'Im feeling lucky','https://duckduckgo.com/?q=\\');
+// api.addSearchAliasX('d', 'download', 'https://www.google.com/search?q=download+');
+// api.addSearchAliasX('G', 'google', 'https://www.google.com/search?q=');
 
 //GoogleTrand
-api.addSearchAliasX('gT', 'google trend', 'trends.google.com/trends/explore?q=');
-api.addSearchAliasX('gtK', 'google trend Korea', 'trends.google.com/trends/explore?geo=KR&q=');
-api.addSearchAliasX('gtU', 'google trend USA',  'trends.google.com/trends/explore?geo=US&q=');
-api.addSearchAliasX('gtI', 'google trend India', 'trends.google.com/trends/explore?geo=IN&q=');
+// api.addSearchAliasX('gT', 'google trend', 'trends.google.com/trends/explore?q=');
+// api.addSearchAliasX('gtK', 'google trend Korea', 'trends.google.com/trends/explore?geo=KR&q=');
+// api.addSearchAliasX('gtU', 'google trend USA',  'trends.google.com/trends/explore?geo=US&q=');
+// api.addSearchAliasX('gtI', 'google trend India', 'trends.google.com/trends/explore?geo=IN&q=');
 
 //api.map
-api.addSearchAliasX('gM', 'Google api.map', 'https://www.google.com/api.maps?q=');
-api.addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
+// api.addSearchAliasX('gM', 'Google api.map', 'https://www.google.com/api.maps?q=');
+// api.addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
 //coding -- 미완성
-api.addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
-api.addSearchAliasX('cA', 'Alternative', 'https://alternativeto.net/browse/search?q=');
-api.addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
-api.addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
-api.addSearchAliasX('cs', 'codesandbox (online interactive IDE)', 'https://codesandbox.io/search?query=');
-api.addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
-api.addSearchAliasX('gH', 'github', 'https://github.com/search?q=');
-api.addSearchAliasX('ghS', 'githubStars', 'https://github.com/mindgitrwx?page=1&q=face&tab=stars&utf8=%E2%9C%93&utf8=%E2%9C%93&q=');
-api.addSearchAliasX('ss', 'slideshare', 'https://www.slideshare.net/search/slideshow?searchfrom=header&q=');
-api.addSearchAliasX('sd', 'soundsnap', 'https://www.soundsnap.com/search/audio/');
+//api.addSearchAliasX('C', 'search coding', 'https://searchcode.com/?q=');
+//api.addSearchAliasX('cA', 'Alternative', 'https://alternativeto.net/browse/search?q=');
+//api.addSearchAliasX('cC', 'search coding', 'https://searchcode.com/?q=');
+//api.addSearchAliasX('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
+//api.addSearchAliasX('cs', 'codesandbox (online interactive IDE)', 'https://codesandbox.io/search?query=');
+//api.addSearchAliasX('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
+//api.addSearchAliasX('gH', 'github', 'https://github.com/search?q=');
+//api.addSearchAliasX('ghS', 'githubStars', 'https://github.com/mindgitrwx?page=1&q=face&tab=stars&utf8=%E2%9C%93&utf8=%E2%9C%93&q=');
+//api.addSearchAliasX('ss', 'slideshare', 'https://www.slideshare.net/search/slideshow?searchfrom=header&q=');
+//api.addSearchAliasX('sd', 'soundsnap', 'https://www.soundsnap.com/search/audio/');
 
 //language -- 
 //
-api.addSearchAliasX('lJ', 'language Javascript', 'https://www.google.com/search?q=Javascript+');
-api.addSearchAliasX('lj', 'language java', 'https://www.google.com/search?q=Java+');
+//api.addSearchAliasX('lJ', 'language Javascript', 'https://www.google.com/search?q=Javascript+');
+//api.addSearchAliasX('lj', 'language java', 'https://www.google.com/search?q=Java+');
 //api.addSearchAliasX('lC', 'C++', 'https://www.google.com/search?q=C++');
-api.addSearchAliasX('lc', 'language c', 'https://www.google.com/search?q=c+language+');
-api.addSearchAliasX('l#', 'language C#', 'https://www.google.com/search?q=c%23+');
-api.addSearchAliasX('lE', 'language E','https://ludwig.guru/s/');
-api.addSearchAliasX('lR', 'language R', 'https://www.google.com/search?q=languag+');
-api.addSearchAliasX('lr', 'language Ruby', 'https://www.google.com/search?q=Ruby+');
-api.addSearchAliasX('lP', 'language Python', 'https://www.google.com/search?q=Python+');
-api.addSearchAliasX('lp', 'language php', 'https://www.google.com/search?q=php+');
-api.addSearchAliasX('lK', 'language Kotlin', 'https://www.google.com/search?q=Kotlin+');
-api.addSearchAliasX('lS', 'language Swift', 'https://www.google.com/search?q=Swift+');
-api.addSearchAliasX('lQ', 'language SQL Query', 'https://www.google.com/search?q=SQL+');
-api.addSearchAliasX('ls', 'language Shell script', 'https://www.google.com/search?q=Shell+Schript+');
-api.addSearchAliasX('lT', 'language Typescript', 'https://www.google.com/search?q=TypeScript+');
-api.addSearchAliasX('lH', 'language HTML', 'https://www.google.com/search?q=HTML+');
+//api.addSearchAliasX('lc', 'language c', 'https://www.google.com/search?q=c+language+');
+//api.addSearchAliasX('l#', 'language C#', 'https://www.google.com/search?q=c%23+');
+//api.addSearchAliasX('lE', 'language E','https://ludwig.guru/s/');
+//api.addSearchAliasX('lR', 'language R', 'https://www.google.com/search?q=languag+');
+//api.addSearchAliasX('lr', 'language Ruby', 'https://www.google.com/search?q=Ruby+');
+//api.addSearchAliasX('lP', 'language Python', 'https://www.google.com/search?q=Python+');
+//api.addSearchAliasX('lp', 'language php', 'https://www.google.com/search?q=php+');
+//api.addSearchAliasX('lK', 'language Kotlin', 'https://www.google.com/search?q=Kotlin+');
+//api.addSearchAliasX('lS', 'language Swift', 'https://www.google.com/search?q=Swift+');
+//api.addSearchAliasX('lQ', 'language SQL Query', 'https://www.google.com/search?q=SQL+');
+//api.addSearchAliasX('ls', 'language Shell script', 'https://www.google.com/search?q=Shell+Schript+');
+//api.addSearchAliasX('lT', 'language Typescript', 'https://www.google.com/search?q=TypeScript+');
+//api.addSearchAliasX('lH', 'language HTML', 'https://www.google.com/search?q=HTML+');
 
-//book
-api.addSearchAliasX('bS', 'snu library', 'https://primoapac01.hosted.exlibrisgroup.com/primo-explore/search?vid=82SNU&query=any,contains,');
-api.addSearchAliasX('bY', 'yonsei library', 'https://library.yonsei.ac.kr/main/searchBrief?q=');
-api.addSearchAliasX('bP', 'pnu library', 'https://lib.pusan.ac.kr/en/resource/?query=');
+////book
+//api.addSearchAliasX('bS', 'snu library', 'https://primoapac01.hosted.exlibrisgroup.com/primo-explore/search?vid=82SNU&query=any,contains,');
+//api.addSearchAliasX('bY', 'yonsei library', 'https://library.yonsei.ac.kr/main/searchBrief?q=');
+//api.addSearchAliasX('bP', 'pnu library', 'https://lib.pusan.ac.kr/en/resource/?query=');
 
 //rate
-api.addSearchAliasX('rmA', 'rate your music artist', 'https://rateyourmusic.com/search?bx=82d55e544de2ee5b27b2fd0e7153bbee&searchtype=a&searchterm=');
-api.addSearchAliasX('rmR', 'rate your music releases', 'https://rateyourmusic.com/search?bx=dfd8f4911473234b6e1362952e1b29e4&searchtype=l&searchterm=');
+//api.addSearchAliasX('rmA', 'rate your music artist', 'https://rateyourmusic.com/search?bx=82d55e544de2ee5b27b2fd0e7153bbee&searchtype=a&searchterm=');
+//api.addSearchAliasX('rmR', 'rate your music releases', 'https://rateyourmusic.com/search?bx=dfd8f4911473234b6e1362952e1b29e4&searchtype=l&searchterm=');
 
 //sns
-api.addSearchAliasX('fB', 'faceBook(페이스북)', 'https://www.facebook.com/search/top/?q=');
-api.addSearchAliasX('tW', 'tWitter', 'https://twitter.com/search?q=');
-api.addSearchAliasX('ig', 'InstaGram HashTag', 'https://www.instagram.com/explore/tags/');
-api.addSearchAliasX('rD', 'redDit', 'https://www.reddit.com/search?q=');
+//api.addSearchAliasX('fB', 'faceBook(페이스북)', 'https://www.facebook.com/search/top/?q=');
+//api.addSearchAliasX('tW', 'tWitter', 'https://twitter.com/search?q=');
+//api.addSearchAliasX('ig', 'InstaGram HashTag', 'https://www.instagram.com/explore/tags/');
+//api.addSearchAliasX('rD', 'redDit', 'https://www.reddit.com/search?q=');
 
 //shorten - what is.. who is.. where is..  
-api.addSearchAliasX('wA', 'advanced', 'https://www.google.com/search?q=advanced+');
-api.addSearchAliasX('wB', 'basic', 'https://www.google.com/search?q=basic+');
-api.addSearchAliasX('wC', '분류', 'https://www.google.com/search?q=classification+of+');
-api.addSearchAliasX('wD', '차이점', 'https://www.google.com/search?q=difference+between+');
-api.addSearchAliasX('wE', '예제', 'https://www.google.com/search?q=example+of+');
-api.addSearchAliasX('wF', '어디서부터', 'https://www.google.com/search?q=where+from+');
-api.addSearchAliasX('wG', '목적', 'https://www.google.com/search?q=what+is+goal+of+');
-api.addSearchAliasX('wH', '역사', 'https://www.google.com/search?q=history+of+');
-api.addSearchAliasX('wI', '소개', 'https://www.google.com/search?q=Introduction+of');
-api.addSearchAliasX('wJ', '직업', 'https://www.google.com/search?q=jo+of+');
-api.addSearchAliasX('wK', '한국', 'https://www.google.com/search?q=Korea+');
-api.addSearchAliasX('wL', '리스트', 'https://www.google.com/search?q=list+of+');
-api.addSearchAliasX('wM', '방법', 'https://www.google.com/search?q=method+of+');
-api.addSearchAliasX('wm', '뜻', 'https://www.google.com/search?q=what+is+the+meaning+of+');
-api.addSearchAliasX('wN', '이름', 'https://www.google.com/search?q=name+of+');
-api.addSearchAliasX('wO', '순서', 'https://www.google.com/search?q=order+of+');
-api.addSearchAliasX('wP', '문제', 'https://www.google.com/search?q=problem+of+');
-api.addSearchAliasX('wQ', '질문', 'https://www.google.com/search?q=questions+of+');
-api.addSearchAliasX('wR', '랭킹', 'https://www.google.com/search?q=rank+of+');
-api.addSearchAliasX('wS', '공통점', 'https://www.google.com/search?q=common+point+of+');
-api.addSearchAliasX('wT', '표', 'https://www.google.com/search?q=q=table+of+');
-api.addSearchAliasX('wU', '사용예', 'https://www.google.com/search?q=usage+of+');
+//api.addSearchAliasX('wA', 'advanced', 'https://www.google.com/search?q=advanced+');
+//api.addSearchAliasX('wB', 'basic', 'https://www.google.com/search?q=basic+');
+//api.addSearchAliasX('wC', '분류', 'https://www.google.com/search?q=classification+of+');
+//api.addSearchAliasX('wD', '차이점', 'https://www.google.com/search?q=difference+between+');
+//api.addSearchAliasX('wE', '예제', 'https://www.google.com/search?q=example+of+');
+//api.addSearchAliasX('wF', '어디서부터', 'https://www.google.com/search?q=where+from+');
+//api.addSearchAliasX('wG', '목적', 'https://www.google.com/search?q=what+is+goal+of+');
+//api.addSearchAliasX('wH', '역사', 'https://www.google.com/search?q=history+of+');
+//api.addSearchAliasX('wI', '소개', 'https://www.google.com/search?q=Introduction+of');
+//api.addSearchAliasX('wJ', '직업', 'https://www.google.com/search?q=jo+of+');
+//api.addSearchAliasX('wK', '한국', 'https://www.google.com/search?q=Korea+');
+//api.addSearchAliasX('wL', '리스트', 'https://www.google.com/search?q=list+of+');
+//api.addSearchAliasX('wM', '방법', 'https://www.google.com/search?q=method+of+');
+//api.addSearchAliasX('wm', '뜻', 'https://www.google.com/search?q=what+is+the+meaning+of+');
+//api.addSearchAliasX('wN', '이름', 'https://www.google.com/search?q=name+of+');
+//api.addSearchAliasX('wO', '순서', 'https://www.google.com/search?q=order+of+');
+//api.addSearchAliasX('wP', '문제', 'https://www.google.com/search?q=problem+of+');
+//api.addSearchAliasX('wQ', '질문', 'https://www.google.com/search?q=questions+of+');
+//api.addSearchAliasX('wR', '랭킹', 'https://www.google.com/search?q=rank+of+');
+//api.addSearchAliasX('wS', '공통점', 'https://www.google.com/search?q=common+point+of+');
+//api.addSearchAliasX('wT', '표', 'https://www.google.com/search?q=q=table+of+');
+//api.addSearchAliasX('wU', '사용예', 'https://www.google.com/search?q=usage+of+');
 // api.addSearchAliasX('wW', '사용예', 'https://www.google.com/search?q=usage+of+'); //  w에만 지나치게 만이 추가 가능 
 // api.addSearchAliasX('wX', '사용예', 'https://www.google.com/search?q=usage+of+');
 // api.addSearchAliasX('wY', '사용예', 'https://www.google.com/search?q=usage+of+');
 // api.addSearchAliasX('wZ', '사용예', 'https://www.google.com/search?q=usage+of+');
 // 
 //file 확장자
-api.addSearchAliasX('pdF', 'pdf', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Apdf+');
-api.addSearchAliasX('cpP', 'cpp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Acpp+');
-api.addSearchAliasX('hwP', 'hwp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Ahwp+');
-api.addSearchAliasX('ppT', 'ppt', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Appt+');
-api.addSearchAliasX('giF', 'gif', 'https://giphy.com/search/');
+//api.addSearchAliasX('pdF', 'pdf', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Apdf+');
+//api.addSearchAliasX('cpP', 'cpp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Acpp+');
+//api.addSearchAliasX('hwP', 'hwp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Ahwp+');
+//api.addSearchAliasX('ppT', 'ppt', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Appt+');
+//api.addSearchAliasX('giF', 'gif', 'https://giphy.com/search/');
 
 //translation
-api.addSearchAliasX('t', 'tlanslate Hangle to English 한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
-api.addSearchAliasX('T', 'tlanslate English to Hangle 영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
-api.addSearchAliasX('tA', 'tlanslate All 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
-api.addSearchAliasX('tE', 'tlanslate Examples 네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
-api.addSearchAliasX('tL', 'tlanslate lyrics 가사해석', 'https://www.google.com/search?q=가사+해석+');
-api.addSearchAliasX('ll', '가사', 'https://www.google.com/search?q=lyrics+of+');
+//api.addSearchAliasX('t', 'tlanslate Hangle to English 한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
+//api.addSearchAliasX('T', 'tlanslate English to Hangle 영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
+//api.addSearchAliasX('tA', 'tlanslate All 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+//api.addSearchAliasX('tE', 'tlanslate Examples 네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
+//api.addSearchAliasX('tL', 'tlanslate lyrics 가사해석', 'https://www.google.com/search?q=가사+해석+');
+//api.addSearchAliasX('ll', '가사', 'https://www.google.com/search?q=lyrics+of+');
 
 //TODO: 검색을 통해서 google tlanslated 된 걸 clipboard에 복사 붙여넣는 것 만들기 (겹쳐서 동작하지 않음)
-api.addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
-api.addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
+//api.addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
+//api.addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
 
 //naver : naver is one of the most famous potal site of korea
-api.addSearchAliasX('N', 'naver', 'https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=');
-api.addSearchAliasX('nM', 'naverapi.map', 'https://api.map.naver.com/?query=');
-api.addSearchAliasX('nA', 'naver all 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
-api.addSearchAliasX('nD', 'naver Dictionary 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
-api.addSearchAliasX('nE', 'naver Example 네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
+//api.addSearchAliasX('N', 'naver', 'https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=');
+//api.addSearchAliasX('nM', 'naverapi.map', 'https://api.map.naver.com/?query=');
+//api.addSearchAliasX('nA', 'naver all 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+//api.addSearchAliasX('nD', 'naver Dictionary 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+//api.addSearchAliasX('nE', 'naver Example 네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 
 //Daum : daum is one of the most famous potal site of korea
-api.addSearchAliasX('D', '다음', 'https://search.daum.net/search?w=');
-api.addSearchAliasX('dA', '다음 사전all', 'http://dic.daum.net/search.do?q=');
-api.addSearchAliasX('dD', '다음 사전all', 'http://dic.daum.net/search.do?q=');
-api.addSearchAliasX('dE', '다음 사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
-api.addSearchAliasX('dM', '다음 api.map', 'http://local.daum.net/api.map/index.jsp?q=');
+//api.addSearchAliasX('D', '다음', 'https://search.daum.net/search?w=');
+//api.addSearchAliasX('dA', '다음 사전all', 'http://dic.daum.net/search.do?q=');
+//api.addSearchAliasX('dD', '다음 사전all', 'http://dic.daum.net/search.do?q=');
+//api.addSearchAliasX('dE', '다음 사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
+//api.addSearchAliasX('dM', '다음 api.map', 'http://local.daum.net/api.map/index.jsp?q=');
 
 //Shopping : without amazon, all the sites are korean-specific sites.
-api.addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
-api.addSearchAliasX('sA', 'shop아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민 
-api.addSearchAliasX('sE', 'shopEbay', 'https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw='); 
-api.addSearchAliasX('sC', 'shop 쿠팡', 'http://www.coupang.com/np/search?component=&q=');
-api.addSearchAliasX('sD', 'shop 다나와', 'http://search.danawa.com/dsearch.php?k1=');
-api.addSearchAliasX('sI', 'shop 인터파크', 'http://isearch.interpark.com/isearch?q=');
-api.addSearchAliasX('sT', 'shop 티몬', 'http://search.ticketmonster.co.kr/search/?keyword=');
-api.addSearchAliasX('sY', 'shop yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
-api.addSearchAliasX('sW', 'shop 위메프', 'http://search.wemakeprice.com/search?search_cate=top&search_keyword=');
-api.addSearchAliasX('saU', 'shop 옥션', 'http://search.auction.co.kr/search/search.aspx?keyword=');
+//api.addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
+//api.addSearchAliasX('sA', 'shop아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민 
+//api.addSearchAliasX('sE', 'shopEbay', 'https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw='); 
+//api.addSearchAliasX('sC', 'shop 쿠팡', 'http://www.coupang.com/np/search?component=&q=');
+//api.addSearchAliasX('sD', 'shop 다나와', 'http://search.danawa.com/dsearch.php?k1=');
+//api.addSearchAliasX('sI', 'shop 인터파크', 'http://isearch.interpark.com/isearch?q=');
+//api.addSearchAliasX('sT', 'shop 티몬', 'http://search.ticketmonster.co.kr/search/?keyword=');
+//api.addSearchAliasX('sY', 'shop yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
+//api.addSearchAliasX('sW', 'shop 위메프', 'http://search.wemakeprice.com/search?search_cate=top&search_keyword=');
+//api.addSearchAliasX('saU', 'shop 옥션', 'http://search.auction.co.kr/search/search.aspx?keyword=');
 //api.addSearchAliasX('sG', '지마켓', ''); 쿼리를 알 수 없음
-api.addSearchAliasX('s11', 'shop 11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
-api.addSearchAliasX('siH', 'shop 아이허브', ' https://kr.iherb.com/search?kw=');
-api.addSearchAliasX('s11', 'shop 11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
-api.addSearchAliasX('sdC', 'shop 다이닝코드 (음식점)', 'https://www.diningcode.com/isearch.php?query=');
+//api.addSearchAliasX('s11', 'shop 11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
+//api.addSearchAliasX('siH', 'shop 아이허브', ' https://kr.iherb.com/search?kw=');
+//api.addSearchAliasX('s11', 'shop 11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
+//api.addSearchAliasX('sdC', 'shop 다이닝코드 (음식점)', 'https://www.diningcode.com/isearch.php?query=');
 
 //music
-api.addSearchAliasX('msC', 'soundcloud', 'https://soundcloud.com/search?q=');
-api.addSearchAliasX('msI', 'soundcloudid', 'https://soundcloud.com/');
-api.addSearchAliasX('mS', 'spotify', 'https://open.spotify.com/search/results/');
-api.addSearchAliasX('msA', 'spotify Albums', 'https://open.spotify.com/search/albums/');
-api.addSearchAliasX('mL', 'meLon', 'https://www.melon.com/search/total/index.htm?q=');
-api.addSearchAliasX('mfM', 'lastFm', 'https://www.last.fm/search?q=');
-api.addSearchAliasX('mH', 'Hiphople', 'http://hiphople.com/index.php?_filter=search&mid=lyrics&search_keyword=');
-api.addSearchAliasX('mG', 'Genius', 'https://genius.com/search?q=');
-api.addSearchAliasX('mP', 'Pitchfork', 'https://pitchfork.com/search/?query=');
-api.addSearchAliasX('mC', 'metaCritic', 'http://www.metacritic.com/search/all/');
+//api.addSearchAliasX('msC', 'soundcloud', 'https://soundcloud.com/search?q=');
+//api.addSearchAliasX('msI', 'soundcloudid', 'https://soundcloud.com/');
+//api.addSearchAliasX('mS', 'spotify', 'https://open.spotify.com/search/results/');
+//api.addSearchAliasX('msA', 'spotify Albums', 'https://open.spotify.com/search/albums/');
+//api.addSearchAliasX('mL', 'meLon', 'https://www.melon.com/search/total/index.htm?q=');
+//api.addSearchAliasX('mfM', 'lastFm', 'https://www.last.fm/search?q=');
+//api.addSearchAliasX('mH', 'Hiphople', 'http://hiphople.com/index.php?_filter=search&mid=lyrics&search_keyword=');
+//api.addSearchAliasX('mG', 'Genius', 'https://genius.com/search?q=');
+//api.addSearchAliasX('mP', 'Pitchfork', 'https://pitchfork.com/search/?query=');
+//api.addSearchAliasX('mC', 'metaCritic', 'http://www.metacritic.com/search/all/');
 
 //Video
-api.addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
-api.addSearchAliasX('yg', 'youglish', 'https://youglish.com/pronounce/');
+//api.addSearchAliasX('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
+//api.addSearchAliasX('yg', 'youglish', 'https://youglish.com/pronounce/');
 
 //Wiki
-api.addSearchAliasX('nW', '나무위키', 'https://namu.wiki/w/');
-api.addSearchAliasX('eW', '영문위키', 'https://www.wikiwand.com/en/');
-api.addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
+//api.addSearchAliasX('nW', '나무위키', 'https://namu.wiki/w/');
+//api.addSearchAliasX('eW', '영문위키', 'https://www.wikiwand.com/en/');
+//api.addSearchAliasX('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 
 //papaers
-api.addSearchAliasX('pG', 'paper 구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
-api.addSearchAliasX('pB', 'paper (biology) nCBI', 'http://www.ncbi.nlm.nih.gov/search/?term=');
-api.addSearchAliasX('pR', 'paper RISS', 'http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=');
-api.addSearchAliasX('pE', 'paper ELSEVIER', 'https://www.elsevier.com/search-results?query=');
-api.addSearchAliasX('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
-api.addSearchAliasX('pN', 'paper Nature', 'https://www.nature.com/search?q=');
+//api.addSearchAliasX('pG', 'paper 구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
+//api.addSearchAliasX('pB', 'paper (biology) nCBI', 'http://www.ncbi.nlm.nih.gov/search/?term=');
+//api.addSearchAliasX('pR', 'paper RISS', 'http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=');
+//api.addSearchAliasX('pE', 'paper ELSEVIER', 'https://www.elsevier.com/search-results?query=');
+//api.addSearchAliasX('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=');
+//api.addSearchAliasX('pN', 'paper Nature', 'https://www.nature.com/search?q=');
 
 // FIXME: focus 관련 명령어는 바로 redirect 되지 않음
 api.mapkey('osA', '#7 open stackoverflow ask', function () {
