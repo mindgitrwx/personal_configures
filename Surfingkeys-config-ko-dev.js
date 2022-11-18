@@ -50,7 +50,7 @@ settings.prevLinkRegex       = /((back|<<|prev(ious)?)+)/i;
 // //--Like Nerd Tree--- TODO: FIX IT LIKE VERTICALLY
 // map(',nt', 'T'); 
 // map(',q', 'x'); 
-// mapkey(',s', 'opne new tab and split', function () {
+// api.mapkey(',s', 'opne new tab and split', function () {
 //     RUNTIME("newWindow");
 // });
 // //TODO: making spell check ,ts 
@@ -89,7 +89,7 @@ settings.prevLinkRegex       = /((back|<<|prev(ious)?)+)/i;
 // document.getElementByClassName('slide-close').click();
 // })();
 
-mapkey('on', '#3Open newtab', function () {
+api.mapkey('on', '#3Open newtab', function () {
     tabOpenLink("www.google.com");
 });
 
@@ -263,69 +263,69 @@ addSearchAliasX('pC', 'paper CiteSheer', 'http://citeseerx.ist.psu.edu/search?q=
 addSearchAliasX('pN', 'paper Nature', 'https://www.nature.com/search?q=');
 
 // FIXME: focus 관련 명령어는 바로 redirect 되지 않음
-mapkey('osA', '#7 open stackoverflow ask', function () {
+api.mapkey('osA', '#7 open stackoverflow ask', function () {
     window.location.replace("https://stackoverflow.com/questions/ask");
     //It cannot be happened document.getElementById('title').focus();      // 제목에 포커스
     //
     //document.getElementById('wmd-input').focus();
 });
 
-mapkey('ouA', '#7 open ubuntu ask', function () {
+api.mapkey('ouA', '#7 open ubuntu ask', function () {
     window.location.replace("https://askubuntu.com/questions/ask");
     //It cannot be happened document.getElementById('title').focus();      // 제목에 포커스
     //
     //document.getElementById('wmd-input').focus();
 });
 
-mapkey('oSA', '#7 open stackoverflow ask', function () {
+api.mapkey('oSA', '#7 open stackoverflow ask', function () {
     window.location.replace("https://stackoverflow.com/questions/ask").getElementById('wmd-input').addEventListener('paste', handlePaste).focus();
     // It cannot be happened
     // document.getElementById('wmd-input').addEventListener('paste',handlePaste).focus();
 });
 
-mapkey('oR', '#7 open reddit write', function () {
+api.mapkey('oR', '#7 open reddit write', function () {
     window.location.replace("https://www.reddit.com/submit");
 });
 
-mapkey('oGM', '#7 open gmail send ', function () {
+api.mapkey('oGM', '#7 open gmail send ', function () {
     window.location.replace("https://mail.google.com/mail/u/1/#inbox?compose=new")
 });
 
-mapkey('oGD', '#7 open google docs send ', function () {
+api.mapkey('oGD', '#7 open google docs send ', function () {
     window.location.replace("https://docs.google.com/document/u/0/")
 });
 
-mapkey('oGI', '#7 open gist', function () {
+api.mapkey('oGI', '#7 open gist', function () {
     window.location.replace("https://gist.github.com/")
 });
 
-mapkey('oP', '#7 open pastebin', function () {
+api.mapkey('oP', '#7 open pastebin', function () {
     window.location.replace("https://pastebin.com/")
 });
 
-mapkey('oGB', '#7 open google Book', function () {
+api.mapkey('oGB', '#7 open google Book', function () {
     window.location.replace("https://books.google.com/books?")
 });
 
-mapkey('oK', '#7 open kindle', function () {
+api.mapkey('oK', '#7 open kindle', function () {
     window.location.replace("https://read.amazon.com/")
 });
 
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
-vmapkey('y', "copy without reference notation on wikipedia", function () {
+vapi.mapkey('y', "copy without reference notation on wikipedia", function () {
     Clipboard.write(window.getSelection().toString().replace(/\[[0-9]*\]/g, "test")); // TODO: 동작하지 않음 
 }, {
     domain: /www\.wikiwand\.com/i
 }); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
 
 //TODO: git clone , get id
-mapkey('yg', '#7 git clone', function () {
+api.mapkey('yg', '#7 git clone', function () {
     Clipboard.write('git clone ' + window.location.href + '.git');
 }, {
     domain: /github\.com/i
 });
 
-mapkey('yg', '#7 git blog', function () {
+api.mapkey('yg', '#7 git blog', function () {
     var address = window.location.href.split(".");
     var githubId = address[0].replace(/(^\w+:|^)\/\//, '');
     var githubAddress = 'github.com' + '/' + githubId;
@@ -334,28 +334,28 @@ mapkey('yg', '#7 git blog', function () {
 })
 
 //TODO: git clone , get id
-mapkey('yG', '#7 git clone', function () {
+api.mapkey('yG', '#7 git clone', function () {
     Clipboard.write(window.location.href + '.git');
 }, {
     domain: /github\.com/i
 }); 
 
 // ADD: read like this yank element ~~~
-mapkey('yeI', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.id')); });
-mapkey('yeC', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.className')); });
-mapkey('yeT', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.type')); });
-mapkey('yeS', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.style')); });
-mapkey('yeA', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.alt')); });
+api.mapkey('yeI', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.id')); });
+api.mapkey('yeC', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.className')); });
+api.mapkey('yeT', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.type')); });
+api.mapkey('yeS', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.style')); });
+api.mapkey('yeA', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.alt')); });
 
 // Copy url as regex of SurfingKeys
-mapkey('yr', "Copy url as regex", function () {
+api.mapkey('yr', "Copy url as regex", function () {
     Clipboard.write('domain: ' + '\/' + window.location.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
 });
 
 
 // pre is often used for insert codeblocks on webpage. some code blocks just in pre, 
 // yQ와 동일함 
-mapkey('gyq', "Copy first pre and exist", function () {
+api.mapkey('gyq', "Copy first pre and exist", function () {
     var cssSelector = "pre";
 
     //보이는 것 중에서 pre element존재하는지 찾기 
@@ -377,7 +377,7 @@ mapkey('gyq', "Copy first pre and exist", function () {
     Clipboard.write(elements[0].innerText);
     RUNTIME("closeTab");
 });
-mapkey('yQ', "Copy first pre", function () {
+api.mapkey('yQ', "Copy first pre", function () {
     var cssSelector = "pre";
 
     //보이는 것 중에서 pre element존재하는지 찾기 
@@ -400,11 +400,11 @@ mapkey('yQ', "Copy first pre", function () {
 });
 
 // for get search url
-mapkey('yk', "Copy url before Keyowrd insertion", function () {
+api.mapkey('yk', "Copy url before Keyowrd insertion", function () {
     Clipboard.write(window.location.href.split('=')[0] + '=');
 });
 // surrounded   
-mapkey('"yy', "surround url with double quotation mark", function () {
+api.mapkey('"yy', "surround url with double quotation mark", function () {
     Clipboard.write('"' + window.location.href + '"');
 });
 
@@ -412,47 +412,47 @@ mapkey('"yy', "surround url with double quotation mark", function () {
 //////////////////////////////////////////////////////////
 // visualmode setting - vsual mode에 진입했을 때 동작가능 //
 //////////////////////////////////////////////////////////
-vmapkey('"y', "surround selection with doube quotation mark", function () {
+vapi.mapkey('"y', "surround selection with doube quotation mark", function () {
     Clipboard.write('"' + window.getSelection().toString().replace(/\n/g, " ") + '"');
 });
-vmapkey('<y', "surround selection ", function () {
+vapi.mapkey('<y', "surround selection ", function () {
     Clipboard.write('<' + window.getSelection().toString() + '>');
 });
-vmapkey('(y', "surround selection ", function () {
+vapi.mapkey('(y', "surround selection ", function () {
     Clipboard.write('(' + window.getSelection().toString() + ')');
 });
-vmapkey('[y', "surround selection ", function () {
+vapi.mapkey('[y', "surround selection ", function () {
     Clipboard.write('[' + window.getSelection().toString() + ']');
 });
-vmapkey('{y', "surround selection ", function () {
+vapi.mapkey('{y', "surround selection ", function () {
     Clipboard.write('{' + window.getSelection().toString() + '}');
 });
-vmapkey('/*y', "surround selection ", function () {
+vapi.mapkey('/*y', "surround selection ", function () {
     Clipboard.write('/*' + window.getSelection().toString() + '*/');
 });
-vmapkey('<--!y', "surround selection ", function () {
+vapi.mapkey('<--!y', "surround selection ", function () {
     Clipboard.write('<--!' + window.getSelection().toString() + '-->');
 });
-vmapkey('~y', "surround selection ", function () {
+vapi.mapkey('~y', "surround selection ", function () {
     var UpperSelected = window.getSelection().toString()
     Clipboard.write(UpperSelected.toUpperCase());
 });
-vmapkey('~jy', "Remove enter", function () {
+vapi.mapkey('~jy', "Remove enter", function () {
     Clipboard.write(window.getSelection().toString().replace(/\n/g, " "));
 });
-vmapkey('~cy', "Added comma", function () {
+vapi.mapkey('~cy', "Added comma", function () {
     Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
 });
-vmapkey('~dy', "Delete first 1 character", function () {
+vapi.mapkey('~dy', "Delete first 1 character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
-vmapkey('~Dy', "Delete surrounded", function () {
+vapi.mapkey('~Dy', "Delete surrounded", function () {
     Clipboard.write(window.getSelection().toString().slice(1, -1));
 });
-vmapkey('~sy', "Remove special character (blank is not considered as special character", function () { //TODO: Black is not work
+vapi.mapkey('~sy', "Remove special character (blank is not considered as special character", function () { //TODO: Black is not work
     Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9:blank:]/ig, ""));
 });
-vmapkey('~dy', "Markdown Strikethrough", function () {
+vapi.mapkey('~dy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
 //addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
@@ -463,7 +463,7 @@ vmapkey('~dy', "Markdown Strikethrough", function () {
 //TODO: google tlanslation auto copy make
 //TODO: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기
 /*
-vmapkey('ty', "한글 영어번역 clipboard", function () { //TODO:  
+vapi.mapkey('ty', "한글 영어번역 clipboard", function () { //TODO:  
     url = "https://translate.google.co.kr/?hl=ko#ko/en/" + window.getSelection().toString();
     request(url, function(err, response, html){
         if (!err) {
@@ -472,7 +472,7 @@ vmapkey('ty', "한글 영어번역 clipboard", function () { //TODO:
         }
     })
 });
-vmapkey('Ty', "영어 한글번역 clipboard", function () {
+vapi.mapkey('Ty', "영어 한글번역 clipboard", function () {
     url = "https://translate.google.co.kr/?hl=ko#en/ko/" + window.getSelection().toString();
     request(url, function(err, response, html){
         if (!err) {
@@ -484,49 +484,49 @@ vmapkey('Ty', "영어 한글번역 clipboard", function () {
 */
 
 /*
-vmapkey('~diy', "remove inner double quoates strings", function () {
+vapi.mapkey('~diy', "remove inner double quoates strings", function () {
     Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
 });
-vmapkey('~siy', "remove inner single quoates strings", function () {
+vapi.mapkey('~siy', "remove inner single quoates strings", function () {
     Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
 });
 */
 // markdown
-vmapkey('miy', "Markdown italic", function () {
+vapi.mapkey('miy', "Markdown italic", function () {
     Clipboard.write('*' + window.getSelection().toString() + '*');
 });
-vmapkey('mby', "Markdown bold", function () {
+vapi.mapkey('mby', "Markdown bold", function () {
     Clipboard.write('**' + window.getSelection().toString() + '**');
 });
-vmapkey('mly', "Markdown link", function () {
+vapi.mapkey('mly', "Markdown link", function () {
     Clipboard.write('[replaceit](' + window.getSelection().toString() + ')');
 });
-vmapkey('msy', "Markdown Strikethrough", function () {
+vapi.mapkey('msy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
 
 //setting 
-mapkey('gs', '#12 go Setting - Open Chrome Settings', function () {
+api.mapkey('gs', '#12 go Setting - Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
-mapkey('gE', '#12 go Extensions - Open Chrome extensions Shortcut setting', function () {
+api.mapkey('gE', '#12 go Extensions - Open Chrome extensions Shortcut setting', function () {
     tabOpenLink("chrome://extensions/shortcuts");
 });
 // intellij bind
-mapkey('<Ctrl-Alt-s>', '#12Open Chrome Settings', function () {
+api.mapkey('<Ctrl-Alt-s>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
 
 map('<Ctrl-V>', 'sm'); // markdown preview
 
-mapkey('D', '', function () {
+api.mapkey('D', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
     if (pageHeadLine.length > codeWrapper) {
         codeWrapper++;
     }
     pageHeadLine[codeWrapper].scrollIntoView();
 });
-mapkey('U', '', function () {
+api.mapkey('U', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
     if (0 < codeWrapper) {
         codeWrapper--;
@@ -534,7 +534,7 @@ mapkey('U', '', function () {
     pageHeadLine[codeWrapper].scrollIntoView();
 });
 
-mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
+api.mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".wiki-heading");
     if (pageHeadLine.length > namuPage) {
         namuPage++;
@@ -543,7 +543,7 @@ mapkey('D', '나무위키 목차 대단위 다운스크롤', function () {
 }, {
     domain: /namu\.wiki/i
 });
-mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
+api.mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
     pageHeadLine = document.querySelectorAll(".wiki-heading");
     if (0 < namuPage) {
         namuPage--;
@@ -553,7 +553,7 @@ mapkey('U', '나무위키 목차 대단위 up스크롤', function () {
     domain: /namu\.wiki/i
 });
 
-mapkey('D', '위키 목차 대단위 다운스크롤', function () {
+api.mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
     if (pageHeadLine.length > wikiPage) {
         wikiPage++;
@@ -563,7 +563,7 @@ mapkey('D', '위키 목차 대단위 다운스크롤', function () {
 }, {
     domain: /\.wikipedia\.org/i
 });
-mapkey('U', '위키 목차 대단위 up스크롤', function () {
+api.mapkey('U', '위키 목차 대단위 up스크롤', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
     if (0 < wikiPage) {
         wikiPage--;
@@ -575,7 +575,7 @@ mapkey('U', '위키 목차 대단위 up스크롤', function () {
 
 
 // Domain을 여러개 넣을 수 있는가?
-mapkey('D', '위키 목차 대단위 다운스크롤', function () {
+api.mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
     if (pageHeadLine.length > wikiPage) {
         wikiPage++;
@@ -586,7 +586,7 @@ mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     domain: /en\.wiktionary\.org/i
 });
 
-mapkey('U', '위키 목차 대단위 up스크롤', function () {
+api.mapkey('U', '위키 목차 대단위 up스크롤', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
     if (0 < wikiPage) {
         wikiPage--;
@@ -595,7 +595,7 @@ mapkey('U', '위키 목차 대단위 up스크롤', function () {
 }, {
     domain: /en\.wiktionary\.org/i
 });
-mapkey('D', 'wikiwand 목차 대단위 스크롤 ', function () {
+api.mapkey('D', 'wikiwand 목차 대단위 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
     if (pageHeadLine.length > wikiPage) {
         wikiPage++;
@@ -604,7 +604,7 @@ mapkey('D', 'wikiwand 목차 대단위 스크롤 ', function () {
 }, {
     domain: /www\.wikiwand\.com/i
 });
-mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
+api.mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
     if (0 < wikiPage) {
         wikiPage--;
@@ -615,7 +615,7 @@ mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
 });
 
 // query select all 내부에서 regular expression 이 먹히지 않음 
-mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
+api.mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
     pageHeadLine = document.querySelectorAll(".answer");
     if (pageHeadLine.length > stackAnswer) {
         stackAnswer++;
@@ -625,7 +625,7 @@ mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
 }, {
     domain: /stackoverflow\.com/i
 });
-mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
+api.mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".answer");
     if (0 < stackAnswer) {
         stackAnswer--;
@@ -635,7 +635,7 @@ mapkey('U', 'stackoverflow 답변 up 스크롤 ', function () {
 }, {
     domain: /stackoverflow\.com/i
 });
-mapkey('D', 'naver 답변 다운 스크롤', function () {
+api.mapkey('D', 'naver 답변 다운 스크롤', function () {
     pageHeadLine = document.querySelectorAll(".line_horizontal");
     if (pageHeadLine.length > naverAnswer) {
         naverAnswer++;
@@ -644,7 +644,7 @@ mapkey('D', 'naver 답변 다운 스크롤', function () {
 }, {
     domain: /kin\.naver\.com/i
 });
-mapkey('U', 'naver 답변 up 스크롤 ', function () {
+api.mapkey('U', 'naver 답변 up 스크롤 ', function () {
     pageHeadLine = document.querySelectorAll(".line_horizontal");
     if (0 < naverAnswer) {
         naverAnswer--;
@@ -667,53 +667,53 @@ window.onload = function(){
 // github default shortcut lists
 // https://help.github.com/articles/using-keyboard-shortcuts/
 
-mapkey('gC', 'Go to the code tab', function () {
+api.mapkey('gC', 'Go to the code tab', function () {
     document.querySelectorAll('.js-selected-navigation-item.reponav-item')[0].click();
 }, {
     domain: /github\.com/i
 });
 
-mapkey('gI', 'Go to the Issues tab. ', function () {
+api.mapkey('gI', 'Go to the Issues tab. ', function () {
     document.querySelectorAll('.js-selected-navigation-item.reponav-item')[1].click();
 }, {
     domain: /github\.com/i
 });
 
-mapkey('gP', 'Go to the Pull requests tab.  ', function () {
+api.mapkey('gP', 'Go to the Pull requests tab.  ', function () {
     document.querySelectorAll('.js-selected-navigation-item.reponav-item')[2].click();
 }, {
     domain: /github\.com/i
 });
-mapkey('gB', 'Go to the Projects tab. "', function () {
+api.mapkey('gB', 'Go to the Projects tab. "', function () {
     document.querySelectorAll('.js-selected-navigation-item.reponav-item')[3].click();
 }, {
     domain: /github\.com/i
 });
 
-mapkey('gW', 'Go to the Wiki tab. ', function () {
+api.mapkey('gW', 'Go to the Wiki tab. ', function () {
     document.querySelectorAll('.js-selected-navigation-item.reponav-item')[4].click();
 }, {
     domain: /github\.com/i
 });
 
-mapkey('gO', 'Go to the Overview tab. ', function () {
+api.mapkey('gO', 'Go to the Overview tab. ', function () {
     document.querySelectorAll('.UnderlineNav-item')[0].click();
 }, {
     domain: /github\.com/i
 });
-mapkey('gR', 'Go to the Repository tab. ', function () {
+api.mapkey('gR', 'Go to the Repository tab. ', function () {
     document.querySelectorAll('.UnderlineNav-item')[1].click();
 }, {
     domain: /github\.com/i
 });
-mapkey('gS', 'Go to the Stars tab. ', function () {
+api.mapkey('gS', 'Go to the Stars tab. ', function () {
     document.querySelectorAll('.UnderlineNav-item')[2].click();
 }, {
     domain: /github\.com/i
 });
 
 // TODO: test
-mapkey('V', 'view', function () {
+api.mapkey('V', 'view', function () {
     document.querySelectorAll('.btn.btn-sm.tooltipped.tooltipped-nw')[0].click();
 }, {
     domain: /github\.com/i
@@ -721,25 +721,25 @@ mapkey('V', 'view', function () {
 //end of github
 
 //start of amazon
-mapkey('gI', 'Instance click ', function () {
+api.mapkey('gI', 'Instance click ', function () {
     document.getElementById('gwt-debug-leftNav-Instances').click();
 }, {
     domain: /us-east-2\.console\.aws\.amazon\.com/i
 });
 
-mapkey('gS', 'security group click', function () {
+api.mapkey('gS', 'security group click', function () {
     document.getElementById('gwt-debug-leftNav-SecurityGroups').click();
 }, {
     domain: /us-east-2\.console\.aws\.amazon\.com/i
 });
 
-mapkey('gE', 'Elastic group click ', function () {
+api.mapkey('gE', 'Elastic group click ', function () {
     document.getElementById('gwt-debug-leftNav-Addresses').click();
 }, {
     domain: /us-east-2\.console\.aws\.amazon\.com/i
 });
 
-mapkey('gV', 'Volume click ', function () {
+api.mapkey('gV', 'Volume click ', function () {
     document.getElementById('gwt-debug-leftNav-Volumes').click();
 }, {
     domain: /us-east-2\.console\.aws\.amazon\.com/i
@@ -748,15 +748,15 @@ mapkey('gV', 'Volume click ', function () {
 
 // 
 // page 양 옆으로 넘길 수 있도록 하기
-mapkey('h', 'slideshare previous page', function () {
+api.mapkey('h', 'slideshare previous page', function () {
     document.getElementById('btnPrevious').click();
 }, {domain: /www\.slideshare\.net/i});
-mapkey('l', 'slideshare next page', function () {
+api.mapkey('l', 'slideshare next page', function () {
     document.getElementById('btnNext').click();
 }, {domain: /www\.slideshare\.net/i});
 
 
-mapkey('f', '#7 santatoic next', function () {
+api.mapkey('f', '#7 santatoic next', function () {
     var buttonList = document.getElementsByClassName('jsx-1583171186');
     for(var i=0;i<buttonList.length;i++){
       buttonList[i].click();
@@ -766,7 +766,7 @@ mapkey('f', '#7 santatoic next', function () {
 });
 
 
-mapkey('l', 'next video', function () { 
+api.mapkey('l', 'next video', function () { 
     s = window.location.hre;
     dividedURL = s.replace(/&/g, '=&').split('=');
     dividedURL[5]++; dividedURL[3]++;
@@ -774,7 +774,7 @@ mapkey('l', 'next video', function () {
     window.location.replace(mergedURL);
 }, {domain: /osam\.kr/i});
 
-mapkey('h', 'before video', function () { 
+api.mapkey('h', 'before video', function () { 
     s = window.location.hre;
     dividedURL = s.replace(/&/g, '=&').split('=');
     dividedURL[5]--; dividedURL[3]--;
@@ -790,17 +790,17 @@ mapkey('h', 'before video', function () {
 //Soundcloud shortcuts
 // . 이 들어가야 하는지 아닌지 테스트 
 // TODO: 잘 동작하지 않음 (이미 단축키가 assign 되어 있는 사이트라서 그런 것 처럼 보임)
-mapkey('J', 'soundcloud previous song', function () {
+api.mapkey('J', 'soundcloud previous song', function () {
     document.getElementsByClassName('sc-ir.playControls__control.playControls__prev.skipControl__previous').click();
 }, {
     domain: /soundcloud\.com/i
 });
-mapkey('K', 'soundcltud next song', function () {
+api.mapkey('K', 'soundcltud next song', function () {
     document.getElementsByClassName('skipControl.sc-ir.playControls__control.playControls__next.skipControl__next').click();
 }, {
     domain: /soundcloud\.com/i
 });
-mapkey('L', 'soundcloud like', function () {
+api.mapkey('L', 'soundcloud like', function () {
     document.getElementsByClassName('sc-button-like.playbackSoundBadge__like.sc-button.sc-button-small.sc-button-icon.sc-button-responsive').click();
 }, {
     domain: /soundcloud\.com/i
@@ -810,23 +810,23 @@ mapkey('L', 'soundcloud like', function () {
 //TODO: google tlanslation auto copy make: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기 
 //p, ''df viewer mapping 
 
-// mapkey('D', 'github readme 스크롤', function () {
+// api.mapkey('D', 'github readme 스크롤', function () {
 //     stackAnswer++;
 //     pageHeadLine = document.querySelectorAll(".answers");
 //     pageHeadLine[stackAnswer].scrollIntoView();
 // },{domain: /\\pdf_viewer.html*/i});
-// mapkey('U', 'github readme up 스크롤 ', function () {
+// api.mapkey('U', 'github readme up 스크롤 ', function () {
 //     stackAnswer--;
 //     pageHeadLine = document.querySelectorAll(".answers");
 //     pageHeadLine[stackAnswer].scrollIntoView();
 // },{domain: /\\pdf_viewer.html*/i});
 
-// mapkey('D', 'github readme 스크롤', function () {
+// api.mapkey('D', 'github readme 스크롤', function () {
 //     stackAnswer++;
 //     pageHeadLine = document.querySelectorAll(".wp_syntax", ".wp_");
 //     pageHeadLine[stackAnswer].scrollIntoView();
 // },{domain: /\\pdf_viewer.html*/i});
-// mapkey('U', 'github readme up 스크롤 ', function () ,{
+// api.mapkey('U', 'github readme up 스크롤 ', function () ,{
 //     stackAnswer--;
 //     pageHeadLine = document.querySelectorAll(".answers");
 //     pageHeadLine[stackAnswer].scrollIntoView();
@@ -846,7 +846,7 @@ map('l', '<ArrowRight>', {domain: /map\.naver\.com/i});
 //HOTFIX:
 //ISSUE: 주석에서 auto로 ISSUE를 붙여주는 것이 있었으면 좋겠다
 
-mapkey('yA', "#7Copy all tabs url", function () {
+api.mapkey('yA', "#7Copy all tabs url", function () {
     //get numbers of tabs
     chrome.tabs.query({
         windowType: 'normal'
