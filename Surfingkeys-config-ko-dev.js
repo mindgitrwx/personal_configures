@@ -146,7 +146,10 @@ api.addSearchAlias('ls', 'language Shell script', 'https://www.google.com/search
 api.addSearchAlias('lT', 'language Typescript', 'https://www.google.com/search?q=TypeScript+');
 api.addSearchAlias('lH', 'language HTML', 'https://www.google.com/search?q=HTML+');
 
-////book
+//sentence search
+api.addSearchAlias('S', 'sentencestack', 'https://sentencestack.com/q/');
+
+//book
 api.addSearchAlias('bS', 'snu library', 'https://primoapac01.hosted.exlibrisgroup.com/primo-explore/search?vid=82SNU&query=any,contains,');
 api.addSearchAlias('bY', 'yonsei library', 'https://library.yonsei.ac.kr/main/searchBrief?q=');
 api.addSearchAlias('bP', 'pnu library', 'https://lib.pusan.ac.kr/en/resource/?query=');
