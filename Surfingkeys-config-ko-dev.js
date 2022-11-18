@@ -12,9 +12,9 @@
 // Advanced mode를 선택한 후, Load settings from에 위 주소를 입력하고 Save 해주시면 몇초 지나서 이 설정이 저장될 겁니다     //
 //                                                                                                                    //
 // 키 맵핑할 때 주의할 점                                                                                               //
-// map('<Ctrl-Shift-e>', 'T');                                                                                        //
+// api.map('<Ctrl-Shift-e>', 'T');                                                                                        //
 // 이런식으로 맵핑하면 동작하지 않고                                                                                     //
-// map('<Ctrl-E>', 'T');                                                                                              //
+// api.map('<Ctrl-E>', 'T');                                                                                              //
 //                                                                                                                    //
 // 이런 식으로 맵핑해야 함                                                                                              //
 //                                                                                                                    //
@@ -34,40 +34,46 @@ var namuPage    = 0;
 var linkCounter = 0;
 
 // Properties list
-// Hints.numericHints           = false;
-// Hints.characters             = "asdfgqwertzxcvbyuiopmnhlk";  // without j for esc (TODO: jj for esc when hints mode)
-// Hints.scrollKeys             = "G";
+api.Hints.numericHints           = false;
+api.Hints.characters             = "asdfgqwertzxcvbyuiopmnhlk";  // without j for esc (TODO: jj for esc when hints mode)
+api.Hints.scrollKeys             = "G";
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
 settings.defaultSearchEngine = 'L';                          // Google I'm Feeling Luckey
 settings.nextLinkRegex       = /((forward|>>|next)+)/i;
 settings.prevLinkRegex       = /((back|<<|prev(ious)?)+)/i;
+////////////////////////////////
+// api.unapi.map default key api.mapings  //
+////////////////////////////////
+api.unapi.map('<Ctrl-6>'); // (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
+api.unapi.map('<Ctrl-p>'); 
+api.unapi.map('<Ctrl-n>'); 
+api.map(']', ']]'); // 두번 누르는건 자연스럽지 않음 
+api.map('[', '[[');
 
-// map(']', ']]'); // 두번 누르는건 자연스럽지 않음 
-// map('[', '[[');
+// My default vim key binding: https://gist.github.com/millermedeiros/1262085
+//--Like Nerd Tree--- TODO: FIX IT LIKE VERTICALLY
+api.map(',nt', 'T'); 
+api.map(',q', 'x'); 
+api.mapkey(',s', 'opne new tab and split', function () {
+    RUNTIME("newWindow");
+});
+//TODO: making spell check ,ts 
 
-// // My default vim key binding: https://gist.github.com/millermedeiros/1262085
-// //--Like Nerd Tree--- TODO: FIX IT LIKE VERTICALLY
-// map(',nt', 'T'); 
-// map(',q', 'x'); 
-// api.mapkey(',s', 'opne new tab and split', function () {
-//     RUNTIME("newWindow");
-// });
-// //TODO: making spell check ,ts 
+// FIXME: it doesn't work
+// iapi.map('<Ctrl-[>', "<Esc>");
+// api.vmap('<Ctrl-[>', "<Esc>");
 
-// // FIXME: it doesn't work
-// imap('<Ctrl-[>', "<Esc>");
-// vmap('<Ctrl-[>', "<Esc>");
+// 바이두와 bing 을 굳이 사용할 필요가 없길래 api.unapi.map함 
+api.removeSearchAliasX('b');
+api.removeSearchAliasX('g');
+api.removeSearchAliasX('w');
+api.removeSearchAliasX('s');
 
-// removeSearchAliasX('b');
-// removeSearchAliasX('g');
-// removeSearchAliasX('w');
-// removeSearchAliasX('s');
-
-// // for surfingkeys PDF autokey-----------------------------------------
-// map('<Shift-1>', 'fs'); // 잘 되는 느낌은 아님
-// map('<Shift-2>', 'fd');
-// map('<Shift-3>', 'ff');
+// for surfingkeys PDF autokey-----------------------------------------
+api.map('<Shift-1>', 'fs'); // 잘 되는 느낌은 아님
+api.map('<Shift-2>', 'fd');
+api.map('<Shift-3>', 'ff');
 
 //////////////////////////
 // for url heml extract //
@@ -105,8 +111,8 @@ api.addSearchAliasX('gtK', 'google trend Korea', 'trends.google.com/trends/explo
 api.addSearchAliasX('gtU', 'google trend USA',  'trends.google.com/trends/explore?geo=US&q=');
 api.addSearchAliasX('gtI', 'google trend India', 'trends.google.com/trends/explore?geo=IN&q=');
 
-//map
-api.addSearchAliasX('gM', 'Google map', 'https://www.google.com/maps?q=');
+//api.map
+api.addSearchAliasX('gM', 'Google api.map', 'https://www.google.com/api.maps?q=');
 api.addSearchAliasX('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
 //coding -- 미완성
@@ -204,7 +210,7 @@ api.addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/
 
 //naver : naver is one of the most famous potal site of korea
 api.addSearchAliasX('N', 'naver', 'https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=');
-api.addSearchAliasX('nM', 'navermap', 'https://map.naver.com/?query=');
+api.addSearchAliasX('nM', 'naverapi.map', 'https://api.map.naver.com/?query=');
 api.addSearchAliasX('nA', 'naver all 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
 api.addSearchAliasX('nD', 'naver Dictionary 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
 api.addSearchAliasX('nE', 'naver Example 네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
@@ -214,7 +220,7 @@ api.addSearchAliasX('D', '다음', 'https://search.daum.net/search?w=');
 api.addSearchAliasX('dA', '다음 사전all', 'http://dic.daum.net/search.do?q=');
 api.addSearchAliasX('dD', '다음 사전all', 'http://dic.daum.net/search.do?q=');
 api.addSearchAliasX('dE', '다음 사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
-api.addSearchAliasX('dM', '다음 map', 'http://local.daum.net/map/index.jsp?q=');
+api.addSearchAliasX('dM', '다음 api.map', 'http://local.daum.net/api.map/index.jsp?q=');
 
 //Shopping : without amazon, all the sites are korean-specific sites.
 api.addSearchAliasX('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
@@ -311,12 +317,31 @@ api.mapkey('oK', '#7 open kindle', function () {
     window.location.replace("https://read.amazon.com/")
 });
 
+api.mapkey('Q', '#1Click on an Image or a button', function () {
+    api.Hints.create("img, button", function (element) {
+        element;
+        element.src;
+        // Clipboard.write(element.src);
+        // TODO: Copy 하는 방법은 없는지 알아보기
+    });
+});
+
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
-api.mapkey('y', "copy without reference notation on wikipedia", function () {
+api.vmapkey('y', "copy without reference notation on wikipedia", function () {
     Clipboard.write(window.getSelection().toString().replace(/\[[0-9]*\]/g, "test")); // TODO: 동작하지 않음 
 }, {
     domain: /www\.wikiwand\.com/i
 }); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
+
+api.mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
+    var linksToYank = [];
+    api.Hints.create('*[href]', function (element) {
+        linksToYank.push('domain: ' + '\/' + element.href.slice(8, ).split('/')[0].replace(/\./g, "\\\.") + '\/' + 'i');
+        Clipboard.write(linksToYank.join('\n'));
+    }, {
+        multipleHits: true
+    });
+});
 
 //TODO: git clone , get id
 api.mapkey('yg', '#7 git clone', function () {
@@ -340,12 +365,56 @@ api.mapkey('yG', '#7 git clone', function () {
     domain: /github\.com/i
 }); 
 
+api.mapkey('yE', '#7 Yank Element info. copy link element id or classname', function () {
+    var linksToYank = [];
+    api.Hints.create("", function (element) {
+
+        linksToYank.push('id: ' + element.id + '\n');
+        linksToYank.push('innertext: ' + element.innerText + '\n');
+        linksToYank.push('className: ' + element.className + '\n');
+        linksToYank.push('href: ' + element.href + '\n');
+        linksToYank.push('type: ' + element.type + '\n');
+        linksToYank.push('style: ' + element.style + '\n');
+        linksToYank.push('src: ' + element.src + '\n');
+        linksToYank.push('alt: ' + element.alt + '\n');
+        (Clipboard.write(linksToYank.join('\n')));
+    });
+});
+
 // ADD: read like this yank element ~~~
 api.mapkey('yeI', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.id')); });
 api.mapkey('yeC', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.className')); });
 api.mapkey('yeT', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.type')); });
 api.mapkey('yeS', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.style')); });
 api.mapkey('yeA', '#7 Yank Element info. copy link element id or classname', function (element) { (Clipboard.write('element.alt')); });
+
+api.mapkey('ymE', '#7 Yank Multiple Element info  (copy multiple link element id or classname)', function () {
+    var linksToYank = [];
+    api.Hints.create('*[href]', function (element) {
+
+        linksToYank.push('id: ' + element.id + '\n');
+        linksToYank.push('innertext: ' + element.innerText + '\n');
+        linksToYank.push('className: ' + element.className + '\n');
+        (Clipboard.write(linksToYank.join('\n')));
+    }, {
+        multipleHits: true
+    });
+});
+
+//TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기  (대문자를 박을때는 맨 뒤에 박는 편이 낫겠다.) --단축키 네개 이상? 
+api.mapkey('ymR', '#7Copy multiple link Regex URLs to the clipboard and add commas', function () {
+    var linksToYank = [];
+    api.Hints.create('*[href]', function (element) {
+        if (linkCounter === 0) {
+            Clipboard.write('{')
+        }
+        linksToYank.push('"' + element.href + '"', );
+        Clipboard.write(linksToYank.join('\n'));
+        linkCounter++;
+    }, {
+        multipleHits: true
+    });
+});
 
 // Copy url as regex of SurfingKeys
 api.mapkey('yr', "Copy url as regex", function () {
@@ -412,10 +481,10 @@ api.mapkey('"yy', "surround url with double quotation mark", function () {
 //////////////////////////////////////////////////////////
 // visualmode setting - vsual mode에 진입했을 때 동작가능 //
 //////////////////////////////////////////////////////////
-api.mapkey('"y', "surround selection with doube quotation mark", function () {
+api.vmapkey('"y', "surround selection with doube quotation mark", function () {
     Clipboard.write('"' + window.getSelection().toString().replace(/\n/g, " ") + '"');
 });
-api.mapkey('<y', "surround selection ", function () {
+api.vmapkey('<y', "surround selection ", function () {
     Clipboard.write('<' + window.getSelection().toString() + '>');
 });
 api.mapkey('(y', "surround selection ", function () {
@@ -424,35 +493,35 @@ api.mapkey('(y', "surround selection ", function () {
 api.mapkey('[y', "surround selection ", function () {
     Clipboard.write('[' + window.getSelection().toString() + ']');
 });
-api.mapkey('{y', "surround selection ", function () {
+api.vmapkey('{y', "surround selection ", function () {
     Clipboard.write('{' + window.getSelection().toString() + '}');
 });
-api.mapkey('/*y', "surround selection ", function () {
+api.vmapkey('/*y', "surround selection ", function () {
     Clipboard.write('/*' + window.getSelection().toString() + '*/');
 });
-api.mapkey('<--!y', "surround selection ", function () {
+api.vmapkey('<--!y', "surround selection ", function () {
     Clipboard.write('<--!' + window.getSelection().toString() + '-->');
 });
-api.mapkey('~y', "surround selection ", function () {
+api.vmapkey('~y', "surround selection ", function () {
     var UpperSelected = window.getSelection().toString()
     Clipboard.write(UpperSelected.toUpperCase());
 });
-api.mapkey('~jy', "Remove enter", function () {
+api.vmapkey('~jy', "Remove enter", function () {
     Clipboard.write(window.getSelection().toString().replace(/\n/g, " "));
 });
-api.mapkey('~cy', "Added comma", function () {
+api.vmapkey('~cy', "Added comma", function () {
     Clipboard.write(window.getSelection().toString().replace(/[ ,]+/g, ","));
 });
-api.mapkey('~dy', "Delete first 1 character", function () {
+api.vmapkey('~dy', "Delete first 1 character", function () {
     Clipboard.write(window.getSelection().toString().substr(1));
 });
-api.mapkey('~Dy', "Delete surrounded", function () {
+api.vmapkey('~Dy', "Delete surrounded", function () {
     Clipboard.write(window.getSelection().toString().slice(1, -1));
 });
-api.mapkey('~sy', "Remove special character (blank is not considered as special character", function () { //TODO: Black is not work
+api.vmapkey('~sy', "Remove special character (blank is not considered as special character", function () { //TODO: Black is not work
     Clipboard.write(window.getSelection().toString().replace(/[^A-Z0-9:blank:]/ig, ""));
 });
-api.mapkey('~dy', "Markdown Strikethrough", function () {
+api.vmapkey('~dy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
 //api.addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
@@ -463,7 +532,7 @@ api.mapkey('~dy', "Markdown Strikethrough", function () {
 //TODO: google tlanslation auto copy make
 //TODO: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기
 /*
-api.mapkey('ty', "한글 영어번역 clipboard", function () { //TODO:  
+api.vmapkey('ty', "한글 영어번역 clipboard", function () { //TODO:  
     url = "https://translate.google.co.kr/?hl=ko#ko/en/" + window.getSelection().toString();
     request(url, function(err, response, html){
         if (!err) {
@@ -472,7 +541,7 @@ api.mapkey('ty', "한글 영어번역 clipboard", function () { //TODO:
         }
     })
 });
-api.mapkey('Ty', "영어 한글번역 clipboard", function () {
+api.vmapkey('Ty', "영어 한글번역 clipboard", function () {
     url = "https://translate.google.co.kr/?hl=ko#en/ko/" + window.getSelection().toString();
     request(url, function(err, response, html){
         if (!err) {
@@ -484,25 +553,35 @@ api.mapkey('Ty', "영어 한글번역 clipboard", function () {
 */
 
 /*
-api.mapkey('~diy', "remove inner double quoates strings", function () {
+api.vmapkey('~diy', "remove inner double quoates strings", function () {
     Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
 });
-api.mapkey('~siy', "remove inner single quoates strings", function () {
+api.vmapkey('~siy', "remove inner single quoates strings", function () {
     Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
 });
 */
 // markdown
-api.mapkey('miy', "Markdown italic", function () {
+api.vmapkey('miy', "Markdown italic", function () {
     Clipboard.write('*' + window.getSelection().toString() + '*');
 });
-api.mapkey('mby', "Markdown bold", function () {
+api.vmapkey('mby', "Markdown bold", function () {
     Clipboard.write('**' + window.getSelection().toString() + '**');
 });
-api.mapkey('mly', "Markdown link", function () {
+api.vmapkey('mly', "Markdown link", function () {
     Clipboard.write('[replaceit](' + window.getSelection().toString() + ')');
 });
-api.mapkey('msy', "Markdown Strikethrough", function () {
+api.vmapkey('msy', "Markdown Strikethrough", function () {
     Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
+});
+// etc
+api.mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function () {
+    var linksToYank = [];
+    api.Hints.create('*[href]', function (element) {
+        linksToYank.push('"' + element.href + '"');
+        Clipboard.write(linksToYank.join('\n'));
+    }, {
+        multipleHits: true
+    });
 });
 
 //setting 
@@ -517,7 +596,7 @@ api.mapkey('<Ctrl-Alt-s>', '#12Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
 
-map('<Ctrl-V>', 'sm'); // markdown preview
+api.map('<Ctrl-V>', 'sm'); // markdown preview
 
 api.mapkey('D', '', function () {
     pageHeadLine = document.querySelectorAll("pre");
@@ -808,7 +887,7 @@ api.mapkey('L', 'soundcloud like', function () {
 
 
 //TODO: google tlanslation auto copy make: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기 
-//p, ''df viewer mapping 
+//p, ''df viewer api.mapping 
 
 // api.mapkey('D', 'github readme 스크롤', function () {
 //     stackAnswer++;
@@ -835,10 +914,10 @@ api.mapkey('L', 'soundcloud like', function () {
 
 //네이버 맵 지도 이동
 /*
-map('h', '<ArrowLeft>', {domain: /map\.naver\.com/i});
-map('j', '<ArrowDown>',  {domain: /map\.naver\.com/i});
-map('k', '<ArrowUp>', {domain: /map\.naver\.com/i});
-map('l', '<ArrowRight>', {domain: /map\.naver\.com/i});
+api.map('h', '<ArrowLeft>', {domain: /api.map\.naver\.com/i});
+api.map('j', '<ArrowDown>',  {domain: /api.map\.naver\.com/i});
+api.map('k', '<ArrowUp>', {domain: /api.map\.naver\.com/i});
+api.map('l', '<ArrowRight>', {domain: /api.map\.naver\.com/i});
 */
 // 지도 이동 
 
