@@ -217,7 +217,7 @@ api.addSearchAlias('Ty', '영어한글번역', 'https://translate.google.co.kr/?
 
 //naver : naver is one of the most famous potal site of korea
 api.addSearchAlias('N', 'naver', 'https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=');
-api.addSearchAlias('nM', 'naverapi.map', 'https://api.map.naver.com/?query=');
+api.addSearchAlias('nM', 'navermap', 'https://map.naver.com/?query=');
 api.addSearchAlias('nA', 'naver all 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
 api.addSearchAlias('nD', 'naver Dictionary 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
 api.addSearchAlias('nE', 'naver Example 네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
@@ -227,7 +227,7 @@ api.addSearchAlias('D', '다음', 'https://search.daum.net/search?w=');
 api.addSearchAlias('dA', '다음 사전all', 'http://dic.daum.net/search.do?q=');
 api.addSearchAlias('dD', '다음 사전all', 'http://dic.daum.net/search.do?q=');
 api.addSearchAlias('dE', '다음 사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
-api.addSearchAlias('dM', '다음 api.map', 'http://local.daum.net/api.map/index.jsp?q=');
+api.addSearchAlias('dM', '다음 map', 'http://local.daum.net/map/index.jsp?q=');
 
 //Shopping : without amazon, all the sites are korean-specific sites.
 api.addSearchAlias('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
