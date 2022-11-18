@@ -107,7 +107,6 @@ api.addSearchAlias('G', 'google', 'https://www.google.com/search?q=');
 
 //ai
 api.addSearchAlias('af', 'futurepedia', 'https://www.futurepedia.io/?searchTerm=');
-api.addSearchAlias('af', 'futurepedia', 'https://www.futurepedia.io/?searchTerm=');
 
 //GoogleTrand
 api.addSearchAlias('gT', 'google trend', 'trends.google.com/trends/explore?q=');
@@ -124,6 +123,7 @@ api.addSearchAlias('C', 'search coding', 'https://searchcode.com/?q=');
 api.addSearchAlias('cA', 'Alternative', 'https://alternativeto.net/browse/search?q=');
 api.addSearchAlias('cC', 'search coding', 'https://searchcode.com/?q=');
 api.addSearchAlias('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
+api.addSearchAlias('cr', 'rfc search', 'https://rfc.fyi/?search=');
 api.addSearchAlias('cs', 'codesandbox (online interactive IDE)', 'https://codesandbox.io/search?query=');
 api.addSearchAlias('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
 api.addSearchAlias('gH', 'github', 'https://github.com/search?q=');
@@ -954,3 +954,15 @@ api.mapkey('yA', "#7Copy all tabs url", function () {
     api.Clipboard.write(URLsToYank);
 });
 
+
+
+int main(int argc, chr (argv[])){
+    cpu_set_t set;
+    int parentCPU childCPU
+    int nloops
+
+    if(argc != 4){
+        fprintf(stderr, "Usage: %s parentc")
+
+    }
+}
