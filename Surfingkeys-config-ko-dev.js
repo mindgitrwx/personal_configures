@@ -105,6 +105,10 @@ api.addSearchAlias('L', 'Im feeling lucky','https://duckduckgo.com/?q=\\');
 api.addSearchAlias('d', 'download', 'https://www.google.com/search?q=download+');
 api.addSearchAlias('G', 'google', 'https://www.google.com/search?q=');
 
+//ai
+api.addSearchAlias('af', 'futurepedia', 'https://www.futurepedia.io/?searchTerm=');
+api.addSearchAlias('af', 'futurepedia', 'https://www.futurepedia.io/?searchTerm=');
+
 //GoogleTrand
 api.addSearchAlias('gT', 'google trend', 'trends.google.com/trends/explore?q=');
 api.addSearchAlias('gtK', 'google trend Korea', 'trends.google.com/trends/explore?geo=KR&q=');
@@ -347,7 +351,10 @@ api.mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function (
 
 //TODO: git clone , get id
 api.mapkey('yg', '#7 git clone', function () {
-    Clipboard.write('git clone ' + window.location.href + '.git');
+    api.Hints.create('git clone ' + window.location.href + '.git', function(element) {
+        Clipboard.write('git clone ' + window.location.href + '.git');
+    });
+    // Clipboard.write('git clone ' + window.location.href + '.git');
 }, {
     domain: /github\.com/i
 });
