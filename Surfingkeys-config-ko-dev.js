@@ -65,10 +65,10 @@ api.mapkey(',s', 'opne new tab and split', function () {
 // api.vmap('<Ctrl-[>', "<Esc>");
 
 // 바이두와 bing 을 굳이 사용할 필요가 없길래 api.unapi함 
-api.removeSearchAliasX('b');
-api.removeSearchAliasX('g');
-api.removeSearchAliasX('w');
-api.removeSearchAliasX('s');
+// api.removeSearchAliasX('b');
+// api.removeSearchAliasX('g');
+// api.removeSearchAliasX('w');
+// api.removeSearchAliasX('s');
 
 // for surfingkeys PDF autokey-----------------------------------------
 api.map('<Shift-1>', 'fs'); // 잘 되는 느낌은 아님
