@@ -124,6 +124,7 @@ api.addSearchAlias('cA', 'Alternative', 'https://alternativeto.net/browse/search
 api.addSearchAlias('cC', 'search coding', 'https://searchcode.com/?q=');
 api.addSearchAlias('cW', 'chrome webstore', 'https://chrome.google.com/webstore/search/'); // chrome
 api.addSearchAlias('cr', 'rfc search', 'https://rfc.fyi/?search=');
+api.addSearchAlias('rfC', 'rfc search', 'https://rfc.fyi/?search=');
 api.addSearchAlias('cs', 'codesandbox (online interactive IDE)', 'https://codesandbox.io/search?query=');
 api.addSearchAlias('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
 api.addSearchAlias('gH', 'github', 'https://github.com/search?q=');
