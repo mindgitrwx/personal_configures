@@ -235,16 +235,8 @@ api.addSearchAlias('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=
 api.addSearchAlias('sA', 'shop아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민 
 api.addSearchAlias('sE', 'shopEbay', 'https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw='); 
 api.addSearchAlias('sC', 'shop 쿠팡', 'http://www.coupang.com/np/search?component=&q=');
-api.addSearchAlias('sD', 'shop 다나와', 'http://search.danawa.com/dsearch.php?k1=');
 api.addSearchAlias('sI', 'shop 인터파크', 'http://isearch.interpark.com/isearch?q=');
-api.addSearchAlias('sT', 'shop 티몬', 'http://search.ticketmonster.co.kr/search/?keyword=');
 api.addSearchAlias('sY', 'shop yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
-api.addSearchAlias('sW', 'shop 위메프', 'http://search.wemakeprice.com/search?search_cate=top&search_keyword=');
-api.addSearchAlias('saU', 'shop 옥션', 'http://search.auction.co.kr/search/search.aspx?keyword=');
-api.addSearchAlias('s11', 'shop 11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
-api.addSearchAlias('siH', 'shop 아이허브', ' https://kr.iherb.com/search?kw=');
-api.addSearchAlias('s11', 'shop 11번가', 'http://search.11st.co.kr/Search.tmall?kwd=');
-api.addSearchAlias('sdC', 'shop 다이닝코드 (음식점)', 'https://www.diningcode.com/isearch.php?query=');
 
 //music
 api.addSearchAlias('msC', 'soundcloud', 'https://soundcloud.com/search?q=');
