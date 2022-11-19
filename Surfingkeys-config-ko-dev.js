@@ -953,16 +953,3 @@ api.mapkey('yA', "#7Copy all tabs url", function () {
     })();
     api.Clipboard.write(URLsToYank);
 });
-
-
-
-int main(int argc, chr (argv[])){
-    cpu_set_t set;
-    int parentCPU childCPU
-    int nloops
-
-    if(argc != 4){
-        fprintf(stderr, "Usage: %s parentc")
-
-    }
-}
