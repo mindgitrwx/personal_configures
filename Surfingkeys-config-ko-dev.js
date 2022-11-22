@@ -39,7 +39,7 @@ api.Hints.characters             = "asdfgqwertzxcvbyuiopmnhlk";  // without j fo
 api.Hints.scrollKeys             = "G";
 settings.caseSensitive       = true;
 settings.omnibarSuggestion   = true;
-// settings.defaultSearchEngine = 'L';                          // Google I'm Feeling Luckey
+settings.defaultSearchEngine = 'L';                          // Google I'm Feeling Luckey
 settings.nextLinkRegex       = /((forward|>>|next)+)/i;
 settings.prevLinkRegex       = /((back|<<|prev(ious)?)+)/i;
 ////////////////////////////////
