@@ -30,7 +30,9 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(
+   '(rust
+     haskell
+     javascript
      markdown
      vimscript
      yaml
@@ -61,20 +63,31 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
+   ;; Found 4 new package(s) to install...
+   ;; --> refreshing package archive: nongnu... [3/3]
+   ;; --> installing package: string-edit@spacemacs-editing... [1/4]
+   ;; Package string-edit is unavailable. Is the package name misspelled?
+   ;; --> installing package: snippet@dotfile... [2/4]
+   ;; Package snippet is unavailable. Is the package name misspelled?
+   ;; --> installing package: markdwon-preview-eww@dotfile... [3/4]
+   ;; Package markdwon-preview-eww is unavailable. Is the package name misspelled?
+   ;; --> installing package: evil-ediff@spacemacs-evil... [4/4]
+   ;; Package evil-ediff is unavailable. Is the package name misspelled?
+
+
    dotspacemacs-additional-packages '(
                                       ;; jumps
                                       ace-jump-mode
                                       ;; git, latex, otherutils
                                       ivy
-                                      latex-math-preview 
-                                      latex-preview-pane 
+                                      latex-math-preview
+                                      latex-preview-pane
                                       magit
                                       pdf-tools
                                       rainbow-mode
                                       ranger
                                       restart-emacs
                                       smex
-                                      sos
                                       vimrc-mode
                                       ;;C
                                       company-irony
@@ -107,7 +120,7 @@ values."
                                       company-rtags
                                       ;;other utils
                                       markdown-preview-mode
-                                      markdwon-preview-eww
+                                      markdown-preview-eww
                                       flymd
                                       chronos
                                       tea-time
@@ -119,13 +132,13 @@ values."
                                       window-numbering
                                       ;;move
                                       ;;copy
-
                                       ;;snippet
-                                      snippet
                                       yasnippet
                                       yasnippet-snippets
                                       yasnippet-classic-snippets
                                       xclip
+                                      ;;file
+                                      neotree
                                       )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -874,6 +887,7 @@ starts a shell."
     (kill-line (- 1 arg)))
   ;;------------ delete word added end -----------------------
 
+
   ;;------------ rotate text-----------------------
   (defvar rotate-text-rotations
     '(("true" "false") ("yes" "no") ("match" "unmatch") ("start" "end") ("forward" "backward") ("active" "inactive") ("created" "terminated") ("run" "block") ("abstract" "concrete") ;; general
@@ -974,6 +988,21 @@ starts a shell."
 
   (define-key evil-normal-state-map (kbd "g s") 'rotate-word-at-point)
   (define-key evil-normal-state-map (kbd "g r") 'rotate-region)
+
+  ;; rotate file
+  (defun find-next-file (&optional backward)
+    "Find the next file (by name) in the current directory.
+
+With prefix arg, find the previous file."
+    (interactive "P")
+    (when buffer-file-name
+      (let* ((file (expand-file-name buffer-file-name))
+             (files (cl-remove-if (lambda (file) (cl-first (file-attributes file)))
+                                  (sort (directory-files (file-name-directory file) t nil t) 'string<)))
+             (pos (mod (+ (cl-position file files :test 'equal) (if backward -1 1))
+                       (length files))))
+        (find-file (nth pos files)))))
+  (define-key evil-normal-state-map (kbd "g S") 'find-next-file)
 
   (defun indent-or-rotate ()
     "If point is at end of a word, then else indent the line."
@@ -1108,3 +1137,22 @@ starts a shell."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+(defun dotspacemacs/emacs-custom-settings ()
+  "Emacs custom settings.
+This is an auto-generated function, do not modify its content directly, use
+Emacs customize menu instead.
+This function is called at the very end of Spacemacs initialization."
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   '(cargo counsel-gtags dap-mode lsp-docker lsp-treemacs bui helm-gtags racer ron-mode rust-mode toml-mode markdown-preview-eww markdown-preview-mode cmake-ide flycheck-clang-tidy levenshtein disaster cmake-mode cquery ppd-sr-speedbar sr-speedbar company-c-headers cedit flycheck-popup-tip eglot flymake jsonrpc ccls ivy-rtags flycheck-rtags company-rtags ac-rtags srefactor elfeed-web snippet window-numbering smart-semicolon web-search searchq google-maps search-web chronos tea-time rotate git-time-metric snapshot-timemachine-rsnapshot timerfunctions clocker typing typing-game speed-type typit helm-R ess julia-mode yasnippet-snippets yasnippet-classic-snippets xclip xterm-color shell-pop org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download multi-term htmlize gnuplot git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip eshell-z eshell-prompt-extras esh-help diff-hl auto-dictionary smex flycheck-irony company-irony irony ivy flycheck-rust flycheck howdoi helm-rtags rtags ggtags clang-format flymd sos vimrc-mode dactyl-mode rainbow-mode ace-jump-mode python-environment smeargle orgit magit-gitflow helm-gitignore helm-company helm-c-yasnippet gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link fuzzy evil-magit company-web web-completion-data company-tern tern company-statistics company-anaconda company auto-yasnippet ac-ispell auto-complete multishell wilt yaml-mode rvm ruby-tools ruby-test-mode rubocop rspec-mode robe rbenv rake minitest chruby bundler inf-ruby pdf-tools web-mode tagedit slim-mode scss-mode sass-mode pug-mode less-css-mode helm-css-scss haml-mode emmet-mode web-beautify livid-mode skewer-mode simple-httpd json-mode json-snatcher json-reformat js2-refactor yasnippet multiple-cursors js2-mode js-doc coffee-mode magit magit-popup git-commit ghub treepy let-alist graphql with-editor yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional helm-pydoc cython-mode anaconda-mode pythonic ranger latex-preview-pane latex-math-preview mmm-mode markdown-toc markdown-mode gh-md ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline powerline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox spinner org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hydra hungry-delete hl-todo highlight-parentheses highlight-numbers parent-mode highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make projectile pkg-info epl helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido flx fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state smartparens evil-indent-plus evil-iedit-state iedit evil-exchange evil-escape evil-ediff evil-args evil-anzu anzu evil goto-chg undo-tree eval-sexp-fu highlight elisp-slime-nav dumb-jump f dash s diminish define-word column-enforce-mode clean-aindent-mode bind-map bind-key auto-highlight-symbol auto-compile packed aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line helm avy helm-core popup async)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+)
