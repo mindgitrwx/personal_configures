@@ -843,6 +843,13 @@ api.mapkey('l', 'slideserve next page', function () {
 }, {domain: /slideserve\.com/i});
 
 
+api.mapkey('h', 'slideplayer previous page', function () {
+    document.querySelector("form[action='#back']").click();
+}, {domain: /slideplayer\.com/i});
+api.mapkey('l', 'slideplayer next page', function () {
+    document.querySelector("form[action='#forward']").click();
+}, {domain: /slideplayer\.com/i});
+
 
 api.mapkey('f', '#7 santatoic next', function () {
     var buttonList = document.getElementsByClassName('jsx-1583171186');
