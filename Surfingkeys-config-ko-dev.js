@@ -830,10 +830,18 @@ api.mapkey('gV', 'Volume click ', function () {
 // page 양 옆으로 넘길 수 있도록 하기
 api.mapkey('h', 'slideshare previous page', function () {
     document.getElementById('previous-slide').click();
-}, {domain: /www\.slideshare\.net/i});
+}, {domain: /www\.slideshare\.com/i});
 api.mapkey('l', 'slideshare next page', function () {
     document.getElementById('next-slide').click();
-}, {domain: /www\.slideshare\.net/i});
+}, {domain: /www\.slideshare\.com/i});
+
+api.mapkey('h', 'slideserve previous page', function () {
+    document.getElementById('btn_prev').click();
+}, {domain: /slideserve\.com/i});
+api.mapkey('l', 'slideserve next page', function () {
+    document.getElementById('btn_next').click();
+}, {domain: /slideserve\.com/i});
+
 
 
 api.mapkey('f', '#7 santatoic next', function () {
