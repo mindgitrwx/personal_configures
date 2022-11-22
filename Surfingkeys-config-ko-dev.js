@@ -362,7 +362,7 @@ api.mapkey('yg', '#7 git blog', function () {
 
 //TODO: git clone , get id
 api.mapkey('yG', '#7 git clone', function () {
-    api.Clipboard.write(window.location.href + '.git');
+    api.Clipboard.write('git clone ' + window.location.href + '.git');
 }, {
     domain: /github\.com/i
 }); 
