@@ -844,10 +844,10 @@ api.mapkey('l', 'slideserve next page', function () {
 
 
 api.mapkey('h', 'slideplayer previous page', function () {
-    document.querySelector("form[action='back']").click();
+    document.querySelector("td[action='back']").click();
 }, {domain: /slideplayer\.com/i});
 api.mapkey('l', 'slideplayer next page', function () {
-    document.querySelector("form[action='forward']").click();
+    document.querySelector("td[action='forward']").click();
 }, {domain: /slideplayer\.com/i});
 
 
