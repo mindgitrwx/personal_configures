@@ -252,6 +252,7 @@ api.addSearchAlias('mC', 'metaCritic', 'http://www.metacritic.com/search/all/');
 
 //Video
 api.addSearchAlias('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
+api.addSearchAlias('y', 'you', 'https://you.com/search?q=');
 api.addSearchAlias('yg', 'youglish', 'https://youglish.com/pronounce/');
 
 //Wiki
