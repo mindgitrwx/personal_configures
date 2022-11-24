@@ -318,13 +318,38 @@ api.mapkey('oK', '#7 open kindle', function () {
 });
 
 api.mapkey('Q', '#1Click on an Image or a button', function () {
+    function imageToBlob(imageURL) {
+        const img = new Image;
+        const c = document.createElement("canvas");
+        const ctx = c.getContext("2d");
+        img.crossOrigin = "";
+        img.src = imageURL;
+        return new Promise(resolve => {
+            img.onload = function () {
+                c.width = this.naturalWidth;
+                c.height = this.naturalHeight;
+                ctx.drawImage(this, 0, 0);
+                c.toBlob((blob) => {
+                    // here the image is a blob
+                    resolve(blob)
+                }, "image/png", 0.75);
+            };
+        });
+    }
+    async function copyImage(imageURL){
+        const blob = await imageToBlob(imageURL);
+        const item = new ClipboardItem({ "image/png": blob });
+        navigator.clipboard.write([item]);
+    }
     api.Hints.create("img, button", function (element) {
-        element;
-        element.src;
+        copyImage(element.src);
         // api.Clipboard.write(element.src);
         // TODO: Copy 하는 방법은 없는지 알아보기
     });
 });
+
+
+
 
 // wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
 api.vmapkey('y', "copy without reference notation on wikipedia", function () {
