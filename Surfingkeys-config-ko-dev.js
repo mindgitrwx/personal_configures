@@ -331,7 +331,7 @@ api.mapkey('Q', '#1Click on an Image or a button', function () {
                 ctx.drawImage(this, 0, 0);
                 c.toBlob((blob) => {
                     // here the image is a blob
-                    resolve(blob)
+                    resolve(blob);
                 }, "image/png", 0.75);
             };
         });
@@ -343,8 +343,6 @@ api.mapkey('Q', '#1Click on an Image or a button', function () {
     }
     api.Hints.create("img, button", function (element) {
         copyImage(element.src);
-        // api.Clipboard.write(element.src);
-        // TODO: Copy 하는 방법은 없는지 알아보기
     });
 });
 
