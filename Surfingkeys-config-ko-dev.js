@@ -251,8 +251,8 @@ api.addSearchAlias('mP', 'Pitchfork', 'https://pitchfork.com/search/?query=');
 api.addSearchAlias('mC', 'metaCritic', 'http://www.metacritic.com/search/all/');
 
 //Video
-api.addSearchAlias('Y', 'youtube', 'https://www.youtube.com/results?search_query=');
-api.addSearchAlias('y', 'you', 'https://you.com/search?q=');
+api.addSearchAlias('y', 'youtube', 'https://www.youtube.com/results?search_query=');
+api.addSearchAlias('Y', 'you', 'https://you.com/search?q=');
 api.addSearchAlias('yg', 'youglish', 'https://youglish.com/pronounce/');
 
 //Wiki
@@ -330,7 +330,7 @@ api.mapkey('Q', '#1Click on an Image or a button', function () {
                 c.height = this.naturalHeight;
                 ctx.drawImage(this, 0, 0);
                 c.toBlob((blob) => {
-                    // here the image is a blob
+                    https://www.w3.org/          // here the image is a blob
                     resolve(blob);
                 }, "image/png", 0.75);
             };
