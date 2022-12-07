@@ -501,7 +501,10 @@ api.mapkey('yk', "Copy url before Keyowrd insertion", function () {
 api.mapkey('"yy', "surround url with double quotation mark", function () {
     api.Clipboard.write('"' + window.location.href + '"');
 });
-
+// for get badename
+api.mapkey('yb', "Copy basename url (lastpath)", function () {
+    api.Clipboard.write(window.location.href.split('/').pop());
+});
 
 //////////////////////////////////////////////////////////
 // visualmode setting - vsual mode에 진입했을 때 동작가능 //
