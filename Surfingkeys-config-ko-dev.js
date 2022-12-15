@@ -349,15 +349,15 @@ api.mapkey('Q', '#1Click on an Image or a button', function () {
 api.mapkey('gq', '#1get image address with wget', function () {
     async function copyImageAddress(imgAddress){
         imageFormats = ["jpg", "jpeg", "png", "gif", "bmp", "svg", "webp", "ico", "tiff", "tif", "jfif", "pjpeg", "pjp", "avif", "apng"];
-        // if imgAddress has imageFormats, then cut the trailing address after the imageFormats
+        // if imgAddress string has imageFormats, then cut the trailing address after the imageFormats
         for (var i = 0; i < imageFormats.length; i++) {
+
             if (imgAddress.includes(imageFormats[i])) {
                 imgAddress = imgAddress.split(imageFormats[i])[0] + imageFormats[i];
                 api.Clipboard.write("wget " + imgAddress);
                 break;
             }
         }
-        api.Clipboard.write("NULL");
     }
     api.Hints.create("img, button", function (element) {
         copyImageAddress(element.src);
