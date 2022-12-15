@@ -346,6 +346,15 @@ api.mapkey('Q', '#1Click on an Image or a button', function () {
     });
 });
 
+api.mapkey('gq', '#1get image address with wget', function () {
+    async function srcAddress(imgAddress){
+        api.Clipboard.write("wget " + imgAddress);
+    }
+    api.Hints.create("img, button", function (element) {
+        copyImageAddress(element.src);
+    });
+});
+
 
 
 
