@@ -502,7 +502,7 @@ api.mapkey('"yy', "surround url with double quotation mark", function () {
     api.Clipboard.write('"' + window.location.href + '"');
 });
 // for get badename
-api.mapkey('yb', "Copy basename url (lastpath)", function () {
+api.mapkey('yb', "Copy basename url (last path)", function () {
     api.Clipboard.write(window.location.href.split('/').pop());
 });
 
@@ -904,87 +904,3 @@ api.mapkey('h', 'before video', function () {
     window.location.replace(mergedURL);
 }, {domain: /osam\.kr/i});
 
-
-
-// skipControl sc-ir playControls__control playControls__prev skipControl__previous
-// skipControl sc-ir playControls__control playControls__next skipControl__next
-// sc-button-like playbackSoundBadge__like sc-button sc-button-small sc-button-icon sc-button-responsive
-//Soundcloud shortcuts
-// . 이 들어가야 하는지 아닌지 테스트 
-// TODO: 잘 동작하지 않음 (이미 단축키가 assign 되어 있는 사이트라서 그런 것 처럼 보임)
-api.mapkey('J', 'soundcloud previous song', function () {
-    document.getElementsByClassName('sc-ir.playControls__control.playControls__prev.skipControl__previous').click();
-}, {
-    domain: /soundcloud\.com/i
-});
-api.mapkey('K', 'soundcltud next song', function () {
-    document.getElementsByClassName('skipControl.sc-ir.playControls__control.playControls__next.skipControl__next').click();
-}, {
-    domain: /soundcloud\.com/i
-});
-api.mapkey('L', 'soundcloud like', function () {
-    document.getElementsByClassName('sc-button-like.playbackSoundBadge__like.sc-button.sc-button-small.sc-button-icon.sc-button-responsive').click();
-}, {
-    domain: /soundcloud\.com/i
-});
-
-
-//TODO: google tlanslation auto copy make: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기 
-//p, ''df viewer api.mapping 
-
-// api.mapkey('D', 'github readme 스크롤', function () {
-//     stackAnswer++;
-//     pageHeadLine = document.querySelectorAll(".answers");
-//     pageHeadLine[stackAnswer].scrollIntoView();
-// },{domain: /\\pdf_viewer.html*/i});
-// api.mapkey('U', 'github readme up 스크롤 ', function () {
-//     stackAnswer--;
-//     pageHeadLine = document.querySelectorAll(".answers");
-//     pageHeadLine[stackAnswer].scrollIntoView();
-// },{domain: /\\pdf_viewer.html*/i});
-
-// api.mapkey('D', 'github readme 스크롤', function () {
-//     stackAnswer++;
-//     pageHeadLine = document.querySelectorAll(".wp_syntax", ".wp_");
-//     pageHeadLine[stackAnswer].scrollIntoView();
-// },{domain: /\\pdf_viewer.html*/i});
-// api.mapkey('U', 'github readme up 스크롤 ', function () ,{
-//     stackAnswer--;
-//     pageHeadLine = document.querySelectorAll(".answers");
-//     pageHeadLine[stackAnswer].scrollIntoView();
-// },{domain: /\*pdf_viewer.html*/i});
-// */
-
-//네이버 맵 지도 이동
-/*
-api.map('h', '<ArrowLeft>', {domain: /api.map\.naver\.com/i});
-api.map('j', '<ArrowDown>',  {domain: /api.map\.naver\.com/i});
-api.map('k', '<ArrowUp>', {domain: /api.map\.naver\.com/i});
-api.map('l', '<ArrowRight>', {domain: /api.map\.naver\.com/i});
-*/
-// 지도 이동 
-
-//TODO: it from sadid https://github.com/brookhong/Surfingkeys/issues/768
-//HOTFIX:
-//ISSUE: 주석에서 auto로 ISSUE를 붙여주는 것이 있었으면 좋겠다
-
-api.mapkey('yA', "#7Copy all tabs url", function () {
-    //get numbers of tabs
-    chrome.tabs.query({
-        windowType: 'normal'
-    }, function (tabs) {
-        tabNums = tabs.length;
-    });
-    Front.showPopup('tabNums'); //debug
-
-    var URLsToYank = [];
-    chrome.tabs.query({
-        'active'           : true,
-        'lastFocusedWindow': true
-    }, function (tabs) {
-        for (i = 0; i < tabNums; i++)
-            var url = tabs[i].url;
-        URLsToYank.push(url);
-    })();
-    api.Clipboard.write(URLsToYank);
-});
