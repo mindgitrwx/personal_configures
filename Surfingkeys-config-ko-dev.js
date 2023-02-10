@@ -107,6 +107,8 @@ api.addSearchAlias('G', 'google', 'https://www.google.com/search?q=');
 
 //ai
 api.addSearchAlias('af', 'futurepedia', 'https://www.futurepedia.io/?searchTerm=');
+api.addSearchAlias('Y', 'you', 'https://you.com/search?q=');
+api.addSearchAlias('ap', 'perplexity', 'https://www.perplexity.ai/?q=');
 
 //GoogleTrand
 api.addSearchAlias('gT', 'google trend', 'trends.google.com/trends/explore?q=');
@@ -133,7 +135,6 @@ api.addSearchAlias('ss', 'slideshare', 'https://www.slideshare.net/search/slides
 api.addSearchAlias('sd', 'soundsnap', 'https://www.soundsnap.com/search/audio/');
 
 //language -- 
-//
 api.addSearchAlias('lJ', 'language Javascript', 'https://www.google.com/search?q=Javascript+');
 api.addSearchAlias('lj', 'language java', 'https://www.google.com/search?q=Java+');
 api.addSearchAlias('lC', 'C++', 'https://www.google.com/search?q=C++');
@@ -196,7 +197,7 @@ api.addSearchAlias('wW', '사용예', 'https://www.google.com/search?q=usage+of+
 api.addSearchAlias('wX', '사용예', 'https://www.google.com/search?q=usage+of+');
 api.addSearchAlias('wY', '사용예', 'https://www.google.com/search?q=usage+of+');
 api.addSearchAlias('wZ', '사용예', 'https://www.google.com/search?q=usage+of+');
-// 
+
 //file 확장자
 api.addSearchAlias('pdF', 'pdf', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Apdf+');
 api.addSearchAlias('cpP', 'cpp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Acpp+');
@@ -252,7 +253,6 @@ api.addSearchAlias('mC', 'metaCritic', 'http://www.metacritic.com/search/all/');
 
 //Video
 api.addSearchAlias('y', 'youtube', 'https://www.youtube.com/results?search_query=');
-api.addSearchAlias('Y', 'you', 'https://you.com/search?q=');
 api.addSearchAlias('yg', 'youglish', 'https://youglish.com/pronounce/');
 
 //Wiki
