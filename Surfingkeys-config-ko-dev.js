@@ -110,6 +110,9 @@ api.addSearchAlias('af', 'futurepedia', 'https://www.futurepedia.io/?searchTerm=
 api.addSearchAlias('Y', 'you', 'https://you.com/search?q=');
 api.addSearchAlias('ap', 'perplexity', 'https://www.perplexity.ai/?q=');
 
+//Microsoft
+api.addSearchAlias('b', 'bing', 'https://www.bing.com/search?q=');
+
 //GoogleTrand
 api.addSearchAlias('gT', 'google trend', 'trends.google.com/trends/explore?q=');
 api.addSearchAlias('gtK', 'google trend Korea', 'trends.google.com/trends/explore?geo=KR&q=');
