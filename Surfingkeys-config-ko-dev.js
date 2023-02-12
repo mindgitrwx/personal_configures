@@ -1,36 +1,22 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
-//
-// Korean Specific Surfing Keys config
-// Version - 1.0 - debug copy all tab urls 
+//                                                                                              //
+// Korean Specific Surfing Keys config                                                          //
+// Version - 1.0 - debug copy all tab urls                                                      //
 // Korean specific surfing key config                                                           //
 // Please copy this url to text box [load settings from:], and 'Save'                           //
 // https:   raw.githubusercontent.com/mindgitrwx/gitconventions/master/SurfingKeys-config-ko.js //
 //                                                                                              //
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-//                                                                                                                    //
-// Surfing key 에서 se를 누르면 setting surfing key 의 setting으로 들어가집니다. 이때 보여지는 화면에서                   //
-// Advanced mode를 선택한 후, Load settings from에 위 주소를 입력하고 Save 해주시면 몇초 지나서 이 설정이 저장될 겁니다     //
-//                                                                                                                    //
-// 키 맵핑할 때 주의할 점                                                                                               //
-// api.map('<Ctrl-Shift-e>', 'T');                                                                                        //
-// 이런식으로 맵핑하면 동작하지 않고                                                                                     //
-// api.map('<Ctrl-E>', 'T');                                                                                              //
-//                                                                                                                    //
-// 이런 식으로 맵핑해야 함                                                                                              //
-//                                                                                                                    //
-// email:jonghyeon.rw@gmail.com                                                                                       //
-//                                                                                                                    //
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// conventions: TODO, FIXME, REFACT
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 // ------------ for page moving -------------- (every time it would be returned zero when refreshed)
 var namuPage    = 0;
     wikiPage    = 0;
-    stackAnswer = 0;  // 변수 통합 생각중
+    stackAnswer = 0;
     naverAnswer = 0;
     codeWrapper = 0;
     lineNum     = 0;
-// 중괄호 닫기용
+
 var linkCounter = 0;
 
 // Properties list
@@ -45,35 +31,28 @@ settings.prevLinkRegex       = /((back|<<|prev(ious)?)+)/i;
 ////////////////////////////////
 // api.unapi.map default key api.mapings  //
 ////////////////////////////////
-api.unmap('<Ctrl-6>'); // (탭이 6개 이상 열려있을 때, ctrl-6에 키가 바인딩되어있으면 자연스럽지가 않음 )
-api.unmap('<Ctrl-p>'); 
-api.unmap('<Ctrl-n>'); 
-api.map(']', ']]'); // 두번 누르는건 자연스럽지 않음 
+api.unmap('<Ctrl-6>');
+api.unmap('<Ctrl-p>');
+api.unmap('<Ctrl-n>');
+api.map(']', ']]');
 api.map('[', '[[');
 
 // My default vim key binding: https://gist.github.com/millermedeiros/1262085
 //--Like Nerd Tree--- TODO: FIX IT LIKE VERTICALLY
-api.map(',nt', 'T'); 
-api.map(',q', 'x'); 
+api.map(',nt', 'T');
+api.map(',q', 'x');
 api.mapkey(',s', 'opne new tab and split', function () {
     RUNTIME("newWindow");
 });
-//TODO: making spell check ,ts 
+//TODO: making spell check ,ts
 
 // FIXME: it doesn't work
 // iapi.map('<Ctrl-[>', "<Esc>");
 // api.vmap('<Ctrl-[>', "<Esc>");
 
-// 바이두와 bing 을 굳이 사용할 필요가 없길래 api.unapi함 
-api.removeSearchAlias('b');
 api.removeSearchAlias('g');
 api.removeSearchAlias('w');
 api.removeSearchAlias('s');
-
-// for surfingkeys PDF autokey-----------------------------------------
-api.map('<Shift-1>', 'fs'); // 잘 되는 느낌은 아님
-api.map('<Shift-2>', 'fd');
-api.map('<Shift-3>', 'ff');
 
 //////////////////////////
 // for url heml extract //
@@ -89,7 +68,7 @@ api.map('<Shift-3>', 'ff');
 // })
 
 // 광고차단 즉시 실행
-// 
+//
 // (function stop(){
 // document.getElementById('slide-close').click(); // NULL 실행 안됨
 // document.getElementByClassName('slide-close').click();
@@ -137,7 +116,7 @@ api.addSearchAlias('ghS', 'githubStars', 'https://github.com/mindgitrwx?page=1&q
 api.addSearchAlias('ss', 'slideshare', 'https://www.slideshare.net/search/slideshow?searchfrom=header&q=');
 api.addSearchAlias('sd', 'soundsnap', 'https://www.soundsnap.com/search/audio/');
 
-//language -- 
+//language --
 api.addSearchAlias('lJ', 'language Javascript', 'https://www.google.com/search?q=Javascript+');
 api.addSearchAlias('lj', 'language java', 'https://www.google.com/search?q=Java+');
 api.addSearchAlias('lC', 'C++', 'https://www.google.com/search?q=C++');
@@ -173,7 +152,7 @@ api.addSearchAlias('tW', 'tWitter', 'https://twitter.com/search?q=');
 api.addSearchAlias('ig', 'InstaGram HashTag', 'https://www.instagram.com/explore/tags/');
 api.addSearchAlias('rD', 'redDit', 'https://www.reddit.com/search?q=');
 
-//shorten - what is.. who is.. where is..  
+//shorten - what is.. who is.. where is..
 api.addSearchAlias('wA', 'advanced', 'https://www.google.com/search?q=advanced+');
 api.addSearchAlias('wB', 'basic', 'https://www.google.com/search?q=basic+');
 api.addSearchAlias('wC', '분류', 'https://www.google.com/search?q=classification+of+');
@@ -196,12 +175,12 @@ api.addSearchAlias('wR', '랭킹', 'https://www.google.com/search?q=rank+of+');
 api.addSearchAlias('wS', '공통점', 'https://www.google.com/search?q=common+point+of+');
 api.addSearchAlias('wT', '표', 'https://www.google.com/search?q=q=table+of+');
 api.addSearchAlias('wU', '사용예', 'https://www.google.com/search?q=usage+of+');
-api.addSearchAlias('wW', '사용예', 'https://www.google.com/search?q=usage+of+'); 
+api.addSearchAlias('wW', '사용예', 'https://www.google.com/search?q=usage+of+');
 api.addSearchAlias('wX', '사용예', 'https://www.google.com/search?q=usage+of+');
 api.addSearchAlias('wY', '사용예', 'https://www.google.com/search?q=usage+of+');
 api.addSearchAlias('wZ', '사용예', 'https://www.google.com/search?q=usage+of+');
 
-//file 확장자
+//file
 api.addSearchAlias('pdF', 'pdf', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Apdf+');
 api.addSearchAlias('cpP', 'cpp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Acpp+');
 api.addSearchAlias('hwP', 'hwp', 'https://www.google.com/search?hl=en&biw=1600&bih=817&ei=ufUTW5_5FcGVmAXPqAc&q=filetype%3Ahwp+');
@@ -216,7 +195,7 @@ api.addSearchAlias('tE', 'tlanslate Examples 네어버사전example', 'http://en
 api.addSearchAlias('tL', 'tlanslate lyrics 가사해석', 'https://www.google.com/search?q=가사+해석+');
 api.addSearchAlias('ll', '가사', 'https://www.google.com/search?q=lyrics+of+');
 
-//TODO: 검색을 통해서 google tlanslated 된 걸 clipboard에 복사 붙여넣는 것 만들기 (겹쳐서 동작하지 않음)
+//TODO: 검색을 통해서 google tlanslated 된 걸 clipboard에 복사 붙여넣는 것 만들기
 api.addSearchAlias('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/');
 api.addSearchAlias('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
 
@@ -236,8 +215,8 @@ api.addSearchAlias('dM', '다음 map', 'http://local.daum.net/map/index.jsp?q=')
 
 //Shopping : without amazon, all the sites are korean-specific sites.
 api.addSearchAlias('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
-api.addSearchAlias('sA', 'shop아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민 
-api.addSearchAlias('sE', 'shopEbay', 'https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw='); 
+api.addSearchAlias('sA', 'shop아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민
+api.addSearchAlias('sE', 'shopEbay', 'https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=');
 api.addSearchAlias('sC', 'shop 쿠팡', 'http://www.coupang.com/np/search?component=&q=');
 api.addSearchAlias('sI', 'shop 인터파크', 'http://isearch.interpark.com/isearch?q=');
 api.addSearchAlias('sY', 'shop yes24', 'http://www.yes24.com/searchcorner/Search?keywordAd=&keyword=&domain=ALL&qdomain=%C0%FC%C3%BC&Wcode=001_005&query=');
@@ -371,12 +350,12 @@ api.mapkey('gq', '#1get image address with wget', function () {
 
 
 
-// wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다. 
+// wiki를 copy 할때 [1] 이런 정보가 나오는 것이 annoying 하므로 없애준다.
 api.vmapkey('y', "copy without reference notation on wikipedia", function () {
-    api.Clipboard.write(window.getSelection().toString().replace(/\[[0-9]*\]/g, "test")); // TODO: 동작하지 않음 
+    api.Clipboard.write(window.getSelection().toString().replace(/\[[0-9]*\]/g, "test")); // TODO: 동작하지 않음
 }, {
     domain: /www\.wikiwand\.com/i
-}); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함 
+}); // TODO: 여러 도메인을 한꺼번에 집어 넣는 것 추가해야 함
 
 api.mapkey('ymr', '#7Copy multiple link regex URLs to the clipboard', function () {
     var linksToYank = [];
@@ -411,7 +390,7 @@ api.mapkey('yG', '#7 git clone', function () {
     api.Clipboard.write('git clone ' + window.location.href + '.git');
 }, {
     domain: /github\.com/i
-}); 
+});
 
 api.mapkey('yE', '#7 Yank Element info. copy link element id or classname', function () {
     var linksToYank = [];
@@ -448,7 +427,6 @@ api.mapkey('ymE', '#7 Yank Multiple Element info  (copy multiple link element id
     });
 });
 
-//TODO: 마지막에 끝날 때 중괄호를 닫아 주는 것 만들기  (대문자를 박을때는 맨 뒤에 박는 편이 낫겠다.) --단축키 네개 이상? 
 api.mapkey('ymR', '#7Copy multiple link Regex URLs to the clipboard and add commas', function () {
     var linksToYank = [];
     api.Hints.create('*[href]', function (element) {
@@ -469,18 +447,16 @@ api.mapkey('yr', "Copy url as regex", function () {
 });
 
 
-// pre is often used for insert codeblocks on webpage. some code blocks just in pre, 
-// yQ와 동일함 
+// pre is often used for insert codeblocks on webpage. some code blocks just in pre,
+// yQ와 동일함
 api.mapkey('gyq', "Copy first pre and exist", function () {
     var cssSelector = "pre";
 
-    //보이는 것 중에서 pre element존재하는지 찾기 
     var elements = getVisibleElements(function (e, v) {
         if (e.matches(cssSelector)) {
             v.push(e);
         }
     });
-    // pre Element가 보이는 것 중에서 존재하지 않을 때 
     if (elements.length === 0 &&
         document.querySelector(cssSelector) !== null) {
         document.querySelector(cssSelector).scrollIntoView();
@@ -496,13 +472,11 @@ api.mapkey('gyq', "Copy first pre and exist", function () {
 api.mapkey('yQ', "Copy first pre", function () {
     var cssSelector = "pre";
 
-    //보이는 것 중에서 pre element존재하는지 찾기 
     var elements = getVisibleElements(function (e, v) {
         if (e.matches(cssSelector)) {
             v.push(e);
         }
     });
-    // pre Element가 보이는 것 중에서 존재하지 않을 때 
     if (elements.length === 0 &&
         document.querySelector(cssSelector) !== null) {
         document.querySelector(cssSelector).scrollIntoView();
@@ -519,7 +493,7 @@ api.mapkey('yQ', "Copy first pre", function () {
 api.mapkey('yk', "Copy url before Keyowrd insertion", function () {
     api.Clipboard.write(window.location.href.split('=')[0] + '=');
 });
-// surrounded   
+// surrounded
 api.mapkey('"yy', "surround url with double quotation mark", function () {
     api.Clipboard.write('"' + window.location.href + '"');
 });
@@ -574,42 +548,7 @@ api.vmapkey('~sy', "Remove special character (blank is not considered as special
 api.vmapkey('~dy', "Markdown Strikethrough", function () {
     api.Clipboard.write('~~ ' + window.getSelection().toString() + ' ~~');
 });
-//api.addSearchAliasX('ty', '한글영어번역', 'https://translate.google.co.kr/?hl=ko#ko/en/'); window.getSelection
-//api.addSearchAliasX('Ty', '영어한글번역', 'https://translate.google.co.kr/?hl=ko#en/ko/');
-// request(URL, function (err, response, html) {
-//      URL로부터 가져온 페이지 소스가 html이란 변수에 담긴다.
-//})
-//TODO: google tlanslation auto copy make
-//TODO: result_box 안에 <span> </span> 있고 그걸 auto 로 복사하는 기능 만들기
-/*
-api.vmapkey('ty', "한글 영어번역 clipboard", function () { //TODO:  
-    url = "https://translate.google.co.kr/?hl=ko#ko/en/" + window.getSelection().toString();
-    request(url, function(err, response, html){
-        if (!err) {
-            var $ = cheerio.load(html);
-            api.Clipboard.write($('#result_box').innerText());
-        }
-    })
-});
-api.vmapkey('Ty', "영어 한글번역 clipboard", function () {
-    url = "https://translate.google.co.kr/?hl=ko#en/ko/" + window.getSelection().toString();
-    request(url, function(err, response, html){
-        if (!err) {
-            var $ = cheerio.load(html);
-            api.Clipboard.write($('#result_box').innerText());
-        }
-    })
-});
-*/
 
-/*
-api.vmapkey('~diy', "remove inner double quoates strings", function () {
-    api.Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
-});
-api.vmapkey('~siy', "remove inner single quoates strings", function () {
-    api.Clipboard.write( window.getSelection().toString().replace(/".*"/, '""') );
-});
-*/
 // markdown
 api.vmapkey('miy', "Markdown italic", function () {
     api.Clipboard.write('*' + window.getSelection().toString() + '*');
@@ -634,7 +573,7 @@ api.mapkey('"yma', '#7Copy multiple link URLs to the clipboard', function () {
     });
 });
 
-//setting 
+//setting
 api.mapkey('gs', '#12 go Setting - Open Chrome Settings', function () {
     tabOpenLink("chrome://settings/");
 });
@@ -703,7 +642,6 @@ api.mapkey('U', '위키 목차 대단위 up스크롤', function () {
 });
 
 
-// Domain을 여러개 넣을 수 있는가?
 api.mapkey('D', '위키 목차 대단위 다운스크롤', function () {
     pageHeadLine = document.querySelectorAll(".mw-headline");
     if (pageHeadLine.length > wikiPage) {
@@ -743,7 +681,7 @@ api.mapkey('U', 'wikiwand 목차  up 스크롤 ', function () {
     domain: /www\.wikiwand\.com/i
 });
 
-// query select all 내부에서 regular expression 이 먹히지 않음 
+// query select all 내부에서 regular expression 이 먹히지 않음
 api.mapkey('D', 'stackoverflow 답변 다운 스크롤', function () {
     pageHeadLine = document.querySelectorAll(".answer");
     if (pageHeadLine.length > stackAnswer) {
@@ -875,7 +813,7 @@ api.mapkey('gV', 'Volume click ', function () {
 });
 //end of amazon
 
-// 
+//
 // page 양 옆으로 넘길 수 있도록 하기
 api.mapkey('h', 'slideshare previous page', function () {
     document.getElementById('previous-slide').click();
@@ -891,38 +829,9 @@ api.mapkey('l', 'slideserve next page', function () {
     document.getElementById('btn_next').click();
 }, {domain: /slideserve\.com/i});
 
-
 api.mapkey('h', 'slideplayer previous page', function () {
     document.querySelector("td[action='back']").click();
 }, {domain: /slideplayer\.com/i});
 api.mapkey('l', 'slideplayer next page', function () {
     document.querySelector("td[action='forward']").click();
 }, {domain: /slideplayer\.com/i});
-
-
-api.mapkey('f', '#7 santatoic next', function () {
-    var buttonList = document.getElementsByClassName('jsx-1583171186');
-    for(var i=0;i<buttonList.length;i++){
-      buttonList[i].click();
-    }
-}, {
-    domain: /santatoeic\.com/i
-});
-
-
-api.mapkey('l', 'next video', function () { 
-    s = window.location.hre;
-    dividedURL = s.replace(/&/g, '=&').split('=');
-    dividedURL[5]++; dividedURL[3]++;
-    mergedURL = dividedURL.join('=').replace(/=&/g, '&')
-    window.location.replace(mergedURL);
-}, {domain: /osam\.kr/i});
-
-api.mapkey('h', 'before video', function () { 
-    s = window.location.hre;
-    dividedURL = s.replace(/&/g, '=&').split('=');
-    dividedURL[5]--; dividedURL[3]--;
-    mergedURL = dividedURL.join('=').replace(/=&/g, '&')
-    window.location.replace(mergedURL);
-}, {domain: /osam\.kr/i});
-
