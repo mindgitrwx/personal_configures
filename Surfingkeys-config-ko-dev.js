@@ -113,7 +113,10 @@ api.addSearchAlias('cs', 'codesandbox (online interactive IDE)', 'https://codesa
 api.addSearchAlias('cS', 'slant (editor 비교 사이트)', 'https://www.slant.co/search?query=');
 api.addSearchAlias('gH', 'github', 'https://github.com/search?q=');
 api.addSearchAlias('ghS', 'githubStars', 'https://github.com/mindgitrwx?page=1&q=face&tab=stars&utf8=%E2%9C%93&utf8=%E2%9C%93&q=');
+
+// slides
 api.addSearchAlias('ss', 'slideshare', 'https://www.slideshare.net/search/slideshow?searchfrom=header&q=');
+
 api.addSearchAlias('sd', 'soundsnap', 'https://www.soundsnap.com/search/audio/');
 
 //language --
@@ -236,6 +239,8 @@ api.addSearchAlias('mC', 'metaCritic', 'http://www.metacritic.com/search/all/');
 //Video
 api.addSearchAlias('y', 'youtube', 'https://www.youtube.com/results?search_query=');
 api.addSearchAlias('yg', 'youglish', 'https://youglish.com/pronounce/');
+api.addSearchAlias('ul', 'underline', 'https://underline.io/library/search?query=');
+
 
 //Wiki
 api.addSearchAlias('nW', '나무위키', 'https://namu.wiki/w/');
@@ -835,3 +840,5 @@ api.mapkey('h', 'slideplayer previous page', function () {
 api.mapkey('l', 'slideplayer next page', function () {
     document.querySelector("td[action='forward']").click();
 }, {domain: /slideplayer\.com/i});
+
+
