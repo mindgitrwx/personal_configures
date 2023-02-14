@@ -784,42 +784,6 @@ api.mapkey('gS', 'Go to the Stars tab. ', function () {
     domain: /github\.com/i
 });
 
-// TODO: test
-api.mapkey('V', 'view', function () {
-    document.querySelectorAll('.btn.btn-sm.tooltipped.tooltipped-nw')[0].click();
-}, {
-    domain: /github\.com/i
-});
-//end of github
-
-//start of amazon
-api.mapkey('gI', 'Instance click ', function () {
-    document.getElementById('gwt-debug-leftNav-Instances').click();
-}, {
-    domain: /us-east-2\.console\.aws\.amazon\.com/i
-});
-
-api.mapkey('gS', 'security group click', function () {
-    document.getElementById('gwt-debug-leftNav-SecurityGroups').click();
-}, {
-    domain: /us-east-2\.console\.aws\.amazon\.com/i
-});
-
-api.mapkey('gE', 'Elastic group click ', function () {
-    document.getElementById('gwt-debug-leftNav-Addresses').click();
-}, {
-    domain: /us-east-2\.console\.aws\.amazon\.com/i
-});
-
-api.mapkey('gV', 'Volume click ', function () {
-    document.getElementById('gwt-debug-leftNav-Volumes').click();
-}, {
-    domain: /us-east-2\.console\.aws\.amazon\.com/i
-});
-//end of amazon
-
-//
-// page 양 옆으로 넘길 수 있도록 하기
 api.mapkey('h', 'slideshare previous page', function () {
     document.getElementById('previous-slide').click();
 }, {domain: /www\.slideshare\.com/i});
@@ -840,5 +804,4 @@ api.mapkey('h', 'slideplayer previous page', function () {
 api.mapkey('l', 'slideplayer next page', function () {
     document.querySelector("td[action='forward']").click();
 }, {domain: /slideplayer\.com/i});
-
 
