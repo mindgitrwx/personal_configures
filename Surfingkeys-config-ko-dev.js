@@ -102,6 +102,9 @@ api.addSearchAlias('gtI', 'google trend India', 'trends.google.com/trends/explor
 api.addSearchAlias('gM', 'Google map', 'https://www.google.com/maps?q=');
 api.addSearchAlias('R', '도로명주소', 'http://www.juso.go.kr/support/AddressMainSearch.do?searchType=location_newaddr&searchKeyword=');
 
+// network
+api.addSearchAlias('ip', 'ipinfo', 'https://ipinfo.io/');
+
 //coding -- 미완성
 api.addSearchAlias('C', 'search coding', 'https://searchcode.com/?q=');
 api.addSearchAlias('cA', 'Alternative', 'https://alternativeto.net/browse/search?q=');
