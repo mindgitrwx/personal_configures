@@ -251,6 +251,7 @@ api.addSearchAlias('eW', '영문위키', 'https://www.wikiwand.com/en/');
 api.addSearchAlias('kW', '한글위키', 'https://www.wikiwand.com/ko/');
 
 //papaers
+api.addSearchAlias('pS', 'paper copilot (SCISPACE)', 'https://typeset.io/search?q=');
 api.addSearchAlias('pG', 'paper 구글 스콜라', 'https://scholar.google.co.kr/scholar?hl=ko&as_sdt=0%2C5&q=');
 api.addSearchAlias('pB', 'paper (biology) nCBI', 'http://www.ncbi.nlm.nih.gov/search/?term=');
 api.addSearchAlias('pR', 'paper RISS', 'http://www.riss.kr/search/Search.do?detailSearch=false&searchGubun=true&strQuery=&queryText=&exQuery=&colName=all&query=');
