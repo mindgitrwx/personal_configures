@@ -274,6 +274,15 @@ api.mapkey('ouA', '#7 open ubuntu ask', function () {
     //document.getElementById('wmd-input').focus();
 });
 
+api.mapkey('oo', '#7 open chatgpt4 ', function () {
+    window.location.replace("https://chat.openai.com/?model=gpt-4")
+});
+
+api.mapkey('oO', '#7 open chatgpt ', function () {
+    window.location.replace("https://chat.openai.com")
+});
+
+
 api.mapkey('oSA', '#7 open stackoverflow ask', function () {
     window.location.replace("https://stackoverflow.com/questions/ask").getElementById('wmd-input').addEventListener('paste', handlePaste).focus();
     // It cannot be happened
