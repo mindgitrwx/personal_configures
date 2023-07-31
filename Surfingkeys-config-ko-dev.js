@@ -220,8 +220,8 @@ api.addSearchAlias('dE', '다음 사전example', 'http://endic.naver.com/search_
 api.addSearchAlias('dM', '다음 map', 'http://local.daum.net/map/index.jsp?q=');
 
 //Shopping : without amazon, all the sites are korean-specific sites.
-api.addSearchAlias('aZ', '아마존', 'https://www.amazon.com/s/?field-keywords=');
-api.addSearchAlias('sA', 'shop아마존', 'https://www.amazon.com/s/?field-keywords='); // gmarket 과 자리를 바꿔야 할 지 고민
+api.addSearchAlias('aZ', '아마존', 'https://www.amazon.com/s?k=');
+api.addSearchAlias('sA', 'shop아마존', 'https://www.amazon.com/s?k='); // gmarket 과 자리를 바꿔야 할 지 고민
 api.addSearchAlias('sE', 'shopEbay', 'https://www.ebay.com/sch/i.html?_from=R40&_trksid=m570.l1313&_nkw=');
 api.addSearchAlias('sC', 'shop 쿠팡', 'http://www.coupang.com/np/search?component=&q=');
 api.addSearchAlias('sI', 'shop 인터파크', 'http://isearch.interpark.com/isearch?q=');
