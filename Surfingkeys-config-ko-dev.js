@@ -282,6 +282,9 @@ api.mapkey('oO', '#7 open chatgpt ', function () {
     window.location.replace("https://chat.openai.com")
 });
 
+api.mapkey('ll', '#7 open twitter like ', function () {
+    window.location.replace("https://twitter.com/mindgitrwx/likes")
+});
 
 api.mapkey('oSA', '#7 open stackoverflow ask', function () {
     window.location.replace("https://stackoverflow.com/questions/ask").getElementById('wmd-input').addEventListener('paste', handlePaste).focus();
