@@ -208,8 +208,8 @@ api.addSearchAlias('Ty', '영어한글번역', 'https://translate.google.co.kr/?
 //naver : naver is one of the most famous potal site of korea
 api.addSearchAlias('N', 'naver', 'https://search.naver.com/search.naver?sm=tab_hty.top&where=nexearch&query=');
 api.addSearchAlias('nM', 'navermap', 'https://map.naver.com/?query=');
-api.addSearchAlias('nA', 'naver all 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
-api.addSearchAlias('nD', 'naver Dictionary 네이버사전all', 'http://dic.naver.com/search.nhn?dicQuery=');
+api.addSearchAlias('nA', 'naver all 네이버사전all', 'https://dict.naver.com/dict.search?query=');
+api.addSearchAlias('nD', 'naver Dictionary 네이버사전all', 'https://dict.naver.com/dict.search?query=');
 api.addSearchAlias('nE', 'naver Example 네어버사전example', 'http://endic.naver.com/search_example.nhn?sLn=kr&query=');
 
 //Daum : daum is one of the most famous potal site of korea
